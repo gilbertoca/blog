@@ -1,29 +1,33 @@
-git config --local user.email "gilbertoca at gmail"
-git config --local user.name "Gilberto Caetano de Andrade"
+#Basic usage
 
+`
 mvn mvn clean jbake:inline -Djbake.port=8080 -Djbake.listenAddress=0.0.0.0
-ou 
 mvn jbake:generate
+`
 
-setup 
+#Setup 
 
+`
 mvn clean 
 echo "target" >> .gitignore
 git worktree add target/blog gh-pages
+`
 
-making changes
+#Making changes
 
+`
 mvn jbake:generate
 cd target/blog
 git add --all && git commit -m "Publising at $(date)" && git push
 
---repeat
+##--repeat
 
---clean worktree
---back to root folder
+#Clean worktree
+
+Back to root folder
+
+`
 git worktree list
 mvn clean or rm -rf target/
 git worktree prune
-
-
-
+`
