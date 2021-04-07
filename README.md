@@ -1,33 +1,26 @@
-#Basic usage
+# Basic usage
 
-`
-mvn mvn clean jbake:inline -Djbake.port=8080 -Djbake.listenAddress=0.0.0.0
-mvn jbake:generate
-`
+    mvn mvn clean jbake:inline -Djbake.port=8080 -Djbake.listenAddress=0.0.0.0  
+    mvn jbake:generate  
 
-#Setup 
+# Setup 
 
-`
-mvn clean 
-echo "target" >> .gitignore
-git worktree add target/blog gh-pages
-`
+    mvn clean  
+    echo "target" >> .gitignore  
+    git worktree add target/blog gh-pages  
 
-#Making changes
+# Making changes
 
-`
-mvn jbake:generate
-cd target/blog
-git add --all && git commit -m "Publising at $(date)" && git push
+    mvn jbake:generate
+    cd target/blog
+    git add --all && git commit -m "Publising at $(date)" && git push
 
-##--repeat
+## --repeat
 
-#Clean worktree
+# Clean worktree
 
 Back to root folder
 
-`
-git worktree list
-mvn clean or rm -rf target/
-git worktree prune
-`
+    git worktree list
+    mvn clean or rm -rf target/
+    git worktree prune
