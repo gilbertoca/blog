@@ -29,5 +29,7 @@
         <!-- End Google Analytics -->
         <#include "adsense-auto.ftl">
         <link rel="shortcut icon" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>favicon.ico">
+        <!-- https://www.osano.com/cookieconsent/download/ -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     </head>
     <body>
