@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <title></title>
+        <meta charset="utf-8"/>
+        <title>Direct Path Load - Como configurar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+
+        <!--link href="http://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet" type="text/css"-->
+        <link rel="alternate" type="application/atom+xml" title="Vivendo e Aprendendo (Atom)" href="/feed.xml" />
+        <link href="../../css/default.css" rel="stylesheet">
+        <!--link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css" -->
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/monokai_sublime.min.css">  
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>        
+        <script>hljs.initHighlightingOnLoad();</script>
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-2586578-2', { 'storage': 'none' });
+            ga('set', 'anonymizeIp', true);
+            ga('send', 'pageview');
+        </script>
+        <!-- End Google Analytics -->
+<script data-ad-client="ca-pub-3863943400063116" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>        <link rel="shortcut icon" href="../../favicon.ico">
+        <!-- https://www.osano.com/cookieconsent/download/ -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    </head>
+    <body>
+	
+<header>
+	<hgroup>
+		<h1><a href="/">Vivendo e Aprendendo</a></h1>
+		<h2>Experiência prática na administração de Banco de Dados</h2>
+	</hgroup>
+</header>
+<nav>
+<menu>
+	<a href="../../index.html">Home</a>
+	<a href="../../archive.html">All posts</a>
+	<a href="../../about.html">About me</a>
+	<a href="../../feeds/posts/default.xml">Atom feed</a>
+	</menu>
+</nav>
+<section>
+<article>
+    <header>
+        <h1>Direct Path Load - Como configurar</h1>
+        <p>by <em>Gilberto C. Andrade</em> on <strong>01 Junho 2010</strong></p>
+        <p>Tagged as: 
+            <a href="../../tags/Database.html">Database</a>,
+            <a href="../../tags/Linux.html">Linux</a>,
+            <a href="../../tags/oracle.html">oracle</a>,
+        </p>
+    </header>
+    <section>
+	<blockquote>
+<p>Verificando posts de <a href="http://www.jroller.com/gilbertoca">meu antigo blog</a> notei que alguns não foram importados ou foram importados com defeitos em seu conteúdo. Então resolvi realizar um trabalho de revisão e o <strong><a href="http://www.jroller.com/gilbertoca/entry/direct_path_load_como_configurar">terceiro</a></strong> começa hoje:</p>
+</blockquote>
+<p>Para que se possa usar a opção de <a href="http://download.oracle.com/docs/cd/B19306_01/server.102/b14215/ldr_modes.htm#i1007669">carga direta usando o SQL Load</a>, você precisa primeiro configurar o banco de dados para tal atividade.<br />
+A configuração é simples, basta você executar o script catldr.sql, localizado na instalação do produto, $ORACLE_HOME/rdbms/admin.<br />
+Depois é só utilizar a opção direct=true na linha de comando.</p>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;">oracle<span style="color: #000000; font-weight: bold;">@</span>SUGEP-DMASI:~<span style="color: #000000; font-weight: bold;">&gt;</span> sqlplus <span style="color: #000000; font-weight: bold;">/</span> <span style="color: #c20cb9; font-weight: bold;">as</span> sysdba
+SQL<span style="color: #000000; font-weight: bold;">*</span>Plus: Release 10.2.0.1.0 - Production on Ter Jun <span style="color: #000000;">1</span> <span style="color: #000000;">17</span>:04:<span style="color: #000000;">20</span> <span style="color: #000000;">2010</span>
+Copyright <span style="color: #7a0874; font-weight: bold;">&#40;</span>c<span style="color: #7a0874; font-weight: bold;">&#41;</span> <span style="color: #000000;">1982</span>, <span style="color: #000000;">2005</span>, Oracle.  All rights reserved.
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+SQL<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000; font-weight: bold;">!</span><span style="color: #c20cb9; font-weight: bold;">ls</span> <span style="color: #007800;">$ORACLE_HOME</span><span style="color: #000000; font-weight: bold;">/</span>rdbms<span style="color: #000000; font-weight: bold;">/</span>admin<span style="color: #000000; font-weight: bold;">/</span>catl<span style="color: #000000; font-weight: bold;">*</span>
+<span style="color: #000000; font-weight: bold;">/</span>opt<span style="color: #000000; font-weight: bold;">/</span>oracle<span style="color: #000000; font-weight: bold;">/</span>db<span style="color: #000000; font-weight: bold;">/</span><span style="color: #000000;">10.2</span><span style="color: #000000; font-weight: bold;">/</span>server<span style="color: #000000; font-weight: bold;">/</span>rdbms<span style="color: #000000; font-weight: bold;">/</span>admin<span style="color: #000000; font-weight: bold;">/</span>catldap.sql  <span style="color: #000000; font-weight: bold;">/</span>opt<span style="color: #000000; font-weight: bold;">/</span>oracle<span style="color: #000000; font-weight: bold;">/</span>db<span style="color: #000000; font-weight: bold;">/</span><span style="color: #000000;">10.2</span><span style="color: #000000; font-weight: bold;">/</span>server<span style="color: #000000; font-weight: bold;">/</span>rdbms<span style="color: #000000; font-weight: bold;">/</span>admin<span style="color: #000000; font-weight: bold;">/</span>catlibc.sql
+<span style="color: #000000; font-weight: bold;">/</span>opt<span style="color: #000000; font-weight: bold;">/</span>oracle<span style="color: #000000; font-weight: bold;">/</span>db<span style="color: #000000; font-weight: bold;">/</span><span style="color: #000000;">10.2</span><span style="color: #000000; font-weight: bold;">/</span>server<span style="color: #000000; font-weight: bold;">/</span>rdbms<span style="color: #000000; font-weight: bold;">/</span>admin<span style="color: #000000; font-weight: bold;">/</span>catldr.sql   <span style="color: #000000; font-weight: bold;">/</span>opt<span style="color: #000000; font-weight: bold;">/</span>oracle<span style="color: #000000; font-weight: bold;">/</span>db<span style="color: #000000; font-weight: bold;">/</span><span style="color: #000000;">10.2</span><span style="color: #000000; font-weight: bold;">/</span>server<span style="color: #000000; font-weight: bold;">/</span>rdbms<span style="color: #000000; font-weight: bold;">/</span>admin<span style="color: #000000; font-weight: bold;">/</span>catlsby.sql
+&nbsp;
+SQL<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000; font-weight: bold;">@/</span>opt<span style="color: #000000; font-weight: bold;">/</span>oracle<span style="color: #000000; font-weight: bold;">/</span>db<span style="color: #000000; font-weight: bold;">/</span><span style="color: #000000;">10.2</span><span style="color: #000000; font-weight: bold;">/</span>server<span style="color: #000000; font-weight: bold;">/</span>rdbms<span style="color: #000000; font-weight: bold;">/</span>admin<span style="color: #000000; font-weight: bold;">/</span>catldr.sql
+.
+.
+View created.
+Synonym created.
+Grant succeeded.
+&nbsp;
+SQL<span style="color: #000000; font-weight: bold;">&gt;</span></pre>
+      </td>
+    </tr>
+  </table>
+</div></p> 
+
+    </section>
+<section>
+<div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'blog-gilbertoca-com';
+            var disqus_identifier = '370';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+</article>
+	
+</section>
+    <footer>
+        <p>
+            <a href="https://pages.github.com/">Hosted by GitHub Pages</a> -
+            <a href="http://jbake.org/">Generated with JBake</a> -
+            <a href="http://github.com/gilbertoca/gilbertoca.com">Source code</a>
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#eaf7f7",
+          "text": "#5c7291"
+        },
+        "button": {
+          "background": "#56cbdb",
+          "text": "#ffffff"
+        }
+      },
+      "content": {
+        "message": "Este site usa cookies do Google para fornecer seus serviços, personalizar anúncios e analisar o tráfego. Informações sobre seu uso deste site são compartilhadas com o Google. Ao utilizar este site, você concorda com o uso de cookies.",
+        "dismiss": "Concordo!",
+        "link": "Saiba mais",
+        "href": "https://policies.google.com/technologies/cookies"
+      }
+    });
+    </script>
+</body>
+</html>
