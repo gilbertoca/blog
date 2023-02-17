@@ -6,13 +6,13 @@
     <atom:link href="http://blog.gilbertoca.com/feeds/posts/default.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sex, 16 abr 2021 10:34:13 -0300</pubDate>
-    <lastBuildDate>Sex, 16 abr 2021 10:34:13 -0300</lastBuildDate>
+    <pubDate>sex, 17 fev 2023 14:45:11 -0300</pubDate>
+    <lastBuildDate>sex, 17 fev 2023 14:45:11 -0300</lastBuildDate>
 
     <item>
       <title>Visualizando arquivos de log no NetBeans</title>
       <link>http://blog.gilbertoca.com/2014/12/visualizando-arquivos-de-log-no-netbeans.html</link>
-      <pubDate>Sex, 5 dez 2014 00:00:00 -0300</pubDate>
+      <pubDate>sex, 5 dez 2014 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2014/12/visualizando-arquivos-de-log-no-netbeans.html</guid>
       	<description>
 	&lt;p&gt;&lt;em&gt;Disponível na Internet. &lt;a href=&quot;https://blogs.oracle.com/NetBeansSupport/entry/netbeans_ide_log_file&quot; target=&quot;_blank&quot;&gt;Viewing log files in NetBeans IDE&lt;/a&gt; Arquivo capturado em 05 de dezembro de 2014&lt;/em&gt;&lt;/p&gt;
@@ -29,7 +29,7 @@
     <item>
       <title>Cursor do notebook muda de lugar sozinho a todo instante na digitação</title>
       <link>http://blog.gilbertoca.com/2014/07/cursor-do-notebook-muda-de-lugar-sozinho-a-todo-instante-na-digitacao.html</link>
-      <pubDate>Sex, 25 jul 2014 00:00:00 -0300</pubDate>
+      <pubDate>sex, 25 jul 2014 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2014/07/cursor-do-notebook-muda-de-lugar-sozinho-a-todo-instante-na-digitacao.html</guid>
       	<description>
 	&lt;p&gt;Há duas semanas (férias) em casa, venho percebendo um comportamento irritante no laptop de trabalho de minha esposa: cursor pula fora da linha e se coloca em outra posição, desordenando as palavras ou frase quando estamos digitando um texto. É impossível escrever no Word, Navegador ou Skype pois o cursor não tem estabilidade.&lt;/p&gt;
@@ -50,7 +50,7 @@
     <item>
       <title>Oracle JDK8 no openSUSE</title>
       <link>http://blog.gilbertoca.com/2014/07/oracle-jdk8-no-opensuse.html</link>
-      <pubDate>Qua, 2 jul 2014 00:00:00 -0300</pubDate>
+      <pubDate>qua, 2 jul 2014 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2014/07/oracle-jdk8-no-opensuse.html</guid>
       	<description>
 	&lt;p&gt;Esta forma de instalação é mais resumida que a do &lt;a href=&quot;/2013/02/instale-oracle-jdk7-no-opensuse.html&quot; title=&quot;Instale Oracle JDK7 no openSUSE&quot; target=&quot;_blank&quot;&gt;post antigo&lt;/a&gt; e utiliza o formato comprimido (tar.gz).&lt;/p&gt;
@@ -79,11 +79,11 @@
     <item>
       <title>Ideologia do gênero neutro?? Não podem mudar os adultos...</title>
       <link>http://blog.gilbertoca.com/2014/06/ideologia-do-genero-neutro.html</link>
-      <pubDate>Qui, 12 jun 2014 00:00:00 -0300</pubDate>
+      <pubDate>qui, 12 jun 2014 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2014/06/ideologia-do-genero-neutro.html</guid>
       	<description>
 	&lt;p&gt;Ideologia do gênero neutro?? Não podem mudar os adultos. Querem mudar nossas crianças! Não sabe o que significa, então assista.&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/E2y6QeJbKcY?list=PLgG6b4TPOPJ8fxKUrNysnQmTvVy-yka8u&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/E2y6QeJbKcY?list=PLgG6b4TPOPJ8fxKUrNysnQmTvVy-yka8u&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;Dra. Damares Alves, Advogada, Pastora e Assessora Parlamentar foi entrevistada pela Rede Super de Televisão.&lt;/p&gt;
 &lt;p&gt;Ela fez um alerta às lideranças cristãs sobre Projetos de Lei que estão sendo debatidos e aprovados, os quais ferem princípios cristãos.&lt;/p&gt;
 &lt;p&gt;Confira o vídeo composto de 4 partes.&lt;/p&gt;
@@ -94,7 +94,7 @@
     <item>
       <title>Por que Modelagem de Domínio?</title>
       <link>http://blog.gilbertoca.com/2014/04/por-que-modelagem-de-dominio.html</link>
-      <pubDate>Sex, 11 abr 2014 00:00:00 -0300</pubDate>
+      <pubDate>sex, 11 abr 2014 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2014/04/por-que-modelagem-de-dominio.html</guid>
       	<description>
 	&lt;p&gt;&lt;em&gt;Disponível na Internet. Rebecca Wirfs-Brock &lt;a href=&quot;http://wirfs-brock.com/blog/2013/02/27/why-domain-modeling/&quot; target=&quot;_blank&quot;&gt;Why Domain Modeling?&lt;/a&gt; Arquivo capturado em 27 de fevereiro de 2013&lt;/em&gt;&lt;/p&gt;
@@ -122,10 +122,10 @@
     <item>
       <title>Os Segredos dos Casais Inteligentes (Gustavo Cerbasi)</title>
       <link>http://blog.gilbertoca.com/2013/12/os-segredos-dos-casais-inteligentes-gustavo-cerbasi.html</link>
-      <pubDate>Sex, 6 dez 2013 00:00:00 -0300</pubDate>
+      <pubDate>sex, 6 dez 2013 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2013/12/os-segredos-dos-casais-inteligentes-gustavo-cerbasi.html</guid>
       	<description>
-	&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/pU_U2NQ2nH4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+	&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/pU_U2NQ2nH4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;Nesta entrevista entre Seiiti Arata (Arata Academy) e Gustavo Cerbasi (Mais Dinheiro), aborda-se temas importantes para a vida financeira a dois, como a construção de riqueza, o bom diálogo entre o casal em assuntos relacionados a dinheiro, as infidelidades financeiras e também o divórcio e a importância em atentar para o regime de separação de bens. Você pode fazer o download desta entrevista na área de membros de nosso site aclassealta.com e conferir mais detalhes no novo livro Os Segredos dos Casais Inteligentes (Editora Sextante)&lt;/p&gt;
 
 	</description>
@@ -133,7 +133,7 @@
     <item>
       <title>Maioridade Penal: por Ariovaldo Ramos</title>
       <link>http://blog.gilbertoca.com/2013/11/maioridade-penal-por-ariovaldo-ramos.html</link>
-      <pubDate>Qua, 27 nov 2013 00:00:00 -0300</pubDate>
+      <pubDate>qua, 27 nov 2013 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2013/11/maioridade-penal-por-ariovaldo-ramos.html</guid>
       	<description>
 	&lt;iframe src=&quot;//player.vimeo.com/video/64759494&quot; width=&quot;500&quot; height=&quot;280&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
@@ -145,10 +145,10 @@
     <item>
       <title>Vida Melhor: Gustavo Cerbasi (Casais Inteligentes Enriquecem Juntos)</title>
       <link>http://blog.gilbertoca.com/2013/10/vida-melhor-gustavo-cerbasi-casais-inteligentes-enriquecem-juntos.html</link>
-      <pubDate>Ter, 29 out 2013 00:00:00 -0300</pubDate>
+      <pubDate>ter, 29 out 2013 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2013/10/vida-melhor-gustavo-cerbasi-casais-inteligentes-enriquecem-juntos.html</guid>
       	<description>
-	&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/4nf_xx8kEEc&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+	&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/4nf_xx8kEEc&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;Sábias palavras.&lt;/p&gt;
 
 	</description>
@@ -156,7 +156,7 @@
     <item>
       <title>Clássicos Nacionais - Pollyanna</title>
       <link>http://blog.gilbertoca.com/2013/10/classicos-nacionais-pollyanna.html</link>
-      <pubDate>Sex, 25 out 2013 00:00:00 -0300</pubDate>
+      <pubDate>sex, 25 out 2013 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2013/10/classicos-nacionais-pollyanna.html</guid>
       	<description>
 	&lt;p&gt;&lt;a href=&quot;http://www.ibep-nacional.com.br/nacional2010/htdocs/script/catalogo.asp?isbn=9788534230902&quot;&gt;&lt;img src=&quot;pollyanna-classicos-nacionais.jpg&quot; alt=&quot;pollyanna-classicos-nacionais&quot; width=&quot;400&quot; height=&quot;553&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -167,7 +167,7 @@
     <item>
       <title>O que pensavam os filósofos a respeito de Deus?</title>
       <link>http://blog.gilbertoca.com/2013/08/o-que-pensavam-os-filosofos-a-respeito-de-deus.html</link>
-      <pubDate>Qui, 29 ago 2013 00:00:00 -0300</pubDate>
+      <pubDate>qui, 29 ago 2013 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2013/08/o-que-pensavam-os-filosofos-a-respeito-de-deus.html</guid>
       	<description>
 	&lt;blockquote&gt;
@@ -184,7 +184,7 @@ Marco Polo ficou inquieto. Esfregou as duas mãos no rosto. Suspirou, colocou a 
     <item>
       <title>Livre-se do duplo click</title>
       <link>http://blog.gilbertoca.com/2013/05/livre-se-do-duplo-click.html</link>
-      <pubDate>Qua, 22 mai 2013 00:00:00 -0300</pubDate>
+      <pubDate>qua, 22 mai 2013 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2013/05/livre-se-do-duplo-click.html</guid>
       	<description>
 	&lt;p&gt;&lt;strong&gt;Primeiro screen-cast&lt;/strong&gt;&lt;/p&gt;
@@ -197,7 +197,7 @@ Marco Polo ficou inquieto. Esfregou as duas mãos no rosto. Suspirou, colocou a 
     <item>
       <title>Instale Oracle JDK7 no openSUSE</title>
       <link>http://blog.gilbertoca.com/2013/02/instale-oracle-jdk7-no-opensuse.html</link>
-      <pubDate>Qui, 21 fev 2013 00:00:00 -0300</pubDate>
+      <pubDate>qui, 21 fev 2013 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2013/02/instale-oracle-jdk7-no-opensuse.html</guid>
       	<description>
 	&lt;p&gt;Realize o download a partir deste local: &lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html&quot; title=&quot;Java SE Development Kit 7 Downloads&quot; target=&quot;_blank&quot;&gt;Java SE Development Kit 7 Downloads&lt;/a&gt;, em um diretório de sua escolha - escolhi: /Softwares_usados/Tools/java/jdk/ .&lt;/p&gt;
@@ -262,7 +262,7 @@ A37710:&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/sp
     <item>
       <title>openSUSE - Repositórios adicionais</title>
       <link>http://blog.gilbertoca.com/2012/10/opensuse-repositorios-adicionais.html</link>
-      <pubDate>Ter, 9 out 2012 00:00:00 -0300</pubDate>
+      <pubDate>ter, 9 out 2012 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2012/10/opensuse-repositorios-adicionais.html</guid>
       	<description>
 	&lt;p&gt;Vira e mexe (entre uma instalação e outra, ou um upgrade e outro) preciso adicionar alguns repositórios(repository) ao &lt;a href=&quot;http://pt.openSUSE.org/YaST_Software_Management&quot; title=&quot;Yast&quot; target=&quot;_blank&quot;&gt;Yast&lt;/a&gt; para aplicativos que costumo utilizar. Registro logo abaixo os que não podem faltar:&lt;/p&gt;
@@ -321,7 +321,7 @@ A37710:&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/sp
     <item>
       <title>Como baixar um site web inteiro - wget</title>
       <link>http://blog.gilbertoca.com/2012/09/como-baixar-um-site-web-inteiro-wget.html</link>
-      <pubDate>Qui, 20 set 2012 00:00:00 -0300</pubDate>
+      <pubDate>qui, 20 set 2012 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2012/09/como-baixar-um-site-web-inteiro-wget.html</guid>
       	<description>
 	&lt;p&gt;Na verdade, a pergunta correta seria: como baixar todas as páginas - e seus recursos (css, javascript, imagem, etc) - de um site web?&lt;br /&gt;
@@ -348,7 +348,7 @@ Assim temos:&lt;/p&gt;
     <item>
       <title>Java - Boas referências online</title>
       <link>http://blog.gilbertoca.com/2012/07/java-boas-referencias-online.html</link>
-      <pubDate>Sex, 13 jul 2012 00:00:00 -0300</pubDate>
+      <pubDate>sex, 13 jul 2012 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2012/07/java-boas-referencias-online.html</guid>
       	<description>
 	&lt;p&gt;Tenho alguns livros sobre Java, mas com as mudanças que a linguagem sofreu nos três últimos anos tenho por mim que minhas referências estão desatualizadas. Meu grande interesse é entender melhor os detalhes que muitos programadores (vindos de outra linguagem ou não) ignoram - seja por desconhecimento, seja por desinteresse, pois o arcabouço de APIs Java é muito amplo.&lt;/p&gt;
@@ -369,7 +369,7 @@ Assim temos:&lt;/p&gt;
     <item>
       <title>Java Concorrente na Prática - crítica</title>
       <link>http://blog.gilbertoca.com/2012/06/java-concorrente-na-pratica-critica.html</link>
-      <pubDate>Sex, 1 jun 2012 00:00:00 -0300</pubDate>
+      <pubDate>sex, 1 jun 2012 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2012/06/java-concorrente-na-pratica-critica.html</guid>
       	<description>
 	&lt;p&gt;Para um livro já consagrado, uma boa tradução seria o mínimo. Mas lamento relatar que o profissional escolhido para tal tarefa deixou muito a desejar. Quem fez a revisão editorial do livro - se é que o fez - , também, não realizou um bom trabalho. É nítido, a partir do primeiro capítulo, o descaso com o leitor. Um exemplo explícito disto é você ver em várias partes do livro a operação de copiar e colar, ou melhor de substituição de texto: o tradutor ou editor, substituiu a sigla GUI por Grafical User Interface onde pode, assim, onde houvesse seGUIR, conseGUIR, etc. encontramos conseGUI(Grafical User Interface). Legal né!&lt;/p&gt;
@@ -388,7 +388,7 @@ Assim temos:&lt;/p&gt;
     <item>
       <title>É um PostgreSQL! Não, é um MSSql! Não, é um DB2! [h2 modo compatibilidade]</title>
       <link>http://blog.gilbertoca.com/2012/05/e-um-postgresql-nao-e-um-mssql-nao-e-um-db2-h2-modo-compatibilidade.html</link>
-      <pubDate>Sex, 18 mai 2012 00:00:00 -0300</pubDate>
+      <pubDate>sex, 18 mai 2012 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2012/05/e-um-postgresql-nao-e-um-mssql-nao-e-um-db2-h2-modo-compatibilidade.html</guid>
       	<description>
 	&lt;p&gt;Calma pessoal, é apenas o banco &lt;a href=&quot;http://www.h2database.com/html/features.html#compatibility&quot; target=&quot;_blank&quot;&gt;H2 em modo compatibilidade&lt;/a&gt;! Imagine&lt;br /&gt;
@@ -517,7 +517,7 @@ banco PostgreSQL!&lt;/p&gt;
     <item>
       <title>Como o Linux é construído - Vídeo</title>
       <link>http://blog.gilbertoca.com/2012/04/como-o-linux-e-construido-video.html</link>
-      <pubDate>Ter, 3 abr 2012 00:00:00 -0300</pubDate>
+      <pubDate>ter, 3 abr 2012 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2012/04/como-o-linux-e-construido-video.html</guid>
       	<description>
 	&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/yVpbFMhOAwE&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
@@ -528,7 +528,7 @@ banco PostgreSQL!&lt;/p&gt;
     <item>
       <title>Alterne entre versões Java facilmente [update-alternatives] parte 2</title>
       <link>http://blog.gilbertoca.com/2012/03/alterne-entre-versoes-java-facilmente-update-alternatives-parte-2.html</link>
-      <pubDate>Seg, 26 mar 2012 00:00:00 -0300</pubDate>
+      <pubDate>seg, 26 mar 2012 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2012/03/alterne-entre-versoes-java-facilmente-update-alternatives-parte-2.html</guid>
       	<description>
 	&lt;p&gt;A um tempo atrás escrevi sobre o &lt;a href=&quot;http://linux.die.net/man/8/update-alternatives&quot; title=&quot;update-alternatives&quot; target=&quot;_blank&quot;&gt;utilitário de sistema update-alternatives&lt;/a&gt; e mostrei &lt;a href=&quot;http://blog.gilbertoca.com/?p=383&quot; title=&quot;Alterne entre versões Java facilmente [update-alternatives]&quot; target=&quot;_blank&quot;&gt;como alternar entre versões do Java usando o mesmo&lt;/a&gt;. Naquele mesmo post mostrei que o Java já havia sido instalado e configurado pelo sistema de gerenciamento de pacotes pre-definido - &lt;a href=&quot;http://en.openSUSE.org/YaST_Software_Management&quot; title=&quot;Yast&quot; target=&quot;_blank&quot;&gt;Yast&lt;/a&gt;. Como já é de conhecimento de alguns a &lt;a href=&quot;http://www.oracle.com&quot; title=&quot;oracle&quot; target=&quot;_blank&quot;&gt;Oracle&lt;/a&gt; mudou a &lt;a href=&quot;http://www.hardware.com.br/noticias/2011-08/java-licenca-linux.html&quot; title=&quot;mudança de licença Java&quot; target=&quot;_blank&quot;&gt;forma de licenciamento do Java&lt;/a&gt; e com isso a maioria das distribuições - senão todas - optaram por retirar o Java distribuído pela Oracle de seus repositórios. Com isso, se você precisar instalar a versão Java da Oracle terá que fazê-la manualmente.&lt;/p&gt;
@@ -618,7 +618,7 @@ zypper &lt;span style=&quot;color: #c20cb9; font-weight: bold;&quot;&gt;install&
     <item>
       <title>Consumismo Infantil, um problema de todos</title>
       <link>http://blog.gilbertoca.com/2012/03/consumismo-infantil-um-problema-de-todos.html</link>
-      <pubDate>Seg, 19 mar 2012 00:00:00 -0300</pubDate>
+      <pubDate>seg, 19 mar 2012 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2012/03/consumismo-infantil-um-problema-de-todos.html</guid>
       	<description>
 	&lt;blockquote&gt;
@@ -634,7 +634,7 @@ zypper &lt;span style=&quot;color: #c20cb9; font-weight: bold;&quot;&gt;install&
     <item>
       <title>Gnome 3 - diálogo modal move toda a aplicação</title>
       <link>http://blog.gilbertoca.com/2012/03/gnome-3-dialogo-modal-move-toda-a-aplicacao.html</link>
-      <pubDate>Sex, 2 mar 2012 00:00:00 -0300</pubDate>
+      <pubDate>sex, 2 mar 2012 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2012/03/gnome-3-dialogo-modal-move-toda-a-aplicacao.html</guid>
       	<description>
 	&lt;p&gt;É, finalmente consegui um tempo para postar algo aqui no blog. Ultimamente (nos dois últimos meses) estive ocupado trabalhando na conversão de alguns projetos java para web: usavam Ant e agora, este trabalho, usam Maven. Neste período, &lt;a href=&quot;http://blog.gilbertoca.com/?p=415&quot; target=&quot;_blank&quot;&gt;como vocês bem sabem&lt;/a&gt;, fiz a atualização (na verdade uma nova instalação) do &lt;a href=&quot;http://www.openSUSE.org&quot;&gt;openSUSE&lt;/a&gt;. Estava com a versão 11.3 e com o recente lançamento da &lt;a href=&quot;http://software.openSUSE.org/121/en&quot; target=&quot;_blank&quot;&gt;versão 12.1&lt;/a&gt;, não resisti - ansioso por usar o novo &lt;a href=&quot;http://www.gnome.org/gnome-3/&quot; target=&quot;_blank&quot;&gt;Gnome 3&lt;/a&gt;.&lt;/p&gt;
@@ -668,7 +668,7 @@ No GNOME 3, o comportamento padrão de diálogo modal é este anexar-se à janel
     <item>
       <title>Usando comando GREP em documentos Word, OpenOffice ou LibreOffice</title>
       <link>http://blog.gilbertoca.com/2011/11/grep-like-command-for-doc-files.html</link>
-      <pubDate>Qui, 10 nov 2011 00:00:00 -0300</pubDate>
+      <pubDate>qui, 10 nov 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/11/grep-like-command-for-doc-files.html</guid>
       	<description>
 	&lt;p&gt;Esta é uma pequena dica. Se você tem uma grande quantidade de arquivos MS Word, OpenOffice e agora LibreOffice, com certeza já teve a necessidade de utilizar os recursos que o Shell Linux/Unix nos trás - grep, sed, more, strings, &lt;a href=&quot;http://www.wagner.pp.ru/~vitus/software/catdoc/&quot; title=&quot;catdoc&quot; target=&quot;_blank&quot;&gt;catdoc&lt;/a&gt;, &lt;a href=&quot;http://www.winfield.demon.nl/&quot; title=&quot;antiwork&quot; target=&quot;_blank&quot;&gt;antiwork&lt;/a&gt;, etc.&lt;/p&gt;
@@ -708,7 +708,7 @@ gilberto&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;@&lt;/s
     <item>
       <title>Alcohol 120% - Aguardando Disco</title>
       <link>http://blog.gilbertoca.com/2011/11/alcohol-120-aguardando-disco.html</link>
-      <pubDate>Qui, 3 nov 2011 00:00:00 -0300</pubDate>
+      <pubDate>qui, 3 nov 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/11/alcohol-120-aguardando-disco.html</guid>
       	<description>
 	&lt;p&gt;&lt;a href=&quot;imagem_alcohol.png&quot;&gt;&lt;img src=&quot;imagem_alcohol.png&quot; title=&quot;imagem_alcohol&quot; width=&quot;1024&quot; height=&quot;768&quot; class=&quot;alignright size-full wp-image-839&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -721,7 +721,7 @@ Referência: &lt;a href=&quot;http://forum.alcohol-soft.com/index.php?/topic/265
     <item>
       <title>Questionando a existência de Deus</title>
       <link>http://blog.gilbertoca.com/2011/10/questionando-a-existencia-de-deus.html</link>
-      <pubDate>Seg, 10 out 2011 00:00:00 -0300</pubDate>
+      <pubDate>seg, 10 out 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/10/questionando-a-existencia-de-deus.html</guid>
       	<description>
 	&lt;blockquote&gt;
@@ -750,7 +750,7 @@ Referência: &lt;a href=&quot;http://forum.alcohol-soft.com/index.php?/topic/265
     <item>
       <title>A tabela de softwares equivalentes/substituições/ análogos Windows no Linux.</title>
       <link>http://blog.gilbertoca.com/2011/09/a-tabela-de-softwares-equivalentes-substituicoes-analogos-windows-no-linux.html</link>
-      <pubDate>Sex, 2 set 2011 00:00:00 -0300</pubDate>
+      <pubDate>sex, 2 set 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/09/a-tabela-de-softwares-equivalentes-substituicoes-analogos-windows-no-linux.html</guid>
       	<description>
 	&lt;p&gt;É novo usuário do sistema Linux(&lt;a href=&quot;http://www.openSUSE.org/pt-br/&quot; title=&quot;openSUSE&quot; target=&quot;_blank&quot;&gt;openSUSE&lt;/a&gt;, &lt;a href=&quot;http://www.projetofedora.org/&quot; title=&quot;Fedora&quot; target=&quot;_blank&quot;&gt;Fedora&lt;/a&gt;, &lt;a href=&quot;http://www.ubuntu-br.org/&quot; title=&quot;Ubuntu&quot; target=&quot;_blank&quot;&gt;Ubuntu&lt;/a&gt;, &lt;a href=&quot;http://www.mandriva.com/br/&quot; title=&quot;Mandriva&quot; target=&quot;_blank&quot;&gt;Mandriva&lt;/a&gt;, etc)? Não sabe por onde começar? Não encontra aquele programa que costumava usar ou um equivalente? Pior, não sabe o nome do programa que precisa usar(Editor de Textos, Planilha Eletrônica, Navegador Web, Gerenciador de Arquivos, Gerenciador de Transferência de Arquivos Remoto, Editoração Eletrônica, etc)?&lt;br /&gt;
@@ -761,11 +761,11 @@ Eis &lt;a href=&quot;http://www.linuxrsp.ru/win-lin-soft/table-eng.html&quot; ti
     <item>
       <title>Onde vc acha que Deus está?</title>
       <link>http://blog.gilbertoca.com/2011/08/onde-vc-acha-que-deus-esta.html</link>
-      <pubDate>Qua, 17 ago 2011 00:00:00 -0300</pubDate>
+      <pubDate>qua, 17 ago 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/08/onde-vc-acha-que-deus-esta.html</guid>
       	<description>
 	&lt;p&gt;&lt;strong&gt;&lt;p&gt;Te desafio a assistir até o fim.&lt;/p&gt;&lt;/strong&gt; &lt;br /&gt;&lt;code&gt;&lt;/p&gt;
-&lt;br /&gt;&lt;iframe src=&quot;http://player.vimeo.com/video/27206833?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;400&quot; height=&quot;225&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;http://vimeo.com/27206833&quot;&gt;Ruídos na Comunicação com Deus&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/sibapa&quot;&gt;sibapa&lt;/a&gt; on &lt;a href=&quot;http://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+&lt;br /&gt;&lt;iframe src=&quot;https://player.vimeo.com/video/27206833?h=4cd007c5e2&quot; width=&quot;640&quot; height=&quot;362&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;https://vimeo.com/27206833&quot;&gt;Ruídos na Comunicação com Deus&lt;/a&gt; from &lt;a href=&quot;https://vimeo.com/sibapa&quot;&gt;sibapa&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
 &lt;br /&gt;&lt;/code&gt;
 
 	</description>
@@ -773,7 +773,7 @@ Eis &lt;a href=&quot;http://www.linuxrsp.ru/win-lin-soft/table-eng.html&quot; ti
     <item>
       <title>Extensões (complementos) FireFox</title>
       <link>http://blog.gilbertoca.com/2011/08/extensoescomplementos-uteis-firefox.html</link>
-      <pubDate>Qui, 11 ago 2011 00:00:00 -0300</pubDate>
+      <pubDate>qui, 11 ago 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/08/extensoescomplementos-uteis-firefox.html</guid>
       	<description>
 	&lt;p&gt;As seguintes &lt;a href=&quot;http://br.mozdev.org/firefox/extensoes&quot;&gt;extensões (complementos)&lt;/a&gt; para o &lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/&quot;&gt;navegador FireFox&lt;/a&gt; melhoram bastante a navegabilidade:&lt;/p&gt;
@@ -917,7 +917,7 @@ Eis &lt;a href=&quot;http://www.linuxrsp.ru/win-lin-soft/table-eng.html&quot; ti
     <item>
       <title>Nosso herói!</title>
       <link>http://blog.gilbertoca.com/2011/07/nosso-heroi.html</link>
-      <pubDate>Sex, 22 jul 2011 00:00:00 -0300</pubDate>
+      <pubDate>sex, 22 jul 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/07/nosso-heroi.html</guid>
       	<description>
 	&lt;table width=&quot;537&quot; cellspacing=&quot;0&quot; cellpadding=&quot;7&quot;&gt;
@@ -1015,7 +1015,7 @@ Eis &lt;a href=&quot;http://www.linuxrsp.ru/win-lin-soft/table-eng.html&quot; ti
     <item>
       <title>Linux - Participação no domínio do Windows</title>
       <link>http://blog.gilbertoca.com/2011/07/participacao-no-dominio-do-windows.html</link>
-      <pubDate>Sex, 15 jul 2011 00:00:00 -0300</pubDate>
+      <pubDate>sex, 15 jul 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/07/participacao-no-dominio-do-windows.html</guid>
       	<description>
 	&lt;blockquote&gt;
@@ -1076,7 +1076,7 @@ Eis &lt;a href=&quot;http://www.linuxrsp.ru/win-lin-soft/table-eng.html&quot; ti
     <item>
       <title>Firefox com rolagem lenta? Eis a solução!</title>
       <link>http://blog.gilbertoca.com/2011/06/firefox-com-rolagem-lenta-eis-a-solucao.html</link>
-      <pubDate>Ter, 28 jun 2011 00:00:00 -0300</pubDate>
+      <pubDate>ter, 28 jun 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/06/firefox-com-rolagem-lenta-eis-a-solucao.html</guid>
       	<description>
 	&lt;p&gt;Abra o Firefox, em “Editar &amp;gt;&amp;gt; Preferências &amp;gt;&amp;gt; Avançado &amp;gt;&amp;gt; Geral”, desmarque a opção “Rolagem Suave” na parte navegação.&lt;/p&gt;
@@ -1088,7 +1088,7 @@ Valeu Ronnie! &lt;img src=&quot;http://blog.gilbertoca.com/wp-includes/images/sm
     <item>
       <title>Removendo itens pré-definidos da barra lateral(sidebar) iNove template</title>
       <link>http://blog.gilbertoca.com/2011/06/removendo-itens-pre-definidos-da-barra-lateralsidebar-inove-template.html</link>
-      <pubDate>Qua, 15 jun 2011 00:00:00 -0300</pubDate>
+      <pubDate>qua, 15 jun 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/06/removendo-itens-pre-definidos-da-barra-lateralsidebar-inove-template.html</guid>
       	<description>
 	&lt;p&gt;Há algum tempo venho tentando personalizar a barra lateral(sidebar) do tema(&lt;a href=&quot;http://www.neoease.com/inove/&quot;&gt;iNove template&lt;/a&gt;) que adotei pro blog. Mas quando adiciono, por exemplo, um widget no sidebar Norte ele aparece duplicado.&lt;/p&gt;
@@ -1113,7 +1113,7 @@ Valeu Ronnie! &lt;img src=&quot;http://blog.gilbertoca.com/wp-includes/images/sm
     <item>
       <title>Herança de Projeto vs Agregação de Projeto</title>
       <link>http://blog.gilbertoca.com/2011/06/heranca-de-projeto-vs-agregacao-de-projeto.html</link>
-      <pubDate>Qua, 15 jun 2011 00:00:00 -0300</pubDate>
+      <pubDate>qua, 15 jun 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/06/heranca-de-projeto-vs-agregacao-de-projeto.html</guid>
       	<description>
 	&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://maven.apache.org/pom.html#Inheritance&quot;&gt;Requisito&lt;/a&gt;:&lt;/strong&gt; The packaging type required to be pom for parent and aggregation (multi-module) projects.&lt;br /&gt;
@@ -1245,7 +1245,7 @@ Bom, primeiro devo dizer que usamos herança em arquivos maven para compartilhar
     <item>
       <title>Debugando com Maven Jetty Plugin no Netbeans</title>
       <link>http://blog.gilbertoca.com/2011/05/use-jetty-para-executar-aplicacoes-web-maven-no-netbeans.html</link>
-      <pubDate>Sex, 13 mai 2011 00:00:00 -0300</pubDate>
+      <pubDate>sex, 13 mai 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/05/use-jetty-para-executar-aplicacoes-web-maven-no-netbeans.html</guid>
       	<description>
 	&lt;p&gt;&lt;a href=&quot;http://www.eclipse.org/jetty/&quot;&gt;Jetty&lt;/a&gt;é um servidor web excelente. É rápido para iniciar o que o torna muito útil durante o desenvolvimento. A &lt;a href=&quot;http://maven.apache.org/what-is-maven.html&quot;&gt;ferramente de construção Maven&lt;/a&gt; possui um &lt;a href=&quot;http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin&quot;&gt;plugin Jetty&lt;/a&gt; que podemos usar em nossos projetos de aplicação Web que utilizam Maven. Desta forma, podemos usar o Jetty para testar nossos arquivos HTML/JSP/JSF/Wicket/Click/etc. Podemos editar o arquivo JSP/HTML e atualizar nosso navegador para ver o resultado imediatamente. Podemos até mesmo compilar um arquivo de classe Java e o servidor Jetty irá reiniciar para que possamos testar o resultado no nosso navegador.&lt;br /&gt;
@@ -1291,7 +1291,7 @@ Pronto!! &lt;img src=&quot;http://blog.gilbertoca.com/wp-includes/images/smilies
     <item>
       <title>REGULAMENTAÇÃO DA PROFISSÃO DE INFORMÁTICA</title>
       <link>http://blog.gilbertoca.com/2011/05/regulamentacao-da-profissao-de-informatica.html</link>
-      <pubDate>Qua, 4 mai 2011 00:00:00 -0300</pubDate>
+      <pubDate>qua, 4 mai 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/05/regulamentacao-da-profissao-de-informatica.html</guid>
       	<description>
 	&lt;p&gt;**&lt;br /&gt;
@@ -1309,7 +1309,7 @@ Será que agora vai?&lt;br /&gt;
     <item>
       <title>Porções Diárias da Bíblia[Pão Diário &amp;#038; Manancial]</title>
       <link>http://blog.gilbertoca.com/2011/04/pao-diario-manancial.html</link>
-      <pubDate>Qui, 28 abr 2011 00:00:00 -0300</pubDate>
+      <pubDate>qui, 28 abr 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/04/pao-diario-manancial.html</guid>
       	<description>
 	&lt;p&gt;Diversos autores compartilham experiências de vida sob uma ótica cristã, trazendo mensagens diárias (simples mas profundas) de encorajamento e reflexão, que mostram uma nova perspectiva de enfrentar os desafios da vida cotidiana. Pastores, escolas, empresas, igrejas e cidadãos que querem crescer na vida devocional têm procurado esse material.&lt;/p&gt;
@@ -1349,7 +1349,7 @@ Os benefícios de uma leitura constante da Bíblia são imensos, mas isso conto 
     <item>
       <title>Apache Shiro Parte 1 - básico</title>
       <link>http://blog.gilbertoca.com/2011/04/apache-shiro-parte-1-basico.html</link>
-      <pubDate>Qui, 7 abr 2011 00:00:00 -0300</pubDate>
+      <pubDate>qui, 7 abr 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/04/apache-shiro-parte-1-basico.html</guid>
       	<description>
 	&lt;p&gt;**&lt;/p&gt;
@@ -1882,7 +1882,7 @@ Se um usuário autenticado não tiver a permissão requerida, uma mensagem de er
     <item>
       <title>pen drive - Cadê minhas pastas?</title>
       <link>http://blog.gilbertoca.com/2011/03/pen-drive-cade-minhas-pastas.html</link>
-      <pubDate>Sex, 25 mar 2011 00:00:00 -0300</pubDate>
+      <pubDate>sex, 25 mar 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/03/pen-drive-cade-minhas-pastas.html</guid>
       	<description>
 	&lt;p&gt;Meus problemas com &lt;a href=&quot;http://pt.wikipedia.org/wiki/V%C3%ADrus_de_computador&quot; target=&quot;_blank&quot;&gt;vírus de computador&lt;/a&gt;, aqui em casa, já se tornaram história. Não me lembro quando foi a última vez que tive o trabalho de criar um &lt;a href=&quot;http://www.ubcd4win.com/howto.htm&quot; target=&quot;_blank&quot;&gt;CD para boot do Windows XP&lt;/a&gt; e a partir dele realizar a limpeza - isso não é totalmente verdade, volta e meia tenho que fazer isso para &lt;a href=&quot;http://pt.wikipedia.org/wiki/Laptop&quot; target=&quot;_blank&quot;&gt;NoteBooks&lt;/a&gt; de colegas ou de colegas de minha esposa.&lt;/p&gt;
@@ -1946,7 +1946,7 @@ C:\Demonstracao&amp;gt;&lt;/pre&gt;
     <item>
       <title>EU, MIM ou ME? [Mapa Mental]</title>
       <link>http://blog.gilbertoca.com/2011/02/eu-mim-ou-me-mapa-mental.html</link>
-      <pubDate>Sex, 4 fev 2011 00:00:00 -0300</pubDate>
+      <pubDate>sex, 4 fev 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/02/eu-mim-ou-me-mapa-mental.html</guid>
       	<description>
 	&lt;p&gt;&lt;span class=&quot;style_0&quot;&gt;Exercício 1.0: Use EU, MIM ou ME, conforme convenha.&lt;/span&gt;&lt;/p&gt;
@@ -1975,7 +1975,7 @@ C:\Demonstracao&amp;gt;&lt;/pre&gt;
     <item>
       <title>A inteligência de Cristo diante da ansiedade</title>
       <link>http://blog.gilbertoca.com/2011/01/a-inteligencia-de-cristo-diante-da-ansiedade.html</link>
-      <pubDate>Seg, 3 jan 2011 00:00:00 -0300</pubDate>
+      <pubDate>seg, 3 jan 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/01/a-inteligencia-de-cristo-diante-da-ansiedade.html</guid>
       	<description>
 	&lt;blockquote&gt;
@@ -1998,7 +1998,7 @@ C:\Demonstracao&amp;gt;&lt;/pre&gt;
     <item>
       <title>Sumiu os botões maximizar,minimizar,fechar[openSUSE 11.3]</title>
       <link>http://blog.gilbertoca.com/2010/12/sumiu-os-botoes-maximizarminimizarfecharopensuse-11-3.html</link>
-      <pubDate>Qui, 30 dez 2010 00:00:00 -0300</pubDate>
+      <pubDate>qui, 30 dez 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/12/sumiu-os-botoes-maximizarminimizarfecharopensuse-11-3.html</guid>
       	<description>
 	&lt;p&gt;Este comportamento do gerenciador de janelas é esquisito, para não dizer indesejável. A coisa fica mais estranha ainda pois não tenho meios de rastrear a causa do problema (placa de vídeo, kernel, gnome, gdm qual é o cupido?). Alguém pode, em algumas situações, acusar o compiz, mas este não o caso - placa legada:&lt;/p&gt;
@@ -2080,7 +2080,7 @@ Observe que a imagem traz o botão de fechar, isso porque fiz a captura da tela 
     <item>
       <title>Atualização openSUSE 11.3 danifica Java</title>
       <link>http://blog.gilbertoca.com/2010/12/atualizacao-opensuse-11-3-danifica-java.html</link>
-      <pubDate>Ter, 7 dez 2010 00:00:00 -0300</pubDate>
+      <pubDate>ter, 7 dez 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/12/atualizacao-opensuse-11-3-danifica-java.html</guid>
       	<description>
 	&lt;p&gt;Veja como o &lt;a href=&quot;http://blog.gilbertoca.com/?p=383&quot;&gt;post que menciono o uso do utilitário update-alternatives&lt;/a&gt; é importante.&lt;br /&gt;
@@ -2121,7 +2121,7 @@ There are 2 alternatives which provide `javaplugin’.
     <item>
       <title>Morte</title>
       <link>http://blog.gilbertoca.com/2010/11/morte-estou-lendo-e-voce.html</link>
-      <pubDate>Seg, 8 nov 2010 00:00:00 -0300</pubDate>
+      <pubDate>seg, 8 nov 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/11/morte-estou-lendo-e-voce.html</guid>
       	<description>
 	&lt;blockquote cite=&quot;http://www.ograndeconflito.com.br/&quot;&gt;
@@ -2140,7 +2140,7 @@ There are 2 alternatives which provide `javaplugin’.
     <item>
       <title>Melhor aparência (fonte)[openSUSE 11.3]</title>
       <link>http://blog.gilbertoca.com/2010/10/melhor-aparencia-fonteopensuse-11-3.html</link>
-      <pubDate>Sex, 22 out 2010 00:00:00 -0300</pubDate>
+      <pubDate>sex, 22 out 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/10/melhor-aparencia-fonteopensuse-11-3.html</guid>
       	<description>
 	&lt;p&gt;Sexta-feira, final de tarde! Um bom motivo para me aventurar em uma área que costumo deixar de lado: configuração do desktop. Primeiro as fontes! Percebo que as fontes não são exibidas de forma suave e elas estão bem pequenas devido a minha resolução de vídeo - 1152x864. Vou seguir &lt;a href=&quot;http://www.linuxcrunch.com/content/font-smoothing-openSUSE-112&quot;&gt;a seguinte dica&lt;/a&gt;, descrita por Fahad:&lt;/p&gt;
@@ -2172,7 +2172,7 @@ There are 2 alternatives which provide `javaplugin’.
     <item>
       <title>bash não lê o arquivo .bashrc na inicialização[Cygwin]</title>
       <link>http://blog.gilbertoca.com/2010/08/bash-nao-le-o-arquivo-bashrc-na-inicializacaocygwin.html</link>
-      <pubDate>Ter, 24 ago 2010 00:00:00 -0300</pubDate>
+      <pubDate>ter, 24 ago 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/08/bash-nao-le-o-arquivo-bashrc-na-inicializacaocygwin.html</guid>
       	<description>
 	&lt;p&gt;Uso a bastante tempo o ambiente &lt;a href=&quot;http://cygwin.com&quot;&gt;Cygwin&lt;/a&gt;em casa. Recentemente realizei a atualização para a versão 1.7. Por enquanto nenhuma queixa, tudo funcionando normalmente. Hoje resolvi me aventurar e customizar o console utilizado como padrão - cmd.exe. Para isso tomei como base o seguinte artigo: &lt;a href=&quot;http://infrablue.tripod.com/cygwin.html&quot;&gt;Useful Configuration of Cygwin, Part 1: Install, rxvt, and BASH&lt;/a&gt;. Fiz todos os ajustes recomendados e fui realizar o teste, mas por algum motivo meu arquivo .bashrc - de ajustes do ambiente bash - não era carregado na inicialização do &lt;a href=&quot;http://cygwin.com&quot;&gt;Cygwin&lt;/a&gt;.&lt;/p&gt;
@@ -2195,7 +2195,7 @@ There are 2 alternatives which provide `javaplugin’.
     <item>
       <title>Alterne entre versões Java facilmente [Netbeans 6.*]</title>
       <link>http://blog.gilbertoca.com/2010/07/alterne-entre-versoes-java-facilmente-netbeans-6.html</link>
-      <pubDate>Qua, 21 jul 2010 00:00:00 -0300</pubDate>
+      <pubDate>qua, 21 jul 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/07/alterne-entre-versoes-java-facilmente-netbeans-6.html</guid>
       	<description>
 	&lt;p&gt;Outro dia escrevi como &lt;a href=&quot;http://blog.gilbertoca.com/?p=383&quot;&gt;alterner entre versões Java facilmente&lt;/a&gt; utilizando o utilitário de sistema operacional &lt;a href=&quot;http://man.he.net/man8/update-alternatives&quot;&gt;update-alternatives&lt;/a&gt;. Aquele post tem uma perspectiva do lado do servidor onde estão instalados servidores de aplicação java ou mesmo aplicativos e o administrador/desenvolvedor precisa testar como estes artefatos mencionados se comportariam em cada versão.&lt;/p&gt;
@@ -2212,7 +2212,7 @@ Lembrando que antes disso precisamos instalar as versões que desejamos utilizar
     <item>
       <title>Renomear um projeto[SUBVERSION]</title>
       <link>http://blog.gilbertoca.com/2010/07/renomear-um-projetosubversion.html</link>
-      <pubDate>Seg, 19 jul 2010 00:00:00 -0300</pubDate>
+      <pubDate>seg, 19 jul 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/07/renomear-um-projetosubversion.html</guid>
       	<description>
 	&lt;p&gt;Em nossa área de tecnologia da informação é comum o desgaste em discussões para nomear objetos, recursos, projetos, etc, sem falar em nossa imaginação para o assunto. Devo confessar, somos ímpares nesse quesito! &lt;img src=&quot;http://blog.gilbertoca.com/wp-includes/images/smilies/icon_smile.gif&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; /&gt;&lt;/p&gt;
@@ -2251,7 +2251,7 @@ Veja como ficaria comando usando URL:&lt;/p&gt;
     <item>
       <title>Testes de Unidade em Paralelo[Maven|JUnit]</title>
       <link>http://blog.gilbertoca.com/2010/07/testes-de-unidade-em-paralelomavenjunit.html</link>
-      <pubDate>Qui, 8 jul 2010 00:00:00 -0300</pubDate>
+      <pubDate>qui, 8 jul 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/07/testes-de-unidade-em-paralelomavenjunit.html</guid>
       	<description>
 	&lt;p&gt;&lt;a href=&quot;http://java.dzone.com/articles/running-junit-tests-parallel?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+javalobby%2Ffrontpage+%28Javalobby+%2F+Java+Zone%29&quot; target=&quot;_blank&quot;&gt;Este artigo&lt;/a&gt; no &lt;a href=&quot;http://www.dzone.com/links/index.html&quot; target=&quot;_blank&quot;&gt;Dzone &lt;/a&gt;explica detalhadamente como executar testes em paralelo utilizando &lt;a href=&quot;http://maven.apache.org&quot; target=&quot;_blank&quot;&gt;Maven &lt;/a&gt;e &lt;a href=&quot;http://www.junit.org/&quot; target=&quot;_blank&quot;&gt;JUnit&lt;/a&gt;.&lt;/p&gt;
@@ -2262,7 +2262,7 @@ Veja como ficaria comando usando URL:&lt;/p&gt;
     <item>
       <title>Empathy não conectando ao MSN</title>
       <link>http://blog.gilbertoca.com/2010/06/empathy-nao-conectando-ao-msnopensuse-11-2.html</link>
-      <pubDate>Ter, 22 jun 2010 00:00:00 -0300</pubDate>
+      <pubDate>ter, 22 jun 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/06/empathy-nao-conectando-ao-msnopensuse-11-2.html</guid>
       	<description>
 	&lt;p&gt;Recentimente resolvi, novamente, atualizar o gnome da versão 2.28 para 2.30 através do procedimento descrito neste endereço: &lt;a href=&quot;http://en.openSUSE.org/GNOME/2.30&quot;&gt;http://en.openSUSE.org/GNOME/2.30&lt;/a&gt; .  Como sempre sem problemas. &lt;a href=&quot;http://www.gnome.org/&quot; target=&quot;_blank&quot;&gt;O gnome&lt;/a&gt; é um ambiente bastante consistente e a meu ver seguro! Mas um componente que uso como meio de comunicação - &lt;a href=&quot;http://live.gnome.org/Empathy&quot; target=&quot;_blank&quot;&gt;Empathy&lt;/a&gt; - começou a apresentar um erro conexão usando o protocolo MSN. Não havia percebido tal problema porque até então só tinha utilizado o &lt;a href=&quot;http://pt.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol&quot; target=&quot;_blank&quot;&gt;protocolo Jabber&lt;/a&gt;.&lt;/p&gt;
@@ -2315,7 +2315,7 @@ url = &lt;span style=&quot;color: #C5A22D;&quot;&gt;&quot;http://local-bay.conta
     <item>
       <title>Como recuperar senha de root</title>
       <link>http://blog.gilbertoca.com/2010/06/como-recuperar-senha-de-root.html</link>
-      <pubDate>Ter, 8 jun 2010 00:00:00 -0300</pubDate>
+      <pubDate>ter, 8 jun 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/06/como-recuperar-senha-de-root.html</guid>
       	<description>
 	&lt;p&gt;Não é difícil encontrar novos usuários linux que esquecem ou perdem a senha do &lt;a href=&quot;http://br-linux.org/artigos/dicas_root.htm&quot;&gt;usuário root&lt;/a&gt; em um servidor ou estação de trabalho. Este post é uma tradução do seguinte HOW-TO: &lt;a href=&quot;http://www.novell.com/support/search.do?cmd=displayKC&amp;amp;docType=kc&amp;amp;externalId=3003803&amp;amp;sliceId=SAL_Public&amp;amp;dialogID=17188705&amp;amp;stateId=0%200%2017194530&quot;&gt;Recover the Linux root password&lt;/a&gt;, publicado pela novell.&lt;/p&gt;
@@ -2454,7 +2454,7 @@ para sair do ambiente chroot;&lt;/li&gt;
     <item>
       <title>Alterne entre versões Java facilmente [update-alternatives]</title>
       <link>http://blog.gilbertoca.com/2010/06/alterne-entre-versoes-java-facilmente-update-alternatives.html</link>
-      <pubDate>Ter, 8 jun 2010 00:00:00 -0300</pubDate>
+      <pubDate>ter, 8 jun 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/06/alterne-entre-versoes-java-facilmente-update-alternatives.html</guid>
       	<description>
 	&lt;p&gt;Com o surgimento de versões e atualizações da máquina virtual java, preciso verificar a compatibilidade da mesma com o &lt;a href=&quot;http://www.techne.com.br/produtos/produtos.asp?id=4&quot;&gt;sistema de gestão de pessoal&lt;/a&gt; sendo implantado &lt;a href=&quot;http://www.secad.to.gov.br&quot;&gt;aqui na secretária&lt;/a&gt;.&lt;/p&gt;
@@ -2577,7 +2577,7 @@ Bom, primeiro precisamos instalar as versões que desejamos. Para facilitar adic
     <item>
       <title>Direct Path Load - Como configurar</title>
       <link>http://blog.gilbertoca.com/2010/06/direct-path-load-como-configurar.html</link>
-      <pubDate>Ter, 1 jun 2010 00:00:00 -0300</pubDate>
+      <pubDate>ter, 1 jun 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/06/direct-path-load-como-configurar.html</guid>
       	<description>
 	&lt;blockquote&gt;
@@ -2618,7 +2618,7 @@ SQL&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;
     <item>
       <title>SQL*Loader - Números decimais</title>
       <link>http://blog.gilbertoca.com/2010/05/sqlloader-numeros-decimais.html</link>
-      <pubDate>Seg, 31 mai 2010 00:00:00 -0300</pubDate>
+      <pubDate>seg, 31 mai 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/05/sqlloader-numeros-decimais.html</guid>
       	<description>
 	&lt;blockquote&gt;
@@ -2666,7 +2666,7 @@ ORA&lt;span style=&quot;color: #66cc66;&quot;&gt;-&lt;/span&gt;01460: unimplemen
     <item>
       <title>Modelagem usando Uml em Cores [Análise de Requisitos]</title>
       <link>http://blog.gilbertoca.com/2010/05/modelagem-analise-de-requisitos.html</link>
-      <pubDate>Ter, 11 mai 2010 00:00:00 -0300</pubDate>
+      <pubDate>ter, 11 mai 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/05/modelagem-analise-de-requisitos.html</guid>
       	<description>
 	&lt;blockquote&gt;
@@ -2762,7 +2762,7 @@ ORA&lt;span style=&quot;color: #66cc66;&quot;&gt;-&lt;/span&gt;01460: unimplemen
     <item>
       <title>Transportado schema de um banco para outro [exp e imp]</title>
       <link>http://blog.gilbertoca.com/2010/04/transportado-schema-de-um-banco-para-outro-exp-e-imp.html</link>
-      <pubDate>Qui, 8 abr 2010 00:00:00 -0300</pubDate>
+      <pubDate>qui, 8 abr 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/04/transportado-schema-de-um-banco-para-outro-exp-e-imp.html</guid>
       	<description>
 	&lt;p&gt;Fazer exportação e importação de schemas de usuários de um banco para outro com os &lt;a href=&quot;http://download.oracle.com/docs/cd/B19306_01/server.102/b14215/exp_imp.htm#i1023560&quot;&gt;utilitários exp e imp&lt;/a&gt; não coisa fácil, principalmente se você nunca fez essa tarefa! Mas há sempre uma primeira vez para quase tudo, não é mesmo?&lt;/p&gt;
@@ -2875,7 +2875,7 @@ no banco de destino.
     <item>
       <title>DBCA não encontra o banco de dados</title>
       <link>http://blog.gilbertoca.com/2010/04/dbca-nao-encontra-o-banco-de-dados.html</link>
-      <pubDate>Qua, 7 abr 2010 00:00:00 -0300</pubDate>
+      <pubDate>qua, 7 abr 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/04/dbca-nao-encontra-o-banco-de-dados.html</guid>
       	<description>
 	&lt;p&gt;Após fazer alguns exercícios de clonagem de banco(através do dbconsole, dbca e manualmente), procurei fazer uma limpeza dos mesmos. Para minha surpresa, o DBCA não lista algumas instâncias clonadas manualmente para que eu possa removê-las.&lt;/p&gt;
@@ -2912,7 +2912,7 @@ alfa:&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span
     <item>
       <title>Como configurar uma conta MSN Messenger?</title>
       <link>http://blog.gilbertoca.com/2010/03/como-configurar-uma-conta-msn-messenger-2.html</link>
-      <pubDate>Seg, 29 mar 2010 00:00:00 -0300</pubDate>
+      <pubDate>seg, 29 mar 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/03/como-configurar-uma-conta-msn-messenger-2.html</guid>
       	<description>
 	&lt;p&gt;Para alguns essa pergunta é realmente simples de responder. Mas para alguém que não tem o costume de acessar a internet ou mesmo um computador para fazer trabalhos mais personalizados, essa tarefa é quase impossível. Essa postagem é uma maneira de ajudar uma pessoa muita querida a se comunicar mais facilmente comigo e com seus colegas de trabalho ou mesmo de profissão. Estou me referindo à minha irmã Márcia.&lt;/p&gt;
@@ -2942,7 +2942,7 @@ Address You Already Have.”;&lt;/li&gt;
     <item>
       <title>Unir legenda (srt) e video (avi) com MENCODER</title>
       <link>http://blog.gilbertoca.com/2010/03/unir-legenda-srt-e-video-avi-com-mencoder.html</link>
-      <pubDate>Sex, 12 mar 2010 00:00:00 -0300</pubDate>
+      <pubDate>sex, 12 mar 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/03/unir-legenda-srt-e-video-avi-com-mencoder.html</guid>
       	<description>
 	&lt;p&gt;Quem tiver um video e o arquivo de legenda e deseja unir ambos num aquivo o comando é este :&lt;/p&gt;
@@ -2993,7 +2993,7 @@ Address You Already Have.”;&lt;/li&gt;
     <item>
       <title>umount: /mnt/XXXX device is busy</title>
       <link>http://blog.gilbertoca.com/2010/02/umount-mntxxxx-device-is-busy.html</link>
-      <pubDate>Qua, 24 fev 2010 00:00:00 -0300</pubDate>
+      <pubDate>qua, 24 fev 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/02/umount-mntxxxx-device-is-busy.html</guid>
       	<description>
 	&lt;p&gt;Você está cansado de ver estas mensagens, dizendo que você não pode desmountar &lt;code&gt;/mnt/cdrom&lt;/code&gt; ou &lt;code&gt;/mnt/flash&lt;/code&gt;? Veja esta pequena tática:&lt;/p&gt;
@@ -3015,7 +3015,7 @@ Address You Already Have.”;&lt;/li&gt;
     <item>
       <title>openSUSE 11.0 [upgrading to KDE4 4.4: Nepomuk e Strigi]</title>
       <link>http://blog.gilbertoca.com/2010/02/opensuse-11-0-upgrading-to-kde4-4-4.html</link>
-      <pubDate>Seg, 22 fev 2010 00:00:00 -0300</pubDate>
+      <pubDate>seg, 22 fev 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/02/opensuse-11-0-upgrading-to-kde4-4-4.html</guid>
       	<description>
 	&lt;p&gt;A partir &lt;a href=&quot;http://en.openSUSE.org/KDE/KDE4&quot;&gt;dessa referência&lt;/a&gt; realizei a atualização para a versão mais recente do KDE4.&lt;br /&gt;
@@ -3032,7 +3032,7 @@ Para desabilitar este serviço siga os seguintes passos:&lt;/p&gt;
     <item>
       <title>Alterando o group principal/efetivo do usuário - newgrp e sg</title>
       <link>http://blog.gilbertoca.com/2010/02/alterando-o-group-principalefetivo-do-usuario-newgrp-e-sg.html</link>
-      <pubDate>Seg, 22 fev 2010 00:00:00 -0300</pubDate>
+      <pubDate>seg, 22 fev 2010 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2010/02/alterando-o-group-principalefetivo-do-usuario-newgrp-e-sg.html</guid>
       	<description>
 	&lt;p&gt;Para ter um ambiente semelhante ao de produção, neste caso para as aplicações que rodam em forms e para a instalação do banco, acabei por instalar o mesmo sistema operacional (SLES9), os mesmos softwares (OracleAs 10g, Oracle Database 10g e Oracle DevSuit 10g) no meu desktop. Com isso, toda vez que preciso usar qualquer um destes softwares eu tem que assumir o usuario de instalação dos mesmos que neste caso usei o default oracle. Veja a labuta que tem de fazer:&lt;/p&gt;
@@ -3068,7 +3068,7 @@ Para desabilitar este serviço siga os seguintes passos:&lt;/p&gt;
     <item>
       <title>Oracle IAS [An error occurred while talking to OPMN. Could not find entity for]</title>
       <link>http://blog.gilbertoca.com/2009/10/oracle-ias-an-error-occurred-while-talking-to-opmn-could-not-find-entity-for.html</link>
-      <pubDate>Seg, 19 out 2009 00:00:00 -0300</pubDate>
+      <pubDate>seg, 19 out 2009 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2009/10/oracle-ias-an-error-occurred-while-talking-to-opmn-could-not-find-entity-for.html</guid>
       	<description>
 	&lt;p&gt;O servidor de aplicações Oracle (IAS 10g) não inicia, o enterprise manager reporta um erro que não diz muito:&lt;/p&gt;
@@ -3090,7 +3090,7 @@ A solução foi fechar todas a aplicações oracle em execução e verificar pel
     <item>
       <title>CHKDSK toda vez que reinicia (CHKDSK runs every time I boot)!</title>
       <link>http://blog.gilbertoca.com/2009/10/chkdsk-toda-vez-que-reinicia-chkdsk-runs-every-time-i-boot.html</link>
-      <pubDate>Sex, 16 out 2009 00:00:00 -0300</pubDate>
+      <pubDate>sex, 16 out 2009 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2009/10/chkdsk-toda-vez-que-reinicia-chkdsk-runs-every-time-i-boot.html</guid>
       	<description>
 	&lt;p&gt;Esse parece ser um problema comum e caso você não o tenha encontrado, pode ficar tranquilo. Sua vez vai chegar!&lt;br /&gt;
@@ -3149,7 +3149,7 @@ A solução que funcionou para mim, encontrei neste &lt;a href=&quot;http://www.
     <item>
       <title>Proteja-se Contra Virus(Disable USB Autorun)</title>
       <link>http://blog.gilbertoca.com/2009/07/proteja-se-contra-virusdisable-usb-autorun.html</link>
-      <pubDate>Sáb, 18 jul 2009 00:00:00 -0300</pubDate>
+      <pubDate>sáb, 18 jul 2009 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2009/07/proteja-se-contra-virusdisable-usb-autorun.html</guid>
       	<description>
 	&lt;p&gt;Meus amigos professores sempre reclamam que não conseguem manter seus PCs/NoteBooks livres de vírus. E uma queixa maior é a infestação por uso de dispositivos usb (pen drive). &lt;a href=&quot;http://www.sizlopedia.com/2008/03/18/disable-usb-autorun-to-save-pc-from-usb-viruses/&quot;&gt;Encontrei uma dica excelente sobre o assunto&lt;/a&gt;.&lt;br /&gt;
@@ -3170,7 +3170,7 @@ A melhor forma de manter longe a auto instalação/execução de virus de USB em
     <item>
       <title>Unix: Initializing..Terminal linux is unknown.</title>
       <link>http://blog.gilbertoca.com/2009/07/unix-initializing-terminal-linux-is-unknown.html</link>
-      <pubDate>Qui, 9 jul 2009 00:00:00 -0300</pubDate>
+      <pubDate>qui, 9 jul 2009 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2009/07/unix-initializing-terminal-linux-is-unknown.html</guid>
       	<description>
 	&lt;p&gt;Nosso banco de dados atual está instalado em uma máquina unix - AIX 5.3. Mas por estar acostumado com ambientes Linux, instalei para o mesmo, o&lt;a href=&quot;http://www-03.ibm.com/systems/power/software/aix/linux/&quot;&gt;pacote de ferramentas Linux&lt;/a&gt; que a &lt;a href=&quot;http://www.ibm.com/pt/pt/&quot;&gt;IBM&lt;/a&gt;disponibiliza. Funciona muito bem, mas quando executo um binário unix - exemplo: topas - o shell responde que esse erro.&lt;br /&gt;
@@ -3186,7 +3186,7 @@ A solução é ajustar a variável TERM para xterm, nesse caso é claro, pois ut
     <item>
       <title>Padronizando Nomes de Objeto - Banco de Dados</title>
       <link>http://blog.gilbertoca.com/2009/05/padronizando-nomes-de-objeto-banco-de-dados.html</link>
-      <pubDate>Sex, 8 mai 2009 00:00:00 -0300</pubDate>
+      <pubDate>sex, 8 mai 2009 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2009/05/padronizando-nomes-de-objeto-banco-de-dados.html</guid>
       	<description>
 	&lt;p&gt;Primeiro definimos a extensão dos arquivos que conterão as sentenças de criação dos objetos do banco de dados:&lt;/p&gt;
@@ -3409,7 +3409,7 @@ Qual notação você usa?&lt;/p&gt;
     <item>
       <title>Indo um pouco além &amp;#8230;</title>
       <link>http://blog.gilbertoca.com/2009/03/indo-um-pouco-alem.html</link>
-      <pubDate>Seg, 23 mar 2009 00:00:00 -0300</pubDate>
+      <pubDate>seg, 23 mar 2009 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2009/03/indo-um-pouco-alem.html</guid>
       	<description>
 	&lt;p&gt;Estou aprendendo um pouco sobre programação orientada a objeto em java e com o pouco que li resolvi implementar uma pequena api que abstrai as regras de acesso e recuperação de dados − acesso a banco de dados. Gosto muito dessa (&lt;a href=&quot;http://orbroker.sourceforge.net/&quot; target=&quot;_blank&quot;&gt;OrBroker&lt;/a&gt;) api de persistência com isso elaborei um contrato que acho o mínimo necessário para o acesso a dados, o qual poderá utilizar a api OrBroker - espero não somente essa api, mas outras (desacoplamento).&lt;/p&gt;
@@ -3455,7 +3455,7 @@ Assinaturas:&lt;/p&gt;
     <item>
       <title>Conexão Lenta com o Banco Oracle - TNSPING, SQLPLUS, ETC</title>
       <link>http://blog.gilbertoca.com/2009/03/conexao-lenta-com-o-banco-oracle-tnsping-sqlplus-etc.html</link>
-      <pubDate>Sex, 13 mar 2009 00:00:00 -0300</pubDate>
+      <pubDate>sex, 13 mar 2009 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2009/03/conexao-lenta-com-o-banco-oracle-tnsping-sqlplus-etc.html</guid>
       	<description>
 	&lt;p&gt;Se você notar que após a configuração (Editando o arquivo tnsnames.ora ou usando o utilitário netmgr) de um cliente de acesso ao Banco de Dados Oracle estiver muito lenta, verifique a variável NAMES.DIRECTORY_PATH no arquivo sqlnet.ora.&lt;/p&gt;
@@ -3479,7 +3479,7 @@ Assinaturas:&lt;/p&gt;
     <item>
       <title>Oracle JInitiator + Forms + IE6/IE7 + Windows Live Toolbar : Problema</title>
       <link>http://blog.gilbertoca.com/2009/03/oracle-jinitiator-forms-ie6ie7-windows-live-toolbar-problema.html</link>
-      <pubDate>Sex, 6 mar 2009 00:00:00 -0300</pubDate>
+      <pubDate>sex, 6 mar 2009 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2009/03/oracle-jinitiator-forms-ie6ie7-windows-live-toolbar-problema.html</guid>
       	<description>
 	&lt;p&gt;Essa combinação é bombástica! Aqui na secretaria, alguns usuários inadivertidadmente instalaram o IE7 e com isso, em conjunto, veio o Windows Live Toolbar. Depois disso, nenhuma aplicação forms funciona, derrubando o navegador. Segundo &lt;a href=&quot;http://www.experts-exchange.com/Database/Oracle/9.x/Q_22572754.html&quot;&gt;essa&lt;/a&gt; discussão o problema todo está nesse complemento ao IE. Então a solução é:&lt;/p&gt;
@@ -3495,7 +3495,7 @@ Assinaturas:&lt;/p&gt;
     <item>
       <title>openSUSE 11.0 - Failed to update system: Authorisation could not be obtained</title>
       <link>http://blog.gilbertoca.com/2009/03/opensuse-110-failed-to-update-system-authorisation-could-not-be-obtained.html</link>
-      <pubDate>Seg, 2 mar 2009 00:00:00 -0300</pubDate>
+      <pubDate>seg, 2 mar 2009 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2009/03/opensuse-110-failed-to-update-system-authorisation-could-not-be-obtained.html</guid>
       	<description>
 	&lt;p&gt;Resolvi mudar de interface gráfica no linux. Antes usava o KDE e agora uso o GNOME, apesar de algumas limitações da interface não tenho muito do que reclamar. Este erro acontece como usuário comum, mas como usuário administrador (root) funciona sem problemas. Encontrei a solução para esse problema no seguinte &lt;a href=&quot;http://linux.derkeiler.com/Mailing-Lists/SuSE/2008-07/msg00999.html&quot; target=&quot;_blank&quot;&gt;LINK&lt;/a&gt;. Reproduzindo:&lt;/p&gt;
@@ -3524,7 +3524,7 @@ Assinaturas:&lt;/p&gt;
     <item>
       <title>openSUSE 10.3 - pt_BR.UTF8</title>
       <link>http://blog.gilbertoca.com/2009/01/opensuse-103-pt_brutf8.html</link>
-      <pubDate>Qui, 8 jan 2009 00:00:00 -0300</pubDate>
+      <pubDate>qui, 8 jan 2009 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2009/01/opensuse-103-pt_brutf8.html</guid>
       	<description>
 	&lt;p&gt;Para resolver de vez os problemas com caracteres estranhos e acentuação:&lt;/p&gt;
@@ -3540,7 +3540,7 @@ Estes ajustes são gravados no arquivo de configuração &lt;span class=&quot;fi
     <item>
       <title>openSUSE 10.2 atingiu o Fim da Vida - Descontinuado</title>
       <link>http://blog.gilbertoca.com/2008/12/opensuse-102-atingiu-o-fim-da-vida-descontinuado.html</link>
-      <pubDate>Seg, 22 dez 2008 00:00:00 -0300</pubDate>
+      <pubDate>seg, 22 dez 2008 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2008/12/opensuse-102-atingiu-o-fim-da-vida-descontinuado.html</guid>
       	<description>
 	&lt;p&gt;Não posso deixar de lamentar essa notícia:&lt;a href=&quot;http://pt.openSUSE.org/Not%C3%ADcias_da_semana_no_openSUSE/51#Atualiza.C3.A7.C3.B5es_de_Seguran.C3.A7a&quot;&gt;openSUSE 10.2 atingiu o Fim da Vida&lt;/a&gt;.&lt;br /&gt;
@@ -3553,7 +3553,7 @@ Quanto tempo você já usou uma distribuição linux? Qual o tempo de vida de su
     <item>
       <title>Para duplicar um banco oracle na mesma maquina</title>
       <link>http://blog.gilbertoca.com/2008/12/para-duplicar-um-banco-oracle-na-mesma-maquina.html</link>
-      <pubDate>Seg, 1 dez 2008 00:00:00 -0300</pubDate>
+      <pubDate>seg, 1 dez 2008 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2008/12/para-duplicar-um-banco-oracle-na-mesma-maquina.html</guid>
       	<description>
 	&lt;p&gt;Atualmente aqui na &lt;a href=&quot;www.secad.to.gov.br&quot;&gt;Secretaria&lt;/a&gt; estamos em um processo de implantação de um &lt;a href=&quot;http://www.techne.com.br/produtos/produtos.asp?id=4&quot;&gt;sistema de recursos humanos&lt;/a&gt;, para ser mais exato, praticamente toda parte de infraestrutura (hardware e software) já está pronta para uso. Mas por questões que foge ao meu conhecimento (penso ser licitação), a fase mais densa (treinamento e uso pelo usuário final) está em fase de planejamento/reestruturação. Bom, apesar dessa, vamos dizer morosidade, tem uma fase desse processo que não pára: a migração. Nesse processo participam duas equipes: parametrização e a própria migração, o qual nessa última pertenço.&lt;/p&gt;
@@ -3791,7 +3791,7 @@ end;
     <item>
       <title>Perdeu o arquivo init.ora e agora? Como recuperar/reiniciar a instância?</title>
       <link>http://blog.gilbertoca.com/2008/06/perdeu-o-arquivo-initora-e-agora-como-recuperarreiniciar-a-instancia.html</link>
-      <pubDate>Ter, 24 jun 2008 00:00:00 -0300</pubDate>
+      <pubDate>ter, 24 jun 2008 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2008/06/perdeu-o-arquivo-initora-e-agora-como-recuperarreiniciar-a-instancia.html</guid>
       	<description>
 	&lt;p&gt;O que fazer quando nós perdemos o arquivo de inicialização de um banco oracle - instância?&lt;br /&gt;
@@ -3803,7 +3803,7 @@ Se você não possuir uma cópia do mesmo, recrie utilizando o arquivo de alerta
     <item>
       <title>Depois de instalar Linux, Windows nao conecta!</title>
       <link>http://blog.gilbertoca.com/2008/06/depois-de-instalar-linux-windows-nao-conecta.html</link>
-      <pubDate>Seg, 9 jun 2008 00:00:00 -0300</pubDate>
+      <pubDate>seg, 9 jun 2008 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2008/06/depois-de-instalar-linux-windows-nao-conecta.html</guid>
       	<description>
 	&lt;p&gt;Colocando essa frase no mecanismo de busca - google -, você encontra uma lista enorme de pessoas com o mesmo problema. Vá entender esses novos hardwares! Para mim o que funcionou está descrito nesse **&lt;a href=&quot;http://www.guiadohardware.net/comunidade/windows-cabo/290438/&quot;&gt;Cabo de rede desconectado (no windows) após instalar Kurumin&lt;/a&gt; **link.&lt;br /&gt;
@@ -3815,7 +3815,7 @@ Qual a solução:&lt;/p&gt;
     <item>
       <title>Como obter histórico de dados modificados no banco de dados Oracle?</title>
       <link>http://blog.gilbertoca.com/2008/06/como-obter-historico-de-dados-modificados-no-banco-de-dados-oracle.html</link>
-      <pubDate>Qua, 4 jun 2008 00:00:00 -0300</pubDate>
+      <pubDate>qua, 4 jun 2008 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2008/06/como-obter-historico-de-dados-modificados-no-banco-de-dados-oracle.html</guid>
       	<description>
 	&lt;p&gt;Na verdade a pergunta original, em inglês, é essa: &lt;a href=&quot;http://searchoracle.techtarget.com/expert/KnowledgebaseAnswer/0,289625,sid41_gci1313625,00.html?track=NL-94&amp;amp;ad=643910&amp;amp;asrc=EM_NLT_3776659&amp;amp;uid=2562960&quot;&gt;How can you get the history of data modified from an Oracle database?&lt;/a&gt; Gosto das dicas desse autor. Essa em questão, nos dá as opções existentes para captura de histórico de modificações no banco de dado:&lt;/p&gt;
@@ -3829,7 +3829,7 @@ Qual a solução:&lt;/p&gt;
     <item>
       <title>Oracle Developer Suite 10g - [openSUSE 10.3]</title>
       <link>http://blog.gilbertoca.com/2008/05/oracle-developer-suite-10g-opensuse-103.html</link>
-      <pubDate>Ter, 6 mai 2008 00:00:00 -0300</pubDate>
+      <pubDate>ter, 6 mai 2008 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2008/05/oracle-developer-suite-10g-opensuse-103.html</guid>
       	<description>
 	&lt;p&gt;O processo de instalação da versão 10.1.2.0.2 do DeveloperSuite10g no openSUSE 10.3 não é certificada. Mas como temos apenas licença para o servidor, o jeito é enfrentar os possíveis problemas com essa instalação.&lt;/p&gt;
@@ -3856,7 +3856,7 @@ ln -s /usr/X11R6/lib/libXtst.so.6.1 /usr/lib/libXtst.so.6.1.0
     <item>
       <title>ScribeFire Setup - Roller API</title>
       <link>http://blog.gilbertoca.com/2008/04/scribefire-setup-roller-api.html</link>
-      <pubDate>Sex, 18 abr 2008 00:00:00 -0300</pubDate>
+      <pubDate>sex, 18 abr 2008 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2008/04/scribefire-setup-roller-api.html</guid>
       	<description>
 	&lt;p&gt;Fonte:&lt;br /&gt;
@@ -3894,7 +3894,7 @@ ln -s /usr/X11R6/lib/libXtst.so.6.1 /usr/lib/libXtst.so.6.1.0
     <item>
       <title>FRM-92101</title>
       <link>http://blog.gilbertoca.com/2008/04/frm-92101.html</link>
-      <pubDate>Sex, 18 abr 2008 00:00:00 -0300</pubDate>
+      <pubDate>sex, 18 abr 2008 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2008/04/frm-92101.html</guid>
       	<description>
 	&lt;p&gt;Você já se deparou com essa categoria (genérica) de erro Oracle? Pois é, esse que me deparei é uma delícia. Vou me acostumar a chamá-lo de delícia, pois dessa forma, no próximo encontro eu não venha a ter um infarto. Perdi praticamente dois dias, rastreando, refazendo, desfazendo a configuração de uma instalação do Servidor IAS 10g no Linux.&lt;br /&gt;
@@ -3925,7 +3925,7 @@ Para encurtar a história, quando cheguei no tópico &lt;a href=&quot;http://dow
     <item>
       <title>Removendo alertas antigos da página principal do DBCONSOLE</title>
       <link>http://blog.gilbertoca.com/2007/10/removendo-alertas-antigos-da-pagina-principal-do-dbconsole.html</link>
-      <pubDate>Seg, 8 out 2007 00:00:00 -0300</pubDate>
+      <pubDate>seg, 8 out 2007 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2007/10/removendo-alertas-antigos-da-pagina-principal-do-dbconsole.html</guid>
       	<description>
 	&lt;p&gt;Por um bom período de tempo estive lendo e pesquisando uma maneira de remover/limpar os alertas que aparecem na primeira página do dbconsole do oracle 10g 10.2.&lt;br /&gt;
@@ -3936,7 +3936,7 @@ Finalmente após encontrar uma discussão no forum oracle (&lt;a href=&quot;http
     <item>
       <title>Instalando Visualizador de Dicionários WordTrans no openSUSE 10.2</title>
       <link>http://blog.gilbertoca.com/2007/02/instalando-visualizador-de-dicionarios-wordtrans-no-opensuse-102.html</link>
-      <pubDate>Sex, 16 fev 2007 00:00:00 -0300</pubDate>
+      <pubDate>sex, 16 fev 2007 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2007/02/instalando-visualizador-de-dicionarios-wordtrans-no-opensuse-102.html</guid>
       	<description>
 	&lt;p&gt;O &lt;a href=&quot;http://www.escomposlinux.org/rvm/wordtrans/about_en.php&quot;&gt;wordtrans&lt;/a&gt;é uma aplicação gráfica que permite a pesquisa de palavras em vários dicionários. O mesmo também pode traduzir uma palavra selecionada pelo mouse. Ele tem suporte a três tipos de dicionários:&lt;/p&gt;
