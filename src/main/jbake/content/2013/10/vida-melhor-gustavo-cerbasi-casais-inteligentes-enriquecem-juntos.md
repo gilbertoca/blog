@@ -7,7 +7,7 @@ tags=Estou lendo e você,  Jesus Cristo, Objetivo
 ~~~~~~
 
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/4nf_xx8kEEc" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4nf_xx8kEEc" frameborder="0" allowfullscreen></iframe>
 
 Sábias palavras.
 
