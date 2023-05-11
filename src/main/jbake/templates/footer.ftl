@@ -2,8 +2,8 @@
     <footer>
         <p>
             <a href="https://pages.github.com/">Hosted by GitHub Pages</a> -
-            <a href="http://jbake.org/">Generated with JBake</a> -
-            <a href="http://github.com/gilbertoca/gilbertoca.com">Source code</a>
+            <a href="https://jbake.org/">Generated with JBake</a> -
+            <a href="https://github.com/gilbertoca/gilbertoca.com">Source code</a>
         </p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
