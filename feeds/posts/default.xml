@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
   <channel>
     <title>JBake</title>
     <link>http://blog.gilbertoca.com</link>
     <atom:link href="http://blog.gilbertoca.com/feeds/posts/default.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>qui, 11 mai 2023 09:44:12 -0300</pubDate>
-    <lastBuildDate>qui, 11 mai 2023 09:44:12 -0300</lastBuildDate>
+    <pubDate>qui, 11 mai 2023 11:02:35 -0300</pubDate>
+    <lastBuildDate>qui, 11 mai 2023 11:02:35 -0300</lastBuildDate>
 
     <item>
       <title>Visualizando arquivos de log no NetBeans</title>
