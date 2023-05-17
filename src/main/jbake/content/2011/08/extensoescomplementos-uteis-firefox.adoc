@@ -14,17 +14,14 @@ As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhor
     <td>
       <strong>Complemento</strong>
     </td>
-    
     <td>
       <strong>Utilidade</strong>
     </td>
   </tr>
-
   <tr>
     <td>
       <a href="https://addons.mozilla.org/pt-BR/firefox/addon/download-status-bar/">download-status-bar</a>
     </td>
-    
     <td>
       Gerenciador de Downloads
     </td>
@@ -33,7 +30,6 @@ As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhor
     <td>
       <a href="https://addons.mozilla.org/pt-BR/firefox/addon/201">DownThemAll!</a>
     </td>
-    
     <td>
       Gerenciador de Downloads
     </td>
@@ -42,37 +38,30 @@ As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhor
     <td>
       <a href="https://addons.mozilla.org/en-US/firefox/addon/flashgot/?src=search">FlashGot Mass Downloader</a>
     </td>
-    
     <td>
       Gerenciador de Downloads
     </td>
   </tr>  
-  
   <tr>
     <td>
       <a href="https://addons.mozilla.org/pt-BR/firefox/addon/684">FireFTP</a>
     </td>
-    
     <td>
       Cliente FTP
     </td>
   </tr>
-  
   <tr>
     <td>
       <a href="https://addons.mozilla.org/pt-BR/firefox/addon/super-start/">Super Start</a>
     </td>
-    
     <td>
       Bookmarks Visuais
     </td>
   </tr>
-  
   <tr>
     <td>
       <a href="https://addons.mozilla.org/pt-BR/firefox/addon/2888">GMarks</a>
     </td>
-    
     <td>
       Sincronizar e gerenciar seus Favoritos com o Google<br /> Bookmarks
     </td>
@@ -81,7 +70,6 @@ As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhor
     <td>
       <a href="https://addons.mozilla.org/pt-BR/firefox/addon/3257">Dicionário pt-BR</a>
     </td>
-    
     <td>
       Dicionário português brasileiro para o verificador ortográfico integrado do Firefox
     </td>
@@ -90,7 +78,6 @@ As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhor
     <td>
       <a href="https://addons.mozilla.org/en-US/firefox/addon/easy-youtube-video-download/">Easy Youtube Video Downloader Express</a>
     </td>
-    
     <td>
       Utilitário para baixar vídeos
     </td>
@@ -104,7 +91,6 @@ As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhor
     <td>
       <a href="https://addons.mozilla.org/pt-br/firefox/addon/video-downloadhelper/">video-downloadhelper</a>
     </td>
-    
     <td>
       Utilitário para baixar vídeos
     </td>
@@ -113,7 +99,6 @@ As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhor
     <td>
       <a href="https://addons.mozilla.org/en-US/firefox/addon/html5-video-everywhere/">html5-video-everywhere</a>
     </td>
-    
     <td>
       Utilitário para baixar vídeos
     </td>
@@ -122,7 +107,6 @@ As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhor
     <td>
       <a href="https://addons.mozilla.org/pt-br/firefox/addon/print-edit/?src=search">Print Edit</a>
     </td>
-    
     <td>
       Permite editar o conteúdo da página antes de imprimir
     </td>
@@ -131,7 +115,6 @@ As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhor
     <td>
       <a href="https://addons.mozilla.org/en-US/firefox/addon/capture-print/?src=search">Capture & Print</a>
     </td>
-    
     <td>
       Capture & Print permite capturar uma área da página e salvá-la em disco ou enviar para impressora
     </td>
@@ -140,7 +123,6 @@ As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhor
     <td>
       <a href="https://addons.mozilla.org/en-US/firefox/addon/session-manager/">Session Manager</a>
     </td>
-    
     <td>
       Session Manager saves and restores the state of all or some windows - either when you want it or automatically at startup and after crashes. It can also automatically save the state of open windows individually.
     </td>
