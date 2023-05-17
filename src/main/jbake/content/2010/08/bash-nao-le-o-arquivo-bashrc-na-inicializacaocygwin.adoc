@@ -21,11 +21,11 @@ fazer funcionar. A segunda opção foi pesquisar na lista de discussão:
 [logo de primeira encontrei a solução do problema][4]. O arquivo .bash_profile 
 precisa conter:
 
-<pre>
+```
+
 <code class="bash">
     . "${HOME}"/.bashrc
-</code>
-</pre>
+</code>```
 
 **ATUALIZAÇÃO:**
 
@@ -34,11 +34,11 @@ utilitário que o usa - rxvt. Com a atualização do Cygwin, o atalho criado nã
 funciona, alias, o utilitário não encontra o ambiente bash. Para resolver é 
 fácil: coloque o caminho absoluto do ambiente bash. Da seguinte forma:
 
-<pre>
+```
+
 <code class="bash">
     C:cygwinbinrxvt.exe -sl 1500 -fn "Lucida Console-12" -bg black -fg grey -sr -e /bin/bash --login -i
-</code>
-</pre>
+</code>```
 
  [1]: http://cygwin.com
  [2]: http://infrablue.tripod.com/cygwin.html

@@ -15,11 +15,11 @@ Veja o sintoma: (Atenção! Esse comportamento pode variar de ambiente para ambi
 Sessão do Forms não inicia no cliente, mesmo o forms de teste que usamos para testar a configuração de instalação não funciona. 
 O erro descrito pelo cliente é bem genérico (frm-92101). O cliente envia um print screen da tela com problemas:
 
-![](frm-92101.png)
+image::frm-92101.png[]
 
 Agora com mais detalhes:  
 
-![](frm-92102-details.png)
+image::frm-92102-details.png[]
 
 No servidor, o log não é de muita ajuda: 
 ```
@@ -102,8 +102,8 @@ Mas algo me chamou a atenção:
 
 Essa falha na inicialização do Forms runtime. Mas, como mencionei no início, desfiz e refiz a configuração do forms nesse servidor. 
 Então o que me restava? Verifiquei também com o pessoal de redes e nada. Me avisaram que não houve mudança alguma no servidor. 
-Bom, a única opção, após fazer uma pesquisa pelo google e principalmente pelo [site][1] de suporte da oracle foi, fazer o checklist dos requerimentos da instalação do servidor de aplicações oracle.
-Para encurtar a história, quando cheguei no tópico [3.9 The /etc/hosts File][2] , olhei o arquivo e a primeira vista não notei nada de anormal: 
+Bom, a única opção, após fazer uma pesquisa pelo google e principalmente pelo https://metalink.oracle.com/[site de suporte da oracle] foi, fazer o checklist dos requerimentos da instalação do servidor de aplicações oracle.
+Para encurtar a história, quando cheguei no tópico http://download.oracle.com/docs/cd/B14099_19/lop.1012/install.1012/install/reqs.htm#BABBJDFE[3.9 The /etc/hosts File], olhei o arquivo e a primeira vista não notei nada de anormal: 
 ```
 oracle@oasibm:~> cat /etc/hosts
 # special IPv6 addresses
@@ -125,6 +125,3 @@ ip primeira placa     oasibm.secad oasibm
 ip segunda placa      oasibm.secad
 ```
 Aí, foi só parar todos os serviços do servidor, alterar essa configuração e tudo voltou ao normal, aleluia!
-
-[1]: https://metalink.oracle.com/
-[2]: http://download.oracle.com/docs/cd/B14099_19/lop.1012/install.1012/install/reqs.htm#BABBJDFE

@@ -7,7 +7,7 @@ tags=Linux,openSUSE,Sistema Operacional,Traduções
 ~~~~~~
 
 
-O [wordtrans ][1] é uma aplicação gráfica que permite a pesquisa de palavras em vários dicionários. 
+O http://www.escomposlinux.org/rvm/wordtrans/about_en.php[wordtrans ]é uma aplicação gráfica que permite a pesquisa de palavras em vários dicionários. 
 O mesmo também pode traduzir uma palavra selecionada pelo mouse. Ele tem suporte a três tipos de dicionários:
 
   1. Dicionários do Tradutor Babylon.
@@ -21,7 +21,7 @@ Pré-requisitos:
   3. wordtrans-1.1pre15-suse.i586.rpm
   4. wordtrans-kde-1.1pre15-suse.i586.rpm
 
-Não esqueça de baixar também os [dicionários][2]!
+Não esqueça de baixar também os http://www.escomposlinux.org/rvm/wordtrans/dictionaries_en.php[dicionários]!
     
 Instale-os da seguinte forma:
     
@@ -71,8 +71,4 @@ ti-des05:/home/gilberto/software_usados/tradutor/dicionarios #
     
 Bom, agora precisamos adicionar os dicionários que precisamos ao worktrans. Para isso, através do menu Dictionaries, escolha New: Dictionaries->New &#8230;. Aparecerá tela para selecionar o tipo de dicionário. Eu escolhi o tipo babylon. O restante é bem fácil e intuitivo!
     
-![menu Dictionaries][3]
-
-[1]: http://www.escomposlinux.org/rvm/wordtrans/about_en.php
-[2]: http://www.escomposlinux.org/rvm/wordtrans/dictionaries_en.php
-[3]: wordtrans.png
+image::wordtrans.png[menu Dictionaries]

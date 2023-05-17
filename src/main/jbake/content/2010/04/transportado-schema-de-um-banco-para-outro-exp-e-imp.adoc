@@ -16,22 +16,22 @@ Bom, o passo inicial foi criar um novo banco - isso porque estamos passando
 da [versão 10gR1 intel][2] para [10gR2 ppc][3] - com opções mínimas. O segundo 
 foi realizar o exp no banco original somente dos usuários (schemas) necessários:
 
-<pre>
+```
+
 <code class="bash">
     exp userid=system@desenv file=producao.dmp log=export_producao.log buffer=65535000 consistent=y recordlength=65535 grants=y compress=n statistics=none owner=(login,hades,c_hades,ergon,c_ergon,gilberto,kira, epj,rafael,sic)
-</code>
-</pre>
+</code>```
 
 O terceiro parecia simples, fazer a importação no novo banco.
 
-<pre>
+```
+
 <code class="bash">
     #Importando os dados sem as constraints
     imp '/ AS SYSDBA' file=producao.dmp full=y grants=n constraints=n
     #Importando sem os dados com as constraints
     imp '/ AS SYSDBA' file=producao.dmp full=y grants=n constraints=y rows=n
-</code>
-</pre>
+</code>```
 
 Doce ilusão! Isso não funcionou porque não tínhamos criado os usuários nesse 
 novo banco. Incrível, se é um export e import, por que não tem essa característica 
@@ -41,16 +41,17 @@ dump do exp.
 Bom, a solução inicial foi extrair do dump gerado pelo exp, a definição dos 
 schemas dos usuários. Para isso utilizamos o utilitário de sistema [strings][4]:
 
-<pre>
+```
+
 <code class="bash">
     strings producao.dmp | grep -i "CREATE USER" > create_user.sql  strings producao.dmp | grep -i "GRANT " > grants.sql
-</code>    
-</pre>
+</code>    ```
 
 Que dureza! Veja que isso não ajudou muito porque o arquivo gerado - grants.sql - 
 não faz distinção através do schema. Não entendeu? Vou mostrar:
 
-<pre>
+```
+
 <code class="bash">
     oracle@oracleserver:~/backup/scripts> head grants.sql
     GRANT ALTER ON "ACIDENTES_SEQ" TO "HADES" WITH GRANT OPTION
@@ -64,13 +65,13 @@ não faz distinção através do schema. Não entendeu? Vou mostrar:
     GRANT ALTER ON "AVERB_SEQ" TO "C_HADES" WITH GRANT OPTION
     GRANT SELECT ON "AVERB_SEQ" TO "C_HADES" WITH GRANT OPTION
     oracle@oracleserver:~/backup/scripts>
-</code>
-</pre>
+</code>```
 
 Veja que não há definição a qual usuário o objeto pertence. A solução foi 
 realizar o exp para cada usuário separadamente e extrair os grants:
 
-<pre>
+```
+
 <code class="bash">
     exp '/ AS SYSDBA' file=login_grants.dmp log=export_archon.log buffer=65535000 consistent=y recordlength=65535 grants=y compress=n statistics=none owner=(login) 
     exp '/ AS SYSDBA' file=ergon_grants.dmp log=export_archon.log buffer=65535000 consistent=y recordlength=65535 grants=y compress=n statistics=none owner=(ergon) 
@@ -80,8 +81,7 @@ realizar o exp para cada usuário separadamente e extrair os grants:
     exp '/ AS SYSDBA' file=sys_grants.dmp log=export_archon.log buffer=65535000 consistent=y recordlength=65535 grants=y compress=n statistics=none owner=(sys)     
     strings ergon_grants.dmp | grep "GRANT " > ergon_grants.sql strings c_ergon_grants.dmp | grep "GRANT " > c_ergon_grants.sql strings login_grants.dmp | grep "GRANT " > login_grants.sql
     . . . 
-</code>
-</pre>
+</code>```
 
 Tem um ditado que acho verdadeiro no nosso mundo TI: 
 
@@ -101,7 +101,8 @@ fácil de resolver esse problema - extrair a definição de determinados usuári
 seus grants -. 
 Muito fácil mesmo. :)
 
-<pre>
+```
+
 <p>definição</p>
 <code class="sql">
     SET pages 9999
@@ -115,10 +116,10 @@ Muito fácil mesmo. :)
     WHERE username NOT IN ('DBSNMP','OUTLN','SYS','SYSTEM')
     ORDER BY username;
     spool off    
-</code>    
-</pre>
+</code>    ```
 
-<pre>
+```
+
 <p>grants</p>
 <code class="sql">
     SET pages 9999
@@ -138,8 +139,7 @@ Muito fácil mesmo. :)
     order by grantee;
     */
     spool off
-</code>    
-</pre>
+</code>    ```
 Lembre-se que este script é útil quando há a possibilidade de acessar o banco de 
 origem. Caso contrário, você terá que usar outro método para criar os usuários 
 no banco de destino.

@@ -36,7 +36,7 @@
             <plugin>
                 <groupId>org.jbake</groupId>
                 <artifactId>jbake-maven-plugin</artifactId>
-                <version>0.3.3</version>
+                <version>2.7.0-rc.7</version>
                 <executions>
                     <execution>
                         <id>default-generate</id>
@@ -50,19 +50,13 @@
                     <dependency>
                         <groupId>org.freemarker</groupId>
                         <artifactId>freemarker</artifactId>
-                        <version>2.3.30</version>
-                    </dependency>                    
+                        <version>2.3.32</version>
+                    </dependency>                
                     <dependency>
-                        <groupId>com.vladsch.flexmark</groupId>
-                        <artifactId>flexmark</artifactId>
-                        <version>0.62.2</version>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>com.vladsch.flexmark</groupId>
-                        <artifactId>flexmark-profile-pegdown</artifactId>
-                        <version>0.62.2</version>
-                    </dependency>                    
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj</artifactId>
+                        <version>2.5.8</version>
+                    </dependency>                        
                 </dependencies>
             </plugin>
 

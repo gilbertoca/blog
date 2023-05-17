@@ -6,8 +6,5 @@ status=published
 tags=Geral
 ~~~~~~
 
-
 O que fazer quando nós perdemos o arquivo de inicialização de um banco oracle - instância?  
-Se você não possuir uma cópia do mesmo, recrie utilizando o arquivo de alerta - alert_<instância>.log.  
-</instância>
-
+Se você não possuir uma cópia do mesmo, recrie utilizando o arquivo de alerta - alert_<instância>.log.

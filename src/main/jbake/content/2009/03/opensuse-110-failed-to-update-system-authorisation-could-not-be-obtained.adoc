@@ -9,16 +9,16 @@ tags=Linux, Objetivo, openSUSE, Sistema Operacional
 
 Resolvi mudar de interface gráfica no linux. Antes usava o KDE e agora uso o GNOME, apesar de algumas limitações da interface não tenho muito do que reclamar. Este erro acontece como usuário comum, mas como usuário administrador (root) funciona sem problemas. Encontrei a solução para esse problema no seguinte <a href="http://linux.derkeiler.com/Mailing-Lists/SuSE/2008-07/msg00999.html" target="_blank">LINK</a>. Reproduzindo: 
 
-<pre>vi /etc/PolicyKit/PolicyKit.conf
-</pre>
+```
+vi /etc/PolicyKit/PolicyKit.conf```
 
 <config version=”0.1”>  
 </config>
 
 adicione a seguinte entrada para seu usuário: 
 
-<pre>vi /etc/PolicyKit/PolicyKit.conf
-</pre>
+```
+vi /etc/PolicyKit/PolicyKit.conf```
 
 <config version=”0.1”>  
 <match user=”foo”>  

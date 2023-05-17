@@ -10,21 +10,21 @@ Você está cansado de ver estas mensagens, dizendo que você não pode
 desmountar <code>/mnt/cdrom</code> ou <code>/mnt/flash</code>? Veja esta 
 pequena tática:
 
-<pre>
+```
+
 <code class="bash">
     lsof | grep /mnt/cdrom
-</code>
-</pre>
+</code>```
 
 
 A sáida será o(s) processo(s) que estão usando este dispositivo. Agora pare ou 
 derrube o processo. Outra opção:
 
-<pre>
+```
+
 <code class="bash">
     fuser -muv /mnt/cdrom
-</code>
-</pre>
+</code>```
 
 O qual irá listar conta de usuário, PID, etc usando o dispositivo montado 
 em <code>/mnt/cdrom</code>. 

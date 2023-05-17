@@ -14,13 +14,13 @@ sistema operacional (SLES9), os mesmos softwares (OracleAs 10g, Oracle Database
 qualquer um destes softwares eu tem que assumir o usuario de instalação dos 
 mesmos que neste caso usei o default oracle. Veja a labuta que tem de fazer:
 
-<pre>
+```
+
 <code class="bash">
     $ xhost +
     $ sux – oracle
     $ source .oracleDB #ou oracleDS ou oracleAS
-</code>    
-</pre>
+</code>    ```
 
 Dos scripts de mudança de ambiente não tenho como escapar mas para facilitar
 minha vida, acabei adicionando os grupos DBA e oinstall para minha lista 
@@ -32,7 +32,8 @@ Para contornar este problema usei o utilitário de sistema newgrp. O comando
 newgrp é usado para alterar o grupo efetivo do usuário para o grupo solicitado
 em uma nova sessão de login:
 
-<pre>
+```
+
 <code class="bash">
     $ groups
     users disk uucp dialout audio video oinstall dba
@@ -42,16 +43,15 @@ em uma nova sessão de login:
     $ exit
     $ groups
     users disk uucp dialout audio video oinstall dba
-</code>
-</pre>
+</code>```
 
 Desta forma meu grupo principal torna-se oinstall, me possibilitando trabalhar 
 com a compilação dos forms. Legal hein! O outro utilitario de sistema que 
 podemos usar é o sg. O sg é mais usando que vc so precisa executar um comando, 
 mas usando o grupo o qual vc necessita:
 
-<pre>
+```
+
 <code class="bash">
     sg oinstall -c rm *.err
-</code>    
-</pre>
+</code>    ```

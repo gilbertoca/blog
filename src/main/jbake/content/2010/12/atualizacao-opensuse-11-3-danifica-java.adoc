@@ -14,7 +14,8 @@ certamente não conseguiria acessar qualquer site que dependesse do [Java][4].
 
 Veja o problema:
 
-<pre>
+```
+
 <code class="bash">
 gilberto@dhcppc0:~> firefox -g
 Gtk-Message: (for origin information, set GTK_DEBUG): failed to retrieve property GtkTreeView::odd-row-color' of typeGdkColor’ from rc file value “((GString*) 0xb1f11100)” of type GString'
@@ -25,12 +26,12 @@ ERROR: Invalid browser function table. Some functionality may be restricted.
 ERROR: Invalid browser function table. Some functionality may be restricted.
 /usr/src/packages/BUILD/icedtea6-1.9.2/plugin/icedteanp/IcedTeaNPPlugin.cc:1506: thread 0x8090738: Error: Failed to spawn applet viewer: Falha ao executar processo filho "/etc/alternatives/../../bin/java" (Arquivo ou diretório não encontrado)
 gilberto@dhcppc0:~>
-</code>    
-</pre>
+</code>    ```
 Quando constatei o problema, utilizei o [update-alternatives][5] para alternar 
 a versão da máquina virtual java:
 
-<pre>
+```
+
 <code class="bash">
 gilberto@dhcppc0:~> su -
 Senha:
@@ -43,8 +44,7 @@ There are 2 alternatives which provide `javaplugin’.
 
 Press enter to keep the default[*], or type selection number: 
 dhcppc0:~ #
-</code>    
-</pre>
+</code>    ```
 
 Outra solução, caso você só tenha uma versão instalada, se encontra 
 [nesta discussão][6], pelo comentário do usuário nwrickert. 

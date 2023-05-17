@@ -18,7 +18,8 @@ A solução que funcionou para mim, encontrei neste [fórum][1]. Vou deixar regi
   * 6. com a finalização repita o passo 3;
   * 7. se não mais indicar que está SUJO então reinicie e não verá mais a mensagem de agendamento do CHKDSK.
 
-<pre>Microsoft Windows XP [versão 5.1.2600]
+```
+Microsoft Windows XP [versão 5.1.2600]
 (C) Copyright 1985-2001 Microsoft Corp.
 
 C:Documents and SettingsGilberto>fsutil dirty query e:
@@ -51,8 +52,7 @@ O Windows verificou o sistema de arquivos e não encontrou problemas.
   12856763 unidades de alocação disponíveis em disco.
 
 C:Documents and SettingsGilberto>fsutil dirty query e:
-O volume e: NÃO está sujo.
-</pre>
+O volume e: NÃO está sujo.```
 
 
 
