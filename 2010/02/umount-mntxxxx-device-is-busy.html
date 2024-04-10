@@ -58,20 +58,31 @@
         </p>
     </header>
     <section>
-	<p>Você está cansado de ver estas mensagens, dizendo que você não pode desmountar <code>/mnt/cdrom</code> ou <code>/mnt/flash</code>? Veja esta pequena tática:</p>
-<pre>
-<code class="bash">
+	<div class="paragraph">
+<p>Você está cansado de ver estas mensagens, dizendo que você não pode
+desmountar &lt;code&gt;/mnt/cdrom&lt;/code&gt; ou &lt;code&gt;/mnt/flash&lt;/code&gt;? Veja esta
+pequena tática:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>&lt;code class="bash"&gt;
     lsof | grep /mnt/cdrom
-</code>
-</pre>
-<p>A sáida será o(s) processo(s) que estão usando este dispositivo. Agora pare ou derrube o processo. Outra opção:</p>
-<pre>
-<code class="bash">
-    fuser -muv /mnt/cdrom
-</code>
-</pre>
-<p>O qual irá listar conta de usuário, PID, etc usando o dispositivo montado em <code>/mnt/cdrom</code>.</p>
+&lt;/code&gt;```
 
+
+A sáida será o(s) processo(s) que estão usando este dispositivo. Agora pare ou
+derrube o processo. Outra opção:</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&lt;code class="bash"&gt;
+    fuser -muv /mnt/cdrom
+&lt;/code&gt;```</p>
+</div>
+<div class="paragraph">
+<p>O qual irá listar conta de usuário, PID, etc usando o dispositivo montado
+em &lt;code&gt;/mnt/cdrom&lt;/code&gt;.</p>
+</div>
     </section>
 <section>
 <div id="disqus_thread"></div>

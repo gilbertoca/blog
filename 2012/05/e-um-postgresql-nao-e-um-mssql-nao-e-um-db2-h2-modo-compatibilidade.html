@@ -57,127 +57,170 @@
         </p>
     </header>
     <section>
-	<p>Calma pessoal, é apenas o banco <a href="http://www.h2database.com/html/features.html#compatibility" target="_blank">H2 em modo compatibilidade</a>! Imagine<br />
-que você acabou levando trabalho pra casa (Novidade!!!) mas se<br />
-esqueceu que em casa vc não possui o ambiente - banco de dados -<br />
-desenvolvimento semelhante ao do trabalho. Em meu caso um servidor de<br />
+	<div class="paragraph">
+<p>Calma pessoal, é apenas o banco &lt;a href="http://www.h2database.com/html/features.html#compatibility" target="_blank"&gt;H2 em modo compatibilidade&lt;/a&gt;! Imagine
+que você acabou levando trabalho pra casa (Novidade!!!) mas se
+esqueceu que em casa vc não possui o ambiente - banco de dados -
+desenvolvimento semelhante ao do trabalho. Em meu caso um servidor de
 banco de dados PostgreSQL.</p>
-<p>O que isso tem haver com <a href="http://www.h2database.com/html/main.html" target="_blank">o banco de dados H2</a>? Diferentemente de um<br />
-Postgresql, um MS Sql ou Oracle o H2 é um banco de dados leve e de<br />
-fácil instalação, podendo até executá-lo sem a necessidade de uma<br />
+</div>
+<div class="paragraph">
+<p>O que isso tem haver com &lt;a href="http://www.h2database.com/html/main.html" target="_blank"&gt;o banco de dados H2&lt;/a&gt;? Diferentemente de um
+Postgresql, um MS Sql ou Oracle o H2 é um banco de dados leve e de
+fácil instalação, podendo até executá-lo sem a necessidade de uma
 instalação propriamente dita.</p>
-<h2><a href="#mas-como-isso-funciona" id="mas-como-isso-funciona">Mas como isso funciona?</p></a></h2>
-<p>Há dua formas de se beneficiar desta característia. A primeira é<br />
-utilizar o driver jdbc do próprio H2, utilizando o parâmetro MODE na<br />
+</div>
+<div class="sect1">
+<h2 id="_mas_como_isso_funcionap">Mas como isso funciona?&lt;/p&gt;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Há dua formas de se beneficiar desta característia. A primeira é
+utilizar o driver jdbc do próprio H2, utilizando o parâmetro MODE na
 URL de conexão:</p>
-<div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">jdbc:h2:file:data<span style="color: #000000; font-weight: bold;">/</span>teste;<span style="color: #007800;">create</span>=<span style="color: #c20cb9; font-weight: bold;">true</span>;<span style="color: #007800;">MODE</span>=PostgreSQL;<span style="color: #007800;">DB_CLOSE_DELAY</span>=-<span style="color: #000000;">1</span></pre>
-      </td>
-    </tr>
-  </table>
 </div>
-<p>Assim você poderia recriar as estruturas do banco por script ou<br />
-ativando a criação das entidades no provedor de persistência - caso<br />
-utilize JPA. Veja que as estruturas - tabelas, views, sequências, etc<br />
-- não teriam que ser ajustadas por estar utilizando o H2. O banco H2<br />
-entende o dialeto, por assim dizer, do banco a ser “emulado” pelo<br />
+<div class="paragraph">
+<p>&lt;div class="wp_syntax"&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class="code"&gt;
+        &lt;pre class="bash" style="font-family:monospace;"&gt;jdbc:h2:file:data&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;teste;&lt;span style="color: #007800;"&gt;create&lt;/span&gt;=&lt;span style="color: #c20cb9; font-weight: bold;"&gt;true&lt;/span&gt;;&lt;span style="color: #007800;"&gt;MODE&lt;/span&gt;=PostgreSQL;&lt;span style="color: #007800;"&gt;DB_CLOSE_DELAY&lt;/span&gt;=-&lt;span style="color: #000000;"&gt;1&lt;/span&gt;&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>Assim você poderia recriar as estruturas do banco por script ou
+ativando a criação das entidades no provedor de persistência - caso
+utilize JPA. Veja que as estruturas - tabelas, views, sequências, etc
+- não teriam que ser ajustadas por estar utilizando o H2. O banco H2
+entende o dialeto, por assim dizer, do banco a ser “emulado” pelo
 parâmetro MODE.</p>
-<p>A segunda maneira, por sinal mais interessante, é não fazer nada!<br />
-Como assim? Você provavelmente se questiona! É verdade, você não<br />
-mexe em nada do seu projeto - que é um banco específico, no meu caso o<br />
-PostgreSQL. Você continua utlizando o driver, a URL do seu banco e<br />
-deixa o H2 fazer o resto. Vamos ver?<br />
+</div>
+<div class="paragraph">
+<p>A segunda maneira, por sinal mais interessante, é não fazer nada!
+Como assim? Você provavelmente se questiona! É verdade, você não
+mexe em nada do seu projeto - que é um banco específico, no meu caso o
+PostgreSQL. Você continua utlizando o driver, a URL do seu banco e
+deixa o H2 fazer o resto. Vamos ver?
 Suponha que sua forma de conexão seja a seguinte:</p>
-<div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="xml" style="font-family:monospace;"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;dependencies<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-	<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;dependency<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-		<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;groupId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>postgresql<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/groupId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-		<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;artifactId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>postgresql<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/artifactId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-		<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;version<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>8.1-408.jdbc3<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/version<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-	<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/dependency<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/dependencies<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;properties<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-	<span style="color: #808080; font-style: italic;">&lt;!-- Default Database Connection--&gt;</span>
-	<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;jdbc.url<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>jdbc:postgresql://localhost:5435/teste<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/jdbc.url<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-	<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;jdbc.driverClassName<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>org.postgresql.Driver<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/jdbc.driverClassName<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-	<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;jdbc.username<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>teste<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/jdbc.username<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-	<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;jdbc.password<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>teste<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/jdbc.password<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/properties<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre>
-      </td>
-    </tr>
-  </table>
-</div></p> 
-<p>Para funcionar precisamos ter um servidor PostreSQL rodando<br />
-localmente, certo? Pois bem, vamos iniciar e estabelecer um servidor<br />
-PostgreSQL através do H2. Para facilitar as coisas, vamos criar <a href="http://www.manydesigns.com/documentation/tutorials/using-maven-profiles-and-resource-filtering.html" target="_blank">um<br /> profile</a> que nos auxiliará nesta tarefa:</p>
-<div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="xml" style="font-family:monospace;"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;profiles<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;profile<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-	<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;id<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>h2<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/id<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-	<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;activation<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-		<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;activeByDefault<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>false<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/activeByDefault<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-	<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/activation<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-	<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;dependencies<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-		<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;dependency<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-			<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;groupId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>postgresql<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/groupId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-			<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;artifactId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>postgresql<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/artifactId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-			<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;version<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>8.1-408.jdbc3<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/version<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-		<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/dependency<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-		<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;dependency<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-			<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;groupId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>com.h2database<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/groupId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-			<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;artifactId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>h2<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/artifactId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-			<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;version<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1.3.166<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/version<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-		<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/dependency<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-	<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/dependencies<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/profile<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
-<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/profiles<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre>
-      </td>
-    </tr>
-  </table>
 </div>
-<p>Agora a “grande sacada” do H2, abra dois terminais: um para rodar o<br />
-servidor e a outra para você trabalhar normalmente com o maven. Em uma<br />
+<div class="paragraph">
+<p>&lt;div class="wp_syntax"&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class="code"&gt;
+        &lt;pre class="xml" style="font-family:monospace;"&gt;&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;dependencies&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;dependency&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;groupId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;postgresql&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/groupId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;artifactId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;postgresql&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/artifactId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;version&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;8.1-408.jdbc3&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/version&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/dependency&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/dependencies&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;properties&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span style="color: #808080; font-style: italic;"&gt;&lt;!-- Default Database Connection--&gt;&lt;/span&gt;
+	&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;jdbc.url&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;jdbc:postgresql://localhost:5435/teste&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/jdbc.url&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;jdbc.driverClassName&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;org.postgresql.Driver&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/jdbc.driverClassName&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;jdbc.username&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;teste&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/jdbc.username&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;jdbc.password&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;teste&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/jdbc.password&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/properties&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;&lt;/p&gt;</p>
+</div>
+<div class="paragraph">
+<p>Para funcionar precisamos ter um servidor PostreSQL rodando
+localmente, certo? Pois bem, vamos iniciar e estabelecer um servidor
+PostgreSQL através do H2. Para facilitar as coisas, vamos criar &lt;a href="http://www.manydesigns.com/documentation/tutorials/using-maven-profiles-and-resource-filtering.html" target="_blank"&gt;um&lt;br /&gt; profile&lt;/a&gt; que nos auxiliará nesta tarefa:</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="wp_syntax"&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class="code"&gt;
+        &lt;pre class="xml" style="font-family:monospace;"&gt;&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;profiles&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;profile&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;id&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;h2&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/id&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;activation&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;activeByDefault&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;false&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/activeByDefault&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/activation&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;dependencies&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;dependency&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;groupId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;postgresql&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/groupId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;artifactId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;postgresql&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/artifactId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;version&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;8.1-408.jdbc3&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/version&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/dependency&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;dependency&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;groupId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;com.h2database&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/groupId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;artifactId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;h2&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/artifactId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;version&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;1.3.166&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/version&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/dependency&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/dependencies&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/profile&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/profiles&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>Agora a “grande sacada” do H2, abra dois terminais: um para rodar o
+servidor e a outra para você trabalhar normalmente com o maven. Em uma
 delas iremos iniciar o servidor:</p>
-<div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">mvn <span style="color: #660033;">-P</span> h2 exec:java -Dexec.mainClass=<span style="color: #ff0000;">"org.h2.tools.Server"</span> -Dexec.args=<span style="color: #ff0000;">"-properties data -baseDir data"</span></pre>
-      </td>
-    </tr>
-  </table>
-</div></p> 
-<p>Após este comando, você terá a sua disposição uma interface - via<br />
-navegador - a qual lhe permitirá escolher em qual MODE rodar o<br />
+</div>
+<div class="paragraph">
+<p>&lt;div class="wp_syntax"&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class="code"&gt;
+        &lt;pre class="bash" style="font-family:monospace;"&gt;mvn &lt;span style="color: #660033;"&gt;-P&lt;/span&gt; h2 exec:java -Dexec.mainClass=&lt;span style="color: #ff0000;"&gt;"org.h2.tools.Server"&lt;/span&gt; -Dexec.args=&lt;span style="color: #ff0000;"&gt;"-properties data -baseDir data"&lt;/span&gt;&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;&lt;/p&gt;</p>
+</div>
+<div class="paragraph">
+<p>Após este comando, você terá a sua disposição uma interface - via
+navegador - a qual lhe permitirá escolher em qual MODE rodar o
 servidor.</p>
-<div id="attachment_899" style="width: 557px" class="wp-caption alignleft">
-  <a href="H2_admin_interface.png"><img src:"H2_admin_interface.png" alt="" title="H2_admin_interface" width="547" height="675" class="size-full wp-image-899" /></a>
-  <p class="wp-caption-text">
+</div>
+<div class="paragraph">
+<p>&lt;div id="attachment_899" style="width: 557px" class="wp-caption alignleft"&gt;
+  &lt;a href="H2_admin_interface.png"&gt;&lt;img src:"H2_admin_interface.png" alt="" title="H2_admin_interface" width="547" height="675" class="size-full wp-image-899" /&gt;&lt;/a&gt;</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  &lt;p class="wp-caption-text"&gt;
     H2 Admin Interface
-  </p>
+  &lt;/p&gt;
+&lt;/div&gt;</pre>
 </div>
-<p>Ao conectar àquela configuração definida incialmente, teremos outra<br />
-interface de administração. Aqui poderemos administrar nosso “banco<br />
+</div>
+<div class="paragraph">
+<p>Ao conectar àquela configuração definida incialmente, teremos outra
+interface de administração. Aqui poderemos administrar nosso “banco
 PostgreSQL”</p>
-<div id="attachment_903" style="width: 835px" class="wp-caption alignleft">
-  <a href="H2_admin_interface_PG_MODE.png"><img src:"H2_admin_interface_PG_MODE.png" alt="" title="H2_admin_interface_PG_MODE" width="825" height="831" class="size-full wp-image-903" /></a>
-  <p class="wp-caption-text">
-    H2 Admin Console
-  </p>
 </div>
-<p>Acesse este banco por sua aplicação ou por qualquer outro cliente<br />
-jdbc - por exemplo o squirrel. Lembre-se você estará acessando um<br />
+<div class="paragraph">
+<p>&lt;div id="attachment_903" style="width: 835px" class="wp-caption alignleft"&gt;
+  &lt;a href="H2_admin_interface_PG_MODE.png"&gt;&lt;img src:"H2_admin_interface_PG_MODE.png" alt="" title="H2_admin_interface_PG_MODE" width="825" height="831" class="size-full wp-image-903" /&gt;&lt;/a&gt;</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  &lt;p class="wp-caption-text"&gt;
+    H2 Admin Console
+  &lt;/p&gt;
+&lt;/div&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Acesse este banco por sua aplicação ou por qualquer outro cliente
+jdbc - por exemplo o squirrel. Lembre-se você estará acessando um
 banco PostgreSQL!</p>
-
+</div>
+</div>
+</div>
     </section>
 <section>
 <div id="disqus_thread"></div>

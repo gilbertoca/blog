@@ -57,39 +57,53 @@
         </p>
     </header>
     <section>
-	<blockquote>
-<p>Verificando posts de <a href="http://www.jroller.com/gilbertoca">meu antigo blog</a> notei que alguns não foram importados ou foram importados com defeitos em seu conteúdo. Então resolvi realizar um trabalho de revisão e o <strong><a href="http://www.jroller.com/gilbertoca/entry/direct_path_load_como_configurar">terceiro</a></strong> começa hoje:</p>
+	<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Verificando posts de [meu antigo blog][1] notei que alguns não foram importados ou foram importados com defeitos em seu conteúdo. Então resolvi realizar um trabalho de revisão e o <strong>[terceiro][2]</strong> começa hoje:</p>
+</div>
 </blockquote>
-<p>Para que se possa usar a opção de <a href="http://download.oracle.com/docs/cd/B19306_01/server.102/b14215/ldr_modes.htm#i1007669">carga direta usando o SQL Load</a>, você precisa primeiro configurar o banco de dados para tal atividade.<br />
-A configuração é simples, basta você executar o script catldr.sql, localizado na instalação do produto, $ORACLE_HOME/rdbms/admin.<br />
+</div>
+<div class="paragraph">
+<p>Para que se possa usar a opção de [carga direta usando o SQL Load][3], você precisa primeiro configurar o banco de dados para tal atividade.
+A configuração é simples, basta você executar o script catldr.sql, localizado na instalação do produto, $ORACLE_HOME/rdbms/admin.
 Depois é só utilizar a opção direct=true na linha de comando.</p>
-<div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">oracle<span style="color: #000000; font-weight: bold;">@</span>SUGEP-DMASI:~<span style="color: #000000; font-weight: bold;">&gt;</span> sqlplus <span style="color: #000000; font-weight: bold;">/</span> <span style="color: #c20cb9; font-weight: bold;">as</span> sysdba
-SQL<span style="color: #000000; font-weight: bold;">*</span>Plus: Release 10.2.0.1.0 - Production on Ter Jun <span style="color: #000000;">1</span> <span style="color: #000000;">17</span>:04:<span style="color: #000000;">20</span> <span style="color: #000000;">2010</span>
-Copyright <span style="color: #7a0874; font-weight: bold;">&#40;</span>c<span style="color: #7a0874; font-weight: bold;">&#41;</span> <span style="color: #000000;">1982</span>, <span style="color: #000000;">2005</span>, Oracle.  All rights reserved.
+</div>
+<div class="paragraph">
+<p>&lt;div class="wp_syntax"&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class="code"&gt;
+        &lt;pre class="bash" style="font-family:monospace;"&gt;oracle&lt;span style="color: #000000; font-weight: bold;"&gt;@&lt;/span&gt;SUGEP-DMASI:~&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt; sqlplus &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt; &lt;span style="color: #c20cb9; font-weight: bold;"&gt;as&lt;/span&gt; sysdba
+SQL&lt;span style="color: #000000; font-weight: bold;"&gt;*&lt;/span&gt;Plus: Release 10.2.0.1.0 - Production on Ter Jun &lt;span style="color: #000000;"&gt;1&lt;/span&gt; &lt;span style="color: #000000;"&gt;17&lt;/span&gt;:04:&lt;span style="color: #000000;"&gt;20&lt;/span&gt; &lt;span style="color: #000000;"&gt;2010&lt;/span&gt;
+Copyright &lt;span style="color: #7a0874; font-weight: bold;"&gt;&#40;&lt;/span&gt;c&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#41;&lt;/span&gt; &lt;span style="color: #000000;"&gt;1982&lt;/span&gt;, &lt;span style="color: #000000;"&gt;2005&lt;/span&gt;, Oracle.  All rights reserved.
 Connected to:
 Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
 With the Partitioning, OLAP and Data Mining options
-SQL<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000; font-weight: bold;">!</span><span style="color: #c20cb9; font-weight: bold;">ls</span> <span style="color: #007800;">$ORACLE_HOME</span><span style="color: #000000; font-weight: bold;">/</span>rdbms<span style="color: #000000; font-weight: bold;">/</span>admin<span style="color: #000000; font-weight: bold;">/</span>catl<span style="color: #000000; font-weight: bold;">*</span>
-<span style="color: #000000; font-weight: bold;">/</span>opt<span style="color: #000000; font-weight: bold;">/</span>oracle<span style="color: #000000; font-weight: bold;">/</span>db<span style="color: #000000; font-weight: bold;">/</span><span style="color: #000000;">10.2</span><span style="color: #000000; font-weight: bold;">/</span>server<span style="color: #000000; font-weight: bold;">/</span>rdbms<span style="color: #000000; font-weight: bold;">/</span>admin<span style="color: #000000; font-weight: bold;">/</span>catldap.sql  <span style="color: #000000; font-weight: bold;">/</span>opt<span style="color: #000000; font-weight: bold;">/</span>oracle<span style="color: #000000; font-weight: bold;">/</span>db<span style="color: #000000; font-weight: bold;">/</span><span style="color: #000000;">10.2</span><span style="color: #000000; font-weight: bold;">/</span>server<span style="color: #000000; font-weight: bold;">/</span>rdbms<span style="color: #000000; font-weight: bold;">/</span>admin<span style="color: #000000; font-weight: bold;">/</span>catlibc.sql
-<span style="color: #000000; font-weight: bold;">/</span>opt<span style="color: #000000; font-weight: bold;">/</span>oracle<span style="color: #000000; font-weight: bold;">/</span>db<span style="color: #000000; font-weight: bold;">/</span><span style="color: #000000;">10.2</span><span style="color: #000000; font-weight: bold;">/</span>server<span style="color: #000000; font-weight: bold;">/</span>rdbms<span style="color: #000000; font-weight: bold;">/</span>admin<span style="color: #000000; font-weight: bold;">/</span>catldr.sql   <span style="color: #000000; font-weight: bold;">/</span>opt<span style="color: #000000; font-weight: bold;">/</span>oracle<span style="color: #000000; font-weight: bold;">/</span>db<span style="color: #000000; font-weight: bold;">/</span><span style="color: #000000;">10.2</span><span style="color: #000000; font-weight: bold;">/</span>server<span style="color: #000000; font-weight: bold;">/</span>rdbms<span style="color: #000000; font-weight: bold;">/</span>admin<span style="color: #000000; font-weight: bold;">/</span>catlsby.sql
+SQL&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;!&lt;/span&gt;&lt;span style="color: #c20cb9; font-weight: bold;"&gt;ls&lt;/span&gt; &lt;span style="color: #007800;"&gt;$ORACLE_HOME&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;rdbms&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;admin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;catl&lt;span style="color: #000000; font-weight: bold;"&gt;*&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;opt&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;oracle&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;db&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;&lt;span style="color: #000000;"&gt;10.2&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;server&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;rdbms&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;admin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;catldap.sql  &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;opt&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;oracle&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;db&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;&lt;span style="color: #000000;"&gt;10.2&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;server&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;rdbms&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;admin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;catlibc.sql
+&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;opt&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;oracle&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;db&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;&lt;span style="color: #000000;"&gt;10.2&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;server&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;rdbms&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;admin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;catldr.sql   &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;opt&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;oracle&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;db&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;&lt;span style="color: #000000;"&gt;10.2&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;server&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;rdbms&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;admin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;catlsby.sql
 &nbsp;
-SQL<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000; font-weight: bold;">@/</span>opt<span style="color: #000000; font-weight: bold;">/</span>oracle<span style="color: #000000; font-weight: bold;">/</span>db<span style="color: #000000; font-weight: bold;">/</span><span style="color: #000000;">10.2</span><span style="color: #000000; font-weight: bold;">/</span>server<span style="color: #000000; font-weight: bold;">/</span>rdbms<span style="color: #000000; font-weight: bold;">/</span>admin<span style="color: #000000; font-weight: bold;">/</span>catldr.sql
+SQL&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;@/&lt;/span&gt;opt&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;oracle&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;db&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;&lt;span style="color: #000000;"&gt;10.2&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;server&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;rdbms&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;admin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;catldr.sql
 .
 .
 View created.
 Synonym created.
 Grant succeeded.
 &nbsp;
-SQL<span style="color: #000000; font-weight: bold;">&gt;</span></pre>
-      </td>
-    </tr>
-  </table>
-</div></p> 
-
+SQL&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;&lt;/p&gt;</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[1]: http://www.jroller.com/gilbertoca
+[2]: http://www.jroller.com/gilbertoca/entry/direct_path_load_como_configurar
+[3]: http://download.oracle.com/docs/cd/B19306_01/server.102/b14215/ldr_modes.htm#i1007669</pre>
+</div>
+</div>
     </section>
 <section>
 <div id="disqus_thread"></div>

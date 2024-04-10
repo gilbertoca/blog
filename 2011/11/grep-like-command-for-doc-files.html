@@ -60,38 +60,53 @@
         </p>
     </header>
     <section>
-	<p>Esta é uma pequena dica. Se você tem uma grande quantidade de arquivos MS Word, OpenOffice e agora LibreOffice, com certeza já teve a necessidade de utilizar os recursos que o Shell Linux/Unix nos trás - grep, sed, more, strings, <a href="http://www.wagner.pp.ru/~vitus/software/catdoc/" title="catdoc" target="_blank">catdoc</a>, <a href="http://www.winfield.demon.nl/" title="antiwork" target="_blank">antiwork</a>, etc.</p>
-<p>Como vocês bem sabem, gerencio o grupo <a href="http://groups.google.com/group/ibmp-mensagens-reflexivas" title="Mensagens Reflexivas" target="_blank">Mensagens Reflexivas</a> e neste fim de semana - aos sábados editamos as mensagens - me deparei que tal necessidade: procurar em vários arquivos docs por um nome, neste caso, por um autor.</p>
+	<div class="paragraph">
+<p>Esta é uma pequena dica. Se você tem uma grande quantidade de arquivos MS Word, OpenOffice e agora LibreOffice, com certeza já teve a necessidade de utilizar os recursos que o Shell Linux/Unix nos trás - grep, sed, more, strings, &lt;a href="http://www.wagner.pp.ru/~vitus/software/catdoc/" title="catdoc" target="_blank"&gt;catdoc&lt;/a&gt;, &lt;a href="http://www.winfield.demon.nl/" title="antiwork" target="_blank"&gt;antiwork&lt;/a&gt;, etc.</p>
+</div>
+<div class="paragraph">
+<p>Como vocês bem sabem, gerencio o grupo &lt;a href="http://groups.google.com/group/ibmp-mensagens-reflexivas" title="Mensagens Reflexivas" target="_blank"&gt;Mensagens Reflexivas&lt;/a&gt; e neste fim de semana - aos sábados editamos as mensagens - me deparei que tal necessidade: procurar em vários arquivos docs por um nome, neste caso, por um autor.</p>
+</div>
+<div class="paragraph">
 <p>Bem, aqui está a dica:</p>
-<div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">&nbsp;
-gilberto<span style="color: #000000; font-weight: bold;">@</span>SUGEP-DMASI:~<span style="color: #000000; font-weight: bold;">/</span>Dropbox<span style="color: #000000; font-weight: bold;">/</span>igreja-bmp<span style="color: #000000; font-weight: bold;">/</span>mensagens<span style="color: #000000; font-weight: bold;">/</span>ENVIADAS$ <span style="color: #c20cb9; font-weight: bold;">ls</span> <span style="color: #660033;">-1</span> <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #c20cb9; font-weight: bold;">wc</span> <span style="color: #660033;">-l</span>
-<span style="color: #000000;">167</span>
+</div>
+<div class="paragraph">
+<p>&lt;div class="wp_syntax"&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class="code"&gt;
+        &lt;pre class="bash" style="font-family:monospace;"&gt;&nbsp;
+gilberto&lt;span style="color: #000000; font-weight: bold;"&gt;@&lt;/span&gt;SUGEP-DMASI:~&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;Dropbox&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;igreja-bmp&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;mensagens&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;ENVIADAS$ &lt;span style="color: #c20cb9; font-weight: bold;"&gt;ls&lt;/span&gt; &lt;span style="color: #660033;"&gt;-1&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt; &lt;span style="color: #c20cb9; font-weight: bold;"&gt;wc&lt;/span&gt; &lt;span style="color: #660033;"&gt;-l&lt;/span&gt;
+&lt;span style="color: #000000;"&gt;167&lt;/span&gt;
 &nbsp;
-gilberto<span style="color: #000000; font-weight: bold;">@</span>SUGEP-DMASI:~<span style="color: #000000; font-weight: bold;">/</span>Dropbox<span style="color: #000000; font-weight: bold;">/</span>igreja-bmp<span style="color: #000000; font-weight: bold;">/</span>mensagens<span style="color: #000000; font-weight: bold;">/</span>ENVIADAS$ antiword <span style="color: #000000; font-weight: bold;">*</span>.doc <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #c20cb9; font-weight: bold;">grep</span> <span style="color: #660033;">-i</span> <span style="color: #ff0000;">"João Garcia"</span> <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #c20cb9; font-weight: bold;">more</span>
-<span style="color: #000000; font-weight: bold;">|</span>Autor: João Garcia, Oakville,      <span style="color: #000000; font-weight: bold;">|</span>Prezado amigo, caso queira interagir  <span style="color: #000000; font-weight: bold;">|</span>
-<span style="color: #000000; font-weight: bold;">|</span>Autor: João Garcia, Oakville,      <span style="color: #000000; font-weight: bold;">|</span>Prezado amigo, caso queira interagir  <span style="color: #000000; font-weight: bold;">|</span>
-<span style="color: #000000; font-weight: bold;">|</span>Autor: João Garcia, Oakville,      <span style="color: #000000; font-weight: bold;">|</span>Prezado amigo, caso queira interagir  <span style="color: #000000; font-weight: bold;">|</span>
-<span style="color: #000000; font-weight: bold;">|</span>Autor: João Garcia, Oakville,      <span style="color: #000000; font-weight: bold;">|</span>Prezado amigo, caso queira interagir  <span style="color: #000000; font-weight: bold;">|</span>
-<span style="color: #000000; font-weight: bold;">|</span>Autor: João Garcia, Oakville,      <span style="color: #000000; font-weight: bold;">|</span>Prezado amigo, caso queira interagir  <span style="color: #000000; font-weight: bold;">|</span>
-<span style="color: #000000; font-weight: bold;">|</span>Autor: João Garcia, Oakville,      <span style="color: #000000; font-weight: bold;">|</span>Prezado amigo, caso queira interagir  <span style="color: #000000; font-weight: bold;">|</span>
-<span style="color: #000000; font-weight: bold;">|</span>Autor: João Garcia, Oakville,      <span style="color: #000000; font-weight: bold;">|</span>Prezado amigo, caso queira interagir  <span style="color: #000000; font-weight: bold;">|</span>
-<span style="color: #000000; font-weight: bold;">|</span>Autor: João Garcia, Oakville,   <span style="color: #000000; font-weight: bold;">|</span>Prezado amigo, caso queira interagir      <span style="color: #000000; font-weight: bold;">|</span>
-<span style="color: #000000; font-weight: bold;">|</span>Autor: João Garcia, Oakville -     <span style="color: #000000; font-weight: bold;">|</span>Prezado amigo, caso queira interagir<span style="color: #000000; font-weight: bold;">|</span>
-<span style="color: #000000; font-weight: bold;">|</span>Autor: João Garcia, Oakville,   <span style="color: #000000; font-weight: bold;">|</span>Prezado amigo, caso queira interagir     <span style="color: #000000; font-weight: bold;">|</span></pre>
-      </td>
-    </tr>
-  </table>
-</div></p> 
+gilberto&lt;span style="color: #000000; font-weight: bold;"&gt;@&lt;/span&gt;SUGEP-DMASI:~&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;Dropbox&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;igreja-bmp&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;mensagens&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;ENVIADAS$ antiword &lt;span style="color: #000000; font-weight: bold;"&gt;*&lt;/span&gt;.doc &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt; &lt;span style="color: #c20cb9; font-weight: bold;"&gt;grep&lt;/span&gt; &lt;span style="color: #660033;"&gt;-i&lt;/span&gt; &lt;span style="color: #ff0000;"&gt;"João Garcia"&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt; &lt;span style="color: #c20cb9; font-weight: bold;"&gt;more&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,   &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir      &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Autor: João Garcia, Oakville -     &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir&lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;
+&lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,   &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir     &lt;span style="color: #000000; font-weight: bold;"&gt;|&lt;/span&gt;&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;&lt;/p&gt;</p>
+</div>
+<div class="paragraph">
 <p>Uma busca pela rede mundial usando o Google ajuda muito nessas horas.</p>
+</div>
+<div class="ulist">
 <ul>
-<li><a href="http://superuser.com/questions/70343/grep-in-microsoft-word" title="Grep in Microsoft Word?" target="_blank">Grep in Microsoft Word?</a></li>
+<li>
+<p>&lt;a href="http://superuser.com/questions/70343/grep-in-microsoft-word" title="Grep in Microsoft Word?" target="_blank"&gt;Grep in Microsoft Word?&lt;/a&gt;</p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
 <p><strong>Agora é descobrir como listar o nome dos arquivos. Alguém se habilita?</strong></p>
-
+</div>
     </section>
 <section>
 <div id="disqus_thread"></div>

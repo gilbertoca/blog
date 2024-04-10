@@ -59,17 +59,35 @@
         </p>
     </header>
     <section>
-	<p>Para ter um ambiente semelhante ao de produção, neste caso para as aplicações que rodam em forms e para a instalação do banco, acabei por instalar o mesmo sistema operacional (SLES9), os mesmos softwares (OracleAs 10g, Oracle Database 10g e Oracle DevSuit 10g) no meu desktop. Com isso, toda vez que preciso usar qualquer um destes softwares eu tem que assumir o usuario de instalação dos mesmos que neste caso usei o default oracle. Veja a labuta que tem de fazer:</p>
-<pre>
-<code class="bash">
+	<div class="paragraph">
+<p>Para ter um ambiente semelhante ao de produção, neste caso para as aplicações
+que rodam em forms e para a instalação do banco, acabei por instalar o mesmo
+sistema operacional (SLES9), os mesmos softwares (OracleAs 10g, Oracle Database
+10g e Oracle DevSuit 10g) no meu desktop. Com isso, toda vez que preciso usar
+qualquer um destes softwares eu tem que assumir o usuario de instalação dos
+mesmos que neste caso usei o default oracle. Veja a labuta que tem de fazer:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>&lt;code class="bash"&gt;
     $ xhost +
     $ sux – oracle
     $ source .oracleDB #ou oracleDS ou oracleAS
-</code>    
-</pre>
-<p>Dos scripts de mudança de ambiente não tenho como escapar mas para facilitar minha vida, acabei adicionando os grupos DBA e oinstall para minha lista de grupos. Dessa forma não preciso usar o su para mudança de usuario. Ai tem um porém, meu grupo padrão é users. Nessa, quando tento compilar um forms ou iniciar o servidor de aplicações, acontece vários erros de permissões. Isso porque meu grupo principal/efetivo, como já disse, não é o oinstall nem DBA. Para contornar este problema usei o utilitário de sistema newgrp. O comando newgrp é usado para alterar o grupo efetivo do usuário para o grupo solicitado em uma nova sessão de login:</p>
-<pre>
-<code class="bash">
+&lt;/code&gt;    ```
+
+Dos scripts de mudança de ambiente não tenho como escapar mas para facilitar
+minha vida, acabei adicionando os grupos DBA e oinstall para minha lista
+de grupos. Dessa forma não preciso usar o su para mudança de usuario. Ai tem um
+porém, meu grupo padrão é users. Nessa, quando tento compilar um forms ou
+iniciar o servidor de aplicações, acontece vários erros de permissões. Isso
+porque meu grupo principal/efetivo, como já disse, não é o oinstall nem DBA.
+Para contornar este problema usei o utilitário de sistema newgrp. O comando
+newgrp é usado para alterar o grupo efetivo do usuário para o grupo solicitado
+em uma nova sessão de login:</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&lt;code class="bash"&gt;
     $ groups
     users disk uucp dialout audio video oinstall dba
     $ newgrp oinstall
@@ -78,15 +96,21 @@
     $ exit
     $ groups
     users disk uucp dialout audio video oinstall dba
-</code>
-</pre>
-<p>Desta forma meu grupo principal torna-se oinstall, me possibilitando trabalhar com a compilação dos forms. Legal hein! O outro utilitario de sistema que podemos usar é o sg. O sg é mais usando que vc so precisa executar um comando, mas usando o grupo o qual vc necessita:</p>
-<pre>
-<code class="bash">
+&lt;/code&gt;```</p>
+</div>
+<div class="paragraph">
+<p>Desta forma meu grupo principal torna-se oinstall, me possibilitando trabalhar
+com a compilação dos forms. Legal hein! O outro utilitario de sistema que
+podemos usar é o sg. O sg é mais usando que vc so precisa executar um comando,
+mas usando o grupo o qual vc necessita:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>&lt;code class="bash"&gt;
     sg oinstall -c rm *.err
-</code>    
-</pre>
-
+&lt;/code&gt;    ```</code></pre>
+</div>
+</div>
     </section>
 <section>
 <div id="disqus_thread"></div>

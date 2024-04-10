@@ -58,14 +58,24 @@
         </p>
     </header>
     <section>
-	<p>Nosso banco de dados atual está instalado em uma máquina unix - AIX 5.3. Mas por estar acostumado com ambientes Linux, instalei para o mesmo, o<a href="http://www-03.ibm.com/systems/power/software/aix/linux/">pacote de ferramentas Linux</a> que a <a href="http://www.ibm.com/pt/pt/">IBM</a>disponibiliza. Funciona muito bem, mas quando executo um binário unix - exemplo: topas - o shell responde que esse erro.<br />
+	<div class="paragraph">
+<p>Nosso banco de dados atual está instalado em uma máquina unix - AIX 5.3. Mas por estar acostumado com ambientes Linux, instalei para o mesmo, o[ pacote de ferramentas Linux][1] que a [IBM ][2]disponibiliza. Funciona muito bem, mas quando executo um binário unix - exemplo: topas - o shell responde que esse erro.
 A solução é ajustar a variável TERM para xterm, nesse caso é claro, pois utilizo um ambiente gráfico para acessar o servidor. Não sei se funcionaria acessando de um terminal texto.</p>
-<pre>
-<code class="bash">
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>&lt;code class="bash"&gt;
         export TERM=xterm
-</code>
-</pre>
+&lt;/code&gt;```
 
+
+
+
+
+ [1]: http://www-03.ibm.com/systems/power/software/aix/linux/
+ [2]: http://www.ibm.com/pt/pt/</code></pre>
+</div>
+</div>
     </section>
 <section>
 <div id="disqus_thread"></div>

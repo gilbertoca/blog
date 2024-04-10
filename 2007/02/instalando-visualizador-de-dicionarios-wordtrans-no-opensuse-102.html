@@ -58,24 +58,51 @@
         </p>
     </header>
     <section>
-	<p>O <a href="http://www.escomposlinux.org/rvm/wordtrans/about_en.php">wordtrans</a>é uma aplicação gráfica que permite a pesquisa de palavras em vários dicionários. O mesmo também pode traduzir uma palavra selecionada pelo mouse. Ele tem suporte a três tipos de dicionários:</p>
-<ol>
-<li>Dicionários do Tradutor Babylon.</li>
-<li>Dicionários de Texto Puro.</li>
-<li>Dicionários servidos pelo Servidor Dict.</li>
+	<div class="paragraph">
+<p>O <a href="http://www.escomposlinux.org/rvm/wordtrans/about_en.php">wordtrans </a>é uma aplicação gráfica que permite a pesquisa de palavras em vários dicionários.
+O mesmo também pode traduzir uma palavra selecionada pelo mouse. Ele tem suporte a três tipos de dicionários:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Dicionários do Tradutor Babylon.</p>
+</li>
+<li>
+<p>Dicionários de Texto Puro.</p>
+</li>
+<li>
+<p>Dicionários servidos pelo Servidor Dict.</p>
+</li>
 </ol>
+</div>
+<div class="paragraph">
 <p>Pré-requisitos:</p>
-<ol>
-<li>dictd-1.10.6-21.i586.rpm</li>
-<li>dicts-1.5-281.i586.rpm</li>
-<li>wordtrans-1.1pre15-suse.i586.rpm</li>
-<li>wordtrans-kde-1.1pre15-suse.i586.rpm</li>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>dictd-1.10.6-21.i586.rpm</p>
+</li>
+<li>
+<p>dicts-1.5-281.i586.rpm</p>
+</li>
+<li>
+<p>wordtrans-1.1pre15-suse.i586.rpm</p>
+</li>
+<li>
+<p>wordtrans-kde-1.1pre15-suse.i586.rpm</p>
+</li>
 </ol>
+</div>
+<div class="paragraph">
 <p>Não esqueça de baixar também os <a href="http://www.escomposlinux.org/rvm/wordtrans/dictionaries_en.php">dicionários</a>!</p>
+</div>
+<div class="paragraph">
 <p>Instale-os da seguinte forma:</p>
-<pre>
-<code class="bash">
-ti-des05:/home/gilberto/software_usados/tradutor # ll
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>ti-des05:/home/gilberto/software_usados/tradutor # ll
 total 20596
 drwxr-xr-x 2 gilberto users     4096 Jun 14  2006 dicionarios
 -rw-r--r-- 1 gilberto users   188473 Jun 14  2006 dictd-1.4.9-759.i586.rpm
@@ -86,12 +113,19 @@ drwxr-xr-x 2 gilberto users     4096 Jun 14  2006 dicionarios
 ti-des05:/home/gilberto/software_usados/tradutor # rpm -Uhv wordtrans-1.1pre15-suse.i586.rpm
 Preparing...                ########################################### [100%]
    1:wordtrans              ########################################### [100%]
-<p>ti-des05:/home/gilberto/software_usados/tradutor # rpm -Uhv wordtrans-kde-1.1pre15-suse.i586.rpm Preparing&hellip;                ########################################### [100%] 1:wordtrans-kde          ########################################### [100%] ti-des05:/home/gilberto/software_usados/tradutor # </code></p>
-</pre>
+
+ti-des05:/home/gilberto/software_usados/tradutor # rpm -Uhv wordtrans-kde-1.1pre15-suse.i586.rpm
+Preparing...                ########################################### [100%]
+   1:wordtrans-kde          ########################################### [100%]
+ti-des05:/home/gilberto/software_usados/tradutor #</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Depois, faça a descompactação dos dicionários em um local:</p>
-<pre>
-<code class="bash">
-ti-des05:/home/gilberto/software_usados/tradutor # cd dicionarios/
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>ti-des05:/home/gilberto/software_usados/tradutor # cd dicionarios/
 ti-des05:/home/gilberto/software_usados/tradutor/dicionarios # ll
 total 37648
 -rw-r--r-- 1 gilberto users 8374290 Jun 14  2006 EngtoEng.dic
@@ -110,12 +144,17 @@ total 37648
 -rw-r--r-- 1 gilberto users  122742 May  8  2003 por-eng.dict.dz
 -rw-r--r-- 1 gilberto users  165280 May  8  2003 por-eng.index
 -rwxr-xr-x 1 gilberto users  208269 Jun  2  2006 por-eng.tar.gz
-ti-des05:/home/gilberto/software_usados/tradutor/dicionarios #
-</code>
-</pre>
-<p>Bom, agora precisamos adicionar os dicionários que precisamos ao worktrans. Para isso, através do menu Dictionaries, escolha New: Dictionaries-&gt;New …. Aparecerá tela para selecionar o tipo de dicionário. Eu escolhi o tipo babylon. O restante é bem fácil e intuitivo!</p>
-<p><img src="wordtrans.png" alt="menu Dictionaries" /></p>
-
+ti-des05:/home/gilberto/software_usados/tradutor/dicionarios #</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Bom, agora precisamos adicionar os dicionários que precisamos ao worktrans. Para isso, através do menu Dictionaries, escolha New: Dictionaries&#8594;New &#8230;. Aparecerá tela para selecionar o tipo de dicionário. Eu escolhi o tipo babylon. O restante é bem fácil e intuitivo!</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="wordtrans.png" alt="menu Dictionaries">
+</div>
+</div>
     </section>
 <section>
 <div id="disqus_thread"></div>

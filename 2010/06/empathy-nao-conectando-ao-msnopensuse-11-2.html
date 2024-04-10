@@ -59,51 +59,83 @@
         </p>
     </header>
     <section>
-	<p>Recentimente resolvi, novamente, atualizar o gnome da versão 2.28 para 2.30 através do procedimento descrito neste endereço: <a href="http://en.openSUSE.org/GNOME/2.30">http://en.openSUSE.org/GNOME/2.30</a> .  Como sempre sem problemas. <a href="http://www.gnome.org/" target="_blank">O gnome</a> é um ambiente bastante consistente e a meu ver seguro! Mas um componente que uso como meio de comunicação - <a href="http://live.gnome.org/Empathy" target="_blank">Empathy</a> - começou a apresentar um erro conexão usando o protocolo MSN. Não havia percebido tal problema porque até então só tinha utilizado o <a href="http://pt.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol" target="_blank">protocolo Jabber</a>.</p>
-<p>Bem, após uma pesquisa pelo google, <a href="http://ubuntu-utah.ubuntuforums.org/showpost.php?p=8058121&postcount=9" target="_blank">encontrei a solução do problema</a>: desisntalar o *pacote telepathy-butterfly. *Lembrando que há a necessidade de fechar o programa antes de remover este componente.</p>
+	<div class="paragraph">
+<p>Recentimente resolvi, novamente, atualizar o gnome da versão 2.28 para 2.30 através do procedimento descrito neste endereço: <a href="http://en.openSUSE.org/GNOME/2.30" class="bare">http://en.openSUSE.org/GNOME/2.30</a> .  Como sempre sem problemas. &lt;a href="http://www.gnome.org/" target="_blank"&gt;O gnome&lt;/a&gt; é um ambiente bastante consistente e a meu ver seguro! Mas um componente que uso como meio de comunicação - &lt;a href="http://live.gnome.org/Empathy" target="_blank"&gt;Empathy&lt;/a&gt; - começou a apresentar um erro conexão usando o protocolo MSN. Não havia percebido tal problema porque até então só tinha utilizado o &lt;a href="http://pt.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol" target="_blank"&gt;protocolo Jabber&lt;/a&gt;.</p>
+</div>
+<div class="paragraph">
+<p>Bem, após uma pesquisa pelo google, &lt;a href="http://ubuntu-utah.ubuntuforums.org/showpost.php?p=8058121&amp;postcount=9" target="_blank"&gt;encontrei a solução do problema&lt;/a&gt;: desisntalar o *pacote telepathy-butterfly. *Lembrando que há a necessidade de fechar o programa antes de remover este componente.</p>
+</div>
+<div class="quoteblock">
 <blockquote>
-<p><strong>Atualização(13/12/2011):</strong> Hoje, após uma atualização, o empathy parou de conectar. Voltando <a href="http://forums.openSUSE.org/english/get-technical-help-here/applications/467973-empathy-not-working-msn-2.html#post2417727" target="_blank">àquela discussão no forum openSUSE</a>, notei que a solução é bem mais simples:</p>
-<div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">- Remova sua conta<span style="color: #7a0874; font-weight: bold;">&#40;</span>Remove your live account<span style="color: #7a0874; font-weight: bold;">&#41;</span>.
-- Sair <span style="color: #000000; font-weight: bold;">do</span> Empathy<span style="color: #7a0874; font-weight: bold;">&#40;</span>Exit from Empathy<span style="color: #7a0874; font-weight: bold;">&#41;</span>
-- Desinstalar o pacote <span style="color: #7a0874; font-weight: bold;">&#40;</span>Remove telepathy-butterfly<span style="color: #7a0874; font-weight: bold;">&#41;</span>
-- Encerrar sua sessão<span style="color: #000000; font-weight: bold;">/</span>Entrar em uma nova sessão<span style="color: #7a0874; font-weight: bold;">&#40;</span>logout<span style="color: #000000; font-weight: bold;">/</span><span style="color: #c20cb9; font-weight: bold;">login</span><span style="color: #7a0874; font-weight: bold;">&#41;</span>
-- Adicione sua conta MSN novamente<span style="color: #7a0874; font-weight: bold;">&#40;</span>Enter your account again<span style="color: #7a0874; font-weight: bold;">&#41;</span>
-- Marque a opção Método Http<span style="color: #7a0874; font-weight: bold;">&#40;</span>mark the Http Method option<span style="color: #7a0874; font-weight: bold;">&#41;</span></pre>
-      </td>
-    </tr>
-  </table>
+<div class="paragraph">
+<p><strong>Atualização(13/12/2011):</strong> Hoje, após uma atualização, o empathy parou de conectar. Voltando &lt;a href="http://forums.openSUSE.org/english/get-technical-help-here/applications/467973-empathy-not-working-msn-2.html#post2417727" target="_blank"&gt;àquela discussão no forum openSUSE&lt;/a&gt;, notei que a solução é bem mais simples:</p>
 </div>
-<p><a href="empathy_msn.png"><img src="empathy_msn-300x240.png"  title="Empathy MSN" width="300" height="240" class="alignnone size-medium wp-image-850" /></a><br />
+<div class="paragraph">
+<p>&lt;div class="wp_syntax"&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class="code"&gt;
+        &lt;pre class="bash" style="font-family:monospace;"&gt;- Remova sua conta&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#40;&lt;/span&gt;Remove your live account&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#41;&lt;/span&gt;.
+- Sair &lt;span style="color: #000000; font-weight: bold;"&gt;do&lt;/span&gt; Empathy&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#40;&lt;/span&gt;Exit from Empathy&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#41;&lt;/span&gt;
+- Desinstalar o pacote &lt;span style="color: #7a0874; font-weight: bold;"&gt;&#40;&lt;/span&gt;Remove telepathy-butterfly&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#41;&lt;/span&gt;
+- Encerrar sua sessão&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;Entrar em uma nova sessão&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#40;&lt;/span&gt;logout&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;&lt;span style="color: #c20cb9; font-weight: bold;"&gt;login&lt;/span&gt;&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#41;&lt;/span&gt;
+- Adicione sua conta MSN novamente&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#40;&lt;/span&gt;Enter your account again&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#41;&lt;/span&gt;
+- Marque a opção Método Http&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#40;&lt;/span&gt;mark the Http Method option&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#41;&lt;/span&gt;&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>[&lt;img src="empathy_msn-300x240.png"  title="Empathy MSN" width="300" height="240" class="alignnone size-medium wp-image-850" /&gt;][1]
 Lembre-se: você precisa fechar o aplicativo(Empathy).</p>
-<p><strong>Atualização(28/11/2011):</strong> No trabalho já estou utilizando o openSUSE 12.1 (adaptando-me ao novo jeito do gnome 3). Este gerenciador de mensagens, novamente, veio com problema para conectar ao protocolo MSN. Desta vez não precisamos desinstalar nada, apenas realizar uma pequena modificação em uma biblioteca que o acompanha. <a href="http://forums.openSUSE.org/english/get-technical-help-here/applications/467973-empathy-not-working-msn.html#post2405889" title="Empathy not working with MSN" target="_blank">Edite o seguinte arquivo da biblioteca ql</a>:</p>
-<div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">gilberto<span style="color: #000000; font-weight: bold;">@</span>SUGEP265338:~<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">vi</span> <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>lib<span style="color: #000000; font-weight: bold;">/</span>python2.7<span style="color: #000000; font-weight: bold;">/</span>site-packages<span style="color: #000000; font-weight: bold;">/</span>papyon<span style="color: #000000; font-weight: bold;">/</span>service<span style="color: #000000; font-weight: bold;">/</span>description<span style="color: #000000; font-weight: bold;">/</span>AB<span style="color: #000000; font-weight: bold;">/</span>__init__.py</pre>
-      </td>
-    </tr>
-  </table>
 </div>
-<p>e faça a seguinte modificação:</p>
-<div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="vim" style="font-family:monospace;">#url = <span style="color: #C5A22D;">"http://contacts.msn.com/abservice/abservice.asmx"</span>
-url = <span style="color: #C5A22D;">"http://local-bay.contacts.msn.com/abservice/abservice.asmx"</span></pre>
-      </td>
-    </tr>
-  </table>
-</div>
-<p>Lembre-se: você precisa fechar o aplicativo(Empathy).</p>
 </blockquote>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><strong>Atualização(28/11/2011):</strong> No trabalho já estou utilizando o openSUSE 12.1 (adaptando-me ao novo jeito do gnome 3). Este gerenciador de mensagens, novamente, veio com problema para conectar ao protocolo MSN. Desta vez não precisamos desinstalar nada, apenas realizar uma pequena modificação em uma biblioteca que o acompanha. &lt;a href="http://forums.openSUSE.org/english/get-technical-help-here/applications/467973-empathy-not-working-msn.html#post2405889" title="Empathy not working with MSN" target="_blank"&gt;Edite o seguinte arquivo da biblioteca ql&lt;/a&gt;:</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="wp_syntax"&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class="code"&gt;
+        &lt;pre class="bash" style="font-family:monospace;"&gt;gilberto&lt;span style="color: #000000; font-weight: bold;"&gt;@&lt;/span&gt;SUGEP265338:~&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt; &lt;span style="color: #c20cb9; font-weight: bold;"&gt;sudo&lt;/span&gt; &lt;span style="color: #c20cb9; font-weight: bold;"&gt;vi&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;lib&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;python2.7&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;site-packages&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;papyon&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;service&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;description&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;AB&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;<em>init</em>.py&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>e faça a seguinte modificação:</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="wp_syntax"&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class="code"&gt;
+        &lt;pre class="vim" style="font-family:monospace;"&gt;#url = &lt;span style="color: #C5A22D;"&gt;"http://contacts.msn.com/abservice/abservice.asmx"&lt;/span&gt;
+url = &lt;span style="color: #C5A22D;"&gt;"http://local-bay.contacts.msn.com/abservice/abservice.asmx"&lt;/span&gt;&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>Lembre-se: você precisa fechar o aplicativo(Empathy).</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
 <p>Espero que esta informação ajude a outros colegas usuários linux.</p>
-
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[1]: empathy_msn.png</pre>
+</div>
+</div>
     </section>
 <section>
 <div id="disqus_thread"></div>
