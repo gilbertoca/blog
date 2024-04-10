@@ -6,7 +6,7 @@ status=published
 tags=Bíblia, Estou lendo e você,  Jesus Cristo, Jornada, Livro Sagrado, Sabedoria
 ~~~~~~
 
-
+++++
 <table width="537" cellspacing="0" cellpadding="7">
   <col width="261" /> <col width="16" /> <col width="316" /> <tr valign="TOP">
     <td bgcolor="#d9d9d9" width="261">
@@ -89,3 +89,4 @@ tags=Bíblia, Estou lendo e você,  Jesus Cristo, Jornada, Livro Sagrado, Sabedo
     </td>
   </tr>
 </table>
+++++

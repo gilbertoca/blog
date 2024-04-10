@@ -6,7 +6,7 @@ status=published
 tags=desenvolvimento,  Java, NetBeans, Traduções
 ~~~~~~
 
-*Disponível na Internet. <a href="https://blogs.oracle.com/NetBeansSupport/entry/netbeans_ide_log_file" target="_blank">Viewing log files in NetBeans IDE</a>
+*Disponível na Internet. <a href="https://blogs.oracle.com/NetBeansSupport/entry/netbeans_ide_log_file[Viewing log files in NetBeans IDE</a>
 Arquivo capturado em 05 de dezembro de 2014*
 
 

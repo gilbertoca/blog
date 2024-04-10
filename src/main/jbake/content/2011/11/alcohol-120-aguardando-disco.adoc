@@ -12,7 +12,7 @@ tags= Sistema Operacional, Windows
 Isso é um problema? Não. Na verdade o problema está entre o teclado e o computador. <img src="http://blog.gilbertoca.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> 
 
 Este software não nos avisa quando tentamos gravar uma imagem de CD em uma mídia diferente desta. Ou seja, imagem CD grava-se em um CD-R, imagem DVD grava-se em DVD-R.  
-Referência: <a href="http://forum.alcohol-soft.com/index.php?/topic/26573-waiting-for-disk/" target="_blank">Waiting For Disk</a>.
+Referência: <a href="http://forum.alcohol-soft.com/index.php?/topic/26573-waiting-for-disk/[Waiting For Disk</a>.
 
 
 

@@ -11,9 +11,9 @@ tags=Active Directory, kerberos, Linux, openSUSE, Sistema Operacional, Windows
 > Eu não quero criar um server com samba sem ser PDC E deixar na rede, quero apenas ao inves de usar o XP como estação de trabalho usar o openSUSE!
 >
 
-Este pedido de ajuda está registrado <a href="http://www.vivaolinux.com.br/topico/Suse/Linux-em-dominio-Windows" title="Linux em dominio Windows" target="_blank">aqui</a> na comunidade <a href="http://www.vivaolinux.com.br/" title="Viva o Linux" target="_blank">vivaolinux</a>. 
+Este pedido de ajuda está registrado <a href="http://www.vivaolinux.com.br/topico/Suse/Linux-em-dominio-Windows" title="Linux em dominio Windows[aqui</a> na comunidade <a href="http://www.vivaolinux.com.br/" title="Viva o Linux[vivaolinux</a>. 
 
-Apesar de ser uma discussão antiga, ainda assim é bom fazer um passo a passo deste procedimento. Antes devo relatar que aqui na secretaria usamos <a href="http://technet.microsoft.com/pt-br/library/cc668412.aspx" title="Active Directory" target="_blank">Active Directory</a> para autenticação, então foi esse ambiente que usei para testar a inclusão de uma estação <a href="http://pt.openSUSE.org/Portal:Distribui%C3%A7%C3%A3o" title="openSUSE" target="_blank">Linux openSUSE</a> em um Domínio Windows: 
+Apesar de ser uma discussão antiga, ainda assim é bom fazer um passo a passo deste procedimento. Antes devo relatar que aqui na secretaria usamos <a href="http://technet.microsoft.com/pt-br/library/cc668412.aspx" title="Active Directory[Active Directory</a> para autenticação, então foi esse ambiente que usei para testar a inclusão de uma estação <a href="http://pt.openSUSE.org/Portal:Distribui%C3%A7%C3%A3o" title="openSUSE[Linux openSUSE</a> em um Domínio Windows: 
 
   1. Registrar seu controlador de domínio(DC) na lista de nomes de máquinas. Adicione todo o nome qualificado primeiro e o apelido como alias: 192.168.1.2 = server.domain.com server  
     [<img src="1-register_domain_controler_machine_hosts.png"  title="1-register_domain_controler_machine_hosts" width="1024" height="768" class="alignright size-full wp-image-769" />][1] 

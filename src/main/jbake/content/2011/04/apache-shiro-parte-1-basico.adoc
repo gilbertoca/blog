@@ -6,153 +6,107 @@ status=published
 tags=Apache Shiro, Application Server, Autenticação, Autorização, Java, maven, Proteção, Recursos de Segurança, Traduções
 ~~~~~~
 
+Este post é uma tradução livre do artigo http://meri-stuff.blogspot.com/2011/03/apache-shiro-part-1-basics.html[ Apache Shiro Part 1 - Basics,window=_blank], publicado por Meri em 27 de março 2011 
 
-** 
-
-Este post é uma tradução livre do artigo “<a href="http://meri-stuff.blogspot.com/2011/03/apache-shiro-part-1-basics.html" target="_blank"> Apache Shiro Part 1 - Basics </a>“, publicado por Meri em 27 de março 2011 
-
-</strong>  
 **ATUALIZAÇÃO: duas novas seções adicionadas - tratamento de erros e hashing de senhas.**
 
-<A href="http://shiro.apache.org/index.html" target="_blank"> Apache Shiro</A>, inicialmente chamado JSecurity, é um framework de segurança desenvolvido em java. Foi aceito e tornou-se um projeto Apache de nível superior em 2010. Tem como objetivo ser poderoso e fácil de usar. 
-
-O projeto está em constante desenvolvimento e com listas de e-mails ativas para usuários e desenvolvedores. Áreas mais importantes estão <a href="http://shiro.apache.org/documentation.html" target="_blank"> documentadas em sua página web</a>. No entanto, existem algumas lacunas na documentação. Não é possível aprender a usar o máximo dos recursos do Shiro somente com a documentação. Felizmente, o código é bem documentado e onde o testei, ela foi de fácil leitura. 
+http://shiro.apache.org/index.html[ Apache Shiro,window=_blank] inicialmente chamado JSecurity, 
+é um framework de segurança desenvolvido em java. Foi aceito e tornou-se um projeto Apache de nível superior em 2010. 
+Tem como objetivo ser poderoso e fácil de usar. O projeto está em constante desenvolvimento e com listas de e-mails ativas 
+para usuários e desenvolvedores. Áreas mais importantes estão http://shiro.apache.org/documentation.html[ documentadas em sua página web,window=_blank].
+No entanto, existem algumas lacunas na documentação. Não é possível aprender a usar o máximo dos recursos do Shiro somente com a documentação. 
+Felizmente, o código é bem documentado e onde o testei, ela foi de fácil leitura. 
 
 Principais recursos do projeto Shiro são:  
 
-
+* autenticação,
+* autorização,
+* criptografia,
+* gerenciamento de sessão.
   
-
-
-  * autenticação,
-  
-
-
-  * autorização,
-  
-
-
-  * criptografia,
-  
-
-
-  * gerenciamento de sessão.
-  
-
-
-Neste artigo tentaremos demonstrar vários recursos do Shiro. Vamos começar com uma simples aplicação sem segurança e então adicionaremos recursos de segurança. Todo código está disponível no projeto <A href="https://github.com/SomMeri/SimpleShiroSecuredApplication" target="_blank"> SimpleShiroSecuredApplication</A> hospedado no <a href="https://github.com/" target="_blank"> Github</a>. 
+Neste artigo tentaremos demonstrar vários recursos do Shiro. Vamos começar com uma simples aplicação sem segurança e 
+então adicionaremos recursos de segurança. Todo código está disponível no projeto https://github.com/SomMeri/SimpleShiroSecuredApplication[ SimpleShiroSecuredApplication,window=_blank] 
+hospedado no https://github.com/[ Github,window=_blank]. 
 
 #### Aplicação sem Segurança
 
-O código da aplicação sem segurança está localizado no ramo(branch) <A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/tree/unsecured_application" target="_blank"> unsecured_application</A>.  
+O código da aplicação sem segurança está localizado no ramo(branch) https://github.com/SomMeri/SimpleShiroSecuredApplication/tree/unsecured_application[ unsecured_application,window=_blank].  
 A aplicação representa um sistema interno para uma companhia fictícia. A companhia tem quatro departamentos:  
 
+* administradores(administrators),
+* reparadores(repairmen),
+* cientistas(scientists),
+* vendedores(sales).
 
-  
+Cada departamento tem sua própria página. Cada página contém botões que serão usados por usuários em sua atividade. 
+Quando o usuário pressiona o botão, o trabalho é realizado. Por exemplo, qualquer reparador pode acessar a página reparadores(repairmen) 
+e pressionar o botão “Reparar Refrigerador(Repair Refrigerator)”. O botão repara refrigerador e mostra mensagem de sucesso. 
 
+Cada usuário tem sua própria página de gerenciamento de conta. Esta página de gerenciamento contém informações privadas do usuário. 
+Como a aplicação sem segurança não tem usuários ainda, a página de gerenciamento de conta não faz nada. Adicionalmente, 
+há uma página que contém todas funções da aplicação. Tudo que alguém pode fazer é possível ser feito nesta página. 
 
-  * administradores(administrators),
-  
-
-
-  * reparadores(repairmen),
-  
-
-
-  * cientistas(scientists),
-  
-
-
-  * vendedores(sales).
-  
-
-
-Cada departamento tem sua própria página. Cada página contém botões que serão usados por usuários em sua atividade. Quando o usuário pressiona o botão, o trabalho é realizado. Por exemplo, qualquer reparador pode acessar a página reparadores(repairmen) e pressionar o botão “Reparar Refrigerador(Repair Refrigerator)”. O botão repara refrigerador e mostra mensagem de sucesso. 
-
-Cada usuário tem sua própria página de gerenciamento de conta. Esta página de gerenciamento contém informações privadas do usuário. Como a aplicação sem segurança não tem usuários ainda, a página de gerenciamento de conta não faz nada. Adicionalmente, há uma página que contém todas funções da aplicação. Tudo que alguém pode fazer é possível ser feito nesta página. 
-
-Qualquer pessoa pode fazer qualquer coisa e ver todas as páginas. A aplicação exemplo é executada na classe de teste <A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/unsecured_application/src/test/java/org/meri/simpleshirosecuredapplication/RunWaitTest.java" target="_blank"> RunWaitTest</A>. Não é uma boa prática usar teste de unidade desta forma, mas isso não é importante agora. Se você executar a classe a aplicação estará disponível no endereço (url) http://localhost:9180/simpleshirosecuredapplication/. 
+Qualquer pessoa pode fazer qualquer coisa e ver todas as páginas. A aplicação exemplo é executada 
+na classe de teste https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/unsecured_application/src/test/java/org/meri/simpleshirosecuredapplication/RunWaitTest.java[ RunWaitTest,window=_blank]. 
+Não é uma boa prática usar teste de unidade desta forma, mas isso não é importante agora. 
+Se você executar a classe a aplicação estará disponível no endereço (url) http://localhost:9180/simpleshirosecuredapplication/. 
 
 #### Adicionando Autenticação
 
-Primeiro, temos que verificar a identidade do usuário. A mais fácil e padronizada forma de autenticação é feita por senha e nome usuário. Usuário preenche o seu nome de usuário e senha e o sistema verifica se os valores fornecidos combinam com alguma conta de usuário. 
+Primeiro, temos que verificar a identidade do usuário. A mais fácil e padronizada forma de autenticação é feita por senha e nome usuário. 
+Usuário preenche o seu nome de usuário e senha e o sistema verifica se os valores fornecidos combinam com alguma conta de usuário. 
 
-Para aplicações mais simples, é suficiente armazenar nome e senha de usuários em arquivos de texto puro. Em um cenário mais realista, o nome e senha são armazenados em um mecanismo de persistente or a verificação é feita por outro sistema como ldap ou active directory. Shiro suporta todos os métodos de autenticação mencionados. Se os recursos de autenticação pré-existentes não são suficientes, é possível estender o framework com sua própria implementação de verificação. 
+Para aplicações mais simples, é suficiente armazenar nome e senha de usuários em arquivos de texto puro. 
+Em um cenário mais realista, o nome e senha são armazenados em um mecanismo de persistente or a verificação é feita por outro sistema como ldap 
+ou active directory. Shiro suporta todos os métodos de autenticação mencionados. Se os recursos de autenticação pré-existentes não são suficientes, é 
+possível estender o framework com sua própria implementação de verificação. 
 
-Neste capítulo, iremos adicionar autenticação baseada em nome de usuário e senha na aplicação. Nome de usuário e senha serão armazenados no arquivo de inicialização do Shiro, o qual é texto e estático. 
+Neste capítulo, iremos adicionar autenticação baseada em nome de usuário e senha na aplicação. Nome de usuário e senha serão armazenados no arquivo 
+de inicialização do Shiro, o qual é texto e estático. 
 
 **Novos requisitos:**  
-É possível a entrada e saída de usuários(log in/out). A aplicação será acessível somente para usuários registrados. Usuário com autenticação sem erros é redirecionado para sua própria página de gerenciamento de conta. Todas as páginas e funções da aplicação serão acessíveis para qualquer usuário autenticado.  
+É possível a entrada e saída de usuários(log in/out). A aplicação será acessível somente para usuários registrados. 
+Usuário com autenticação sem erros é redirecionado para sua própria página de gerenciamento de conta. 
+Todas as páginas e funções da aplicação serão acessíveis para qualquer usuário autenticado.  
+
 Passos necessários:  
 
-
-  
-
-
-  * adicionar Apache Shiro,
-  
-
-
-  * criar página de autenticação(log in),
-  
-
-
-  * configurar usuários e senhas,
-  
-
-
-  * criar página de saída(log out).
-  
-
+* adicionar Apache Shiro,
+* criar página de autenticação(log in),
+* configurar usuários e senhas,
+* criar página de saída(log out).
 
 ##### Adicionar Apache Shiro
 
-Shiro é integrado à aplicação web através de <a href="http://download.oracle.com/javaee/5/api/javax/servlet/Filter.html" target="_blank"> filtros servlet</a>. Um filtro intercepta requisições e respostas antes do servlet e executa todas as tarefas necessárias (como a identificação do usuário atualmente autenticado, anexar o usuário ao thread corrente, &#8230;). Filtros Shiro pré-definidos fornecem recursos de segurança básicos, como:  
+Shiro é integrado à aplicação web através de http://download.oracle.com/javaee/5/api/javax/servlet/Filter.html[ filtros servlet,window=_blank].
+Um filtro intercepta requisições e respostas antes do servlet e executa todas as tarefas necessárias 
+(como a identificação do usuário atualmente autenticado, anexar o usuário ao thread corrente, &#8230;). 
+Filtros Shiro pré-definidos fornecem recursos de segurança básicos, como:  
 
+* força a autenticação do usuário(log in),
+* força ssl,
+* verificação dos direitos de acesso à página.
 
-  
+Se você quiser aprender mais sobre filtros Shiro pré-definidos, um bom lugar para começar é a enumeração http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/mgt/DefaultFilter.html[ DefaultFilter,window=_blank]. 
+Ela lista todos os filtros Shiro pré-definidos disponíveis. Se estes não forem suficientes para suas necessidades, você pode criar um personalizado. 
 
+Usaremos o filtro altamente configurável http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/servlet/IniShiroFilter.html[ IniShiroFilter,window=_blank]. 
+Ele lê a configuração Shiro a partir do arquivo ini e inicializa o framework de segurança. Ele não executa qualquer verificação de segurança. 
+Verificação de segurança, autenticação de usuário, verificação de protocolo, etc., são 
+todos transferidos(delegados) tanto para o filtro Shiro pré-definido quanto para o filtro personalizado(outra implementação). 
+O filtro IniShiroFilter apenas os inicializa. 
 
-  * força a autenticação do usuário(log in),
-  
+A configuração ini é descrita na http://shiro.apache.org/configuration.html[ documentação,window=_blank] e 
+no http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/servlet/IniShiroFilter.html[ javadoc,window=_blank]. 
+O arquivo de configuração ini tem quatro seções:  
 
-
-  * força ssl,
-  
-
-
-  * verificação dos direitos de acesso à página.
-  
-
-
-Se você quiser aprender mais sobre filtros Shiro pré-definidos, um bom lugar para começar é a enumeração <A href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/mgt/DefaultFilter.html" target="_blank"> DefaultFilter</A>. Ela lista todos os filtros Shiro pré-definidos disponíveis. Se estes não forem suficientes para suas necessidades, você pode criar um personalizado. 
-
-Usaremos o filtro altamente configurável <A href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/servlet/IniShiroFilter.html" target="_blank"> IniShiroFilter</A>. Ele lê a configuração Shiro a partir do arquivo ini e inicializa o framework de segurança. Ele não executa qualquer verificação de segurança. Verificação de segurança, autenticação de usuário, verificação de protocolo, etc. são todos transferidos(delegados) tanto para o filtro Shiro pré-definido quanto para o filtro personalizado(outra implementação). O filtro IniShiroFilter apenas os inicializa. 
-
-A configuração ini é descrita na <A href="http://shiro.apache.org/configuration.html" target="_blank"> documentação</A> e no <A href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/servlet/IniShiroFilter.html" target="_blank"> javadoc</A>. O arquivo de configuração ini tem quatro seções:  
-
-
-  
-
-
-  * Seção [main] contém a inicialização do Shiro. Filtros e objetos personalizados são configurados aqui. 
-  
-
-
-  * Seção [users] define usuários, senhas e perfis de usuário(roles). 
-  
-
-
-  * Seção [roles] associa perfis(roles) com permissões.
-  
-
-
-  * Seção [urls] especifica direitos de acesso às páginas da aplicação (urls). É feito ligando filtro tanto pré-definido quanto personalizado às urls
-  
-
+* Seção [main] contém a inicialização do Shiro. Filtros e objetos personalizados são configurados aqui. 
+* Seção [users] define usuários, senhas e perfis de usuário(roles). 
+* Seção [roles] associa perfis(roles) com permissões.
+* Seção [urls] especifica direitos de acesso às páginas da aplicação (urls). É feito ligando filtro tanto pré-definido quanto personalizado às urls
 
 Adicione Apache Shiro como dependência ao arquivo pom.xml:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -176,9 +130,9 @@ Adicione Apache Shiro como dependência ao arquivo pom.xml:
     </tr>
   </table>
 </div></p> 
-
+++++
 Crie o arquivo Shiro.ini e o coloque no classpath. Configure o arquivo web.xml para chamar o filtro IniShiroFilter antes de cada requisição:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -198,14 +152,16 @@ Crie o arquivo Shiro.ini e o coloque no classpath. Configure o arquivo web.xml p
       </td>
     </tr>
   </table>
-</div></p> 
-
+</div>
+++++
 ##### Criar Página de Autenticação(Log in)
 
-A página de autenticação é uma simples página html contendo um botão submissão, nome de usuário e senha. A funcionalidade de autenticação é tratada pelo filtro Shiro authc pré-definido. O filtro autch permite acesso à página (url) somente a usuários autenticados. Se o usuário não está autenticado, o filtro o redirecionará para a página de autenticação (log in). 
+A página de autenticação é uma simples página html contendo um botão submissão, nome de usuário e senha. 
+A funcionalidade de autenticação é tratada pelo filtro Shiro authc pré-definido. O filtro autch permite acesso à página (url) 
+somente a usuários autenticados. Se o usuário não está autenticado, o filtro o redirecionará para a página de autenticação (log in). 
 
 Crie a página login.jsp:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -231,10 +187,10 @@ Crie a página login.jsp:
       </td>
     </tr>
   </table>
-</div></p> 
-
+</div>
+++++
 Habilite o filtro authc para todas as páginas da aplicação:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -260,13 +216,19 @@ authc<span style="color: #000000;">.</span>successUrl  = <span style="color: #00
     </tr>
   </table>
 </div>
+++++
+**Atualização:** Shiro automaticamente executa a equiparação(comparação) de caminho(path matching) relativa ao contexto. 
+Como a aplicação SimpleShiroSecuredApplication não tem o caminho do contexto definido, caminhos completos no arquivo Shiro.ini são necessários. 
+No entanto, se o contexto da aplicação fosse definido para /simpleshirosecuredapplication, então os caminhos poderiam ser relativos, 
+por exemplo, /**=authc ou /account/personalaccountpage.jsp. 
 
-**Atualização:** Shiro automaticamente executa a equiparação(comparação) de caminho(path matching) relativa ao contexto. Como a aplicação SimpleShiroSecuredApplication não tem o caminho do contexto definido, caminhos completos no arquivo Shiro.ini são necessários. No entanto, se o contexto da aplicação fosse definido para /simpleshirosecuredapplication, então os caminhos poderiam ser relativos, por exemplo, /**=authc ou /account/personalaccountpage.jsp. 
+Como não é seguro enviar nome de usuário e senha pela rede, devemos forçar autenticações com o protocolo ssl. 
+O filtro ssl faz exatamente isso. Ele tem um parâmetro opcional: número da porta ssl. Se o parâmetro porta(port) for omitido, 
+ele usa a porta ssl pré-definida 443. 
 
-Como não é seguro enviar nome de usuário e senha pela rede, devemos forçar autenticações com o protocolo ssl. O filtro ssl faz exatamente isso. Ele tem um parâmetro opcional: número da porta ssl. Se o parâmetro porta(port) for omitido, ele usa a porta ssl pré-definida 443. 
-
-Antes de configurar o protocolo ssl no Shiro, precisamos habilitá-lo no servidor web. Como fazer isso, depende do servidor web. Iremos demonstrar como habilitá-lo no <a href="http://jetty.codehaus.org/jetty/" target="_blank"> Jetty</a>. Primeiro, crie um keystore com o certificado auto assinado:
-
+Antes de configurar o protocolo ssl no Shiro, precisamos habilitá-lo no servidor web. Como fazer isso, depende do servidor web. 
+Iremos demonstrar como habilitá-lo no http://jetty.codehaus.org/jetty/[ Jetty,window=_blank]. Primeiro, crie um keystore com o certificado auto assinado:
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -276,13 +238,14 @@ Antes de configurar o protocolo ssl no Shiro, precisamos habilitá-lo no servido
     </tr>
   </table>
 </div>
-
+++++
 Responda todas questões e no final pressione ENTER, assim o keystore senha e a chave senha serão o mesmo. 
 
-Segundo, adicione o keystore ao projeto e configure <a href="http://jetty.codehaus.org/jetty/" target="_blank"> o servidor Jetty</a> para usar o protocolo ssl. O código java está disponível na classe<A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/test/java/org/meri/simpleshirosecuredapplication/test/AbstractContainerTest.java" target="_blank"> AbstractContainerTest</A>. 
+Segundo, adicione o keystore ao projeto e configure http://jetty.codehaus.org/jetty/[ o servidor Jetty,window=_blank] para usar o protocolo ssl. 
+O código java está disponível na classe https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/test/java/org/meri/simpleshirosecuredapplication/test/AbstractContainerTest.java[ AbstractContainerTest,window=_blank]. 
 
 Agora é possível configurar o filtro ssl no arquivo Shiro.ini:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -296,12 +259,13 @@ Agora é possível configurar o filtro ssl no arquivo Shiro.ini:
     </tr>
   </table>
 </div></p> 
-
+++++
 ##### Configurar Usuários e Senhas
 
-A aplicação SimpleShiroSecuredApplication estará agora disponível somente para usuários autenticados. Assim, é necessário adicionar alguns usuários de forma que algumas pessoas tenham acesso à aplicação.  
+A aplicação SimpleShiroSecuredApplication estará agora disponível somente para usuários autenticados. 
+Assim, é necessário adicionar alguns usuários de forma que algumas pessoas tenham acesso à aplicação.  
 A configuração é feita na seção [users] do arquivo Shiro.ini. O formato das entradas da seção é:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -311,9 +275,9 @@ A configuração é feita na seção [users] do arquivo Shiro.ini. O formato das
     </tr>
   </table>
 </div>
-
+++++
 A seguinte seção cria sete usuários, todos com a mesma senha &#8216;heslo&#8217;:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -329,19 +293,24 @@ servicessales=heslo,sales</pre>
       </td>
     </tr>
   </table>
-</div></p> 
-
-Agora é possível ser autenticado e ter acesso à aplicação. No entanto, nenhuma mensagem de erro razoável é mostrada se o usuário comete um erro. Além disso, as senhas são armazenadas em arquivo texto. 
+</div>
+++++
+Agora é possível ser autenticado e ter acesso à aplicação. No entanto, nenhuma mensagem de erro razoável é mostrada se o usuário comete um erro. 
+Além disso, as senhas são armazenadas em arquivo texto. 
 
 ##### Tratamento de Erro
 
-Se o usuário comete um erro ao fazer a autenticação (log in), o Shiro o redireciona de volta para a página de login. A página parece exatamente a mesma de antes, o que pode confundir o usuário. 
+Se o usuário comete um erro ao fazer a autenticação (log in), o Shiro o redireciona de volta para a página de login. 
+A página parece exatamente a mesma de antes, o que pode confundir o usuário. 
 
 **Novo requerimento:**  
 Mostrar mensagem de erro após cada tentativa de autenticação(log in) sem êxito. 
 
-Toda vez que ocorrer um erro de autenticação, uma exceção é lançada. Por definição, o filtro de autenticação captura a exceção e armazena nome da classe (exceção) em um parâmentro da requisição (request). Como desejamos personalizar os dados enviados à página, teremos que estender o filtro pré-definido <a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/authc/FormAuthenticationFilter.html" target="_blank">FormAuthenticationFilter</a> e sobrescrever o método <a href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/VerboseFormAuthenticationFilter.java" target="_blank">setFailureAttribute</a>: 
-
+Toda vez que ocorrer um erro de autenticação, uma exceção é lançada. Por definição, o filtro de autenticação captura a exceção e 
+armazena nome da classe (exceção) em um parâmentro da requisição (request). Como desejamos personalizar os dados enviados à página, 
+teremos que estender o filtro pré-definido http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/authc/FormAuthenticationFilter.html[FormAuthenticationFilter,window=_blank] 
+e sobrescrever o método https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/VerboseFormAuthenticationFilter.java[setFailureAttribute,window=_blank]: 
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -355,9 +324,10 @@ Toda vez que ocorrer um erro de autenticação, uma exceção é lançada. Por d
     </tr>
   </table>
 </div>
-
-Substitua o filtro pré-definido FormAuthenticationFilter por [VerboseFormAuthenticationFilter][1] e o configure para usar o atributo de requisição (request) &#8216;simpleShiroApplicationLoginFailure&#8217; para armazenar a informação do erro: 
-
+++++
+Substitua o filtro pré-definido FormAuthenticationFilter por [VerboseFormAuthenticationFilter][1] e o configure para usar o atributo de 
+requisição (request) &#8216;simpleShiroApplicationLoginFailure&#8217; para armazenar a informação do erro: 
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -371,9 +341,9 @@ authc<span style="color: #000000;">.</span>failureKeyAttribute=simpleShiroApplic
     </tr>
   </table>
 </div>
-
+++++
 Mostrar o erro na página login.jsp: 
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -390,17 +360,21 @@ Login attempt was unsuccessful<span style="color: #339933;">:</span> <span style
     </tr>
   </table>
 </div>
-
-Cuidado: uma aplicação real não deve apresentar muitas informações de erro de autenticação. Uma mensagem como “tentativa de logon sem sucesso.”, com nenhuma informação adicional é geralmente suficiente. 
+++++
+Cuidado: uma aplicação real não deve apresentar muitas informações de erro de autenticação. Uma mensagem como “tentativa de logon sem sucesso.”, 
+com nenhuma informação adicional é geralmente suficiente. 
 
 ##### Hashing de Senhas
 
 Na versão atual da aplicação, todas as senhas estão, ainda, em texto puro. É melhor armazenar e comparar somente o hashing da senha. 
 
-Objetos responsáveis por autenticação são chamados de <A href="http://shiro.apache.org/realm.html" target="_blank"> realms</A>. Por padrão, Shiro usa o <A href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/realm/text/IniRealm.html" target="_blank"> IniRealm</A> com comparador de senha plugável para comparar senhas. Iremos substituir as senhas no ini por suas correspondentes hasheadas com SHA-256 e configurar o IniRealm para usar este comparador de senhas. 
+Objetos responsáveis por autenticação são chamados de http://shiro.apache.org/realm.html[ realms,window=_blank]. 
+Por padrão, Shiro usa o http://shiro.apache.org/static/current/apidocs/org/apache/shiro/realm/text/IniRealm.html[ IniRealm,window=_blank] 
+]com comparador de senha plugável para comparar senhas. Iremos substituir as senhas no ini por suas correspondentes hasheadas com SHA-256 
+e configurar o IniRealm para usar este comparador de senhas. 
 
 Gerar o hash SHA-256 da senha:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -414,10 +388,10 @@ Gerar o hash SHA-256 da senha:
       </td>
     </tr>
   </table>
-</div></p> 
-
+</div>
+++++
 Configurar o Shiro para comparar senha trasnformada(hashing) ao invés da própria senha:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -432,10 +406,10 @@ iniRealm<span style="color: #000000;">.</span>credentialsMatcher = <span style="
       </td>
     </tr>
   </table>
-</div></p> 
-
+</div>
+++++
 Substituir as senhas dos usuários por senhas trasnformadas(hashing):
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -452,13 +426,13 @@ servicessales=56b1db8133d9eb398aabd376f07bf8ab5fc584ea0b8bd6a1770200cb613ca005, 
     </tr>
   </table>
 </div>
-
+++++
 Nota: não é possível especificar SALT no arquivo de configuração ini. 
 
 ##### Criar Página de Saída(Log out)
 
 Qualque aplicação que tenha recursos de autenticação deveria também ter o recurso de saída. Terminar uma sessão corrente com Shiro é fácil, use o comando:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -469,9 +443,9 @@ SecurityUtils.<span style="color: #006633;">getSubject</span><span style="color:
     </tr>
   </table>
 </div>
-
+++++
 A página de saída(Log out) então fica assim:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -482,15 +456,20 @@ You have succesfully logged out.</pre>
       </td>
     </tr>
   </table>
-</div></p> 
-
+</div>
+++++
 #### Adicionar Autorização
 
-Concluiremos esta primeira parte adicionando autorização à aplicação. Começamos limitando o acesso às páginas aos usuários. Nenhum usuário deveria ser capaz de ver páginas de outros departamentos. Fornecendo assim, somente segurança parcial ao projeto, pois o usuário ainda é capaz de usar a página com “todas as funções da aplicação” ou editar o endereço (url) no navegador para realizar qualquer ação. Nós a chamaremos de autorização em nível de página. 
+Concluiremos esta primeira parte adicionando autorização à aplicação. Começamos limitando o acesso às páginas aos usuários. 
+Nenhum usuário deveria ser capaz de ver páginas de outros departamentos. Fornecendo assim, somente segurança parcial ao projeto, 
+pois o usuário ainda é capaz de usar a página com “todas as funções da aplicação” ou editar o endereço (url) no navegador para realizar qualquer ação.
+Nós a chamaremos de autorização em nível de página. 
 
-Então, limitaremos a habilidade dos usuários para realizar ações próprias. Mesmo que abra a página com “todas as funções da aplicação” ou edite o endereço (url) no navegador, ele poderá realizar somente funções específicas de seu departamento. Nós a chamaremos de autorização em nível de função. 
+Então, limitaremos a habilidade dos usuários para realizar ações próprias. Mesmo que abra a página com “todas as funções da aplicação” ou 
+edite o endereço (url) no navegador, ele poderá realizar somente funções específicas de seu departamento. Nós a chamaremos de autorização em nível de função. 
 
-**Novos requisitos:** o usuário não é capaz de ver páginas de departamentos que não pertence. O usuário é capaz de realizar somente funções de seu departamento. Uma exceção a essa regra é o administrador, que pode realizar funções administrativas e de reparação. 
+**Novos requisitos:** o usuário não é capaz de ver páginas de departamentos que não pertence. O usuário é capaz de realizar somente funções de seu departamento. 
+Uma exceção a essa regra é o administrador, que pode realizar funções administrativas e de reparação. 
 
 ##### Página de Autorização
 
@@ -498,7 +477,7 @@ Autorização em nível de página é feita com filtro de perfis(roles).
 Parâmetro parte do filtro pode conter qualquer número de perfis. Usuário autenticado pode acessar a página somente se ele tem todas os perfis fornecidos. 
 
 Como de costume, o filtro de perfis(roles) é configurado no arquivo Shiro.ini:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -519,11 +498,12 @@ Como de costume, o filtro de perfis(roles) é configurado no arquivo Shiro.ini:
     </tr>
   </table>
 </div>
-
+++++
 Teste se a segurança funciona: entre como um usuário de vendas, clique home, clique no link &#8216;repairmen page&#8217;. Você verá um erro feio. 
 
-Nós terminamos a página de autorização e substituimos o erro redirecionando-o para uma página de erro. Os filtros pré-definidos do Shiro possuem a propriedade unauthorizedUrl. Em caso de acesso não autorizado, o filtro redirecionará o usuário para um endereço (url) específico.
-
+Nós terminamos a página de autorização e substituimos o erro redirecionando-o para uma página de erro. Os filtros pré-definidos do Shiro possuem 
+a propriedade unauthorizedUrl. Em caso de acesso não autorizado, o filtro redirecionará o usuário para um endereço (url) específico.
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -534,10 +514,10 @@ roles<span style="color: #000000;">.</span>unauthorizedUrl = <span style="color:
       </td>
     </tr>
   </table>
-</div></p> 
-
+</div>
+++++
 accessdenied.jsp: 
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -548,59 +528,34 @@ Sorry, you do not have access rights to that area.
       </td>
     </tr>
   </table>
-</div></p> 
-
+</div>
+++++
 ##### Autorização de Funções
 
-Todas as páginas departamentais estão protegidas agora. No entanto, qualquer usuário pode ainda realizar qualquer função na página com “todas as funções da aplicação”. Além disso, qualquer usuário autenticado pode editar endereço (url) e assim fazer qualquer ação. Por exemplo, se você entrar como vendedor e colocar  
-https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN na url, a aplicação irá realizar a função gerenciar reparadores também (e então irá dispará a exceção: null point, mas a violação de segurança já foi feita).  
-Atribuimos uma úncia <A href="http://shiro.apache.org/permissions.html" target="_blank"> permissão</A> para cada função. Elas estão divididas em grupos:  
+Todas as páginas departamentais estão protegidas agora. No entanto, qualquer usuário pode ainda realizar qualquer função na página com “todas as funções da aplicação”. 
+Além disso, qualquer usuário autenticado pode editar endereço (url) e assim fazer qualquer ação. Por exemplo, se você entrar como vendedor e colocar  
+https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN na url, a aplicação irá realizar a função gerenciar reparadores 
+também (e então irá dispará a exceção: null point, mas a violação de segurança já foi feita).  
+Atribuimos uma úncia http://shiro.apache.org/permissions.html[ permissão,window=_blank] para cada função. Elas estão divididas em grupos:  
 
+* todas as permissões estão no grupo “functions”,
+* todas as permissões administrativas estão no grupo “manage”,
+* todas as permissões reparação estão no grupo “repair”,
+* todas as permissões venda estão no grupo “sale”, 
+* todas as permissões ciência estão no grupo “science”.
 
+Shiro suporta permissões de múltiplos níveis representadas como strings. 
+Níveis são separados com o símbolo &#8216;:&#8217;. p.e. “functions:manage:repairmen” tem três níveis: “functions”, “manage” e “repairman”. 
+Permissões de múltiplos níveis permitem facilmente o agrupamento de permissões. Por exemplo, o grupo science pertence ao grupo functions e 
+contém três permissões:  
+
+* functions:science:research,
+* functions:science:writearticle,
+* functions:science:preparetalk.
   
-
-
-  * todas as permissões estão no grupo “functions”,
-  
-
-
-  * todas as permissões administrativas estão no grupo “manage”,
-  
-
-
-  * todas as permissões reparação estão no grupo “repair”,
-  
-
-
-  * todas as permissões venda estão no grupo “sale”, 
-  
-
-
-  * todas as permissões ciência estão no grupo “science”.
-  
-
-
-Shiro suporta permissões de múltiplos níveis representadas como strings. Níveis são separados com o símbolo &#8216;:&#8217;. p.e. “functions:manage:repairmen” tem três níveis: “functions”, “manage” e “repairman”. Permissões de múltiplos níveis permitem facilmente o agrupamento de permissões. Por exemplo, o grupo science pertence ao grupo functions e contém três permissões:  
-
-
-  
-
-
-  * functions:science:research,
-  
-
-
-  * functions:science:writearticle,
-  
-
-
-  * functions:science:preparetalk.
-  
-
-
-  
-A classe <A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/actions/Actions.java" target="_blank"> Ações</A> verifica as permissões do usuário autenticado(log in) antes de fazer seu trabalho:
-
+A classe https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/actions/Actions.java[ Ações,window=_blank] 
+verifica as permissões do usuário autenticado(log in) antes de fazer seu trabalho:
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -617,11 +572,12 @@ A classe <A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/
     </tr>
   </table>
 </div>
-
+++++
 NOTA: Outro modo de se alcançar o mesmo objetivo é através de anotações. 
 
-O servlet <A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/PerformFunctionAndGoBackServlet.java" target="_blank"> PerformFunctionAndGoBackServlet</A> captura exceções de autorização e as converte em mensagem de erro:
-
+O servlet https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/PerformFunctionAndGoBackServlet.java[ PerformFunctionAndGoBackServlet,window=_blank] 
+captura exceções de autorização e as converte em mensagem de erro:
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -640,10 +596,11 @@ O servlet <A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob
       </td>
     </tr>
   </table>
-</div></p> 
-
-Finalmente, precisamos configurar as permissões para os perfis no arquivo Shiro.ini. Shiro suporta curingas para permissões de múltiplo nível. Assim, não temos que especificar cada permissão departamental em separado:
-
+</div>
+++++
+Finalmente, precisamos configurar as permissões para os perfis no arquivo Shiro.ini. Shiro suporta curingas para permissões de múltiplo nível. 
+Assim, não temos que especificar cada permissão departamental em separado:
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -659,17 +616,19 @@ Administrator=functions<span style="color: #000000;">:</span>manage<span style="
       </td>
     </tr>
   </table>
-</div></p> 
-
+</div>
+++++
 Você pode agora acessar a página “todas as funções da aplicação” e testar as funções.  
-Se um usuário autenticado não tiver a permissão requerida, uma mensagem de erro aparecerá no topo da página. Além disso, se você fizer a autenticação (log in) como vendedor e tentar hackear  
-https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN, você verá uma mensagem de erro no console (em vez de uma mensagem de sucesso). 
+Se um usuário autenticado não tiver a permissão requerida, uma mensagem de erro aparecerá no topo da página. 
+Além disso, se você fizer a autenticação (log in) como vendedor e tentar hackear  
+https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN , você verá uma mensagem de erro no 
+console (em vez de uma mensagem de sucesso). 
 
 #### Fim
 
-A aplicação final está disponível no ramo(branch) <A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/tree/static_authentication_and_authorization" target="_blank"> &#8216;static_authentication_and_authorization&#8217;</A> hospedado no Github. 
+A aplicação final está disponível no ramo(branch) https://github.com/SomMeri/SimpleShiroSecuredApplication/tree/static_authentication_and_authorization[ &#8216;static_authentication_and_authorization&#8217;,window=_blank] hospedado no Github. 
 
-Na segunda parte iremos criar um <A href="http://shiro.apache.org/realm.html" target="_blank"> realm</A> personalizado e mover usuários, senhas, perfis(roles) e permissões do arquivo ini para um banco de dados.
+Na segunda parte iremos criar um http://shiro.apache.org/realm.html[ realm,window=_blank] personalizado e mover usuários, senhas, perfis(roles) e permissões do arquivo ini para um banco de dados.
 
 
 

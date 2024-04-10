@@ -24,9 +24,9 @@ Propus o uso de alguns mecanismos disponibilizados na rede mundial para auxiliar
   2. [Google Groups][3] - precisávamos de um mecanismo para gerenciar os e-mails das pessoas interessadas(convidadas) em receber uma [mensagem reflexiva][1]; 
   3. precisávamos definir um formato da mensagem (veja logo abaixo como ficou); 
   4. precisávamos definir qual versão do Microsoft Word usaríamos (escolhemos Microsoft Word 97/2000/XP) 
-
+++++
 <div id="attachment_664" style="width: 1034px" class="wp-caption alignright">
-  <a href="dropbox.png"><img src:"dropbox.png" alt="cliente dropbox linux" title="dropbox" width="1024" height="768" class="size-full wp-image-664" /></a>
+  <a href="dropbox.png"><img src="dropbox.png" alt="cliente dropbox linux" title="dropbox" width="1024" height="768" class="size-full wp-image-664" /></a>
   
   <p class="wp-caption-text">
     cliente dropbox linux
@@ -34,13 +34,13 @@ Propus o uso de alguns mecanismos disponibilizados na rede mundial para auxiliar
 </div>
 
 <div id="attachment_662" style="width: 1034px" class="wp-caption alignright">
-  <a href="formato.png"><img src:"formato.png" alt="Formato de transcrição de texto" title="formato" width="1024" height="768" class="size-full wp-image-662" /></a>
+  <a href="formato.png"><img src="formato.png" alt="Formato de transcrição de texto" title="formato" width="1024" height="768" class="size-full wp-image-662" /></a>
   
   <p class="wp-caption-text">
     Formato de transcrição de texto
   </p>
 </div>
-
+++++
 Minha escolha foi arriscada e ao mesmo tempo feliz. Arriscada por ter uma equipe com pouco ou nenhum conhecimento em informática básica. Confesso que a maior parte do trabalho é realizada por mim, mas estou feliz pelas escolhas que fiz - posso treinar um membro da equipe facilmente nos mecanismos escolhidos. 
 
 Bom, tive duas intenções ao escrever este post: a primeira descrever a experiência e o desafio que é desenvolver este trabalho; a outra é [convidá-lo][1]: receba você também uma porção diária da Bíblia em seu e-mail!  
