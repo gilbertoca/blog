@@ -8,7 +8,8 @@ tags= Sistema Operacional, Windows
 
 
 Esse parece ser um problema comum e caso você não o tenha encontrado, pode ficar tranquilo. Sua vez vai chegar!  
-A solução que funcionou para mim, encontrei neste [fórum][1]. Vou deixar registrado pois sei que outros usuários também precisarão:
+A solução que funcionou para mim, encontrei neste http://www.pcreview.co.uk/forums/thread-72388.php[fórum]. 
+Vou deixar registrado pois sei que outros usuários também precisarão:
 
   * 1. click no menu iniciar e abra a janela de execução;
   * 2. digite “cmd” e enter (nota: não use aspas);
@@ -52,8 +53,5 @@ O Windows verificou o sistema de arquivos e não encontrou problemas.
   12856763 unidades de alocação disponíveis em disco.
 
 C:Documents and SettingsGilberto>fsutil dirty query e:
-O volume e: NÃO está sujo.```
-
-
-
- [1]: http://www.pcreview.co.uk/forums/thread-72388.php
+O volume e: NÃO está sujo.
+```

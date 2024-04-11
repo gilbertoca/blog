@@ -48,7 +48,7 @@ Bom, até agora podemos dizer que o problema não é hardware. Por que? Você po
 
 Com essa opção não tenho que encerra a sessão para que as janelas voltem ao normal. 
 
-Mas &#8230; como vamos explicar essa solução para meu filho de 9 anos ou mesmo para minha esposa?  
+Mas ... como vamos explicar essa solução para meu filho de 9 anos ou mesmo para minha esposa?  
 Sei que farão com bastante tranquilidade quando estiver por perto, mas quando não estiver? 
 
 **ATUALIZAÇÃO (25/06/2011):**  

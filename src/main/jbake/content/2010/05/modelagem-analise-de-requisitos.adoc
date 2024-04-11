@@ -3,12 +3,12 @@ title=Modelagem usando Uml em Cores [Análise de Requisitos]
 date=2010-05-11 11:06:35
 type=post
 status=published
-tags=Database,  Metodologia Ágil, Modelagem, UML, Uml em Cores
+tags=Database, Metodologia Ágil, Modelagem, Uml
 ~~~~~~
 
-
-> Verificando posts de [meu antigo blog][1] notei que alguns não foram importados ou foram importados com defeitos em seu conteúdo. Então resolvi realizar um trabalho de revisão e o primeiro deles começa hoje: 
-
+Verificando posts de http://www.jroller.com/gilbertoca[meu antigo blog] notei que alguns não foram importados ou foram importados com defeitos em seu conteúdo. 
+Então resolvi realizar um trabalho de revisão e o primeiro deles começa hoje: 
+++++
 <div class="toc">
   <h2>
     Conteúdo
@@ -94,7 +94,4 @@ tags=Database,  Metodologia Ágil, Modelagem, UML, Uml em Cores
         <a href="http://www.step-10.com/Books/JMCUBook.html" target="referências">Java Modeling in Color with UML</a>
       </li>
     </ul>
-    
-    
-
- [1]: http://www.jroller.com/gilbertoca
+++++

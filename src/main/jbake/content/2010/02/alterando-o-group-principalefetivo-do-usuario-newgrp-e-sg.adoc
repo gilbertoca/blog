@@ -3,7 +3,7 @@ title=Alterando o group principal/efetivo do usuário - newgrp e sg
 date=2010-02-22 17:24:31
 type=post
 status=published
-tags=Application Server, Database, Linux, openSUSE, Sistema Operacional
+tags=Application Server, Oracle, Database, Linux, openSUSE
 ~~~~~~
 
 
@@ -15,12 +15,10 @@ qualquer um destes softwares eu tem que assumir o usuario de instalação dos
 mesmos que neste caso usei o default oracle. Veja a labuta que tem de fazer:
 
 ```
-
-<code class="bash">
-    $ xhost +
-    $ sux – oracle
-    $ source .oracleDB #ou oracleDS ou oracleAS
-</code>    ```
+$ xhost +
+$ sux – oracle
+$ source .oracleDB #ou oracleDS ou oracleAS
+```
 
 Dos scripts de mudança de ambiente não tenho como escapar mas para facilitar
 minha vida, acabei adicionando os grupos DBA e oinstall para minha lista 
@@ -33,17 +31,15 @@ newgrp é usado para alterar o grupo efetivo do usuário para o grupo solicitado
 em uma nova sessão de login:
 
 ```
-
-<code class="bash">
-    $ groups
-    users disk uucp dialout audio video oinstall dba
-    $ newgrp oinstall
-    $ groups
-    oinstall disk uucp dialout audio video dba users
-    $ exit
-    $ groups
-    users disk uucp dialout audio video oinstall dba
-</code>```
+$ groups
+users disk uucp dialout audio video oinstall dba
+$ newgrp oinstall
+$ groups
+oinstall disk uucp dialout audio video dba users
+$ exit
+$ groups
+users disk uucp dialout audio video oinstall dba
+```
 
 Desta forma meu grupo principal torna-se oinstall, me possibilitando trabalhar 
 com a compilação dos forms. Legal hein! O outro utilitario de sistema que 
@@ -51,7 +47,5 @@ podemos usar é o sg. O sg é mais usando que vc so precisa executar um comando,
 mas usando o grupo o qual vc necessita:
 
 ```
-
-<code class="bash">
-    sg oinstall -c rm *.err
-</code>    ```
+sg oinstall -c rm *.err
+```

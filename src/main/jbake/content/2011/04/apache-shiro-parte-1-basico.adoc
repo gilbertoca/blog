@@ -6,14 +6,14 @@ status=published
 tags=Apache Shiro, Application Server, Autenticação, Autorização, Java, maven, Proteção, Recursos de Segurança, Traduções
 ~~~~~~
 
-Este post é uma tradução livre do artigo http://meri-stuff.blogspot.com/2011/03/apache-shiro-part-1-basics.html[ Apache Shiro Part 1 - Basics,window=_blank], publicado por Meri em 27 de março 2011 
+Este post é uma tradução livre do artigo http://meri-stuff.blogspot.com/2011/03/apache-shiro-part-1-basics.html[Apache Shiro Part 1 - Basics,window=_blank], publicado por Meri em 27 de março 2011 
 
 **ATUALIZAÇÃO: duas novas seções adicionadas - tratamento de erros e hashing de senhas.**
 
-http://shiro.apache.org/index.html[ Apache Shiro,window=_blank] inicialmente chamado JSecurity, 
+http://shiro.apache.org/index.html[Apache Shiro,window=_blank] inicialmente chamado JSecurity, 
 é um framework de segurança desenvolvido em java. Foi aceito e tornou-se um projeto Apache de nível superior em 2010. 
 Tem como objetivo ser poderoso e fácil de usar. O projeto está em constante desenvolvimento e com listas de e-mails ativas 
-para usuários e desenvolvedores. Áreas mais importantes estão http://shiro.apache.org/documentation.html[ documentadas em sua página web,window=_blank].
+para usuários e desenvolvedores. Áreas mais importantes estão http://shiro.apache.org/documentation.html[documentadas em sua página web,window=_blank].
 No entanto, existem algumas lacunas na documentação. Não é possível aprender a usar o máximo dos recursos do Shiro somente com a documentação. 
 Felizmente, o código é bem documentado e onde o testei, ela foi de fácil leitura. 
 
@@ -25,12 +25,12 @@ Principais recursos do projeto Shiro são:
 * gerenciamento de sessão.
   
 Neste artigo tentaremos demonstrar vários recursos do Shiro. Vamos começar com uma simples aplicação sem segurança e 
-então adicionaremos recursos de segurança. Todo código está disponível no projeto https://github.com/SomMeri/SimpleShiroSecuredApplication[ SimpleShiroSecuredApplication,window=_blank] 
-hospedado no https://github.com/[ Github,window=_blank]. 
+então adicionaremos recursos de segurança. Todo código está disponível no projeto https://github.com/SomMeri/SimpleShiroSecuredApplication[SimpleShiroSecuredApplication,window=_blank] 
+hospedado no https://github.com/[Github,window=_blank]. 
 
 #### Aplicação sem Segurança
 
-O código da aplicação sem segurança está localizado no ramo(branch) https://github.com/SomMeri/SimpleShiroSecuredApplication/tree/unsecured_application[ unsecured_application,window=_blank].  
+O código da aplicação sem segurança está localizado no ramo(branch) https://github.com/SomMeri/SimpleShiroSecuredApplication/tree/unsecured_application[unsecured_application,window=_blank].  
 A aplicação representa um sistema interno para uma companhia fictícia. A companhia tem quatro departamentos:  
 
 * administradores(administrators),
@@ -47,7 +47,7 @@ Como a aplicação sem segurança não tem usuários ainda, a página de gerenci
 há uma página que contém todas funções da aplicação. Tudo que alguém pode fazer é possível ser feito nesta página. 
 
 Qualquer pessoa pode fazer qualquer coisa e ver todas as páginas. A aplicação exemplo é executada 
-na classe de teste https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/unsecured_application/src/test/java/org/meri/simpleshirosecuredapplication/RunWaitTest.java[ RunWaitTest,window=_blank]. 
+na classe de teste https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/unsecured_application/src/test/java/org/meri/simpleshirosecuredapplication/RunWaitTest.java[RunWaitTest,window=_blank]. 
 Não é uma boa prática usar teste de unidade desta forma, mas isso não é importante agora. 
 Se você executar a classe a aplicação estará disponível no endereço (url) http://localhost:9180/simpleshirosecuredapplication/. 
 
@@ -78,26 +78,26 @@ Passos necessários:
 
 ##### Adicionar Apache Shiro
 
-Shiro é integrado à aplicação web através de http://download.oracle.com/javaee/5/api/javax/servlet/Filter.html[ filtros servlet,window=_blank].
+Shiro é integrado à aplicação web através de http://download.oracle.com/javaee/5/api/javax/servlet/Filter.html[filtros servlet,window=_blank].
 Um filtro intercepta requisições e respostas antes do servlet e executa todas as tarefas necessárias 
-(como a identificação do usuário atualmente autenticado, anexar o usuário ao thread corrente, &#8230;). 
+(como a identificação do usuário atualmente autenticado, anexar o usuário ao thread corrente, ...). 
 Filtros Shiro pré-definidos fornecem recursos de segurança básicos, como:  
 
 * força a autenticação do usuário(log in),
 * força ssl,
 * verificação dos direitos de acesso à página.
 
-Se você quiser aprender mais sobre filtros Shiro pré-definidos, um bom lugar para começar é a enumeração http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/mgt/DefaultFilter.html[ DefaultFilter,window=_blank]. 
+Se você quiser aprender mais sobre filtros Shiro pré-definidos, um bom lugar para começar é a enumeração http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/mgt/DefaultFilter.html[DefaultFilter,window=_blank]. 
 Ela lista todos os filtros Shiro pré-definidos disponíveis. Se estes não forem suficientes para suas necessidades, você pode criar um personalizado. 
 
-Usaremos o filtro altamente configurável http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/servlet/IniShiroFilter.html[ IniShiroFilter,window=_blank]. 
+Usaremos o filtro altamente configurável http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/servlet/IniShiroFilter.html[IniShiroFilter,window=_blank]. 
 Ele lê a configuração Shiro a partir do arquivo ini e inicializa o framework de segurança. Ele não executa qualquer verificação de segurança. 
 Verificação de segurança, autenticação de usuário, verificação de protocolo, etc., são 
 todos transferidos(delegados) tanto para o filtro Shiro pré-definido quanto para o filtro personalizado(outra implementação). 
 O filtro IniShiroFilter apenas os inicializa. 
 
-A configuração ini é descrita na http://shiro.apache.org/configuration.html[ documentação,window=_blank] e 
-no http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/servlet/IniShiroFilter.html[ javadoc,window=_blank]. 
+A configuração ini é descrita na http://shiro.apache.org/configuration.html[documentação,window=_blank] e 
+no http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/servlet/IniShiroFilter.html[javadoc,window=_blank]. 
 O arquivo de configuração ini tem quatro seções:  
 
 * Seção [main] contém a inicialização do Shiro. Filtros e objetos personalizados são configurados aqui. 
@@ -227,7 +227,7 @@ O filtro ssl faz exatamente isso. Ele tem um parâmetro opcional: número da por
 ele usa a porta ssl pré-definida 443. 
 
 Antes de configurar o protocolo ssl no Shiro, precisamos habilitá-lo no servidor web. Como fazer isso, depende do servidor web. 
-Iremos demonstrar como habilitá-lo no http://jetty.codehaus.org/jetty/[ Jetty,window=_blank]. Primeiro, crie um keystore com o certificado auto assinado:
+Iremos demonstrar como habilitá-lo no http://jetty.codehaus.org/jetty/[Jetty,window=_blank]. Primeiro, crie um keystore com o certificado auto assinado:
 ++++
 <div class="wp_syntax">
   <table>
@@ -241,8 +241,8 @@ Iremos demonstrar como habilitá-lo no http://jetty.codehaus.org/jetty/[ Jetty,w
 ++++
 Responda todas questões e no final pressione ENTER, assim o keystore senha e a chave senha serão o mesmo. 
 
-Segundo, adicione o keystore ao projeto e configure http://jetty.codehaus.org/jetty/[ o servidor Jetty,window=_blank] para usar o protocolo ssl. 
-O código java está disponível na classe https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/test/java/org/meri/simpleshirosecuredapplication/test/AbstractContainerTest.java[ AbstractContainerTest,window=_blank]. 
+Segundo, adicione o keystore ao projeto e configure http://jetty.codehaus.org/jetty/[o servidor Jetty,window=_blank] para usar o protocolo ssl. 
+O código java está disponível na classe https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/test/java/org/meri/simpleshirosecuredapplication/test/AbstractContainerTest.java[AbstractContainerTest,window=_blank]. 
 
 Agora é possível configurar o filtro ssl no arquivo Shiro.ini:
 ++++
@@ -325,8 +325,8 @@ e sobrescrever o método https://github.com/SomMeri/SimpleShiroSecuredApplicatio
   </table>
 </div>
 ++++
-Substitua o filtro pré-definido FormAuthenticationFilter por [VerboseFormAuthenticationFilter][1] e o configure para usar o atributo de 
-requisição (request) &#8216;simpleShiroApplicationLoginFailure&#8217; para armazenar a informação do erro: 
+Substitua o filtro pré-definido FormAuthenticationFilter por https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/VerboseFormAuthenticationFilter.java[VerboseFormAuthenticationFilter] 
+e o configure para usar o atributo de requisição (request) &#8216;simpleShiroApplicationLoginFailure&#8217; para armazenar a informação do erro: 
 ++++
 <div class="wp_syntax">
   <table>
@@ -368,8 +368,8 @@ com nenhuma informação adicional é geralmente suficiente.
 
 Na versão atual da aplicação, todas as senhas estão, ainda, em texto puro. É melhor armazenar e comparar somente o hashing da senha. 
 
-Objetos responsáveis por autenticação são chamados de http://shiro.apache.org/realm.html[ realms,window=_blank]. 
-Por padrão, Shiro usa o http://shiro.apache.org/static/current/apidocs/org/apache/shiro/realm/text/IniRealm.html[ IniRealm,window=_blank] 
+Objetos responsáveis por autenticação são chamados de http://shiro.apache.org/realm.html[realms,window=_blank]. 
+Por padrão, Shiro usa o http://shiro.apache.org/static/current/apidocs/org/apache/shiro/realm/text/IniRealm.html[IniRealm,window=_blank] 
 ]com comparador de senha plugável para comparar senhas. Iremos substituir as senhas no ini por suas correspondentes hasheadas com SHA-256 
 e configurar o IniRealm para usar este comparador de senhas. 
 
@@ -536,7 +536,7 @@ Todas as páginas departamentais estão protegidas agora. No entanto, qualquer u
 Além disso, qualquer usuário autenticado pode editar endereço (url) e assim fazer qualquer ação. Por exemplo, se você entrar como vendedor e colocar  
 https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN na url, a aplicação irá realizar a função gerenciar reparadores 
 também (e então irá dispará a exceção: null point, mas a violação de segurança já foi feita).  
-Atribuimos uma úncia http://shiro.apache.org/permissions.html[ permissão,window=_blank] para cada função. Elas estão divididas em grupos:  
+Atribuimos uma úncia http://shiro.apache.org/permissions.html[permissão,window=_blank] para cada função. Elas estão divididas em grupos:  
 
 * todas as permissões estão no grupo “functions”,
 * todas as permissões administrativas estão no grupo “manage”,
@@ -553,7 +553,7 @@ contém três permissões:
 * functions:science:writearticle,
 * functions:science:preparetalk.
   
-A classe https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/actions/Actions.java[ Ações,window=_blank] 
+A classe https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/actions/Actions.java[Ações,window=_blank] 
 verifica as permissões do usuário autenticado(log in) antes de fazer seu trabalho:
 ++++
 <div class="wp_syntax">
@@ -575,7 +575,7 @@ verifica as permissões do usuário autenticado(log in) antes de fazer seu traba
 ++++
 NOTA: Outro modo de se alcançar o mesmo objetivo é através de anotações. 
 
-O servlet https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/PerformFunctionAndGoBackServlet.java[ PerformFunctionAndGoBackServlet,window=_blank] 
+O servlet https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/PerformFunctionAndGoBackServlet.java[PerformFunctionAndGoBackServlet,window=_blank] 
 captura exceções de autorização e as converte em mensagem de erro:
 ++++
 <div class="wp_syntax">
@@ -626,10 +626,6 @@ console (em vez de uma mensagem de sucesso).
 
 #### Fim
 
-A aplicação final está disponível no ramo(branch) https://github.com/SomMeri/SimpleShiroSecuredApplication/tree/static_authentication_and_authorization[ &#8216;static_authentication_and_authorization&#8217;,window=_blank] hospedado no Github. 
+A aplicação final está disponível no ramo(branch) https://github.com/SomMeri/SimpleShiroSecuredApplication/tree/static_authentication_and_authorization[static_authentication_and_authorization,window=_blank] hospedado no Github. 
 
-Na segunda parte iremos criar um http://shiro.apache.org/realm.html[ realm,window=_blank] personalizado e mover usuários, senhas, perfis(roles) e permissões do arquivo ini para um banco de dados.
-
-
-
- [1]: https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/VerboseFormAuthenticationFilter.java
+Na segunda parte iremos criar um http://shiro.apache.org/realm.html[realm,window=_blank] personalizado e mover usuários, senhas, perfis(roles) e permissões do arquivo ini para um banco de dados.

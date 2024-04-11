@@ -3,7 +3,7 @@ title=Duplicar um banco oracle na mesma máquina
 date=2008-12-01 10:42:24
 type=post
 status=published
-tags=Database
+tags=Database, oracle
 ~~~~~~
 
 Atualmente aqui na https://www.secad.to.gov.br[Secretaria] estamos em um processo de 

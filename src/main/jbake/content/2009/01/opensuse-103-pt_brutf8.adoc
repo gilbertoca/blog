@@ -10,11 +10,11 @@ tags=Linux, openSUSE, Sistema Operacional
 Para resolver de vez os problemas com caracteres estranhos e acentuação:
 
 ```
-zypper in bundle-lang-common-pt bundle-lang-gnome-pt bundle-lang-kde-pt```
+zypper in bundle-lang-common-pt bundle-lang-gnome-pt bundle-lang-kde-pt
+```
 
-Depois, yast->system->language, ajuste o item <span class="guimenu">"Primary Language" para Português</span>(Brasil).  
-Configure também como as variáveis "locale" serão ajustadas para o usuário root através do botão <span class="systemitem"></span>"<span class="guimenu">Details</span>".  
-Estes ajustes são gravados no arquivo de configuração <span class="filename">/etc/sysconfig/language</span>. 
-
-&nbsp;
+Depois, yast->system->language, ajuste o item *_Primary Language_* para Português(Brasil).  
+Configure também como as variáveis "locale" serão ajustadas para o usuário root através do botão 
+*_Details_*.  Estes ajustes são gravados 
+no arquivo de configuração *_/etc/sysconfig/language_*. 
 

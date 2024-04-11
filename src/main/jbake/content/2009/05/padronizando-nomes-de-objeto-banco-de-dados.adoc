@@ -3,12 +3,12 @@ title=Padronizando Nomes de Objeto - Banco de Dados
 date=2009-05-08 16:07:46
 type=post
 status=published
-tags=Database,  nomear objeto, padrão
+tags=Database, nomear objeto, padrão
 ~~~~~~
-
 
 Primeiro definimos a extensão dos arquivos que conterão as sentenças de criação dos objetos do banco de dados: 
 
+++++
 <table border="0">
   <tr>
     <td>
@@ -166,68 +166,76 @@ Primeiro definimos a extensão dos arquivos que conterão as sentenças de cria�
     </td>
     
     <td>
-      Reponsável por chamar/executar os outros arquivos em uma sequencia apropriada:
+      Reponsável por chamar/executar os outros arquivos em uma sequencia apropriada
     </td>
   </tr>
 </table>
+++++
 
-| Para Tabelas           | Descrição                                                                            | Exemplo    |
-| ---------------------- | ------------------------------------------------------------------------------------ | ---------- |
-| <prefixo>_<nometabela> | onde <prefixo> deverá ser letras representando o módulo em que esta tabela pertença. | ger_pessoa |
+[%header,frame=ends]
+|===
+| Para Tabelas           | Descrição                                                                            | Exemplo    
+| <prefixo>_<nometabela> | onde <prefixo> deverá ser letras representando o módulo em que esta tabela pertença. | ger_pessoa 
+|===
 
-</tr> | Para Visão                 | Descrição                                                                            | Exemplo              |
-| -------------------------- | ------------------------------------------------------------------------------------ | -------------------- |
-| <prefixo>\_<nomevisao>\_vw | onde <prefixo> deverá ser letras representando o módulo em que esta tabela pertença. | ger\_funcionario\_vw |
+[%header,frame=ends]
+|===
+| Para Visão                 | Descrição                                                                          | Exemplo 
+| <prefixo>_<nomevisao>_vw   | onde <prefixo> deverá ser letras representando o módulo em que esta tabela pertença. | ger_funcionario_vw
+|===
 
-| Para Sequências                   | Descrição                                                                            | Exemplo                    |
-| --------------------------------- | ------------------------------------------------------------------------------------ | -------------------------- |
-| <prefixo>\_<nometabela>\_sequence | onde <prefixo> deverá ser letras representando o módulo em que esta tabela pertença. | ger\_funcionario\_sequence |
+[%header]
+|===
+| Para Sequências                   | Descrição                                                                            | Exemplo
+| <prefixo>_<nometabela>_sequence | onde <prefixo> deverá ser letras representando o módulo em que esta tabela pertença. | ger_funcionario_sequence
+|===
 
-| Para Colunas                                              | Descrição                                                     | Exemplo                       |
-| --------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------- |
-| <cd>_<nometabela>                                         | para coluna representando a chave primaria da tabela.         | cd_pessoa                     |
-| <cd>_<nometabelaestrangeira>                              | para coluna(s) representando a presença de chave estrangeira. | cd_municipio                  |
-| <cd>_<nometabelaestrangeira><significadodorelacionamento> | para coluna(s) representando a presença de chave estrangeira. | cd_municipionaturalidade      |
-| <fl>_<nomecampo>                                          | para coluna representando campo lógico(verdadeiro ou falso).  | fl\_dependente, fl\_encerrado |
-| <dt>_<nomecampo>                                          | para coluna representando campo data.                         | dt_nascimento                 |
-| <hr>_<nomecampo>                                          | para coluna representando campo tempo.                        | hr_saida                      |
-| <nu>_<nomecampo>                                          | para coluna representando campo numerico.                     | nu_leicriacao                 |
+[%header]
+|===
+| Para Colunas                                              | Descrição                                                     | Exemplo                       
+| <cd>_<nometabela>                                         | para coluna representando a chave primaria da tabela.         | cd_pessoa                     
+| <cd>_<nometabelaestrangeira>                              | para coluna(s) representando a presença de chave estrangeira. | cd_municipio                  
+| <cd>_<nometabelaestrangeira><significadodorelacionamento> | para coluna(s) representando a presença de chave estrangeira. | cd_municipionaturalidade      
+| <fl>_<nomecampo>                                          | para coluna representando campo lógico(verdadeiro ou falso).  | fl_dependente, fl_encerrado 
+| <dt>_<nomecampo>                                          | para coluna representando campo data.                         | dt_nascimento                 
+| <hr>_<nomecampo>                                          | para coluna representando campo tempo.                        | hr_saida                      
+| <nu>_<nomecampo>                                          | para coluna representando campo numerico.                     | nu_leicriacao                 
+|===
 
 Para nomear constraints, devemos usar um padrão porque não pode haver repetição de nomes dos mesmos (limitado a 30 caracteres - limitação do oracle). 
 
-| Para Constraints                                                                               | Descrição                                                     | Exemplo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <nome da tabela com prefixo>_<pk>                                                              | para chave primaria.                                          | constraint sys\_usuario\_pk primary key (cd_usuario) enable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| <nome da tabela com prefixo>_<uk>                                                              | para indice unico.                                            | constraint sys\_usuario\_uk unique (login, email) enable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| <nome da tabela origem sem prefixo>\_<to>\_<nome da tabela atual(destino sem prefixo>_<fk>     | para coluna(s) representando a presença de chave estrangeira. | constraint entidade\_to\_subentidade\_fk foreign key (id\_entidade) references kira.sys\_entidade (id\_entidade) enable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| <nome da tabela sem prefixo>\_<nome da coluna>\_<ck>_<um digito - caso ocorra repeticao> | para check.                                                   | create table ergon.ergon\_regras\_compara_ff  
+[%header]
+|===
+| Para Constraints                                                                               | Descrição                                                     | Exemplo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+| <nome da tabela com prefixo>_<pk>                                                              | para chave primaria.                                          | constraint sys_usuario_pk primary key (cd_usuario) enable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+| <nome da tabela com prefixo>_<uk>                                                              | para indice unico.                                            | constraint sys_usuario_uk unique (login, email) enable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+| <nome da tabela origem sem prefixo>_<to>_<nome da tabela atual(destino sem prefixo>_<fk>     | para coluna(s) representando a presença de chave estrangeira. | constraint entidade_to_subentidade_fk foreign key (id_entidade) references kira.sys_entidade (id_entidade) enable
+| <nome da tabela sem prefixo>_<nome da coluna>_<ck>_<um digito - caso ocorra repeticao>       | para check.                                                   | create table ergon.ergon_regras_compara_ff  
 (  
-regra number(6,0) constraint regras\_compara\_ff\_regra\_ck_0 not null enable,  
-fl\_ativa\_1 char(1 byte) default &#8216;n&#8217; constraint rg\_cp\_ff\_fl\_ativa\_1\_ck_0 not null enable,  
-fl\_ativa\_2 char(1 byte) default &#8216;n&#8217; constraint rg\_cp\_ff\_fl\_ativa\_2\_ck_0 not null enable,  
-fl\_ativa\_3 char(1 byte) default &#8216;n&#8217; constraint rg\_cp\_ff\_fl\_ativa\_3\_ck_0 not null enable,  
+regra number(6,0) constraint regras_compara_ff_regra_ck_0 not null enable,  
+fl_ativa_1 char(1 byte) default &#8216;n&#8217; constraint rg_cp_ff_fl_ativa_1_ck_0 not null enable,  
+fl_ativa_2 char(1 byte) default &#8216;n&#8217; constraint rg_cp_ff_fl_ativa_2_ck_0 not null enable,  
+fl_ativa_3 char(1 byte) default &#8216;n&#8217; constraint rg_cp_ff_fl_ativa_3_ck_0 not null enable,  
 limite_diferenca number(11,2),  
-constraint ergon\_regras\_compara\_ff\_pk primary key (regra) enable,  
-constraint rg\_cp\_ff\_fl\_ativa\_1\_ck\_1 check (fl\_ativa_1 in (&#8216;s&#8217;, &#8216;n&#8217;)) enable novalidate,  
-constraint rg\_cp\_ff\_fl\_ativa\_2\_ck\_2 check (fl\_ativa_2 in (&#8216;s&#8217;, &#8216;n&#8217;)) enable novalidate,  
-constraint rg\_cp\_ff\_fl\_ativa\_3\_ck\_3 check (fl\_ativa_3 in (&#8216;s&#8217;, &#8216;n&#8217;)) enable novalidate  
-) ; |
+constraint ergon_regras_compara_ff_pk primary key (regra) enable,  
+constraint rg_cp_ff_fl_ativa_1_ck_1 check (fl_ativa_1 in (&#8216;s&#8217;, &#8216;n&#8217;)) enable novalidate,  
+constraint rg_cp_ff_fl_ativa_2_ck_2 check (fl_ativa_2 in (&#8216;s&#8217;, &#8216;n&#8217;)) enable novalidate,  
+constraint rg_cp_ff_fl_ativa_3_ck_3 check (fl_ativa_3 in (&#8216;s&#8217;, &#8216;n&#8217;)) enable novalidate  
+) ; 
+|===
 
 **Nota:** em todos os casos acima, sendo o nome do objeto grande, devemos abreviar o nome do mesmo.  
 ex.:  
+```
 aplicacoes = apli (4)  
 aplicacao_funcoes = apfu (2:2)  
-aplicacao\_funcao\_papeis = apfp (2:1:1)  
-aplicacao\_funcao\_papel_bananas = afpb (1:1:1:1)  
-aplicacao\_funcao\_papel\_banana\_macas = (Seja criativo!) 
-
-**REFERENCIA:** [NamingConventions.php][1]
+aplicacao_funcao_papeis = apfp (2:1:1)  
+aplicacao_funcao_papel_bananas = afpb (1:1:1:1)  
+aplicacao_funcao_papel_banana_macas = (Seja criativo!) 
+```
+**REFERENCIA:** http://www.oracle-base.com/articles/misc/NamingConventions.php[NamingConventions]
 
 Uso essa estratégia há algum tempo e fica muito fácil de trabalhar e manter. 
 
 Você adota uma notação?  
 Qual notação você usa?
-
-
-
- [1]: http://www.oracle-base.com/articles/misc/NamingConventions.php

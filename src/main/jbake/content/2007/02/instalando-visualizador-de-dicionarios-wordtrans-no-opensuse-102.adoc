@@ -69,6 +69,6 @@ total 37648
 ti-des05:/home/gilberto/software_usados/tradutor/dicionarios #
 ```
     
-Bom, agora precisamos adicionar os dicionários que precisamos ao worktrans. Para isso, através do menu Dictionaries, escolha New: Dictionaries->New &#8230;. Aparecerá tela para selecionar o tipo de dicionário. Eu escolhi o tipo babylon. O restante é bem fácil e intuitivo!
+Bom, agora precisamos adicionar os dicionários que precisamos ao worktrans. Para isso, através do menu Dictionaries, escolha New: Dictionaries->New .... Aparecerá tela para selecionar o tipo de dicionário. Eu escolhi o tipo babylon. O restante é bem fácil e intuitivo!
     
 image::wordtrans.png[menu Dictionaries]
