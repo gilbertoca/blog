@@ -52,10 +52,10 @@
         <p>by <em>Gilberto C. Andrade</em> on <strong>22 fevereiro 2010</strong></p>
         <p>Tagged as: 
             <a href="../../tags/Application-Server.html">Application-Server</a>,
+            <a href="../../tags/Oracle.html">Oracle</a>,
             <a href="../../tags/Database.html">Database</a>,
             <a href="../../tags/Linux.html">Linux</a>,
             <a href="../../tags/openSUSE.html">openSUSE</a>,
-            <a href="../../tags/Sistema-Operacional.html">Sistema-Operacional</a>,
         </p>
     </header>
     <section>
@@ -69,13 +69,13 @@ mesmos que neste caso usei o default oracle. Veja a labuta que tem de fazer:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code>&lt;code class="bash"&gt;
-    $ xhost +
-    $ sux – oracle
-    $ source .oracleDB #ou oracleDS ou oracleAS
-&lt;/code&gt;    ```
-
-Dos scripts de mudança de ambiente não tenho como escapar mas para facilitar
+<pre class="prettyprint highlight"><code>$ xhost +
+$ sux – oracle
+$ source .oracleDB #ou oracleDS ou oracleAS</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dos scripts de mudança de ambiente não tenho como escapar mas para facilitar
 minha vida, acabei adicionando os grupos DBA e oinstall para minha lista
 de grupos. Dessa forma não preciso usar o su para mudança de usuario. Ai tem um
 porém, meu grupo padrão é users. Nessa, quando tento compilar um forms ou
@@ -83,20 +83,19 @@ iniciar o servidor de aplicações, acontece vários erros de permissões. Isso
 porque meu grupo principal/efetivo, como já disse, não é o oinstall nem DBA.
 Para contornar este problema usei o utilitário de sistema newgrp. O comando
 newgrp é usado para alterar o grupo efetivo do usuário para o grupo solicitado
-em uma nova sessão de login:</code></pre>
+em uma nova sessão de login:</p>
 </div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>$ groups
+users disk uucp dialout audio video oinstall dba
+$ newgrp oinstall
+$ groups
+oinstall disk uucp dialout audio video dba users
+$ exit
+$ groups
+users disk uucp dialout audio video oinstall dba</code></pre>
 </div>
-<div class="paragraph">
-<p>&lt;code class="bash"&gt;
-    $ groups
-    users disk uucp dialout audio video oinstall dba
-    $ newgrp oinstall
-    $ groups
-    oinstall disk uucp dialout audio video dba users
-    $ exit
-    $ groups
-    users disk uucp dialout audio video oinstall dba
-&lt;/code&gt;```</p>
 </div>
 <div class="paragraph">
 <p>Desta forma meu grupo principal torna-se oinstall, me possibilitando trabalhar
@@ -106,9 +105,7 @@ mas usando o grupo o qual vc necessita:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code>&lt;code class="bash"&gt;
-    sg oinstall -c rm *.err
-&lt;/code&gt;    ```</code></pre>
+<pre class="prettyprint highlight"><code>sg oinstall -c rm *.err</code></pre>
 </div>
 </div>
     </section>

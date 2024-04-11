@@ -54,34 +54,33 @@
             <a href="../../tags/Database.html">Database</a>,
             <a href="../../tags/Linux.html">Linux</a>,
             <a href="../../tags/openSUSE.html">openSUSE</a>,
-            <a href="../../tags/Sistema-Operacional.html">Sistema-Operacional</a>,
         </p>
     </header>
     <section>
 	<div class="paragraph">
 <p>Você está cansado de ver estas mensagens, dizendo que você não pode
-desmountar &lt;code&gt;/mnt/cdrom&lt;/code&gt; ou &lt;code&gt;/mnt/flash&lt;/code&gt;? Veja esta
-pequena tática:</p>
+desmountar <code>/mnt/cdrom/</code> ou <code>/mnt/flash/</code>?</p>
+</div>
+<div class="paragraph">
+<p>Veja esta pequena tática:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code>&lt;code class="bash"&gt;
-    lsof | grep /mnt/cdrom
-&lt;/code&gt;```
-
-
-A sáida será o(s) processo(s) que estão usando este dispositivo. Agora pare ou
-derrube o processo. Outra opção:</code></pre>
+<pre class="prettyprint highlight"><code>lsof | grep /mnt/cdrom</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>&lt;code class="bash"&gt;
-    fuser -muv /mnt/cdrom
-&lt;/code&gt;```</p>
+<p>A sáida será o(s) processo(s) que estão usando este dispositivo.
+Agora pare ou derrube o processo. Outra opção:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>fuser -muv /mnt/cdrom</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>O qual irá listar conta de usuário, PID, etc usando o dispositivo montado
-em &lt;code&gt;/mnt/cdrom&lt;/code&gt;.</p>
+em <code>/mnt/cdrom/</code>.</p>
 </div>
     </section>
 <section>

@@ -52,6 +52,7 @@
         <p>by <em>Gilberto C. Andrade</em> on <strong>19 outubro 2009</strong></p>
         <p>Tagged as: 
             <a href="../../tags/Application-Server.html">Application-Server</a>,
+            <a href="../../tags/Oracle.html">Oracle</a>,
             <a href="../../tags/Linux.html">Linux</a>,
             <a href="../../tags/Sistema-Operacional.html">Sistema-Operacional</a>,
         </p>
@@ -60,12 +61,10 @@
 	<div class="paragraph">
 <p>O servidor de aplicações Oracle (IAS 10g) não inicia, o enterprise manager reporta um erro que não diz muito:</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>An error occurred while talking to OPMN. Could not find entity for “nome do servidor”</p>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>An error occurred while talking to OPMN. Could not find entity for “nome do servidor”</code></pre>
 </div>
-</blockquote>
 </div>
 <div class="paragraph">
 <p>Os arquivos de log necessários são:</p>
@@ -84,20 +83,20 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>O único que mostrou algo de errado foi ipm.log:
-`&lt;br /&gt;
-cat ipm.log&lt;br /&gt;
-09/10/19 10:18:09 [2] BIND (Address already in use)&lt;br /&gt;
-09/10/19 10:18:09 [2] 127.0.0.1:6101 - listener BIND failed&lt;br /&gt;
-09/10/19 10:18:09 [4] Thread do listener 98311: 127.0.0.1:6101 (0x442) está sendo encerrado&lt;br /&gt;
-09/10/19 10:18:09 [1] Listener local encerrado&lt;br /&gt;
-`
-A solução foi fechar todas a aplicações oracle em execução e verificar pelo utilitário <strong>[ps][1]</strong> a existência de algum ainda rodando, para fechá-lo também.</p>
+<p>O único que mostrou algo de errado foi ipm.log:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>[1]: http://linux.die.net/man/1/ps</pre>
+<pre class="prettyprint highlight"><code>cat ipm.log
+09/10/19 10:18:09 [2] BIND (Address already in use)
+09/10/19 10:18:09 [2] 127.0.0.1:6101 - listener BIND failed
+09/10/19 10:18:09 [4] Thread do listener 98311: 127.0.0.1:6101 (0x442) está sendo encerrado
+09/10/19 10:18:09 [1] Listener local encerrado</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>A solução foi fechar todas a aplicações oracle em execução e verificar pelo utilitário <strong><a href="http://linux.die.net/man/1/ps">ps</a></strong>
+a existência de algum ainda rodando, para fechá-lo também.</p>
 </div>
     </section>
 <section>

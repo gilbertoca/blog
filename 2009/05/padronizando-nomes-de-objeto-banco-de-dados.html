@@ -60,321 +60,346 @@
 	<div class="paragraph">
 <p>Primeiro definimos a extensão dos arquivos que conterão as sentenças de criação dos objetos do banco de dados:</p>
 </div>
-<div class="paragraph">
-<p>&lt;table border="0"&gt;
-  &lt;tr&gt;
-    &lt;td&gt;
-      &lt;modulo&gt;.tbs
-    &lt;/td&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Tablespace (Tablespace)- Script de criação do(s) espaço(s) de armazenamento
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.vw
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    View (visão)-Script de criação da visões
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.usr
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Schema (esquema)- Criação do Proprietário do Módulo (Schema), juntamente com a role(papel) de aplicação e usário(s) correspondente(s)
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.grt
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Grant (Permissão)- Script que estabelece as permissões a outros usuário e a role de aplicação
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.rvk
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Revoke (Permissão)- Script que revoga as permissões a outros usuário e a role de aplicação
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.syn
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Synonym (Sinônimo)- Script que estabelece os sinônimos dos objetos a outros usuários
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.tab
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Table (Tabela)- Script de criação das tabelas
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.con
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Constraint (Restrição)- Script de criação das restrições de integridade
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.ind
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Index (Índice)- Script de criação dos índeces
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.trg
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Trigger (Gatilho)- Script de criação dos gatilhos
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.seq
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Sequence (Sequência)- Script de criação das sequências
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.prc
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Stored Procedure (Procedimento Armazenado)- Script de criação de procedimentos armazenados
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.fnc
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Stored Function (Função Armazenada)- Script de criação de funções armazenadas
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.pks
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Package Specification (Especificação de Pacote) - Script de criação das especificações dos pacotes
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.pkb
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    Package Body (Corpo de Pacote) - Script de criação do corpo dos pacotes
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;modulo&gt;.sql
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>    &lt;td&gt;
-      Reponsável por chamar/executar os outros arquivos em uma sequencia apropriada:
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>| Para Tabelas           | Descrição                                                                            | Exemplo    |
-| ---------------------- | ------------------------------------------------------------------------------------ | ---------- |
-| &lt;prefixo&gt;_&lt;nometabela&gt; | onde &lt;prefixo&gt; deverá ser letras representando o módulo em que esta tabela pertença. | ger_pessoa |</p>
-</div>
-<div class="paragraph">
-<p>&lt;/tr&gt; | Para Visão                 | Descrição                                                                            | Exemplo              |
-| -------------------------- | ------------------------------------------------------------------------------------ | -------------------- |
-| &lt;prefixo&gt;\_&lt;nomevisao&gt;\_vw | onde &lt;prefixo&gt; deverá ser letras representando o módulo em que esta tabela pertença. | ger\_funcionario\_vw |</p>
-</div>
-<div class="paragraph">
-<p>| Para Sequências                   | Descrição                                                                            | Exemplo                    |
-| --------------------------------- | ------------------------------------------------------------------------------------ | -------------------------- |
-| &lt;prefixo&gt;\_&lt;nometabela&gt;\_sequence | onde &lt;prefixo&gt; deverá ser letras representando o módulo em que esta tabela pertença. | ger\_funcionario\_sequence |</p>
-</div>
-<div class="paragraph">
-<p>| Para Colunas                                              | Descrição                                                     | Exemplo                       |
-| --------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------- |
-| &lt;cd&gt;_&lt;nometabela&gt;                                         | para coluna representando a chave primaria da tabela.         | cd_pessoa                     |
-| &lt;cd&gt;_&lt;nometabelaestrangeira&gt;                              | para coluna(s) representando a presença de chave estrangeira. | cd_municipio                  |
-| &lt;cd&gt;_&lt;nometabelaestrangeira&gt;&lt;significadodorelacionamento&gt; | para coluna(s) representando a presença de chave estrangeira. | cd_municipionaturalidade      |
-| &lt;fl&gt;_&lt;nomecampo&gt;                                          | para coluna representando campo lógico(verdadeiro ou falso).  | fl_dependente, fl\_encerrado |
-| &lt;dt&gt;_&lt;nomecampo&gt;                                          | para coluna representando campo data.                         | dt_nascimento                 |
-| &lt;hr&gt;_&lt;nomecampo&gt;                                          | para coluna representando campo tempo.                        | hr_saida                      |
-| &lt;nu&gt;_&lt;nomecampo&gt;                                          | para coluna representando campo numerico.                     | nu_leicriacao                 |</p>
-</div>
+<table border="0">
+  <tr>
+    <td>
+      <modulo>.tbs
+    </td>
+
+    <td>
+      Tablespace (Tablespace)- Script de criação do(s) espaço(s) de armazenamento
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.vw
+    </td>
+
+    <td>
+      View (visão)-Script de criação da visões
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.usr
+    </td>
+
+    <td>
+      Schema (esquema)- Criação do Proprietário do Módulo (Schema), juntamente com a role(papel) de aplicação e usário(s) correspondente(s)
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.grt
+    </td>
+
+    <td>
+      Grant (Permissão)- Script que estabelece as permissões a outros usuário e a role de aplicação
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.rvk
+    </td>
+
+    <td>
+      Revoke (Permissão)- Script que revoga as permissões a outros usuário e a role de aplicação
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.syn
+    </td>
+
+    <td>
+      Synonym (Sinônimo)- Script que estabelece os sinônimos dos objetos a outros usuários
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.tab
+    </td>
+
+    <td>
+      Table (Tabela)- Script de criação das tabelas
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.con
+    </td>
+
+    <td>
+      Constraint (Restrição)- Script de criação das restrições de integridade
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.ind
+    </td>
+
+    <td>
+      Index (Índice)- Script de criação dos índeces
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.trg
+    </td>
+
+    <td>
+      Trigger (Gatilho)- Script de criação dos gatilhos
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.seq
+    </td>
+
+    <td>
+      Sequence (Sequência)- Script de criação das sequências
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.prc
+    </td>
+
+    <td>
+      Stored Procedure (Procedimento Armazenado)- Script de criação de procedimentos armazenados
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.fnc
+    </td>
+
+    <td>
+      Stored Function (Função Armazenada)- Script de criação de funções armazenadas
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.pks
+    </td>
+
+    <td>
+      Package Specification (Especificação de Pacote) - Script de criação das especificações dos pacotes
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.pkb
+    </td>
+
+    <td>
+      Package Body (Corpo de Pacote) - Script de criação do corpo dos pacotes
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <modulo>.sql
+    </td>
+
+    <td>
+      Reponsável por chamar/executar os outros arquivos em uma sequencia apropriada
+    </td>
+  </tr>
+</table>
+<table class="tableblock frame-ends grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Para Tabelas</th>
+<th class="tableblock halign-left valign-top">Descrição</th>
+<th class="tableblock halign-left valign-top">Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;prefixo&gt;_&lt;nometabela&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onde &lt;prefixo&gt; deverá ser letras representando o módulo em que esta tabela pertença.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ger_pessoa</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-ends grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Para Visão</th>
+<th class="tableblock halign-left valign-top">Descrição</th>
+<th class="tableblock halign-left valign-top">Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;prefixo&gt;_&lt;nomevisao&gt;_vw</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onde &lt;prefixo&gt; deverá ser letras representando o módulo em que esta tabela pertença.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ger_funcionario_vw</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Para Sequências</th>
+<th class="tableblock halign-left valign-top">Descrição</th>
+<th class="tableblock halign-left valign-top">Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;prefixo&gt;_&lt;nometabela&gt;_sequence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onde &lt;prefixo&gt; deverá ser letras representando o módulo em que esta tabela pertença.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ger_funcionario_sequence</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Para Colunas</th>
+<th class="tableblock halign-left valign-top">Descrição</th>
+<th class="tableblock halign-left valign-top">Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cd&gt;_&lt;nometabela&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">para coluna representando a chave primaria da tabela.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cd_pessoa</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cd&gt;_&lt;nometabelaestrangeira&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">para coluna(s) representando a presença de chave estrangeira.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cd_municipio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cd&gt;_&lt;nometabelaestrangeira&gt;&lt;significadodorelacionamento&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">para coluna(s) representando a presença de chave estrangeira.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cd_municipionaturalidade</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;fl&gt;_&lt;nomecampo&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">para coluna representando campo lógico(verdadeiro ou falso).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fl_dependente, fl_encerrado</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;dt&gt;_&lt;nomecampo&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">para coluna representando campo data.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dt_nascimento</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;hr&gt;_&lt;nomecampo&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">para coluna representando campo tempo.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hr_saida</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;nu&gt;_&lt;nomecampo&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">para coluna representando campo numerico.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nu_leicriacao</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Para nomear constraints, devemos usar um padrão porque não pode haver repetição de nomes dos mesmos (limitado a 30 caracteres - limitação do oracle).</p>
 </div>
-<div class="paragraph">
-<p>| Para Constraints                                                                               | Descrição                                                     | Exemplo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| &lt;nome da tabela com prefixo&gt;_&lt;pk&gt;                                                              | para chave primaria.                                          | constraint sys_usuario\_pk primary key (cd_usuario) enable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| &lt;nome da tabela com prefixo&gt;_&lt;uk&gt;                                                              | para indice unico.                                            | constraint sys_usuario\_uk unique (login, email) enable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| &lt;nome da tabela origem sem prefixo&gt;\_&lt;to&gt;_&lt;nome da tabela atual(destino sem prefixo&gt;_&lt;fk&gt;     | para coluna(s) representando a presença de chave estrangeira. | constraint entidade_to\_subentidade\_fk foreign key (id\_entidade) references kira.sys\_entidade (id\_entidade) enable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| &lt;nome da tabela sem prefixo&gt;\_&lt;nome da coluna&gt;_&lt;ck&gt;_&lt;um digito - caso ocorra repeticao&gt; | para check.                                                   | create table ergon.ergon\_regras\_compara_ff
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Para Constraints</th>
+<th class="tableblock halign-left valign-top">Descrição</th>
+<th class="tableblock halign-left valign-top">Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;nome da tabela com prefixo&gt;_&lt;pk&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">para chave primaria.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">constraint sys_usuario_pk primary key (cd_usuario) enable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;nome da tabela com prefixo&gt;_&lt;uk&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">para indice unico.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">constraint sys_usuario_uk unique (login, email) enable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;nome da tabela origem sem prefixo&gt;_&lt;to&gt;_&lt;nome da tabela atual(destino sem prefixo&gt;_&lt;fk&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">para coluna(s) representando a presença de chave estrangeira.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">constraint entidade_to_subentidade_fk foreign key (id_entidade) references kira.sys_entidade (id_entidade) enable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;nome da tabela sem prefixo&gt;_&lt;nome da coluna&gt;_&lt;ck&gt;_&lt;um digito - caso ocorra repeticao&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">para check.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">create table ergon.ergon_regras_compara_ff
 (
-regra number(6,0) constraint regras\_compara\_ff\_regra\_ck_0 not null enable,
-fl\_ativa\_1 char(1 byte) default &#8216;n&#8217; constraint rg\_cp\_ff\_fl\_ativa\_1\_ck_0 not null enable,
-fl\_ativa\_2 char(1 byte) default &#8216;n&#8217; constraint rg\_cp\_ff\_fl\_ativa\_2\_ck_0 not null enable,
-fl\_ativa\_3 char(1 byte) default &#8216;n&#8217; constraint rg\_cp\_ff\_fl\_ativa\_3\_ck_0 not null enable,
+regra number(6,0) constraint regras_compara_ff_regra_ck_0 not null enable,
+fl_ativa_1 char(1 byte) default &#8216;n&#8217; constraint rg_cp_ff_fl_ativa_1_ck_0 not null enable,
+fl_ativa_2 char(1 byte) default &#8216;n&#8217; constraint rg_cp_ff_fl_ativa_2_ck_0 not null enable,
+fl_ativa_3 char(1 byte) default &#8216;n&#8217; constraint rg_cp_ff_fl_ativa_3_ck_0 not null enable,
 limite_diferenca number(11,2),
-constraint ergon\_regras\_compara\_ff\_pk primary key (regra) enable,
-constraint rg\_cp\_ff\_fl\_ativa\_1\_ck\_1 check (fl\_ativa_1 in (&#8216;s&#8217;, &#8216;n&#8217;)) enable novalidate,
-constraint rg\_cp\_ff\_fl\_ativa\_2\_ck\_2 check (fl\_ativa_2 in (&#8216;s&#8217;, &#8216;n&#8217;)) enable novalidate,
-constraint rg\_cp\_ff\_fl\_ativa\_3\_ck\_3 check (fl\_ativa_3 in (&#8216;s&#8217;, &#8216;n&#8217;)) enable novalidate
-) ; |</p>
-</div>
+constraint ergon_regras_compara_ff_pk primary key (regra) enable,
+constraint rg_cp_ff_fl_ativa_1_ck_1 check (fl_ativa_1 in (&#8216;s&#8217;, &#8216;n&#8217;)) enable novalidate,
+constraint rg_cp_ff_fl_ativa_2_ck_2 check (fl_ativa_2 in (&#8216;s&#8217;, &#8216;n&#8217;)) enable novalidate,
+constraint rg_cp_ff_fl_ativa_3_ck_3 check (fl_ativa_3 in (&#8216;s&#8217;, &#8216;n&#8217;)) enable novalidate
+) ;</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p><strong>Nota:</strong> em todos os casos acima, sendo o nome do objeto grande, devemos abreviar o nome do mesmo.
-ex.:
-aplicacoes = apli (4)
+ex.:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>aplicacoes = apli (4)
 aplicacao_funcoes = apfu (2:2)
-aplicacao\_funcao\_papeis = apfp (2:1:1)
-aplicacao\_funcao\_papel_bananas = afpb (1:1:1:1)
-aplicacao\_funcao\_papel\_banana\_macas = (Seja criativo!)</p>
+aplicacao_funcao_papeis = apfp (2:1:1)
+aplicacao_funcao_papel_bananas = afpb (1:1:1:1)
+aplicacao_funcao_papel_banana_macas = (Seja criativo!)</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p><strong>REFERENCIA:</strong> [NamingConventions.php][1]</p>
+<p><strong>REFERENCIA:</strong> <a href="http://www.oracle-base.com/articles/misc/NamingConventions.php">NamingConventions</a></p>
 </div>
 <div class="paragraph">
 <p>Uso essa estratégia há algum tempo e fica muito fácil de trabalhar e manter.</p>
@@ -382,11 +407,6 @@ aplicacao\_funcao\_papel\_banana\_macas = (Seja criativo!)</p>
 <div class="paragraph">
 <p>Você adota uma notação?
 Qual notação você usa?</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>[1]: http://www.oracle-base.com/articles/misc/NamingConventions.php</pre>
-</div>
 </div>
     </section>
 <section>

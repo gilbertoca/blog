@@ -64,20 +64,18 @@
     </header>
     <section>
 	<div class="paragraph">
-<p>**</p>
+<p>Este post é uma tradução livre do artigo <a href="http://meri-stuff.blogspot.com/2011/03/apache-shiro-part-1-basics.html" target="_blank" rel="noopener">Apache Shiro Part 1 - Basics</a>, publicado por Meri em 27 de março 2011</p>
 </div>
 <div class="paragraph">
-<p>Este post é uma tradução livre do artigo “&lt;a href="http://meri-stuff.blogspot.com/2011/03/apache-shiro-part-1-basics.html" target="_blank"&gt; Apache Shiro Part 1 - Basics &lt;/a&gt;“, publicado por Meri em 27 de março 2011</p>
+<p><strong>ATUALIZAÇÃO: duas novas seções adicionadas - tratamento de erros e hashing de senhas.</strong></p>
 </div>
 <div class="paragraph">
-<p>&lt;/strong&gt;
-<strong>ATUALIZAÇÃO: duas novas seções adicionadas - tratamento de erros e hashing de senhas.</strong></p>
-</div>
-<div class="paragraph">
-<p>&lt;A href="http://shiro.apache.org/index.html" target="_blank"&gt; Apache Shiro&lt;/A&gt;, inicialmente chamado JSecurity, é um framework de segurança desenvolvido em java. Foi aceito e tornou-se um projeto Apache de nível superior em 2010. Tem como objetivo ser poderoso e fácil de usar.</p>
-</div>
-<div class="paragraph">
-<p>O projeto está em constante desenvolvimento e com listas de e-mails ativas para usuários e desenvolvedores. Áreas mais importantes estão &lt;a href="http://shiro.apache.org/documentation.html" target="_blank"&gt; documentadas em sua página web&lt;/a&gt;. No entanto, existem algumas lacunas na documentação. Não é possível aprender a usar o máximo dos recursos do Shiro somente com a documentação. Felizmente, o código é bem documentado e onde o testei, ela foi de fácil leitura.</p>
+<p><a href="http://shiro.apache.org/index.html" target="_blank" rel="noopener">Apache Shiro</a> inicialmente chamado JSecurity,
+é um framework de segurança desenvolvido em java. Foi aceito e tornou-se um projeto Apache de nível superior em 2010.
+Tem como objetivo ser poderoso e fácil de usar. O projeto está em constante desenvolvimento e com listas de e-mails ativas
+para usuários e desenvolvedores. Áreas mais importantes estão <a href="http://shiro.apache.org/documentation.html" target="_blank" rel="noopener">documentadas em sua página web</a>.
+No entanto, existem algumas lacunas na documentação. Não é possível aprender a usar o máximo dos recursos do Shiro somente com a documentação.
+Felizmente, o código é bem documentado e onde o testei, ela foi de fácil leitura.</p>
 </div>
 <div class="paragraph">
 <p>Principais recursos do projeto Shiro são:</p>
@@ -99,12 +97,14 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>Neste artigo tentaremos demonstrar vários recursos do Shiro. Vamos começar com uma simples aplicação sem segurança e então adicionaremos recursos de segurança. Todo código está disponível no projeto &lt;A href="https://github.com/SomMeri/SimpleShiroSecuredApplication" target="_blank"&gt; SimpleShiroSecuredApplication&lt;/A&gt; hospedado no &lt;a href="https://github.com/" target="_blank"&gt; Github&lt;/a&gt;.</p>
+<p>Neste artigo tentaremos demonstrar vários recursos do Shiro. Vamos começar com uma simples aplicação sem segurança e
+então adicionaremos recursos de segurança. Todo código está disponível no projeto <a href="https://github.com/SomMeri/SimpleShiroSecuredApplication" target="_blank" rel="noopener">SimpleShiroSecuredApplication</a>
+hospedado no <a href="https://github.com/" target="_blank" rel="noopener">Github</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="_aplicação_sem_segurança">Aplicação sem Segurança</h4>
 <div class="paragraph">
-<p>O código da aplicação sem segurança está localizado no ramo(branch) &lt;A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/tree/unsecured_application" target="_blank"&gt; unsecured_application&lt;/A&gt;.
+<p>O código da aplicação sem segurança está localizado no ramo(branch) <a href="https://github.com/SomMeri/SimpleShiroSecuredApplication/tree/unsecured_application" target="_blank" rel="noopener">unsecured_application</a>.
 A aplicação representa um sistema interno para uma companhia fictícia. A companhia tem quatro departamentos:</p>
 </div>
 <div class="ulist">
@@ -124,30 +124,46 @@ A aplicação representa um sistema interno para uma companhia fictícia. A comp
 </ul>
 </div>
 <div class="paragraph">
-<p>Cada departamento tem sua própria página. Cada página contém botões que serão usados por usuários em sua atividade. Quando o usuário pressiona o botão, o trabalho é realizado. Por exemplo, qualquer reparador pode acessar a página reparadores(repairmen) e pressionar o botão “Reparar Refrigerador(Repair Refrigerator)”. O botão repara refrigerador e mostra mensagem de sucesso.</p>
+<p>Cada departamento tem sua própria página. Cada página contém botões que serão usados por usuários em sua atividade.
+Quando o usuário pressiona o botão, o trabalho é realizado. Por exemplo, qualquer reparador pode acessar a página reparadores(repairmen)
+e pressionar o botão “Reparar Refrigerador(Repair Refrigerator)”. O botão repara refrigerador e mostra mensagem de sucesso.</p>
 </div>
 <div class="paragraph">
-<p>Cada usuário tem sua própria página de gerenciamento de conta. Esta página de gerenciamento contém informações privadas do usuário. Como a aplicação sem segurança não tem usuários ainda, a página de gerenciamento de conta não faz nada. Adicionalmente, há uma página que contém todas funções da aplicação. Tudo que alguém pode fazer é possível ser feito nesta página.</p>
+<p>Cada usuário tem sua própria página de gerenciamento de conta. Esta página de gerenciamento contém informações privadas do usuário.
+Como a aplicação sem segurança não tem usuários ainda, a página de gerenciamento de conta não faz nada. Adicionalmente,
+há uma página que contém todas funções da aplicação. Tudo que alguém pode fazer é possível ser feito nesta página.</p>
 </div>
 <div class="paragraph">
-<p>Qualquer pessoa pode fazer qualquer coisa e ver todas as páginas. A aplicação exemplo é executada na classe de teste &lt;A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/unsecured_application/src/test/java/org/meri/simpleshirosecuredapplication/RunWaitTest.java" target="_blank"&gt; RunWaitTest&lt;/A&gt;. Não é uma boa prática usar teste de unidade desta forma, mas isso não é importante agora. Se você executar a classe a aplicação estará disponível no endereço (url) <a href="http://localhost:9180/simpleshirosecuredapplication/" class="bare">http://localhost:9180/simpleshirosecuredapplication/</a>.</p>
+<p>Qualquer pessoa pode fazer qualquer coisa e ver todas as páginas. A aplicação exemplo é executada
+na classe de teste <a href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/unsecured_application/src/test/java/org/meri/simpleshirosecuredapplication/RunWaitTest.java" target="_blank" rel="noopener">RunWaitTest</a>.
+Não é uma boa prática usar teste de unidade desta forma, mas isso não é importante agora.
+Se você executar a classe a aplicação estará disponível no endereço (url) <a href="http://localhost:9180/simpleshirosecuredapplication/" class="bare">http://localhost:9180/simpleshirosecuredapplication/</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_adicionando_autenticação">Adicionando Autenticação</h4>
 <div class="paragraph">
-<p>Primeiro, temos que verificar a identidade do usuário. A mais fácil e padronizada forma de autenticação é feita por senha e nome usuário. Usuário preenche o seu nome de usuário e senha e o sistema verifica se os valores fornecidos combinam com alguma conta de usuário.</p>
+<p>Primeiro, temos que verificar a identidade do usuário. A mais fácil e padronizada forma de autenticação é feita por senha e nome usuário.
+Usuário preenche o seu nome de usuário e senha e o sistema verifica se os valores fornecidos combinam com alguma conta de usuário.</p>
 </div>
 <div class="paragraph">
-<p>Para aplicações mais simples, é suficiente armazenar nome e senha de usuários em arquivos de texto puro. Em um cenário mais realista, o nome e senha são armazenados em um mecanismo de persistente or a verificação é feita por outro sistema como ldap ou active directory. Shiro suporta todos os métodos de autenticação mencionados. Se os recursos de autenticação pré-existentes não são suficientes, é possível estender o framework com sua própria implementação de verificação.</p>
+<p>Para aplicações mais simples, é suficiente armazenar nome e senha de usuários em arquivos de texto puro.
+Em um cenário mais realista, o nome e senha são armazenados em um mecanismo de persistente or a verificação é feita por outro sistema como ldap
+ou active directory. Shiro suporta todos os métodos de autenticação mencionados. Se os recursos de autenticação pré-existentes não são suficientes, é
+possível estender o framework com sua própria implementação de verificação.</p>
 </div>
 <div class="paragraph">
-<p>Neste capítulo, iremos adicionar autenticação baseada em nome de usuário e senha na aplicação. Nome de usuário e senha serão armazenados no arquivo de inicialização do Shiro, o qual é texto e estático.</p>
+<p>Neste capítulo, iremos adicionar autenticação baseada em nome de usuário e senha na aplicação. Nome de usuário e senha serão armazenados no arquivo
+de inicialização do Shiro, o qual é texto e estático.</p>
 </div>
 <div class="paragraph">
 <p><strong>Novos requisitos:</strong>
-É possível a entrada e saída de usuários(log in/out). A aplicação será acessível somente para usuários registrados. Usuário com autenticação sem erros é redirecionado para sua própria página de gerenciamento de conta. Todas as páginas e funções da aplicação serão acessíveis para qualquer usuário autenticado.
-Passos necessários:</p>
+É possível a entrada e saída de usuários(log in/out). A aplicação será acessível somente para usuários registrados.
+Usuário com autenticação sem erros é redirecionado para sua própria página de gerenciamento de conta.
+Todas as páginas e funções da aplicação serão acessíveis para qualquer usuário autenticado.</p>
+</div>
+<div class="paragraph">
+<p>Passos necessários:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -168,7 +184,10 @@ Passos necessários:</p>
 <div class="sect4">
 <h5 id="_adicionar_apache_shiro">Adicionar Apache Shiro</h5>
 <div class="paragraph">
-<p>Shiro é integrado à aplicação web através de &lt;a href="http://download.oracle.com/javaee/5/api/javax/servlet/Filter.html" target="_blank"&gt; filtros servlet&lt;/a&gt;. Um filtro intercepta requisições e respostas antes do servlet e executa todas as tarefas necessárias (como a identificação do usuário atualmente autenticado, anexar o usuário ao thread corrente, &#8230;). Filtros Shiro pré-definidos fornecem recursos de segurança básicos, como:</p>
+<p>Shiro é integrado à aplicação web através de <a href="http://download.oracle.com/javaee/5/api/javax/servlet/Filter.html" target="_blank" rel="noopener">filtros servlet</a>.
+Um filtro intercepta requisições e respostas antes do servlet e executa todas as tarefas necessárias
+(como a identificação do usuário atualmente autenticado, anexar o usuário ao thread corrente, &#8230;&#8203;).
+Filtros Shiro pré-definidos fornecem recursos de segurança básicos, como:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -184,13 +203,20 @@ Passos necessários:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Se você quiser aprender mais sobre filtros Shiro pré-definidos, um bom lugar para começar é a enumeração &lt;A href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/mgt/DefaultFilter.html" target="_blank"&gt; DefaultFilter&lt;/A&gt;. Ela lista todos os filtros Shiro pré-definidos disponíveis. Se estes não forem suficientes para suas necessidades, você pode criar um personalizado.</p>
+<p>Se você quiser aprender mais sobre filtros Shiro pré-definidos, um bom lugar para começar é a enumeração <a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/mgt/DefaultFilter.html" target="_blank" rel="noopener">DefaultFilter</a>.
+Ela lista todos os filtros Shiro pré-definidos disponíveis. Se estes não forem suficientes para suas necessidades, você pode criar um personalizado.</p>
 </div>
 <div class="paragraph">
-<p>Usaremos o filtro altamente configurável &lt;A href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/servlet/IniShiroFilter.html" target="_blank"&gt; IniShiroFilter&lt;/A&gt;. Ele lê a configuração Shiro a partir do arquivo ini e inicializa o framework de segurança. Ele não executa qualquer verificação de segurança. Verificação de segurança, autenticação de usuário, verificação de protocolo, etc. são todos transferidos(delegados) tanto para o filtro Shiro pré-definido quanto para o filtro personalizado(outra implementação). O filtro IniShiroFilter apenas os inicializa.</p>
+<p>Usaremos o filtro altamente configurável <a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/servlet/IniShiroFilter.html" target="_blank" rel="noopener">IniShiroFilter</a>.
+Ele lê a configuração Shiro a partir do arquivo ini e inicializa o framework de segurança. Ele não executa qualquer verificação de segurança.
+Verificação de segurança, autenticação de usuário, verificação de protocolo, etc., são
+todos transferidos(delegados) tanto para o filtro Shiro pré-definido quanto para o filtro personalizado(outra implementação).
+O filtro IniShiroFilter apenas os inicializa.</p>
 </div>
 <div class="paragraph">
-<p>A configuração ini é descrita na &lt;A href="http://shiro.apache.org/configuration.html" target="_blank"&gt; documentação&lt;/A&gt; e no &lt;A href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/servlet/IniShiroFilter.html" target="_blank"&gt; javadoc&lt;/A&gt;. O arquivo de configuração ini tem quatro seções:</p>
+<p>A configuração ini é descrita na <a href="http://shiro.apache.org/configuration.html" target="_blank" rel="noopener">documentação</a> e
+no <a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/servlet/IniShiroFilter.html" target="_blank" rel="noopener">javadoc</a>.
+O arquivo de configuração ini tem quatro seções:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -211,278 +237,273 @@ Passos necessários:</p>
 <div class="paragraph">
 <p>Adicione Apache Shiro como dependência ao arquivo pom.xml:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="xml" style="font-family:monospace;"&gt;&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;properties&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;shiro.version&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;1.1.0&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/shiro.version&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/properties&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;dependencies&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;dependency&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;groupId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;org.apache.shiro&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/groupId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;artifactId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;shiro-core&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/artifactId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;version&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;${shiro.version}&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/version&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/dependency&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;dependency&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;groupId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;org.apache.shiro&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/groupId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;artifactId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;shiro-web&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/artifactId&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;version&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;${shiro.version}&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/version&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/dependency&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/dependencies&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
-</div>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="xml" style="font-family:monospace;"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;properties<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;shiro.version<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>1.1.0<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/shiro.version<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/properties<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;dependencies<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;dependency<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;groupId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>org.apache.shiro<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/groupId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;artifactId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>shiro-core<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/artifactId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;version<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>${shiro.version}<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/version<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/dependency<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;dependency<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;groupId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>org.apache.shiro<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/groupId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;artifactId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>shiro-web<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/artifactId<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;version<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>${shiro.version}<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/version<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/dependency<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/dependencies<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre>
+      </td>
+    </tr>
+  </table>
+</div></p>
 <div class="paragraph">
 <p>Crie o arquivo Shiro.ini e o coloque no classpath. Configure o arquivo web.xml para chamar o filtro IniShiroFilter antes de cada requisição:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="xml" style="font-family:monospace;"&gt;&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;filter&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;filter-name&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;ShiroFilter&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/filter-name&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;filter-class&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;org.apache.shiro.web.servlet.IniShiroFilter&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/filter-class&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;init-param&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;param-name&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;configPath&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/param-name&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;param-value&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;classpath:Shiro.ini&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/param-value&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/init-param&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/filter&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;filter-mapping&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;filter-name&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;ShiroFilter&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/filter-name&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;url-pattern&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;/*&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/url-pattern&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/filter-mapping&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="xml" style="font-family:monospace;"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;filter<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;filter-name<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>ShiroFilter<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/filter-name<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;filter-class<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>org.apache.shiro.web.servlet.IniShiroFilter<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/filter-class<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;init-param<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;param-name<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>configPath<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/param-name<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;param-value<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>classpath:Shiro.ini<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/param-value<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/init-param<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/filter<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;filter-mapping<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;filter-name<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>ShiroFilter<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/filter-name<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;url-pattern<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>/*<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/url-pattern<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/filter-mapping<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_criar_página_de_autenticaçãolog_in">Criar Página de Autenticação(Log in)</h5>
 <div class="paragraph">
-<p>A página de autenticação é uma simples página html contendo um botão submissão, nome de usuário e senha. A funcionalidade de autenticação é tratada pelo filtro Shiro authc pré-definido. O filtro autch permite acesso à página (url) somente a usuários autenticados. Se o usuário não está autenticado, o filtro o redirecionará para a página de autenticação (log in).</p>
+<p>A página de autenticação é uma simples página html contendo um botão submissão, nome de usuário e senha.
+A funcionalidade de autenticação é tratada pelo filtro Shiro authc pré-definido. O filtro autch permite acesso à página (url)
+somente a usuários autenticados. Se o usuário não está autenticado, o filtro o redirecionará para a página de autenticação (log in).</p>
 </div>
 <div class="paragraph">
 <p>Crie a página login.jsp:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="xml" style="font-family:monospace;"&gt;&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;form&lt;/span&gt; &lt;span style="color: #000066;"&gt;name&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"loginform"&lt;/span&gt; &lt;span style="color: #000066;"&gt;action&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;""&lt;/span&gt; &lt;span style="color: #000066;"&gt;method&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"post"&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;table&lt;/span&gt; &lt;span style="color: #000066;"&gt;align&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"left"&lt;/span&gt; &lt;span style="color: #000066;"&gt;border&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"0"&lt;/span&gt; &lt;span style="color: #000066;"&gt;cellspacing&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"0"&lt;/span&gt; &lt;span style="color: #000066;"&gt;cellpadding&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"3"&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;tr&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-            &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;td&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;Username:&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/td&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-            &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;td&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;input&lt;/span&gt; &lt;span style="color: #000066;"&gt;type&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"text"&lt;/span&gt; &lt;span style="color: #000066;"&gt;name&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"user"&lt;/span&gt; &lt;span style="color: #000066;"&gt;maxlength&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"30"&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/td&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/tr&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;tr&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-            &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;td&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;Password:&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/td&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-            &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;td&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;input&lt;/span&gt; &lt;span style="color: #000066;"&gt;type&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"password"&lt;/span&gt; &lt;span style="color: #000066;"&gt;name&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"pass"&lt;/span&gt; &lt;span style="color: #000066;"&gt;maxlength&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"30"&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/td&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/tr&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;tr&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-            &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;td&lt;/span&gt; &lt;span style="color: #000066;"&gt;colspan&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"2"&lt;/span&gt; &lt;span style="color: #000066;"&gt;align&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"left"&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;input&lt;/span&gt; &lt;span style="color: #000066;"&gt;type&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"checkbox"&lt;/span&gt; &lt;span style="color: #000066;"&gt;name&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"remember"&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;font&lt;/span&gt; &lt;span style="color: #000066;"&gt;size&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"2"&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;Remember Me&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/font&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/td&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/tr&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;tr&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-            &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;td&lt;/span&gt; &lt;span style="color: #000066;"&gt;colspan&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"2"&lt;/span&gt; &lt;span style="color: #000066;"&gt;align&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"right"&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;input&lt;/span&gt; &lt;span style="color: #000066;"&gt;type&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"submit"&lt;/span&gt; &lt;span style="color: #000066;"&gt;name&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"submit"&lt;/span&gt; &lt;span style="color: #000066;"&gt;value&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"Login"&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/td&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/tr&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/table&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/form&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="xml" style="font-family:monospace;"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;form</span> <span style="color: #000066;">name</span>=<span style="color: #ff0000;">"loginform"</span> <span style="color: #000066;">action</span>=<span style="color: #ff0000;">""</span> <span style="color: #000066;">method</span>=<span style="color: #ff0000;">"post"</span><span style="color: #000000; font-weight: bold;">&gt;</span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;table</span> <span style="color: #000066;">align</span>=<span style="color: #ff0000;">"left"</span> <span style="color: #000066;">border</span>=<span style="color: #ff0000;">"0"</span> <span style="color: #000066;">cellspacing</span>=<span style="color: #ff0000;">"0"</span> <span style="color: #000066;">cellpadding</span>=<span style="color: #ff0000;">"3"</span><span style="color: #000000; font-weight: bold;">&gt;</span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;tr<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;td<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>Username:<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/td<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;td<span style="color: #000000; font-weight: bold;">&gt;</span></span><span style="color: #000000; font-weight: bold;">&lt;input</span> <span style="color: #000066;">type</span>=<span style="color: #ff0000;">"text"</span> <span style="color: #000066;">name</span>=<span style="color: #ff0000;">"user"</span> <span style="color: #000066;">maxlength</span>=<span style="color: #ff0000;">"30"</span><span style="color: #000000; font-weight: bold;">&gt;</span><span style="color: #000000; font-weight: bold;">&lt;/td<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/tr<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;tr<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;td<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>Password:<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/td<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;td<span style="color: #000000; font-weight: bold;">&gt;</span></span><span style="color: #000000; font-weight: bold;">&lt;input</span> <span style="color: #000066;">type</span>=<span style="color: #ff0000;">"password"</span> <span style="color: #000066;">name</span>=<span style="color: #ff0000;">"pass"</span> <span style="color: #000066;">maxlength</span>=<span style="color: #ff0000;">"30"</span><span style="color: #000000; font-weight: bold;">&gt;</span><span style="color: #000000; font-weight: bold;">&lt;/td<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/tr<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;tr<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;td</span> <span style="color: #000066;">colspan</span>=<span style="color: #ff0000;">"2"</span> <span style="color: #000066;">align</span>=<span style="color: #ff0000;">"left"</span><span style="color: #000000; font-weight: bold;">&gt;</span><span style="color: #000000; font-weight: bold;">&lt;input</span> <span style="color: #000066;">type</span>=<span style="color: #ff0000;">"checkbox"</span> <span style="color: #000066;">name</span>=<span style="color: #ff0000;">"remember"</span><span style="color: #000000; font-weight: bold;">&gt;</span><span style="color: #000000; font-weight: bold;">&lt;font</span> <span style="color: #000066;">size</span>=<span style="color: #ff0000;">"2"</span><span style="color: #000000; font-weight: bold;">&gt;</span></span>Remember Me<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/font<span style="color: #000000; font-weight: bold;">&gt;</span></span><span style="color: #000000; font-weight: bold;">&lt;/td<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/tr<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;tr<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+            <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;td</span> <span style="color: #000066;">colspan</span>=<span style="color: #ff0000;">"2"</span> <span style="color: #000066;">align</span>=<span style="color: #ff0000;">"right"</span><span style="color: #000000; font-weight: bold;">&gt;</span><span style="color: #000000; font-weight: bold;">&lt;input</span> <span style="color: #000066;">type</span>=<span style="color: #ff0000;">"submit"</span> <span style="color: #000066;">name</span>=<span style="color: #ff0000;">"submit"</span> <span style="color: #000066;">value</span>=<span style="color: #ff0000;">"Login"</span><span style="color: #000000; font-weight: bold;">&gt;</span><span style="color: #000000; font-weight: bold;">&lt;/td<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+        <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/tr<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+    <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/table<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/form<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>Habilite o filtro authc para todas as páginas da aplicação:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="vim" style="font-family:monospace;"&gt;&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;main&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="vim" style="font-family:monospace;"><span style="color: #000000;">&#91;</span>main<span style="color: #000000;">&#93;</span>
 # specify login page
-authc&lt;span style="color: #000000;"&gt;.&lt;/span&gt;loginUrl = &lt;span style="color: #000000;"&gt;/&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;/&lt;/span&gt;account&lt;span style="color: #000000;"&gt;/&lt;/span&gt;login&lt;span style="color: #000000;"&gt;.&lt;/span&gt;jsp
+authc<span style="color: #000000;">.</span>loginUrl = <span style="color: #000000;">/</span>simpleshirosecuredapplication<span style="color: #000000;">/</span>account<span style="color: #000000;">/</span>login<span style="color: #000000;">.</span>jsp
 &nbsp;
-# name of request parameter with username; &lt;span style="color: #804040;"&gt;if&lt;/span&gt; not present &lt;span style="color: #25BB4D;"&gt;filter&lt;/span&gt; assumes &lt;span style="color: #C5A22D;"&gt;'username'&lt;/span&gt;
-authc&lt;span style="color: #000000;"&gt;.&lt;/span&gt;usernameParam = &lt;span style="color: #804040;"&gt;user&lt;/span&gt;
-# name of request parameter with password; &lt;span style="color: #804040;"&gt;if&lt;/span&gt; not present &lt;span style="color: #25BB4D;"&gt;filter&lt;/span&gt; assumes &lt;span style="color: #C5A22D;"&gt;'password'&lt;/span&gt;
-authc&lt;span style="color: #000000;"&gt;.&lt;/span&gt;passwordParam = pass
-# does the &lt;span style="color: #804040;"&gt;user&lt;/span&gt; wish &lt;span style="color: #668080;"&gt;to&lt;/span&gt; be remembered&lt;span style="color: #000000;"&gt;?&lt;/span&gt;; &lt;span style="color: #804040;"&gt;if&lt;/span&gt; not present &lt;span style="color: #25BB4D;"&gt;filter&lt;/span&gt; assumes &lt;span style="color: #C5A22D;"&gt;'rememberMe'&lt;/span&gt;
-authc&lt;span style="color: #000000;"&gt;.&lt;/span&gt;rememberMeParam = remember
+# name of request parameter with username; <span style="color: #804040;">if</span> not present <span style="color: #25BB4D;">filter</span> assumes <span style="color: #C5A22D;">'username'</span>
+authc<span style="color: #000000;">.</span>usernameParam = <span style="color: #804040;">user</span>
+# name of request parameter with password; <span style="color: #804040;">if</span> not present <span style="color: #25BB4D;">filter</span> assumes <span style="color: #C5A22D;">'password'</span>
+authc<span style="color: #000000;">.</span>passwordParam = pass
+# does the <span style="color: #804040;">user</span> wish <span style="color: #668080;">to</span> be remembered<span style="color: #000000;">?</span>; <span style="color: #804040;">if</span> not present <span style="color: #25BB4D;">filter</span> assumes <span style="color: #C5A22D;">'rememberMe'</span>
+authc<span style="color: #000000;">.</span>rememberMeParam = remember
 &nbsp;
 # redirect after successful login
-authc&lt;span style="color: #000000;"&gt;.&lt;/span&gt;successUrl  = &lt;span style="color: #000000;"&gt;/&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;/&lt;/span&gt;account&lt;span style="color: #000000;"&gt;/&lt;/span&gt;personalaccountpage&lt;span style="color: #000000;"&gt;.&lt;/span&gt;jsp
+authc<span style="color: #000000;">.</span>successUrl  = <span style="color: #000000;">/</span>simpleshirosecuredapplication<span style="color: #000000;">/</span>account<span style="color: #000000;">/</span>personalaccountpage<span style="color: #000000;">.</span>jsp
 &nbsp;
-&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;urls&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
-# enable authc &lt;span style="color: #25BB4D;"&gt;filter&lt;/span&gt; &lt;span style="color: #804040;"&gt;for&lt;/span&gt; all application pages
-&lt;span style="color: #000000;"&gt;/&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;/**&lt;/span&gt;=authc&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
+<span style="color: #000000;">&#91;</span>urls<span style="color: #000000;">&#93;</span>
+# enable authc <span style="color: #25BB4D;">filter</span> <span style="color: #804040;">for</span> all application pages
+<span style="color: #000000;">/</span>simpleshirosecuredapplication<span style="color: #000000;">/**</span>=authc</pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
-<p><strong>Atualização:</strong> Shiro automaticamente executa a equiparação(comparação) de caminho(path matching) relativa ao contexto. Como a aplicação SimpleShiroSecuredApplication não tem o caminho do contexto definido, caminhos completos no arquivo Shiro.ini são necessários. No entanto, se o contexto da aplicação fosse definido para /simpleshirosecuredapplication, então os caminhos poderiam ser relativos, por exemplo, /**=authc ou /account/personalaccountpage.jsp.</p>
+<p><strong>Atualização:</strong> Shiro automaticamente executa a equiparação(comparação) de caminho(path matching) relativa ao contexto.
+Como a aplicação SimpleShiroSecuredApplication não tem o caminho do contexto definido, caminhos completos no arquivo Shiro.ini são necessários.
+No entanto, se o contexto da aplicação fosse definido para /simpleshirosecuredapplication, então os caminhos poderiam ser relativos,
+por exemplo, /**=authc ou /account/personalaccountpage.jsp.</p>
 </div>
 <div class="paragraph">
-<p>Como não é seguro enviar nome de usuário e senha pela rede, devemos forçar autenticações com o protocolo ssl. O filtro ssl faz exatamente isso. Ele tem um parâmetro opcional: número da porta ssl. Se o parâmetro porta(port) for omitido, ele usa a porta ssl pré-definida 443.</p>
+<p>Como não é seguro enviar nome de usuário e senha pela rede, devemos forçar autenticações com o protocolo ssl.
+O filtro ssl faz exatamente isso. Ele tem um parâmetro opcional: número da porta ssl. Se o parâmetro porta(port) for omitido,
+ele usa a porta ssl pré-definida 443.</p>
 </div>
 <div class="paragraph">
-<p>Antes de configurar o protocolo ssl no Shiro, precisamos habilitá-lo no servidor web. Como fazer isso, depende do servidor web. Iremos demonstrar como habilitá-lo no &lt;a href="http://jetty.codehaus.org/jetty/" target="_blank"&gt; Jetty&lt;/a&gt;. Primeiro, crie um keystore com o certificado auto assinado:</p>
+<p>Antes de configurar o protocolo ssl no Shiro, precisamos habilitá-lo no servidor web. Como fazer isso, depende do servidor web.
+Iremos demonstrar como habilitá-lo no <a href="http://jetty.codehaus.org/jetty/" target="_blank" rel="noopener">Jetty</a>. Primeiro, crie um keystore com o certificado auto assinado:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="bash" style="font-family:monospace;"&gt;keytool &lt;span style="color: #660033;"&gt;-genkey&lt;/span&gt; &lt;span style="color: #660033;"&gt;-keyalg&lt;/span&gt; RSA &lt;span style="color: #660033;"&gt;-alias&lt;/span&gt; jetty &lt;span style="color: #660033;"&gt;-keystore&lt;/span&gt; keystore &lt;span style="color: #660033;"&gt;-storepass&lt;/span&gt; secret &lt;span style="color: #660033;"&gt;-validity&lt;/span&gt; &lt;span style="color: #000000;"&gt;360&lt;/span&gt; &lt;span style="color: #660033;"&gt;-keysize&lt;/span&gt; &lt;span style="color: #000000;"&gt;2048&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;">keytool <span style="color: #660033;">-genkey</span> <span style="color: #660033;">-keyalg</span> RSA <span style="color: #660033;">-alias</span> jetty <span style="color: #660033;">-keystore</span> keystore <span style="color: #660033;">-storepass</span> secret <span style="color: #660033;">-validity</span> <span style="color: #000000;">360</span> <span style="color: #660033;">-keysize</span> <span style="color: #000000;">2048</span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>Responda todas questões e no final pressione ENTER, assim o keystore senha e a chave senha serão o mesmo.</p>
 </div>
 <div class="paragraph">
-<p>Segundo, adicione o keystore ao projeto e configure &lt;a href="http://jetty.codehaus.org/jetty/" target="_blank"&gt; o servidor Jetty&lt;/a&gt; para usar o protocolo ssl. O código java está disponível na classe&lt;A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/test/java/org/meri/simpleshirosecuredapplication/test/AbstractContainerTest.java" target="_blank"&gt; AbstractContainerTest&lt;/A&gt;.</p>
+<p>Segundo, adicione o keystore ao projeto e configure <a href="http://jetty.codehaus.org/jetty/" target="_blank" rel="noopener">o servidor Jetty</a> para usar o protocolo ssl.
+O código java está disponível na classe <a href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/test/java/org/meri/simpleshirosecuredapplication/test/AbstractContainerTest.java" target="_blank" rel="noopener">AbstractContainerTest</a>.</p>
 </div>
 <div class="paragraph">
 <p>Agora é possível configurar o filtro ssl no arquivo Shiro.ini:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="vim" style="font-family:monospace;"&gt;&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;urls&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
-# force &lt;span style="color: #668080;"&gt;ssl&lt;/span&gt; &lt;span style="color: #804040;"&gt;for&lt;/span&gt; login page
-&lt;span style="color: #000000;"&gt;/&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;/&lt;/span&gt;account&lt;span style="color: #000000;"&gt;/&lt;/span&gt;login&lt;span style="color: #000000;"&gt;.&lt;/span&gt;jsp=&lt;span style="color: #668080;"&gt;ssl&lt;/span&gt;&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;&lt;span style="color: #000000; font-weight:bold;"&gt;8443&lt;/span&gt;&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;,authc
-# enable authc &lt;span style="color: #25BB4D;"&gt;filter&lt;/span&gt; &lt;span style="color: #804040;"&gt;for&lt;/span&gt; the all application pages; as Shiro reads urls from up &lt;span style="color: #668080;"&gt;to&lt;/span&gt; down, must be last
-&lt;span style="color: #000000;"&gt;/&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;/**&lt;/span&gt;=authc&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
-</div>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="vim" style="font-family:monospace;"><span style="color: #000000;">&#91;</span>urls<span style="color: #000000;">&#93;</span>
+# force <span style="color: #668080;">ssl</span> <span style="color: #804040;">for</span> login page
+<span style="color: #000000;">/</span>simpleshirosecuredapplication<span style="color: #000000;">/</span>account<span style="color: #000000;">/</span>login<span style="color: #000000;">.</span>jsp=<span style="color: #668080;">ssl</span><span style="color: #000000;">&#91;</span><span style="color: #000000; font-weight:bold;">8443</span><span style="color: #000000;">&#93;</span>,authc
+# enable authc <span style="color: #25BB4D;">filter</span> <span style="color: #804040;">for</span> the all application pages; as Shiro reads urls from up <span style="color: #668080;">to</span> down, must be last
+<span style="color: #000000;">/</span>simpleshirosecuredapplication<span style="color: #000000;">/**</span>=authc</pre>
+      </td>
+    </tr>
+  </table>
+</div></p>
 </div>
 <div class="sect4">
 <h5 id="_configurar_usuários_e_senhas">Configurar Usuários e Senhas</h5>
 <div class="paragraph">
-<p>A aplicação SimpleShiroSecuredApplication estará agora disponível somente para usuários autenticados. Assim, é necessário adicionar alguns usuários de forma que algumas pessoas tenham acesso à aplicação.
+<p>A aplicação SimpleShiroSecuredApplication estará agora disponível somente para usuários autenticados.
+Assim, é necessário adicionar alguns usuários de forma que algumas pessoas tenham acesso à aplicação.
 A configuração é feita na seção [users] do arquivo Shiro.ini. O formato das entradas da seção é:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="vim" style="font-family:monospace;"&gt;username = password, roleName1, roleName2, &lt;span style="color: #000000;"&gt;&#8230;&#8203;&lt;/span&gt;, roleNameN&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="vim" style="font-family:monospace;">username = password, roleName1, roleName2, <span style="color: #000000;">...</span>, roleNameN</pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>A seguinte seção cria sete usuários, todos com a mesma senha &#8216;heslo&#8217;:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="vim" style="font-family:monospace;"&gt;&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;users&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="vim" style="font-family:monospace;"><span style="color: #000000;">&#91;</span>users<span style="color: #000000;">&#93;</span>
 administrator=heslo,Administrator
 friendlyrepairmen=heslo,repairmen
 unfriendlyrepairmen=heslo,repairmen
 mathematician=heslo,scientist
 physicien=heslo,scientist
 productsales=heslo,sales
-servicessales=heslo,sales&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
+servicessales=heslo,sales</pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
-<p>Agora é possível ser autenticado e ter acesso à aplicação. No entanto, nenhuma mensagem de erro razoável é mostrada se o usuário comete um erro. Além disso, as senhas são armazenadas em arquivo texto.</p>
+<p>Agora é possível ser autenticado e ter acesso à aplicação. No entanto, nenhuma mensagem de erro razoável é mostrada se o usuário comete um erro.
+Além disso, as senhas são armazenadas em arquivo texto.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_tratamento_de_erro">Tratamento de Erro</h5>
 <div class="paragraph">
-<p>Se o usuário comete um erro ao fazer a autenticação (log in), o Shiro o redireciona de volta para a página de login. A página parece exatamente a mesma de antes, o que pode confundir o usuário.</p>
+<p>Se o usuário comete um erro ao fazer a autenticação (log in), o Shiro o redireciona de volta para a página de login.
+A página parece exatamente a mesma de antes, o que pode confundir o usuário.</p>
 </div>
 <div class="paragraph">
 <p><strong>Novo requerimento:</strong>
 Mostrar mensagem de erro após cada tentativa de autenticação(log in) sem êxito.</p>
 </div>
 <div class="paragraph">
-<p>Toda vez que ocorrer um erro de autenticação, uma exceção é lançada. Por definição, o filtro de autenticação captura a exceção e armazena nome da classe (exceção) em um parâmentro da requisição (request). Como desejamos personalizar os dados enviados à página, teremos que estender o filtro pré-definido &lt;a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/authc/FormAuthenticationFilter.html" target="_blank"&gt;FormAuthenticationFilter&lt;/a&gt; e sobrescrever o método &lt;a href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/VerboseFormAuthenticationFilter.java" target="_blank"&gt;setFailureAttribute&lt;/a&gt;:</p>
+<p>Toda vez que ocorrer um erro de autenticação, uma exceção é lançada. Por definição, o filtro de autenticação captura a exceção e
+armazena nome da classe (exceção) em um parâmentro da requisição (request). Como desejamos personalizar os dados enviados à página,
+teremos que estender o filtro pré-definido <a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/authc/FormAuthenticationFilter.html" target="_blank" rel="noopener">FormAuthenticationFilter</a>
+e sobrescrever o método <a href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/VerboseFormAuthenticationFilter.java" target="_blank" rel="noopener">setFailureAttribute</a>:</p>
+</div>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="java" style="font-family:monospace;">@Override
+<span style="color: #000000; font-weight: bold;">protected</span> <span style="color: #000066; font-weight: bold;">void</span> setFailureAttribute<span style="color: #009900;">&#40;</span>ServletRequest request, <span style="color: #003399;">AuthenticationException</span> ae<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+  <span style="color: #003399;">String</span> message <span style="color: #339933;">=</span> ae.<span style="color: #006633;">getMessage</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+  request.<span style="color: #006633;">setAttribute</span><span style="color: #009900;">&#40;</span>getFailureKeyAttribute<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>, message<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="java" style="font-family:monospace;"&gt;@Override
-&lt;span style="color: #000000; font-weight: bold;"&gt;protected&lt;/span&gt; &lt;span style="color: #000066; font-weight: bold;"&gt;void&lt;/span&gt; setFailureAttribute&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;ServletRequest request, &lt;span style="color: #003399;"&gt;AuthenticationException&lt;/span&gt; ae&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt; &lt;span style="color: #009900;"&gt;&#123;&lt;/span&gt;
-  &lt;span style="color: #003399;"&gt;String&lt;/span&gt; message &lt;span style="color: #339933;"&gt;=&lt;/span&gt; ae.&lt;span style="color: #006633;"&gt;getMessage&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-  request.&lt;span style="color: #006633;"&gt;setAttribute&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;getFailureKeyAttribute&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;, message&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-&lt;span style="color: #009900;"&gt;&#125;&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
+<p>Substitua o filtro pré-definido FormAuthenticationFilter por <a href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/VerboseFormAuthenticationFilter.java">VerboseFormAuthenticationFilter</a>
+e o configure para usar o atributo de requisição (request) &#8216;simpleShiroApplicationLoginFailure&#8217; para armazenar a informação do erro:</p>
 </div>
-<div class="paragraph">
-<p>Substitua o filtro pré-definido FormAuthenticationFilter por [VerboseFormAuthenticationFilter][1] e o configure para usar o atributo de requisição (request) &#8216;simpleShiroApplicationLoginFailure&#8217; para armazenar a informação do erro:</p>
-</div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="vim" style="font-family:monospace;"&gt;&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;main&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
-# replace form authentication &lt;span style="color: #25BB4D;"&gt;filter&lt;/span&gt; with &lt;span style="color: #668080;"&gt;verbose&lt;/span&gt; &lt;span style="color: #25BB4D;"&gt;filter&lt;/span&gt;
-authc = org&lt;span style="color: #000000;"&gt;.&lt;/span&gt;meri&lt;span style="color: #000000;"&gt;.&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;.&lt;/span&gt;servlet&lt;span style="color: #000000;"&gt;.&lt;/span&gt;VerboseFormAuthenticationFilter
-# request parameter with login error information; &lt;span style="color: #804040;"&gt;if&lt;/span&gt; not present &lt;span style="color: #25BB4D;"&gt;filter&lt;/span&gt; assumes &lt;span style="color: #C5A22D;"&gt;'shiroLoginFailure'&lt;/span&gt;
-authc&lt;span style="color: #000000;"&gt;.&lt;/span&gt;failureKeyAttribute=simpleShiroApplicationLoginFailure&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="vim" style="font-family:monospace;"><span style="color: #000000;">&#91;</span>main<span style="color: #000000;">&#93;</span>
+# replace form authentication <span style="color: #25BB4D;">filter</span> with <span style="color: #668080;">verbose</span> <span style="color: #25BB4D;">filter</span>
+authc = org<span style="color: #000000;">.</span>meri<span style="color: #000000;">.</span>simpleshirosecuredapplication<span style="color: #000000;">.</span>servlet<span style="color: #000000;">.</span>VerboseFormAuthenticationFilter
+# request parameter with login error information; <span style="color: #804040;">if</span> not present <span style="color: #25BB4D;">filter</span> assumes <span style="color: #C5A22D;">'shiroLoginFailure'</span>
+authc<span style="color: #000000;">.</span>failureKeyAttribute=simpleShiroApplicationLoginFailure</pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>Mostrar o erro na página login.jsp:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="java" style="font-family:monospace;"&gt;&lt;span style="color: #339933;"&gt;&lt;%&lt;/span&gt;
-  &lt;span style="color: #003399;"&gt;String&lt;/span&gt; errorDescription &lt;span style="color: #339933;"&gt;=&lt;/span&gt; &lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #003399;"&gt;String&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt; request.&lt;span style="color: #006633;"&gt;getAttribute&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"simpleShiroApplicationLoginFailure"&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-  &lt;span style="color: #000000; font-weight: bold;"&gt;if&lt;/span&gt; &lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;errorDescription&lt;span style="color: #339933;"&gt;!=&lt;/span&gt;&lt;span style="color: #000066; font-weight: bold;"&gt;null&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt; &lt;span style="color: #009900;"&gt;&#123;&lt;/span&gt;
-&lt;span style="color: #339933;"&gt;%&gt;&lt;/span&gt;
-Login attempt was unsuccessful&lt;span style="color: #339933;"&gt;:&lt;/span&gt; &lt;span style="color: #339933;"&gt;&lt;%=&lt;/span&gt;errorDescription&lt;span style="color: #339933;"&gt;%&gt;&lt;/span&gt;
-&lt;span style="color: #339933;"&gt;&lt;%&lt;/span&gt;
-  &lt;span style="color: #009900;"&gt;&#125;&lt;/span&gt;
-&lt;span style="color: #339933;"&gt;%&gt;&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="java" style="font-family:monospace;"><span style="color: #339933;">&lt;%</span>
+  <span style="color: #003399;">String</span> errorDescription <span style="color: #339933;">=</span> <span style="color: #009900;">&#40;</span><span style="color: #003399;">String</span><span style="color: #009900;">&#41;</span> request.<span style="color: #006633;">getAttribute</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">"simpleShiroApplicationLoginFailure"</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+  <span style="color: #000000; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>errorDescription<span style="color: #339933;">!=</span><span style="color: #000066; font-weight: bold;">null</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+<span style="color: #339933;">%&gt;</span>
+Login attempt was unsuccessful<span style="color: #339933;">:</span> <span style="color: #339933;">&lt;%=</span>errorDescription<span style="color: #339933;">%&gt;</span>
+<span style="color: #339933;">&lt;%</span>
+  <span style="color: #009900;">&#125;</span>
+<span style="color: #339933;">%&gt;</span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
-<p>Cuidado: uma aplicação real não deve apresentar muitas informações de erro de autenticação. Uma mensagem como “tentativa de logon sem sucesso.”, com nenhuma informação adicional é geralmente suficiente.</p>
+<p>Cuidado: uma aplicação real não deve apresentar muitas informações de erro de autenticação. Uma mensagem como “tentativa de logon sem sucesso.”,
+com nenhuma informação adicional é geralmente suficiente.</p>
 </div>
 </div>
 <div class="sect4">
@@ -491,67 +512,64 @@ Login attempt was unsuccessful&lt;span style="color: #339933;"&gt;:&lt;/span&gt;
 <p>Na versão atual da aplicação, todas as senhas estão, ainda, em texto puro. É melhor armazenar e comparar somente o hashing da senha.</p>
 </div>
 <div class="paragraph">
-<p>Objetos responsáveis por autenticação são chamados de &lt;A href="http://shiro.apache.org/realm.html" target="_blank"&gt; realms&lt;/A&gt;. Por padrão, Shiro usa o &lt;A href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/realm/text/IniRealm.html" target="_blank"&gt; IniRealm&lt;/A&gt; com comparador de senha plugável para comparar senhas. Iremos substituir as senhas no ini por suas correspondentes hasheadas com SHA-256 e configurar o IniRealm para usar este comparador de senhas.</p>
+<p>Objetos responsáveis por autenticação são chamados de <a href="http://shiro.apache.org/realm.html" target="_blank" rel="noopener">realms</a>.
+Por padrão, Shiro usa o <a href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/realm/text/IniRealm.html" target="_blank" rel="noopener">IniRealm</a>
+]com comparador de senha plugável para comparar senhas. Iremos substituir as senhas no ini por suas correspondentes hasheadas com SHA-256
+e configurar o IniRealm para usar este comparador de senhas.</p>
 </div>
 <div class="paragraph">
 <p>Gerar o hash SHA-256 da senha:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="java" style="font-family:monospace;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;import&lt;/span&gt; &lt;span style="color: #006699;"&gt;org.apache.shiro.crypto.hash.Sha256Hash&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="java" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">org.apache.shiro.crypto.hash.Sha256Hash</span><span style="color: #339933;">;</span>
 &nbsp;
-&lt;span style="color: #000000; font-weight: bold;"&gt;public&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;static&lt;/span&gt; &lt;span style="color: #000066; font-weight: bold;"&gt;void&lt;/span&gt; main&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #003399;"&gt;String&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#91;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#93;&lt;/span&gt; args&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt; &lt;span style="color: #009900;"&gt;&#123;&lt;/span&gt;
-    Sha256Hash sha256Hash &lt;span style="color: #339933;"&gt;=&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;new&lt;/span&gt; Sha256Hash&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"heslo"&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-    &lt;span style="color: #003399;"&gt;System&lt;/span&gt;.&lt;span style="color: #006633;"&gt;out&lt;/span&gt;.&lt;span style="color: #006633;"&gt;println&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;sha256Hash.&lt;span style="color: #006633;"&gt;toHex&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-&lt;span style="color: #009900;"&gt;&#125;&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
+<span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">void</span> main<span style="color: #009900;">&#40;</span><span style="color: #003399;">String</span><span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span> args<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    Sha256Hash sha256Hash <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> Sha256Hash<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">"heslo"</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">&#40;</span>sha256Hash.<span style="color: #006633;">toHex</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>Configurar o Shiro para comparar senha trasnformada(hashing) ao invés da própria senha:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="vim" style="font-family:monospace;"&gt;&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;main&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
-# &lt;span style="color: #668080;"&gt;define&lt;/span&gt; matcher matching hashes instead of passwords
-sha256Matcher = org&lt;span style="color: #000000;"&gt;.&lt;/span&gt;apache&lt;span style="color: #000000;"&gt;.&lt;/span&gt;shiro&lt;span style="color: #000000;"&gt;.&lt;/span&gt;authc&lt;span style="color: #000000;"&gt;.&lt;/span&gt;credential&lt;span style="color: #000000;"&gt;.&lt;/span&gt;HashedCredentialsMatcher
-sha256Matcher&lt;span style="color: #000000;"&gt;.&lt;/span&gt;hashAlgorithmName=SHA&lt;span style="color: #000000;"&gt;-&lt;/span&gt;&lt;span style="color: #000000; font-weight:bold;"&gt;256&lt;/span&gt;
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="vim" style="font-family:monospace;"><span style="color: #000000;">&#91;</span>main<span style="color: #000000;">&#93;</span>
+# <span style="color: #668080;">define</span> matcher matching hashes instead of passwords
+sha256Matcher = org<span style="color: #000000;">.</span>apache<span style="color: #000000;">.</span>shiro<span style="color: #000000;">.</span>authc<span style="color: #000000;">.</span>credential<span style="color: #000000;">.</span>HashedCredentialsMatcher
+sha256Matcher<span style="color: #000000;">.</span>hashAlgorithmName=SHA<span style="color: #000000;">-</span><span style="color: #000000; font-weight:bold;">256</span>
 &nbsp;
-# enable matcher &lt;span style="color: #804040;"&gt;in&lt;/span&gt; iniRealm &lt;span style="color: #000000;"&gt;&#40;&lt;/span&gt;object responsible &lt;span style="color: #804040;"&gt;for&lt;/span&gt; authentication&lt;span style="color: #000000;"&gt;&#41;&lt;/span&gt;
-iniRealm&lt;span style="color: #000000;"&gt;.&lt;/span&gt;credentialsMatcher = &lt;span style="color: #000000;"&gt;$&lt;/span&gt;sha256Matcher&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
+# enable matcher <span style="color: #804040;">in</span> iniRealm <span style="color: #000000;">&#40;</span>object responsible <span style="color: #804040;">for</span> authentication<span style="color: #000000;">&#41;</span>
+iniRealm<span style="color: #000000;">.</span>credentialsMatcher = <span style="color: #000000;">$</span>sha256Matcher</pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>Substituir as senhas dos usuários por senhas trasnformadas(hashing):</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="vim" style="font-family:monospace;"&gt;&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;users&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="vim" style="font-family:monospace;"><span style="color: #000000;">&#91;</span>users<span style="color: #000000;">&#93;</span>
 administrator=56b1db8133d9eb398aabd376f07bf8ab5fc584ea0b8bd6a1770200cb613ca005, Administrator
 friendlyrepairmen=56b1db8133d9eb398aabd376f07bf8ab5fc584ea0b8bd6a1770200cb613ca005, repairmen
 unfriendlyrepairmen=56b1db8133d9eb398aabd376f07bf8ab5fc584ea0b8bd6a1770200cb613ca005, repairmen
 mathematician=56b1db8133d9eb398aabd376f07bf8ab5fc584ea0b8bd6a1770200cb613ca005, scientist
 physicien=56b1db8133d9eb398aabd376f07bf8ab5fc584ea0b8bd6a1770200cb613ca005,  scientist
 productsales=56b1db8133d9eb398aabd376f07bf8ab5fc584ea0b8bd6a1770200cb613ca005,        sales
-servicessales=56b1db8133d9eb398aabd376f07bf8ab5fc584ea0b8bd6a1770200cb613ca005,  sales&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
+servicessales=56b1db8133d9eb398aabd376f07bf8ab5fc584ea0b8bd6a1770200cb613ca005,  sales</pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>Nota: não é possível especificar SALT no arquivo de configuração ini.</p>
@@ -562,46 +580,47 @@ servicessales=56b1db8133d9eb398aabd376f07bf8ab5fc584ea0b8bd6a1770200cb613ca005, 
 <div class="paragraph">
 <p>Qualque aplicação que tenha recursos de autenticação deveria também ter o recurso de saída. Terminar uma sessão corrente com Shiro é fácil, use o comando:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="java" style="font-family:monospace;"&gt;&lt;span style="color: #666666; font-style: italic;"&gt;//acquire currently logged user and log him out&lt;/span&gt;
-SecurityUtils.&lt;span style="color: #006633;"&gt;getSubject&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;.&lt;span style="color: #006633;"&gt;logout&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="java" style="font-family:monospace;"><span style="color: #666666; font-style: italic;">//acquire currently logged user and log him out</span>
+SecurityUtils.<span style="color: #006633;">getSubject</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>.<span style="color: #006633;">logout</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>A página de saída(Log out) então fica assim:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="xml" style="font-family:monospace;"&gt;&lt;span style="color: #009900;"&gt;&lt;%@ page &lt;span style="color: #000066;"&gt;import&lt;/span&gt;=&lt;span style="color: #ff0000;"&gt;"org.apache.shiro.SecurityUtils"&lt;/span&gt; %&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span style="color: #009900;"&gt;&lt;% SecurityUtils.getSubject&lt;span style="color: #66cc66;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #66cc66;"&gt;&#41;&lt;/span&gt;.logout&lt;span style="color: #66cc66;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #66cc66;"&gt;&#41;&lt;/span&gt;;%&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-You have succesfully logged out.&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="xml" style="font-family:monospace;"><span style="color: #009900;">&lt;%@ page <span style="color: #000066;">import</span>=<span style="color: #ff0000;">"org.apache.shiro.SecurityUtils"</span> %<span style="color: #000000; font-weight: bold;">&gt;</span></span>
+<span style="color: #009900;">&lt;% SecurityUtils.getSubject<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>.logout<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;%<span style="color: #000000; font-weight: bold;">&gt;</span></span>
+You have succesfully logged out.</pre>
+      </td>
+    </tr>
+  </table>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_adicionar_autorização">Adicionar Autorização</h4>
 <div class="paragraph">
-<p>Concluiremos esta primeira parte adicionando autorização à aplicação. Começamos limitando o acesso às páginas aos usuários. Nenhum usuário deveria ser capaz de ver páginas de outros departamentos. Fornecendo assim, somente segurança parcial ao projeto, pois o usuário ainda é capaz de usar a página com “todas as funções da aplicação” ou editar o endereço (url) no navegador para realizar qualquer ação. Nós a chamaremos de autorização em nível de página.</p>
+<p>Concluiremos esta primeira parte adicionando autorização à aplicação. Começamos limitando o acesso às páginas aos usuários.
+Nenhum usuário deveria ser capaz de ver páginas de outros departamentos. Fornecendo assim, somente segurança parcial ao projeto,
+pois o usuário ainda é capaz de usar a página com “todas as funções da aplicação” ou editar o endereço (url) no navegador para realizar qualquer ação.
+Nós a chamaremos de autorização em nível de página.</p>
 </div>
 <div class="paragraph">
-<p>Então, limitaremos a habilidade dos usuários para realizar ações próprias. Mesmo que abra a página com “todas as funções da aplicação” ou edite o endereço (url) no navegador, ele poderá realizar somente funções específicas de seu departamento. Nós a chamaremos de autorização em nível de função.</p>
+<p>Então, limitaremos a habilidade dos usuários para realizar ações próprias. Mesmo que abra a página com “todas as funções da aplicação” ou
+edite o endereço (url) no navegador, ele poderá realizar somente funções específicas de seu departamento. Nós a chamaremos de autorização em nível de função.</p>
 </div>
 <div class="paragraph">
-<p><strong>Novos requisitos:</strong> o usuário não é capaz de ver páginas de departamentos que não pertence. O usuário é capaz de realizar somente funções de seu departamento. Uma exceção a essa regra é o administrador, que pode realizar funções administrativas e de reparação.</p>
+<p><strong>Novos requisitos:</strong> o usuário não é capaz de ver páginas de departamentos que não pertence. O usuário é capaz de realizar somente funções de seu departamento.
+Uma exceção a essa regra é o administrador, que pode realizar funções administrativas e de reparação.</p>
 </div>
 <div class="sect4">
 <h5 id="_página_de_autorização">Página de Autorização</h5>
@@ -612,70 +631,67 @@ Parâmetro parte do filtro pode conter qualquer número de perfis. Usuário aute
 <div class="paragraph">
 <p>Como de costume, o filtro de perfis(roles) é configurado no arquivo Shiro.ini:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="vim" style="font-family:monospace;"&gt;&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;urls&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
-# force &lt;span style="color: #668080;"&gt;ssl&lt;/span&gt; &lt;span style="color: #804040;"&gt;for&lt;/span&gt; login page
-&lt;span style="color: #000000;"&gt;/&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;/&lt;/span&gt;account&lt;span style="color: #000000;"&gt;/&lt;/span&gt;login&lt;span style="color: #000000;"&gt;.&lt;/span&gt;jsp=&lt;span style="color: #668080;"&gt;ssl&lt;/span&gt;&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;&lt;span style="color: #000000; font-weight:bold;"&gt;8443&lt;/span&gt;&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;,authc
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="vim" style="font-family:monospace;"><span style="color: #000000;">&#91;</span>urls<span style="color: #000000;">&#93;</span>
+# force <span style="color: #668080;">ssl</span> <span style="color: #804040;">for</span> login page
+<span style="color: #000000;">/</span>simpleshirosecuredapplication<span style="color: #000000;">/</span>account<span style="color: #000000;">/</span>login<span style="color: #000000;">.</span>jsp=<span style="color: #668080;">ssl</span><span style="color: #000000;">&#91;</span><span style="color: #000000; font-weight:bold;">8443</span><span style="color: #000000;">&#93;</span>,authc
 &nbsp;
-# only users with some roles are allowed &lt;span style="color: #668080;"&gt;to&lt;/span&gt; use role&lt;span style="color: #000000;"&gt;-&lt;/span&gt;specific pages
-&lt;span style="color: #000000;"&gt;/&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;/&lt;/span&gt;repairmen&lt;span style="color: #000000;"&gt;/<strong>&lt;/span&gt;=authc, roles&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;repairman&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;/&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;/&lt;/span&gt;sales&lt;span style="color: #000000;"&gt;/</strong>&lt;/span&gt;=authc, roles&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;sales&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;/&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;/&lt;/span&gt;scientists&lt;span style="color: #000000;"&gt;/<strong>&lt;/span&gt;=authc, roles&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;scientist&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;/&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;/&lt;/span&gt;adminarea&lt;span style="color: #000000;"&gt;/</strong>&lt;/span&gt;=authc, roles&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;Administrator&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
+# only users with some roles are allowed <span style="color: #668080;">to</span> use role<span style="color: #000000;">-</span>specific pages
+<span style="color: #000000;">/</span>simpleshirosecuredapplication<span style="color: #000000;">/</span>repairmen<span style="color: #000000;">/**</span>=authc, roles<span style="color: #000000;">&#91;</span>repairman<span style="color: #000000;">&#93;</span>
+<span style="color: #000000;">/</span>simpleshirosecuredapplication<span style="color: #000000;">/</span>sales<span style="color: #000000;">/**</span>=authc, roles<span style="color: #000000;">&#91;</span>sales<span style="color: #000000;">&#93;</span>
+<span style="color: #000000;">/</span>simpleshirosecuredapplication<span style="color: #000000;">/</span>scientists<span style="color: #000000;">/**</span>=authc, roles<span style="color: #000000;">&#91;</span>scientist<span style="color: #000000;">&#93;</span>
+<span style="color: #000000;">/</span>simpleshirosecuredapplication<span style="color: #000000;">/</span>adminarea<span style="color: #000000;">/**</span>=authc, roles<span style="color: #000000;">&#91;</span>Administrator<span style="color: #000000;">&#93;</span>
 &nbsp;
-# enable authc &lt;span style="color: #25BB4D;"&gt;filter&lt;/span&gt; &lt;span style="color: #804040;"&gt;for&lt;/span&gt; the all application pages; as Shiro reads urls from up &lt;span style="color: #668080;"&gt;to&lt;/span&gt; down, must be last
-&lt;span style="color: #000000;"&gt;/&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;/**&lt;/span&gt;=authc&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
+# enable authc <span style="color: #25BB4D;">filter</span> <span style="color: #804040;">for</span> the all application pages; as Shiro reads urls from up <span style="color: #668080;">to</span> down, must be last
+<span style="color: #000000;">/</span>simpleshirosecuredapplication<span style="color: #000000;">/**</span>=authc</pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>Teste se a segurança funciona: entre como um usuário de vendas, clique home, clique no link &#8216;repairmen page&#8217;. Você verá um erro feio.</p>
 </div>
 <div class="paragraph">
-<p>Nós terminamos a página de autorização e substituimos o erro redirecionando-o para uma página de erro. Os filtros pré-definidos do Shiro possuem a propriedade unauthorizedUrl. Em caso de acesso não autorizado, o filtro redirecionará o usuário para um endereço (url) específico.</p>
+<p>Nós terminamos a página de autorização e substituimos o erro redirecionando-o para uma página de erro. Os filtros pré-definidos do Shiro possuem
+a propriedade unauthorizedUrl. Em caso de acesso não autorizado, o filtro redirecionará o usuário para um endereço (url) específico.</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="vim" style="font-family:monospace;"&gt;&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;main&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
-# redirect &lt;span style="color: #668080;"&gt;to&lt;/span&gt; an error page &lt;span style="color: #804040;"&gt;if&lt;/span&gt; &lt;span style="color: #804040;"&gt;user&lt;/span&gt; does not have access rights
-roles&lt;span style="color: #000000;"&gt;.&lt;/span&gt;unauthorizedUrl = &lt;span style="color: #000000;"&gt;/&lt;/span&gt;simpleshirosecuredapplication&lt;span style="color: #000000;"&gt;/&lt;/span&gt;account&lt;span style="color: #000000;"&gt;/&lt;/span&gt;accessdenied&lt;span style="color: #000000;"&gt;.&lt;/span&gt;jsp&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="vim" style="font-family:monospace;"><span style="color: #000000;">&#91;</span>main<span style="color: #000000;">&#93;</span>
+# redirect <span style="color: #668080;">to</span> an error page <span style="color: #804040;">if</span> <span style="color: #804040;">user</span> does not have access rights
+roles<span style="color: #000000;">.</span>unauthorizedUrl = <span style="color: #000000;">/</span>simpleshirosecuredapplication<span style="color: #000000;">/</span>account<span style="color: #000000;">/</span>accessdenied<span style="color: #000000;">.</span>jsp</pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>accessdenied.jsp:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="xml" style="font-family:monospace;"&gt;&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;body&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="xml" style="font-family:monospace;"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;body<span style="color: #000000; font-weight: bold;">&gt;</span></span></span>
 Sorry, you do not have access rights to that area.
-&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;&lt;/body&lt;span style="color: #000000; font-weight: bold;"&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
+<span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/body<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_autorização_de_funções">Autorização de Funções</h5>
 <div class="paragraph">
-<p>Todas as páginas departamentais estão protegidas agora. No entanto, qualquer usuário pode ainda realizar qualquer função na página com “todas as funções da aplicação”. Além disso, qualquer usuário autenticado pode editar endereço (url) e assim fazer qualquer ação. Por exemplo, se você entrar como vendedor e colocar
-<a href="https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN" class="bare">https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN</a> na url, a aplicação irá realizar a função gerenciar reparadores também (e então irá dispará a exceção: null point, mas a violação de segurança já foi feita).
-Atribuimos uma úncia &lt;A href="http://shiro.apache.org/permissions.html" target="_blank"&gt; permissão&lt;/A&gt; para cada função. Elas estão divididas em grupos:</p>
+<p>Todas as páginas departamentais estão protegidas agora. No entanto, qualquer usuário pode ainda realizar qualquer função na página com “todas as funções da aplicação”.
+Além disso, qualquer usuário autenticado pode editar endereço (url) e assim fazer qualquer ação. Por exemplo, se você entrar como vendedor e colocar
+<a href="https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN" class="bare">https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN</a> na url, a aplicação irá realizar a função gerenciar reparadores
+também (e então irá dispará a exceção: null point, mas a violação de segurança já foi feita).
+Atribuimos uma úncia <a href="http://shiro.apache.org/permissions.html" target="_blank" rel="noopener">permissão</a> para cada função. Elas estão divididas em grupos:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -697,7 +713,10 @@ Atribuimos uma úncia &lt;A href="http://shiro.apache.org/permissions.html" targ
 </ul>
 </div>
 <div class="paragraph">
-<p>Shiro suporta permissões de múltiplos níveis representadas como strings. Níveis são separados com o símbolo &#8216;:&#8217;. p.e. “functions:manage:repairmen” tem três níveis: “functions”, “manage” e “repairman”. Permissões de múltiplos níveis permitem facilmente o agrupamento de permissões. Por exemplo, o grupo science pertence ao grupo functions e contém três permissões:</p>
+<p>Shiro suporta permissões de múltiplos níveis representadas como strings.
+Níveis são separados com o símbolo &#8216;:&#8217;. p.e. “functions:manage:repairmen” tem três níveis: “functions”, “manage” e “repairman”.
+Permissões de múltiplos níveis permitem facilmente o agrupamento de permissões. Por exemplo, o grupo science pertence ao grupo functions e
+contém três permissões:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -713,93 +732,87 @@ Atribuimos uma úncia &lt;A href="http://shiro.apache.org/permissions.html" targ
 </ul>
 </div>
 <div class="paragraph">
-<p>A classe &lt;A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/actions/Actions.java" target="_blank"&gt; Ações&lt;/A&gt; verifica as permissões do usuário autenticado(log in) antes de fazer seu trabalho:</p>
+<p>A classe <a href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/actions/Actions.java" target="_blank" rel="noopener">Ações</a>
+verifica as permissões do usuário autenticado(log in) antes de fazer seu trabalho:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="java" style="font-family:monospace;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;public&lt;/span&gt; &lt;span style="color: #003399;"&gt;String&lt;/span&gt; doIt&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt; &lt;span style="color: #009900;"&gt;&#123;&lt;/span&gt;
-    &lt;span style="color: #003399;"&gt;String&lt;/span&gt; neededPermission &lt;span style="color: #339933;"&gt;=&lt;/span&gt; getNeededPermission&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-    &lt;span style="color: #666666; font-style: italic;"&gt;// acquire logged user and check permission&lt;/span&gt;
-    &lt;span style="color: #000000; font-weight: bold;"&gt;if&lt;/span&gt; &lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;SecurityUtils.&lt;span style="color: #006633;"&gt;getSubject&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;.&lt;span style="color: #006633;"&gt;isPermitted&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;neededPermission&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;
-        &lt;span style="color: #000000; font-weight: bold;"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;"Function "&lt;/span&gt; &lt;span style="color: #339933;"&gt;&lt;/span&gt; getName&lt;span style="color: #009900;"&gt;&amp;#40;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&amp;#41;&lt;/span&gt; &lt;span style="color: #339933;"&gt;&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;" run succesfully."&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="java" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #003399;">String</span> doIt<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    <span style="color: #003399;">String</span> neededPermission <span style="color: #339933;">=</span> getNeededPermission<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #666666; font-style: italic;">// acquire logged user and check permission</span>
+    <span style="color: #000000; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>SecurityUtils.<span style="color: #006633;">getSubject</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>.<span style="color: #006633;">isPermitted</span><span style="color: #009900;">&#40;</span>neededPermission<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+        <span style="color: #000000; font-weight: bold;">return</span> <span style="color: #0000ff;">"Function "</span> <span style="color: #339933;">+</span> getName<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">+</span> <span style="color: #0000ff;">" run succesfully."</span><span style="color: #339933;">;</span>
 &nbsp;
-    &lt;span style="color: #000000; font-weight: bold;"&gt;throw&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;new&lt;/span&gt; UnauthorizedException&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"Logged user does not have "&lt;/span&gt; &lt;span style="color: #339933;"&gt;&lt;/span&gt; neededPermission &lt;span style="color: #339933;"&gt;&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;" permission"&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-&lt;span style="color: #009900;"&gt;&#125;&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
+    <span style="color: #000000; font-weight: bold;">throw</span> <span style="color: #000000; font-weight: bold;">new</span> UnauthorizedException<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">"Logged user does not have "</span> <span style="color: #339933;">+</span> neededPermission <span style="color: #339933;">+</span> <span style="color: #0000ff;">" permission"</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>NOTA: Outro modo de se alcançar o mesmo objetivo é através de anotações.</p>
 </div>
 <div class="paragraph">
-<p>O servlet &lt;A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/PerformFunctionAndGoBackServlet.java" target="_blank"&gt; PerformFunctionAndGoBackServlet&lt;/A&gt; captura exceções de autorização e as converte em mensagem de erro:</p>
+<p>O servlet <a href="https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/PerformFunctionAndGoBackServlet.java" target="_blank" rel="noopener">PerformFunctionAndGoBackServlet</a>
+captura exceções de autorização e as converte em mensagem de erro:</p>
+</div>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="java" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">private</span> <span style="color: #003399;">String</span> performAction<span style="color: #009900;">&#40;</span><span style="color: #003399;">String</span> actionName<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">try</span> <span style="color: #009900;">&#123;</span>
+        Actions action <span style="color: #339933;">=</span> findAction<span style="color: #009900;">&#40;</span>actionName<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #003399;">String</span> result <span style="color: #339933;">=</span> action <span style="color: #339933;">==</span> <span style="color: #000066; font-weight: bold;">null</span> <span style="color: #339933;">?</span> <span style="color: #000066; font-weight: bold;">null</span> <span style="color: #339933;">:</span> action.<span style="color: #006633;">doIt</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        log.<span style="color: #006633;">debug</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">"Performed function with result: "</span> <span style="color: #339933;">+</span> result<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #000000; font-weight: bold;">return</span> result<span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span> <span style="color: #000000; font-weight: bold;">catch</span> <span style="color: #009900;">&#40;</span>ShiroException ex<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+        log.<span style="color: #006633;">debug</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">"Function failed with "</span> <span style="color: #339933;">+</span> ex.<span style="color: #006633;">getMessage</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">+</span> <span style="color: #0000ff;">" message."</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #000000; font-weight: bold;">return</span> <span style="color: #0000ff;">"Error: "</span> <span style="color: #339933;">+</span> ex.<span style="color: #006633;">getMessage</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span>
+<span style="color: #009900;">&#125;</span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="java" style="font-family:monospace;"&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;private&lt;/span&gt; &lt;span style="color: #003399;"&gt;String&lt;/span&gt; performAction&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #003399;"&gt;String&lt;/span&gt; actionName&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt; &lt;span style="color: #009900;"&gt;&#123;&lt;/span&gt;
-    &lt;span style="color: #000000; font-weight: bold;"&gt;try&lt;/span&gt; &lt;span style="color: #009900;"&gt;&#123;&lt;/span&gt;
-        Actions action &lt;span style="color: #339933;"&gt;=&lt;/span&gt; findAction&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;actionName&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-        &lt;span style="color: #003399;"&gt;String&lt;/span&gt; result &lt;span style="color: #339933;"&gt;=&lt;/span&gt; action &lt;span style="color: #339933;"&gt;==&lt;/span&gt; &lt;span style="color: #000066; font-weight: bold;"&gt;null&lt;/span&gt; &lt;span style="color: #339933;"&gt;?&lt;/span&gt; &lt;span style="color: #000066; font-weight: bold;"&gt;null&lt;/span&gt; &lt;span style="color: #339933;"&gt;:&lt;/span&gt; action.&lt;span style="color: #006633;"&gt;doIt&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-        log.&lt;span style="color: #006633;"&gt;debug&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"Performed function with result: "&lt;/span&gt; &lt;span style="color: #339933;"&gt;&lt;/span&gt; result&lt;span style="color: #009900;"&gt;&amp;#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-        &lt;span style="color: #000000; font-weight: bold;"&gt;return&lt;/span&gt; result&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&amp;#125;&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;catch&lt;/span&gt; &lt;span style="color: #009900;"&gt;&amp;#40;&lt;/span&gt;ShiroException ex&lt;span style="color: #009900;"&gt;&amp;#41;&lt;/span&gt; &lt;span style="color: #009900;"&gt;&amp;#123;&lt;/span&gt;
-        log.&lt;span style="color: #006633;"&gt;debug&lt;/span&gt;&lt;span style="color: #009900;"&gt;&amp;#40;&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;"Function failed with "&lt;/span&gt; &lt;span style="color: #339933;"&gt;&lt;/span&gt; ex.&lt;span style="color: #006633;"&gt;getMessage&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt; &lt;span style="color: #339933;"&gt;&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;" message."&lt;/span&gt;&lt;span style="color: #009900;"&gt;&amp;#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-        &lt;span style="color: #000000; font-weight: bold;"&gt;return&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;"Error: "&lt;/span&gt; &lt;span style="color: #339933;"&gt;&lt;/span&gt; ex.&lt;span style="color: #006633;"&gt;getMessage&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #009900;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #339933;"&gt;;&lt;/span&gt;
-    &lt;span style="color: #009900;"&gt;&#125;&lt;/span&gt;
-&lt;span style="color: #009900;"&gt;&#125;&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
+<p>Finalmente, precisamos configurar as permissões para os perfis no arquivo Shiro.ini. Shiro suporta curingas para permissões de múltiplo nível.
+Assim, não temos que especificar cada permissão departamental em separado:</p>
 </div>
-<div class="paragraph">
-<p>Finalmente, precisamos configurar as permissões para os perfis no arquivo Shiro.ini. Shiro suporta curingas para permissões de múltiplo nível. Assim, não temos que especificar cada permissão departamental em separado:</p>
-</div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="vim" style="font-family:monospace;"&gt;&lt;span style="color: #000000;"&gt;&#91;&lt;/span&gt;roles&lt;span style="color: #000000;"&gt;&#93;&lt;/span&gt;
-# members of departments should be able &lt;span style="color: #668080;"&gt;to&lt;/span&gt; perform all departmental functions
-sales=functions&lt;span style="color: #000000;"&gt;:&lt;/span&gt;sale&lt;span style="color: #000000;"&gt;:*&lt;/span&gt;
-scientist=functions&lt;span style="color: #000000;"&gt;:&lt;/span&gt;science&lt;span style="color: #000000;"&gt;:*&lt;/span&gt;
-repairman=functions&lt;span style="color: #000000;"&gt;:&lt;/span&gt;repair&lt;span style="color: #000000;"&gt;:*&lt;/span&gt;
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="vim" style="font-family:monospace;"><span style="color: #000000;">&#91;</span>roles<span style="color: #000000;">&#93;</span>
+# members of departments should be able <span style="color: #668080;">to</span> perform all departmental functions
+sales=functions<span style="color: #000000;">:</span>sale<span style="color: #000000;">:*</span>
+scientist=functions<span style="color: #000000;">:</span>science<span style="color: #000000;">:*</span>
+repairman=functions<span style="color: #000000;">:</span>repair<span style="color: #000000;">:*</span>
 &nbsp;
-# administrators are able &lt;span style="color: #668080;"&gt;to&lt;/span&gt; do all management functions and repair functions
-Administrator=functions&lt;span style="color: #000000;"&gt;:&lt;/span&gt;manage&lt;span style="color: #000000;"&gt;:*&lt;/span&gt;,functions&lt;span style="color: #000000;"&gt;:&lt;/span&gt;repair&lt;span style="color: #000000;"&gt;:*&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
+# administrators are able <span style="color: #668080;">to</span> do all management functions and repair functions
+Administrator=functions<span style="color: #000000;">:</span>manage<span style="color: #000000;">:*</span>,functions<span style="color: #000000;">:</span>repair<span style="color: #000000;">:*</span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>Você pode agora acessar a página “todas as funções da aplicação” e testar as funções.
-Se um usuário autenticado não tiver a permissão requerida, uma mensagem de erro aparecerá no topo da página. Além disso, se você fizer a autenticação (log in) como vendedor e tentar hackear
-<a href="https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN" class="bare">https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN</a>, você verá uma mensagem de erro no console (em vez de uma mensagem de sucesso).</p>
+Se um usuário autenticado não tiver a permissão requerida, uma mensagem de erro aparecerá no topo da página.
+Além disso, se você fizer a autenticação (log in) como vendedor e tentar hackear
+<a href="https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN" class="bare">https://localhost:8443/simpleshirosecuredapplication/masterservlet?action=MANAGE_REPAIRMEN</a> , você verá uma mensagem de erro no
+console (em vez de uma mensagem de sucesso).</p>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_fim">Fim</h4>
 <div class="paragraph">
-<p>A aplicação final está disponível no ramo(branch) &lt;A href="https://github.com/SomMeri/SimpleShiroSecuredApplication/tree/static_authentication_and_authorization" target="_blank"&gt; &#8216;static_authentication_and_authorization&#8217;&lt;/A&gt; hospedado no Github.</p>
+<p>A aplicação final está disponível no ramo(branch) <a href="https://github.com/SomMeri/SimpleShiroSecuredApplication/tree/static_authentication_and_authorization" target="_blank" rel="noopener">static_authentication_and_authorization</a> hospedado no Github.</p>
 </div>
 <div class="paragraph">
-<p>Na segunda parte iremos criar um &lt;A href="http://shiro.apache.org/realm.html" target="_blank"&gt; realm&lt;/A&gt; personalizado e mover usuários, senhas, perfis(roles) e permissões do arquivo ini para um banco de dados.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>[1]: https://github.com/SomMeri/SimpleShiroSecuredApplication/blob/static_authentication_and_authorization/src/main/java/org/meri/simpleshirosecuredapplication/servlet/VerboseFormAuthenticationFilter.java</pre>
-</div>
+<p>Na segunda parte iremos criar um <a href="http://shiro.apache.org/realm.html" target="_blank" rel="noopener">realm</a> personalizado e mover usuários, senhas, perfis(roles) e permissões do arquivo ini para um banco de dados.</p>
 </div>
 </div>
     </section>

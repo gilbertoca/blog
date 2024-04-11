@@ -3,7 +3,7 @@
     <head>
         <title></title>
         <meta charset="utf-8"/>
-        <title>Indo um pouco além &amp;#8230;</title>
+        <title>Indo um pouco além ...</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
 
@@ -48,7 +48,7 @@
 <section>
 <article>
     <header>
-        <h1>Indo um pouco além &#8230;</h1>
+        <h1>Indo um pouco além ...</h1>
         <p>by <em>Gilberto C. Andrade</em> on <strong>23 março 2009</strong></p>
         <p>Tagged as: 
             <a href="../../tags/Java.html">Java</a>,
@@ -56,57 +56,156 @@
     </header>
     <section>
 	<div class="paragraph">
-<p>Estou aprendendo um pouco sobre programação orientada a objeto em java e com o pouco que li resolvi implementar uma pequena api que abstrai as regras de acesso e recuperação de dados &minus; acesso a banco de dados. Gosto muito dessa (&lt;a href="http://orbroker.sourceforge.net/" target="_blank"&gt;OrBroker&lt;/a&gt;) api de persistência com isso elaborei um contrato que acho o mínimo necessário para o acesso a dados, o qual poderá utilizar a api OrBroker - espero não somente essa api, mas outras (desacoplamento).</p>
+<p>Estou aprendendo um pouco sobre programação orientada a objeto em java e com o
+pouco que li resolvi implementar uma pequena api que abstrai as regras de acesso
+e recuperação de dados - acesso a banco de dados. Gosto muito dessa (<a href="http://orbroker.sourceforge.net/">OrBroker</a>)
+ api de persistência com isso elaborei um contrato que acho o mínimo necessário para o acesso a dados,
+o qual poderá utilizar a api OrBroker - espero não somente essa api, mas outras (desacoplamento).</p>
 </div>
 <div class="paragraph">
-<p>IService: Interface (contrato) geral para uso com o mescanimo de persistência OrBroker. Estabelece assinaturas de métodos essenciais para operações de acesso a banco de dados.
-Assinaturas:</p>
+<p>IService: Interface (contrato) geral para uso com o mescanimo de persistência OrBroker.
+Estabelece assinaturas de métodos essenciais para operações de acesso a banco de dados.</p>
+</div>
+<div class="paragraph">
+<p>Assinaturas:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code>&lt;span style="color: #000000;"&gt;   &lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;public&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="font-weight: bold;color: #0095ff;"&gt;Collection&lt;/span&gt;&lt;span style="color: #000000;"&gt;&amp;lt;T&amp;gt; &lt;/span&gt;&lt;span style="color: #000080;"&gt;getAll&lt;/span&gt;&lt;span style="color: #000000;"&gt;();&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;   &lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;public&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #800000;"&gt;boolean&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #000080;"&gt;find&lt;/span&gt;&lt;span style="color: #000000;"&gt;(T entity);&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;   &lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;public&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #800000;"&gt;void&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #000080;"&gt;insert&lt;/span&gt;&lt;span style="color: #000000;"&gt;(T entity);&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;   &lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;public&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #800000;"&gt;void&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #000080;"&gt;update&lt;/span&gt;&lt;span style="color: #000000;"&gt;(T entity);&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;   &lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;public&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #800000;"&gt;void&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #000080;"&gt;delete&lt;/span&gt;&lt;span style="color: #000000;"&gt;(T entity);&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;   &lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;public&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="font-weight: bold;color: #0095ff;"&gt;Collection&lt;/span&gt;&lt;span style="color: #000000;"&gt;&amp;lt;T&amp;gt; &lt;/span&gt;&lt;span style="color: #000080;"&gt;findByNamedQuery&lt;/span&gt;&lt;span style="color: #000000;"&gt;(&lt;/span&gt;&lt;span style="font-weight: bold;color: #0095ff;"&gt;String&lt;/span&gt;&lt;span style="color: #000000;"&gt; queryName);&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;   &lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;public&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="font-weight: bold;color: #0095ff;"&gt;Collection&lt;/span&gt;&lt;span style="color: #000000;"&gt;&amp;lt;T&amp;gt; &lt;/span&gt;&lt;span style="color: #000080;"&gt;findLike&lt;/span&gt;&lt;span style="color: #000000;"&gt;(&lt;/span&gt;&lt;span style="font-weight: bold;color: #0095ff;"&gt;String&lt;/span&gt;&lt;span style="color: #000000;"&gt; likeColumn, &lt;/span&gt;&lt;span style="font-weight: bold;color: #0095ff;"&gt;String&lt;/span&gt;&lt;span style="color: #000000;"&gt; likeValue);&lt;/span&gt;```
+<pre class="prettyprint highlight"><code data-lang="java">public interface IService&lt;T, PK extends Serializable&gt; {
+    /**
+     * Expõe o mecanismo de persistência. .
+     */
+    public Broker getBroker();
 
-Vocês podem notar o uso do inglês para nomear classes, metodos e até atributos. Acho isso um vício ou uma maneira de reduzir os nomes, pois em português ficam enormes. Outra coisa, alguns podem comentar que o nome certo seria sufixar ou prefixar tal interface com o termo DAO, para expressar um padrão de projeto muito conhecido e utilizado para, também, abstrair essas atividades de banco de dados. Acontece que essa minha pequena implementação não exigirá tamanha desacoplagem e acho também que um programa que grava e ler dados, não faz somente isso, faz isso e um pouco mais - regras de negócio. Assim, optei por, inicialmente, colocar as assinaturas necessárias ao acesso a dados e deixar para uma outra interface acrescentar as assinaturas de contrato específicas:</code></pre>
+    public Class&lt;T&gt; getClassEntity();
+
+    /**
+     * Método genérico usado para obter todas as entidades de uma classe
+     * particular. Essa classe particular é definida no construtor da
+     * implementação desta interface.
+     *
+     * @return Collection de entidades preenchidas
+     */
+    public Collection&lt;T&gt; getAll();
+
+    /**
+     * Método genérico para obter uma entidade.
+     *
+     * @param entity
+     *                objeto ao qual se aplica o retorno da pesquisa.
+     * @return true e o preenchimento da entidade passada como parâmetro. false
+     *         caso contrário.
+     */
+    public boolean find(T entity);
+
+    /**
+     * Método genérico para inserção de uma nova entidade.
+     *
+     * @param entity
+     *                entidade a ser inserida.
+     * @throws InsertException
+     */
+    public void insert(T entity) throws InsertException;
+
+    /**
+     * Método genérico para atualização de uma entidade.
+     *
+     * @param entity
+     *                entidade a ser alterada.
+     */
+    public void update(T entity);
+
+    /**
+     * Método genérico para deleção de uma entidade.
+     *
+     * @param entity
+     *                entidade a ser deletada.
+     */
+    public void delete(T entity);
+
+    /**
+     * Método genérico para consulta nomeada preexistente.
+     *
+     * @param queryName
+     *                nome da consulta.
+     */
+    public Collection&lt;T&gt; findByNamedQuery(String queryName);
+
+    /**
+     * Método genérico para personalizada com a cláusula SQL LIKE.
+     *
+     * @param likeColumn
+     *                campo a ser usado na cláusula SQL.
+     * @param likeValue
+     *                valor para pesquisa.
+     */
+    public Collection&lt;T&gt; findLike(String likeColumn, String likeValue);
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>&lt;span style="font-weight: bold;color: #000000;"&gt;public&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;interface&lt;/span&gt;&lt;span style="color: #000000;"&gt; ICategoriaService &lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;extends&lt;/span&gt;&lt;span style="color: #000000;"&gt; IService&lt;categoria, integer&gt; {&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;	&lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;public&lt;/span&gt;&lt;span style="color: #000000;"&gt; Categoria &lt;/span&gt;&lt;span style="color: #000080;"&gt;find&lt;/span&gt;&lt;span style="color: #000000;"&gt;(&lt;/span&gt;&lt;span style="font-weight: bold;color: #0095ff;"&gt;Integer&lt;/span&gt;&lt;span style="color: #000000;"&gt; primaryKey);&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;	&lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;public&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #800000;"&gt;void&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #000080;"&gt;Classificar&lt;/span&gt;&lt;span style="color: #000000;"&gt;();&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;	}&lt;/span&gt;```</p>
+<p>Vocês podem notar o uso do inglês para nomear classes, metodos e até atributos.
+Acho isso um vício ou uma maneira de reduzir os nomes, pois em português ficam enormes.
+Outra coisa, alguns podem comentar que o nome certo seria sufixar ou prefixar
+tal interface com o termo DAO, para expressar um padrão de projeto muito conhecido
+e utilizado para, também, abstrair essas atividades de banco de dados.
+Acontece que essa minha pequena implementação não exigirá tamanha desacoplagem
+e acho também que um programa que grava e ler dados, não faz somente isso,
+faz isso e um pouco mais - regras de negócio.</p>
 </div>
 <div class="paragraph">
-<p>Na implementação ocorre um fato interessante quando a entidade sendo trabalhada não exigir contratos além dos já fornecidos. Notei essa característica quando da implementação dos métodos por uma classe a ser utilizada como base de implementação, ou seja, as classes mais específicas &minus; a exemplo da ICategoriaService &minus; herdarão dessa classe base e implementarão seus contratos específicos. Um exemplo de uso dessa classe base:</p>
+<p>Assim, optei por, inicialmente, colocar as assinaturas necessárias ao acesso
+a dados e deixar para uma outra interface acrescentar as assinaturas de contrato específicas:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code>&lt;span style="font-weight: bold;color: #000000;"&gt;public&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;class&lt;/span&gt;&lt;span style="color: #000000;"&gt; CategoriaBaseServiceTest {&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;	&lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;private&lt;/span&gt;&lt;span style="color: #000000;"&gt; BaseService&amp;lt;categoria, integer&amp;gt; cS = &lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;new&lt;/span&gt;&lt;span style="color: #000000;"&gt; BaseService&amp;lt;categoria,integer&amp;gt;(Categoria.&lt;/span&gt;&lt;span style="color: #000080;"&gt;class&lt;/span&gt;&lt;span style="color: #000000;"&gt;,Constants.&lt;/span&gt;&lt;span style="color: #000080;"&gt;ORBROKER_INVENTARIO&lt;/span&gt;&lt;span style="color: #000000;"&gt;);	&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;	&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;	@Test&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;	&lt;/span&gt;&lt;span style="font-weight: bold;color: #000000;"&gt;public&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #800000;"&gt;void&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #000080;"&gt;testGetAll&lt;/span&gt;&lt;span style="color: #000000;"&gt;() {&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;	&lt;/span&gt;&lt;span style="font-weight: bold;color: #0095ff;"&gt;Collection&lt;/span&gt;&lt;span style="color: #000000;"&gt;&amp;lt;categoria&amp;gt; result = cS.&lt;/span&gt;&lt;span style="color: #000080;"&gt;getAll&lt;/span&gt;&lt;span style="color: #000000;"&gt;();&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;		&lt;/span&gt;&lt;span style="font-weight: bold;color: #0095ff;"&gt;System&lt;/span&gt;&lt;span style="color: #000000;"&gt;.&lt;/span&gt;&lt;span style="color: #000080;"&gt;out&lt;/span&gt;&lt;span style="color: #000000;"&gt;.&lt;/span&gt;&lt;span style="color: #000080;"&gt;println&lt;/span&gt;&lt;span style="color: #000000;"&gt;(result);&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;		&lt;/span&gt;&lt;span style="color: #000080;"&gt;assertFalse&lt;/span&gt;&lt;span style="color: #000000;"&gt;(result.&lt;/span&gt;&lt;span style="color: #000080;"&gt;isEmpty&lt;/span&gt;&lt;span style="color: #000000;"&gt;());&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;	}&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;}&lt;/span&gt;```
-
-Então ficou da seguinte maneira essa pequena api:
-&lt;/&gt;</code></pre>
+<pre class="prettyprint highlight"><code data-lang="java">public interface ICategoriaService extends IService&lt;Categoria, Integer&gt; {
+    /**
+     * Busca por chave primária.
+     * @param primaryKey
+     * @return a instância da entidade encontrada ou null se a entidade não existe
+     * @throws IllegalArgumentException se o primeiro argumento é nulo
+     */
+    public Categoria find(Integer primaryKey);
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>&lt;span style="color: #000000;"&gt;Interface	Implementação&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;IService ----------&gt; BaseService&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;:                     :&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;:                     :&lt;/span&gt;
-&lt;span style="color: #000000;"&gt;ICategoriaService -&gt; CategoriaService	&lt;/span&gt;```</p>
+<p>Na implementação ocorre um fato interessante quando a entidade sendo trabalhada
+não exigir contratos além dos já fornecidos. Notei essa característica quando da
+implementação dos métodos por uma classe a ser utilizada como base de implementação,
+ou seja, as classes mais específicas - a exemplo da ICategoriaService -
+herdarão dessa classe base e implementarão seus contratos específicos.</p>
+</div>
+<div class="paragraph">
+<p>Um exemplo de uso dessa classe base:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="java">public class CategoriaBaseServiceTest {
+    private BaseService&lt;Categoria, Integer&gt; cS = new BaseService&lt;Categoria, Integer&gt;(
+	    Categoria.class, Constants.ORBROKER_INVENTARIO);
+
+    @Test
+    public void testGetAll() {
+	Collection&lt;Categoria&gt; result = cS.getAll();
+	System.out.println(result);
+	assertFalse(result.isEmpty());
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Então ficou da seguinte maneira essa pequena api:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>Interface	     Implementação
+IService ----------&gt; BaseService
+|                        |
+|                        |
+ICategoriaService -&gt; CategoriaService</code></pre>
+</div>
 </div>
     </section>
 <section>

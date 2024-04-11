@@ -60,16 +60,10 @@
 	<div class="paragraph">
 <p>Quem tiver um video e o arquivo de legenda e deseja unir ambos num aquivo o comando é este :</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="bash" style="font-family:monospace;"&gt;mencoder &lt;span style="color: #660033;"&gt;-oac&lt;/span&gt; mp3lame &lt;span style="color: #660033;"&gt;-ovc&lt;/span&gt; lavc &lt;span style="color: #660033;"&gt;-sub&lt;/span&gt; legenda.srt video.avi &lt;span style="color: #660033;"&gt;-o&lt;/span&gt; videocomlegenda.avi&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>mencoder -oac mp3lame -ovc lavc -sub legenda.srt video.avi -o videocomlegenda.avi</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>Sintaxe :</p>
@@ -77,49 +71,20 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>\# mencoder ( programa que acompanha o mplayer capaz de ripar e outras coisas )</p>
+<p>mencoder ( programa que acompanha o mplayer capaz de ripar e outras coisas )</p>
 </li>
 <li>
-<p>\# -oac (Qual sera o codec de audio no arquivo que seja criado, usando a opção help é possivel ter uma lista ex.: &lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="bash" style="font-family:monospace;"&gt;mencoder &lt;span style="color: #660033;"&gt;-oac&lt;/span&gt; &lt;span style="color: #7a0874; font-weight: bold;"&gt;help&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
-<div class="literalblock">
-<div class="content">
-<pre>)&lt;/li&gt;</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>\# -ovc (Qual sera o codec de video no arquivo que seja criado, usando a opção help é possivel ter uma lista ex.: &lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="bash" style="font-family:monospace;"&gt;mencoder &lt;span style="color: #660033;"&gt;-ovc&lt;/span&gt; &lt;span style="color: #7a0874; font-weight: bold;"&gt;help&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
-<div class="literalblock">
-<div class="content">
-<pre>)&lt;/li&gt;</pre>
-</div>
-</div>
+<p>-oac (Qual sera o codec de audio no arquivo que seja criado, usando a opção help é possivel ter uma lista ex.:
+<code>mencoder -oac</code> help)</p>
 </li>
 <li>
-<p>\# -sub ( para especificar o arquivo de legendas )</p>
+<p>-ovc (Qual sera o codec de video no arquivo que seja criado, usando a opção help é possivel ter uma lista ex.:` mencoder -ovc help`</p>
 </li>
 <li>
-<p>\# -o ( arquivo de saida que sera gerado)&lt;/ol&gt;</p>
+<p>-sub ( para especificar o arquivo de legendas )</p>
 </li>
-</ul>
-</div>
+<li>
+<p>-o ( arquivo de saida que sera gerado)</p>
 </li>
 </ol>
 </div>
