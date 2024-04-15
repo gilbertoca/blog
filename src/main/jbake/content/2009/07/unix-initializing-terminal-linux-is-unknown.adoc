@@ -13,7 +13,5 @@ A solução é ajustar a variável TERM para xterm, nesse caso é claro, pois ut
 Não sei se funcionaria acessando de um terminal texto.
 
 ```
-<code class="bash">
-        export TERM=xterm
-</code>
+export TERM=xterm
 ```

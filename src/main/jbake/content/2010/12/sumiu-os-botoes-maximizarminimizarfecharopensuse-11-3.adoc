@@ -3,13 +3,15 @@ title=Sumiu os botões maximizar,minimizar,fechar[openSUSE 11.3]
 date=2010-12-30 18:22:16
 type=post
 status=published
-tags=desktop,  gnome, Linux, openSUSE
+tags=Desktop, Gnome, Linux, openSUSE
 ~~~~~~
 
+Este comportamento do gerenciador de janelas é esquisito, para não dizer indesejável. 
+A coisa fica mais estranha ainda pois não tenho meios de rastrear a causa do problema (placa de vídeo, 
+kernel, gnome, gdm qual é o cupido?). Alguém pode, em algumas situações, acusar o compiz, 
+mas este não o caso - placa legada:
 
-Este comportamento do gerenciador de janelas é esquisito, para não dizer indesejável. A coisa fica mais estranha ainda pois não tenho meios de rastrear a causa do problema (placa de vídeo, kernel, gnome, gdm qual é o cupido?). Alguém pode, em algumas situações, acusar o compiz, mas este não o caso - placa legada:
-
-<div class="wp_syntax">
+++++
   <table>
     <tr>
       <td class="code">
@@ -30,13 +32,22 @@ Este comportamento do gerenciador de janelas é esquisito, para não dizer indes
       </td>
     </tr>
   </table>
-</div></p> 
+++++
 
-Assim que estalei o openSUSE 11.3 em casa ficou difícil evitar seu uso e olha que minha família ainda não viu - ou não usufruiu - das ferramentas gráficas pois ficamos aproximadamente 3 meses usando o [driver de vídeo que vem instalado por padrão][1] - O projeto Nouveau. Só recentemente a Nvidia publicou uma atualização [para minha placa de vídeo][2] e é claro para a minha versão do kernel. 
+Assim que estalei o openSUSE 11.3 em casa ficou difícil evitar seu uso e olha que minha 
+família ainda não viu - ou não usufruiu - das ferramentas gráficas pois ficamos aproximadamente 
+3 meses usando o [driver de vídeo que vem instalado por padrão][1] - O projeto Nouveau. 
+Só recentemente a Nvidia publicou uma atualização [para minha placa de vídeo][2] 
+e é claro para a minha versão do kernel. 
 
-Bom, até agora podemos dizer que o problema não é hardware. Por que? Você pode perguntar. Veja, usei dois tipos de driver e com ambos o comportamento (defeito) persistiu. O pior é que fica dias sem aparecer e de repente acontece. Até então não havia outro meio de contornar o problema senão encerrar a sessão e entrar novamente. Hoje encontrei [uma discussão sobre o assunto][3] - Adivinha? Aconteceu hoje novamente - e nessa discussão o usuário “Rvos” sugere o seguinte contorno:
+Bom, até agora podemos dizer que o problema não é hardware. Por que? Você pode perguntar. 
+Veja, usei dois tipos de driver e com ambos o comportamento (defeito) persistiu. 
+O pior é que fica dias sem aparecer e de repente acontece. Até então não havia outro meio 
+de contornar o problema senão encerrar a sessão e entrar novamente. 
+Hoje encontrei [uma discussão sobre o assunto][3] - Adivinha? 
+Aconteceu hoje novamente - e nessa discussão o usuário “Rvos” sugere o seguinte contorno:
 
-<div class="wp_syntax">
+++++
   <table>
     <tr>
       <td class="code">
@@ -44,7 +55,7 @@ Bom, até agora podemos dizer que o problema não é hardware. Por que? Você po
       </td>
     </tr>
   </table>
-</div>
+++++
 
 Com essa opção não tenho que encerra a sessão para que as janelas voltem ao normal. 
 
@@ -55,7 +66,7 @@ Sei que farão com bastante tranquilidade quando estiver por perto, mas quando n
 Após um longo período sem este problema, aconteceu novamente: desta vez enquanto usava o [qBittorrent][4].  
 [Esta discussão][5] pode revelar algum caminho para resolução deste problema. Com o comando sugerido, verifiquei a minha configuração:
 
-<div class="wp_syntax">
+++++
   <table>
     <tr>
       <td class="code">
@@ -70,11 +81,11 @@ Após um longo período sem este problema, aconteceu novamente: desta vez enquan
       </td>
     </tr>
   </table>
-</div>
+++++
 
 E com outro ajustei para o sugerido:
 
-<div class="wp_syntax">
+++++
   <table>
     <tr>
       <td class="code">
@@ -82,17 +93,25 @@ E com outro ajustei para o sugerido:
       </td>
     </tr>
   </table>
-</div>
+++++
 
-Vamos aguardar e torcer! <img src="http://blog.gilbertoca.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> 
+Vamos aguardar e torcer!
 
 **ATUALIZAÇÃO (31/12/2010):**  
-Aconteceu novamente. Desta vez enquanto verificava a lista de contatos no [Empathy][6]. O mais complicado foi constatar que este problema afeta a digitação. Ao utilizar as teclas de atalho - alt + f2 - não aconteceu nada, a tela de execução de aplicativos não apareceu. Utilizei o menu iniciar para acionar o prompt de comando - terminal gnome - que logo apareceu, mas não recebia qualquer digitação. O que fazer? Fui abrindo - através do menu iniciar - aplicativos que pudessem receber digitação, mas nenhum respondia. Então tentei a caixa de texto para pesquisa do próprio menu iniciar:  
+Aconteceu novamente. Desta vez enquanto verificava a lista de contatos no [Empathy][6]. 
+O mais complicado foi constatar que este problema afeta a digitação. Ao utilizar as teclas de atalho - alt + f2 - não aconteceu nada, 
+a tela de execução de aplicativos não apareceu. Utilizei o menu iniciar para acionar o prompt de comando - terminal gnome - que logo apareceu, 
+mas não recebia qualquer digitação. O que fazer? Fui abrindo - através do menu iniciar - aplicativos que pudessem receber digitação, 
+mas nenhum respondia. Então tentei a caixa de texto para pesquisa do próprio menu iniciar:  
 ![Caixa de texto para pesquisa, menu iniciar.][7] 
 
-Com isso, fiz uma cópia do texto - ctrl+c - e adicionei um ícone no [painel principal][8], aquela grande barra no rodapé da tela, para acionar o Executar Aplicativo:  
+Com isso, fiz uma cópia do texto - ctrl+c - e adicionei um ícone no [painel principal][8], 
+aquela grande barra no rodapé da tela, para acionar o Executar Aplicativo:  
 ![adicionar ao painel][9]  
-Observe que a imagem traz o botão de fechar, isso porque fiz a captura da tela agora depois de todo o processo. Com o ícone disponível foi só acioná-lo e colar - ctrl+v - o comando (metacity -replace) e executar. Pronto, Voltou ao normal! Até quando? <img src="http://blog.gilbertoca.com/wp-includes/images/smilies/icon_sad.gif" alt=":(" class="wp-smiley" />
+Observe que a imagem traz o botão de fechar, isso porque fiz a captura da tela agora depois de todo o processo. 
+Com o ícone disponível foi só acioná-lo e colar - ctrl+v - o comando (metacity -replace) e executar. 
+Pronto! Voltou ao normal! 
+Até quando?
 
 
 
