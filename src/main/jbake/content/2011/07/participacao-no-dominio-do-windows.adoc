@@ -3,7 +3,7 @@ title=Linux - Participação no domínio do Windows
 date=2011-07-15 22:27:44
 type=post
 status=published
-tags=Active Directory, kerberos, Linux, openSUSE, Sistema Operacional, Windows
+tags=Active Directory, kerberos, Linux, openSUSE, Windows
 ~~~~~~
 
 >

@@ -3,7 +3,7 @@ title=openSUSE 10.2 atingiu o Fim da Vida - Descontinuado
 date=2008-12-22 08:09:22
 type=post
 status=published
-tags=Linux, openSUSE, Sistema Operacional
+tags=Linux, openSUSE
 ~~~~~~
 
 Não posso deixar de lamentar essa notícia: http://pt.openSUSE.org/Not%C3%ADcias_da_semana_no_openSUSE/51#Atualiza.C3.A7.C3.B5es_de_Seguran.C3.A7a[openSUSE 10.2 atingiu o Fim da Vida].

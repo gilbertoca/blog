@@ -3,7 +3,7 @@ title=Oracle IAS [An error occurred while talking to OPMN. Could not find entity
 date=2009-10-19 11:43:40
 type=post
 status=published
-tags=Application Server, Oracle, Linux, Sistema Operacional
+tags=Application Server, Oracle, Linux
 ~~~~~~
 
 

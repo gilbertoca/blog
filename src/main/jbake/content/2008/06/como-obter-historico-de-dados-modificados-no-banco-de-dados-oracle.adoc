@@ -3,7 +3,7 @@ title=Como obter histórico de dados modificados no banco de dados Oracle?
 date=2008-06-04 18:09:43
 type=post
 status=published
-tags=Database, oracle
+tags=Database, Oracle
 ~~~~~~
 
 Na verdade a pergunta original, em inglês, é essa: http://searchoracle.techtarget.com/expert/KnowledgebaseAnswer/0,289625,sid41_gci1313625,00.html?track=NL-94&#038;ad=643910&asrc=EM_NLT_3776659&uid=2562960[How can you get the history 
