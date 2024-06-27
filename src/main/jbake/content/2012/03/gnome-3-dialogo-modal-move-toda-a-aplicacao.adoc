@@ -3,18 +3,24 @@ title=Gnome 3 - diálogo modal move toda a aplicação
 date=2012-03-02 17:36:28
 type=post
 status=published
-tags=Geral
+tags=OpenSUSE, Geral
 ~~~~~~
 
+É, finalmente consegui um tempo para postar algo aqui no blog. Ultimamente (nos dois últimos meses) estive ocupado trabalhando na conversão de alguns projetos 
+java para web: usavam Ant e agora, este trabalho, usam Maven. Neste período, https://blog.gilbertoca.com/?p=415[como vocês bem sabem], 
+fiz a atualização (na verdade uma nova instalação) do https://software.openSUSE.org[openSUSE]. Estava com a versão 11.3 e com o recente lançamento da 
+https://software.openSUSE.org/121/en[versão 12.1], não resisti - ansioso por usar o novo https://www.gnome.org/gnome-3/[Gnome 3]. 
 
-É, finalmente consegui um tempo para postar algo aqui no blog. Ultimamente (nos dois últimos meses) estive ocupado trabalhando na conversão de alguns projetos java para web: usavam Ant e agora, este trabalho, usam Maven. Neste período, <a href="http://blog.gilbertoca.com/?p=415[como vocês bem sabem</a>, fiz a atualização (na verdade uma nova instalação) do [openSUSE][1]. Estava com a versão 11.3 e com o recente lançamento da <a href="http://software.openSUSE.org/121/en[versão 12.1</a>, não resisti - ansioso por usar o novo <a href="http://www.gnome.org/gnome-3/[Gnome 3</a>. 
+A mudança foi um pouco impactante mais pro lado positivo, diferente de outras experiências que tenho ouvido e lido a respeito. Bem, espero ajudar os novos adeptos a este ambiente 
+gráfico por aqui: postando dicas e links para solucionar eventuais embaraços por assim dizer nesta jornada de aprendizado.  
+Vamos começar com um link bem útil: https://live.gnome.org/GnomeShell/CheatSheet[GnomeShell/CheatSheet]. 
 
-A mudança foi um pouco impactante mais pro lado positivo, diferente de outras experiências que tenho ouvido e lido a respeito. Bem, espero ajudar os novos adeptos a este ambiente gráfico por aqui: postando dicas e links para solucionar eventuais embaraços por assim dizer nesta jornada de aprendizado.  
-Vamos começar com um link bem útil: <a href="https://live.gnome.org/GnomeShell/CheatSheet" title="GnomeShell-CheatSheet[GnomeShell/CheatSheet</a> . 
-
-Agora algo que atrapalha um pouco: toda vez que precisamos abrir uma janela modal, tipo “Open File”, “Print”, esta mesma janela modal é anexada (colada mesmo!) à janela principal da aplicação(Evince, Firefox, NetBeans, Empathy, etc) tornando-a uma só. Isso é contra produtivo pois em algumas situações precisamos fazer um “copy and paste” de informações na janela principal da aplicação - ocorre muito com o Evince e com NetBeans no meu caso.  
+Agora algo que atrapalha um pouco: toda vez que precisamos abrir uma janela modal, tipo “Open File”, “Print”, esta mesma janela modal é anexada (colada mesmo!) à janela principal 
+da aplicação(Evince, Firefox, NetBeans, Empathy, etc) tornando-a uma só. Isso é contra produtivo pois em algumas situações precisamos fazer um “copy and paste” de informações 
+na janela principal da aplicação - ocorre muito com o Evince e com NetBeans no meu caso.  
 No GNOME 3, o comportamento padrão de diálogo modal é este anexar-se à janela principal da aplicação, mas este comportamento pode ser customizado, veja:
 
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -24,9 +30,9 @@ No GNOME 3, o comportamento padrão de diálogo modal é este anexar-se à janel
     </tr>
   </table>
 </div>
-
+++++
 Para desabilitar. E o contrário:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -35,10 +41,7 @@ Para desabilitar. E o contrário:
       </td>
     </tr>
   </table>
-</div></p> 
+</div>
+++++
 
-**Referência:The GNOME Shell Blog - <a href="http://gnomeshell.wordpress.com/2011/09/10/the-modal-windows-behavior/" title="the-modal-windows-behavior[The modal windows behavior</a>**
-
-
-
- [1]: http://www.openSUSE.org
+**Referência:The GNOME Shell Blog - https://gnomeshell.wordpress.com/2011/09/10/the-modal-windows-behavior/[The modal windows behavior]**

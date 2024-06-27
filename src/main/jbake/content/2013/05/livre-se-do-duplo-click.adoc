@@ -13,7 +13,8 @@ tags= desktop, freeseer,  kde, Linux, screencast, Windows
 
 **Melhor visualização:** escolha FULL SCREEN ou TELA INTEIRA
 
-<video width="640" height="360" controls>
-  <source src="livre-se-do-duble-click.ogg" type="video/ogg">
-</video>
+video::livre-se-do-duble-click.ogg[width=640,height=360,opts=controls]
 
+  * https://github.com/Freeseer/freeseer[freeseer]
+  * https://www.maartenbaert.be/simplescreenrecorder/[simplescreenrecorder]
+  * https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html[vokoscreenNG]
