@@ -53,19 +53,22 @@
         <p>Tagged as: 
             <a href="../../tags/Banco-do-Brasil.html">Banco-do-Brasil</a>,
             <a href="../../tags/Chromium.html">Chromium</a>,
-            <a href="../../tags/Internet.html">Internet</a>,
             <a href="../../tags/Java.html">Java</a>,
-            <a href="../../tags/Linux.html">Linux</a>,
             <a href="../../tags/openSUSE.html">openSUSE</a>,
             <a href="../../tags/update-alternatives.html">update-alternatives</a>,
         </p>
     </header>
     <section>
 	<div class="paragraph">
-<p>A um tempo atrás escrevi sobre o &lt;a href="http://linux.die.net/man/8/update-alternatives" title="update-alternatives[utilitário de sistema update-alternatives&lt;/a&gt; e mostrei &lt;a href="http://blog.gilbertoca.com/?p=383" title="Alterne entre versões Java facilmente [update-alternatives][como alternar entre versões do Java usando o mesmo&lt;/a&gt;. Naquele mesmo post mostrei que o Java já havia sido instalado e configurado pelo sistema de gerenciamento de pacotes pre-definido - &lt;a href="http://en.openSUSE.org/YaST_Software_Management" title="Yast[Yast&lt;/a&gt;. Como já é de conhecimento de alguns a &lt;a href="http://www.oracle.com" title="oracle[Oracle&lt;/a&gt; mudou a &lt;a href="http://www.hardware.com.br/noticias/2011-08/java-licenca-linux.html" title="mudança de licença Java[forma de licenciamento do Java&lt;/a&gt; e com isso a maioria das distribuições - senão todas - optaram por retirar o Java distribuído pela Oracle de seus repositórios. Com isso, se você precisar instalar a versão Java da Oracle terá que fazê-la manualmente.</p>
+<p>A um tempo atrás escrevi sobre o <a href="http://linux.die.net/man/8/update-alternatives">utilitário de sistema update-alternatives</a> e mostrei <a href="http://blog.gilbertoca.com/?p=383">como alternar entre versões do Java usando o mesmo</a>.
+Naquele mesmo post mostrei que o Java já havia sido instalado e configurado pelo sistema de gerenciamento de pacotes pre-definido - <a href="http://en.openSUSE.org/YaST_Software_Management">Yast</a>.
+Como já é de conhecimento de alguns a <a href="http://www.oracle.com">Oracle</a> mudou a <a href="http://www.hardware.com.br/noticias/2011-08/java-licenca-linux.html">forma de licenciamento do Java</a>
+e com isso a maioria das distribuições - senão todas - optaram por retirar o Java distribuído pela Oracle de seus repositórios. Com isso, se você precisar instalar a versão Java da Oracle terá que fazê-la manualmente.</p>
 </div>
 <div class="paragraph">
-<p>Antes de começar, quero notificar aos usuários do navegador Chromium que como eles tive dificuldades, no início, para fazê-lo funcionar com Java ao acessar o site do Banco do Brasil. Para confirmar este problema é só fazer uma pesquisa no Google usando a seguinte sentença: &lt;a href="https://www.google.com.br/search?sourceid:chrome&#038;ie=UTF-8&#038;q=chromium+banco+do+brasil" title="chromium banco do brasil[chromium banco do brasil&lt;/a&gt;. Então para a felicidade geral nação “chromiumana”, relato que esta maneira manual aqui demonstrada soluciona este pequeno problema.</p>
+<p>Antes de começar, quero notificar aos usuários do navegador Chromium que como eles tive dificuldades, no início, para fazê-lo funcionar com Java ao acessar o site do Banco do Brasil.
+Para confirmar este problema é só fazer uma pesquisa no Google usando a seguinte sentença: <a href="https://www.google.com.br/search?sourceid:chrome&#038;ie=UTF-8&#038;q=chromium+banco+do+brasil">chromium banco do brasil</a>.
+Então para a felicidade geral nação “chromiumana”, relato que esta maneira manual aqui demonstrada soluciona este pequeno problema.</p>
 </div>
 <div class="paragraph">
 <p>Então vamos lá!
@@ -74,121 +77,141 @@ Os passos são esses:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Baixe a versão RPM do &lt;a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" title="oracle java[site da Oracle&lt;/a&gt; - baixei a versão jre-7u3-linux-i586.rpm;</p>
+<p>Baixe a versão RPM do <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">site da Oracle</a> - baixei a versão jre-7u3-linux-i586.rpm;</p>
 </li>
 <li>
-<p>Instale o jre com yast2, zypper, ou com um duplo clique no rpm pelo dolphin ou nautilus: &lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="bash" style="font-family:monospace;"&gt;SUGEP265338:~ &lt;span style="color: <mark>666666; font-style: italic;"&gt;</mark> zypper in jre-7u3-linux-i586.rpm&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
-</li>
-<li>
-<p>Agora precisamos adicionar esta instalação às alternativas já instaladas, de forma a disponibilizá-la como uma opção: &lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="bash" style="font-family:monospace;"&gt;SUGEP265338:~ &lt;span style="color: <mark>666666; font-style: italic;"&gt;</mark> update-alternatives --install /usr/bin/java java /usr/java/jre1.7.0_03/bin/java 40&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
-</li>
-<li>
-<p>Faremos o mesmo para o plugin java. Esta opção é muito importante pois estabelece qual versão Java para navegação web estaremos usando: &lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="bash" style="font-family:monospace;"&gt;SUGEP265338:~ &lt;span style="color: <mark>666666; font-style: italic;"&gt;</mark> update-alternatives --install /usr/lib/browser-plugins/javaplugin.so javaplugin /usr/java/jre1.7.0_03/lib/i386/libnpjp2.so 40&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
-</li>
-<li>
-<p>Bom, agora vem a parte mais fácil que é, como escrevi no primeiro post, alternar entre tais versões: &lt;div class="wp_syntax"&gt;
-      &lt;table&gt;
-        &lt;tr&gt;
-          &lt;td class="code"&gt;
-            &lt;pre class="bash" style="font-family:monospace;"&gt;SUGEP265338:~ &lt;span style="color: <mark>666666; font-style: italic;"&gt;</mark> update-alternatives --config java&lt;/span&gt;
-There are &lt;span style="color: <mark>000000;"&gt;2&lt;/span&gt; choices &lt;span style="color: #000000; font-weight: bold;"&gt;for&lt;/span&gt; the alternative java &lt;span style="color: #7a0874; font-weight: bold;"&gt;&#40;&lt;/span&gt;providing &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;bin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;java&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#41;&lt;/span&gt;.
-&nbsp;
-  Selection    Path                                     Priority   Status
-&lt;span style="color: #660033;"&gt;------------------------------------------------------------&lt;/span&gt;
-&lt;span style="color: #000000; font-weight: bold;"&gt;*&lt;/span&gt; &lt;span style="color: #000000;"&gt;&lt;/span&gt;            &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;lib&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;jvm&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;jre-1.6.0-openjdk&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;bin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;java   &lt;span style="color: #000000;"&gt;17105&lt;/span&gt;     auto mode
-  &lt;span style="color: #000000;"&gt;1&lt;/span&gt;            &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;java&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;jre1.7.0_03&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;bin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;java            &lt;span style="color: #000000;"&gt;40&lt;/span&gt;        manual mode
-  &lt;span style="color: #000000;"&gt;2&lt;/span&gt;            &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;lib&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;jvm&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;jre-1.6.0-openjdk&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;bin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;java   &lt;span style="color: #000000;"&gt;17105&lt;/span&gt;     manual mode
-&nbsp;
-Press enter to keep the current choice&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#91;&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;*&lt;/span&gt;&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#93;&lt;/span&gt;, or &lt;span style="color: #7a0874; font-weight: bold;"&gt;type&lt;/span&gt; selection number: &lt;span style="color: #000000;"&gt;1&lt;/span&gt;
-update-alternatives: using &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;java&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;jre1.7.0_03&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;bin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;java to provide &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;bin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;java &lt;span style="color: #7a0874; font-weight: bold;"&gt;&#40;&lt;/span&gt;java&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#41;&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;in&lt;/span&gt; manual mode.
-SUGEP265338:~ &lt;span style="color: #666666; font-style: italic;"&gt;</mark>&lt;/span&gt;&lt;/pre&gt;
-          &lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/table&gt;
-    &lt;/div&gt;</p>
-</li>
-<li>
-<p>E finalmente, o mais importante, o plugin para os navegadores web: &lt;div class="wp_syntax"&gt;
-      &lt;table&gt;
-        &lt;tr&gt;
-          &lt;td class="code"&gt;
-            &lt;pre class="bash" style="font-family:monospace;"&gt;SUGEP265338:~ &lt;span style="color: <mark>666666; font-style: italic;"&gt;</mark> update-alternatives --config javaplugin&lt;/span&gt;
-There are &lt;span style="color: <mark>000000;"&gt;2&lt;/span&gt; choices &lt;span style="color: #000000; font-weight: bold;"&gt;for&lt;/span&gt; the alternative javaplugin &lt;span style="color: #7a0874; font-weight: bold;"&gt;&#40;&lt;/span&gt;providing &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;lib&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;browser-plugins&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;javaplugin.so&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#41;&lt;/span&gt;.
-&nbsp;
-  Selection    Path                                        Priority   Status
-&lt;span style="color: #660033;"&gt;------------------------------------------------------------&lt;/span&gt;
-&lt;span style="color: #000000; font-weight: bold;"&gt;*&lt;/span&gt; &lt;span style="color: #000000;"&gt;&lt;/span&gt;            &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;lib&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;IcedTeaPlugin.so                    &lt;span style="color: #000000;"&gt;17106&lt;/span&gt;     auto mode
-  &lt;span style="color: #000000;"&gt;1&lt;/span&gt;            &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;java&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;jre1.7.0_03&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;lib&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;i386&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;libnpjp2.so   &lt;span style="color: #000000;"&gt;40&lt;/span&gt;        manual mode
-  &lt;span style="color: #000000;"&gt;2&lt;/span&gt;            &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;lib&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;IcedTeaPlugin.so                    &lt;span style="color: #000000;"&gt;17106&lt;/span&gt;     manual mode
-&nbsp;
-Press enter to keep the current choice&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#91;&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;*&lt;/span&gt;&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#93;&lt;/span&gt;, or &lt;span style="color: #7a0874; font-weight: bold;"&gt;type&lt;/span&gt; selection number: &lt;span style="color: #000000;"&gt;1&lt;/span&gt;
-update-alternatives: using &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;java&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;jre1.7.0_03&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;lib&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;i386&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;libnpjp2.so to provide &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;lib&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;browser-plugins&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;javaplugin.so &lt;span style="color: #7a0874; font-weight: bold;"&gt;&#40;&lt;/span&gt;javaplugin&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#41;&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;in&lt;/span&gt; manual mode.
-SUGEP265338:~ &lt;span style="color: #666666; font-style: italic;"&gt;</mark>&lt;/span&gt;&lt;/pre&gt;
-          &lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/table&gt;
-    &lt;/div&gt;</p>
+<p>Instale o jre com yast2, zypper, ou com um duplo clique no rpm pelo dolphin ou nautilus:</p>
 </li>
 </ul>
 </div>
+    <div class="wp_syntax">
+      <table>
+        <tr>
+          <td class="code">
+            <pre class="bash" style="font-family:monospace;">SUGEP265338:~ <span style="color: #666666; font-style: italic;"># zypper in jre-7u3-linux-i586.rpm</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Agora precisamos adicionar esta instalação às alternativas já instaladas, de forma a disponibilizá-la como uma opção:</p>
+</li>
+</ul>
+</div>
+    <div class="wp_syntax">
+      <table>
+        <tr>
+          <td class="code">
+            <pre class="bash" style="font-family:monospace;">SUGEP265338:~ <span style="color: #666666; font-style: italic;"># update-alternatives --install /usr/bin/java java /usr/java/jre1.7.0_03/bin/java 40</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Faremos o mesmo para o plugin java. Esta opção é muito importante pois estabelece qual versão Java para navegação web estaremos usando:</p>
+</li>
+</ul>
+</div>
+    <div class="wp_syntax">
+      <table>
+        <tr>
+          <td class="code">
+            <pre class="bash" style="font-family:monospace;">SUGEP265338:~ <span style="color: #666666; font-style: italic;"># update-alternatives --install /usr/lib/browser-plugins/javaplugin.so javaplugin /usr/java/jre1.7.0_03/lib/i386/libnpjp2.so 40</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bom, agora vem a parte mais fácil que é, como escrevi no primeiro post, alternar entre tais versões:</p>
+</li>
+</ul>
+</div>
+    <div class="wp_syntax">
+      <table>
+        <tr>
+          <td class="code">
+            <pre class="bash" style="font-family:monospace;">SUGEP265338:~ <span style="color: #666666; font-style: italic;"># update-alternatives --config java</span>
+There are <span style="color: #000000;">2</span> choices <span style="color: #000000; font-weight: bold;">for</span> the alternative java <span style="color: #7a0874; font-weight: bold;">&#40;</span>providing <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #7a0874; font-weight: bold;">&#41;</span>.
+&nbsp;
+  Selection    Path                                     Priority   Status
+<span style="color: #660033;">------------------------------------------------------------</span>
+<span style="color: #000000; font-weight: bold;">*</span> <span style="color: #000000;"></span>            <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>lib<span style="color: #000000; font-weight: bold;">/</span>jvm<span style="color: #000000; font-weight: bold;">/</span>jre-1.6.0-openjdk<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>java   <span style="color: #000000;">17105</span>     auto mode
+  <span style="color: #000000;">1</span>            <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>jre1.7.0_03<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>java            <span style="color: #000000;">40</span>        manual mode
+  <span style="color: #000000;">2</span>            <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>lib<span style="color: #000000; font-weight: bold;">/</span>jvm<span style="color: #000000; font-weight: bold;">/</span>jre-1.6.0-openjdk<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>java   <span style="color: #000000;">17105</span>     manual mode
+&nbsp;
+Press enter to keep the current choice<span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000; font-weight: bold;">*</span><span style="color: #7a0874; font-weight: bold;">&#93;</span>, or <span style="color: #7a0874; font-weight: bold;">type</span> selection number: <span style="color: #000000;">1</span>
+update-alternatives: using <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>jre1.7.0_03<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>java to provide <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>java <span style="color: #7a0874; font-weight: bold;">&#40;</span>java<span style="color: #7a0874; font-weight: bold;">&#41;</span> <span style="color: #000000; font-weight: bold;">in</span> manual mode.
+SUGEP265338:~ <span style="color: #666666; font-style: italic;">#</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+<div class="ulist">
+<ul>
+<li>
+<p>E finalmente, o mais importante, o plugin para os navegadores web:</p>
+</li>
+</ul>
+</div>
+    <div class="wp_syntax">
+      <table>
+        <tr>
+          <td class="code">
+            <pre class="bash" style="font-family:monospace;">SUGEP265338:~ <span style="color: #666666; font-style: italic;"># update-alternatives --config javaplugin</span>
+There are <span style="color: #000000;">2</span> choices <span style="color: #000000; font-weight: bold;">for</span> the alternative javaplugin <span style="color: #7a0874; font-weight: bold;">&#40;</span>providing <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>lib<span style="color: #000000; font-weight: bold;">/</span>browser-plugins<span style="color: #000000; font-weight: bold;">/</span>javaplugin.so<span style="color: #7a0874; font-weight: bold;">&#41;</span>.
+&nbsp;
+  Selection    Path                                        Priority   Status
+<span style="color: #660033;">------------------------------------------------------------</span>
+<span style="color: #000000; font-weight: bold;">*</span> <span style="color: #000000;"></span>            <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>lib<span style="color: #000000; font-weight: bold;">/</span>IcedTeaPlugin.so                    <span style="color: #000000;">17106</span>     auto mode
+  <span style="color: #000000;">1</span>            <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>jre1.7.0_03<span style="color: #000000; font-weight: bold;">/</span>lib<span style="color: #000000; font-weight: bold;">/</span>i386<span style="color: #000000; font-weight: bold;">/</span>libnpjp2.so   <span style="color: #000000;">40</span>        manual mode
+  <span style="color: #000000;">2</span>            <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>lib<span style="color: #000000; font-weight: bold;">/</span>IcedTeaPlugin.so                    <span style="color: #000000;">17106</span>     manual mode
+&nbsp;
+Press enter to keep the current choice<span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000; font-weight: bold;">*</span><span style="color: #7a0874; font-weight: bold;">&#93;</span>, or <span style="color: #7a0874; font-weight: bold;">type</span> selection number: <span style="color: #000000;">1</span>
+update-alternatives: using <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>jre1.7.0_03<span style="color: #000000; font-weight: bold;">/</span>lib<span style="color: #000000; font-weight: bold;">/</span>i386<span style="color: #000000; font-weight: bold;">/</span>libnpjp2.so to provide <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>lib<span style="color: #000000; font-weight: bold;">/</span>browser-plugins<span style="color: #000000; font-weight: bold;">/</span>javaplugin.so <span style="color: #7a0874; font-weight: bold;">&#40;</span>javaplugin<span style="color: #7a0874; font-weight: bold;">&#41;</span> <span style="color: #000000; font-weight: bold;">in</span> manual mode.
+SUGEP265338:~ <span style="color: #666666; font-style: italic;">#</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
 <div class="paragraph">
 <p>Pronto! Feche o navegador e faça um teste. Até a próxima!</p>
 </div>
 <div class="paragraph">
-<p><strong>Atualização(12/07/2012):</strong> Hoje pela manhã, &lt;a href="https://www.google.com.br/search?q:update-alternatives+for+jdk+7&#038;ie=utf-8&#038;oe=utf-8&#038;aq=t&#038;rls=org.mozilla:pt-BR:official&#038;client=firefox-a" title="script for registering JDK7 to update-alternatives[procurando por mudanças que torne o script&lt;/a&gt; update-alternatives compatível com o jdk 1.7, me &lt;a href="http://odoepner.wordpress.com/2011/10/02/install-jdk7-on-openSUSE/" title="Install JDK7 on openSUSE[deparei com uma forma bem mais simples de instalar manualmente o jdk&lt;/a&gt; Oracle. Veja:</p>
+<p><strong>Atualização(12/07/2012):</strong> Hoje pela manhã, <a href="https://www.google.com.br/search?q:update-alternatives+for+jdk+7&#038;ie=utf-8&#038;oe=utf-8&#038;aq=t&#038;rls=org.mozilla:pt-BR:official&#038;client=firefox-a">procurando por mudanças que torne o script</a> update-alternatives compatível com o jdk 1.7,
+me <a href="http://odoepner.wordpress.com/2011/10/02/install-jdk7-on-openSUSE/">deparei com uma forma bem mais simples</a> de instalar manualmente o jdk Oracle.
+Veja:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="bash" style="font-family:monospace;"&gt;&nbsp;
-zypper &lt;span style="color: #c20cb9; font-weight: bold;"&gt;install&lt;/span&gt; jdk-&lt;span style="color: #000000;"&gt;7&lt;/span&gt;-linux-x64.rpm
-&lt;span style="color: #7a0874; font-weight: bold;"&gt;cd&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;java&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;jdk1.7.0&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;bin
-&lt;span style="color: #000000; font-weight: bold;"&gt;for&lt;/span&gt; bin &lt;span style="color: #000000; font-weight: bold;"&gt;in&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;*&lt;/span&gt;; &lt;span style="color: #000000; font-weight: bold;"&gt;do&lt;/span&gt; update-alternatives &lt;span style="color: #660033;"&gt;--install&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;bin&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;&lt;span style="color: #007800;"&gt;$bin&lt;/span&gt; &lt;span style="color: #007800;"&gt;$bin&lt;/span&gt; $&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#40;&lt;/span&gt;&lt;span style="color: #7a0874; font-weight: bold;"&gt;pwd&lt;/span&gt;&lt;span style="color: #7a0874; font-weight: bold;"&gt;&#41;&lt;/span&gt;&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;&lt;span style="color: #007800;"&gt;$bin&lt;/span&gt; &lt;span style="color: #000000;"&gt;20000&lt;/span&gt;; &lt;span style="color: #000000; font-weight: bold;"&gt;done&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</p>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;">&nbsp;
+zypper <span style="color: #c20cb9; font-weight: bold;">install</span> jdk-<span style="color: #000000;">7</span>-linux-x64.rpm
+<span style="color: #7a0874; font-weight: bold;">cd</span> <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>jdk1.7.0<span style="color: #000000; font-weight: bold;">/</span>bin
+<span style="color: #000000; font-weight: bold;">for</span> bin <span style="color: #000000; font-weight: bold;">in</span> <span style="color: #000000; font-weight: bold;">*</span>; <span style="color: #000000; font-weight: bold;">do</span> update-alternatives <span style="color: #660033;">--install</span> <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span><span style="color: #007800;">$bin</span> <span style="color: #007800;">$bin</span> $<span style="color: #7a0874; font-weight: bold;">&#40;</span><span style="color: #7a0874; font-weight: bold;">pwd</span><span style="color: #7a0874; font-weight: bold;">&#41;</span><span style="color: #000000; font-weight: bold;">/</span><span style="color: #007800;">$bin</span> <span style="color: #000000;">20000</span>; <span style="color: #000000; font-weight: bold;">done</span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
 <div class="paragraph">
 <p>Agora o javaplugin para o navegador:</p>
 </div>
-<div class="paragraph">
-<p>&lt;div class="wp_syntax"&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class="code"&gt;
-        &lt;pre class="bash" style="font-family:monospace;"&gt;update-alternatives &lt;span style="color: #660033;"&gt;--install&lt;/span&gt; &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;lib64&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;browser-plugins&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;javaplugin.so javaplugin &lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;usr&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;java&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;jdk1.7.0&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;jre&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;lib&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;amd64&lt;span style="color: #000000; font-weight: bold;"&gt;/&lt;/span&gt;libnpjp2.so &lt;span style="color: #000000;"&gt;20000&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;</p>
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;">update-alternatives <span style="color: #660033;">--install</span> <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>lib64<span style="color: #000000; font-weight: bold;">/</span>browser-plugins<span style="color: #000000; font-weight: bold;">/</span>javaplugin.so javaplugin <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>jdk1.7.0<span style="color: #000000; font-weight: bold;">/</span>jre<span style="color: #000000; font-weight: bold;">/</span>lib<span style="color: #000000; font-weight: bold;">/</span>amd64<span style="color: #000000; font-weight: bold;">/</span>libnpjp2.so <span style="color: #000000;">20000</span></pre>
+      </td>
+    </tr>
+  </table>
 </div>
+</p>
 <div class="paragraph">
 <p>Usei a versão 64bits mas o procedimento vale também para 32bits.</p>
 </div>

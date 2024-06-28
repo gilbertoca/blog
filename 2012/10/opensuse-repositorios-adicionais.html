@@ -58,91 +58,60 @@
     </header>
     <section>
 	<div class="paragraph">
-<p>Vira e mexe (entre uma instalação e outra, ou um upgrade e outro) preciso adicionar alguns repositórios(repository) ao &lt;a href="http://pt.openSUSE.org/YaST_Software_Management" title="Yast[Yast&lt;/a&gt; para aplicativos que costumo utilizar. Registro logo abaixo os que não podem faltar:</p>
+<p>Vira e mexe (entre uma instalação e outra, ou um upgrade e outro) preciso adicionar alguns repositórios(repository) ao
+<a href="https://pt.openSUSE.org/YaST_Software_Management">Yast</a> para aplicativos que costumo utilizar. Registro logo abaixo os que não podem faltar:</p>
 </div>
-<div class="paragraph">
-<p>&lt;table border="1"&gt;
-  &lt;tr&gt;
-    &lt;td&gt;
-      &lt;strong&gt;Nome&lt;/strong&gt;
-    &lt;/td&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    &lt;strong&gt;Como adicionar&lt;/strong&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;a href="https://www.virtualbox.org/" title="VirtualBox[VirtualBox&lt;/a&gt;
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    zypper addrepo -r http://download.virtualbox.org/virtualbox/rpm/openSUSE/11.4/virtualbox.repo
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    Fonts
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    zypper addrepo -r http://download.openSUSE.org/repositories/M17N:/fonts/openSUSE_12.2/M17N:fonts.repo
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;a href="https://www.google.com/intl/pt-BR/chrome/browser/?hl:pt-BR" title="Google Chrome[Google Chrome&lt;/a&gt;
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;td&gt;
-    zypper ar -f -n Google-Chrome http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
-  &lt;/td&gt;
-&lt;/tr&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;tr&gt;
-  &lt;td&gt;
-    &lt;a href="http://openSUSE-community.org/Restricted_formats/12.2" title="Restricted Formats[Restricted formats&lt;/a&gt;
-  &lt;/td&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>    &lt;td&gt;
-      zypper addrepo -r http://packman.inode.at/suse/12.2/packman.repo&lt;br /&gt; zypper addrepo -r http://www.openSUSE-guide.org/repo/12.2/libdvdcss.repo
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;/&gt;</p>
-</div>
+<table border="1">
+  <tr>
+    <td>
+      <strong>Nome</strong>
+    </td>
+
+    <td>
+      <strong>Como adicionar</strong>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="https://www.virtualbox.org/" title="VirtualBox">VirtualBox</a>
+    </td>
+
+    <td>
+      zypper addrepo -r https://download.virtualbox.org/virtualbox/rpm/openSUSE/11.4/virtualbox.repo
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Fonts
+    </td>
+
+    <td>
+      zypper addrepo -r https://download.openSUSE.org/repositories/M17N:/fonts/openSUSE_12.2/M17N:fonts.repo
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="https://www.google.com/intl/pt-BR/chrome/browser/?hl:pt-BR" title="Google Chrome">Google Chrome</a>
+    </td>
+
+    <td>
+      zypper ar -f -n Google-Chrome https://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="https://openSUSE-community.org/Restricted_formats/12.2" title="Restricted Formats">Restricted formats</a>
+    </td>
+
+    <td>
+      zypper addrepo -r https://packman.inode.at/suse/12.2/packman.repo<br /> zypper addrepo -r https://www.openSUSE-guide.org/repo/12.2/libdvdcss.repo
+    </td>
+  </tr>
+</table>
 <div class="paragraph">
 <p>E aí, quais você mais usa?</p>
 </div>

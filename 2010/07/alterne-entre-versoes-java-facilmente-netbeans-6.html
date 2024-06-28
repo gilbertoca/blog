@@ -51,38 +51,41 @@
         <h1>Alterne entre versões Java facilmente [Netbeans 6.*]</h1>
         <p>by <em>Gilberto C. Andrade</em> on <strong>21 julho 2010</strong></p>
         <p>Tagged as: 
-            <a href="../../tags/desenvolvimento.html">desenvolvimento</a>,
             <a href="../../tags/Java.html">Java</a>,
             <a href="../../tags/Linux.html">Linux</a>,
-            <a href="../../tags/maven.html">maven</a>,
+            <a href="../../tags/Maven.html">Maven</a>,
             <a href="../../tags/openSUSE.html">openSUSE</a>,
         </p>
     </header>
     <section>
 	<div class="paragraph">
-<p>Outro dia escrevi como [alterner entre versões Java facilmente][1] utilizando o utilitário de sistema operacional [update-alternatives][2]. Aquele post tem uma perspectiva do lado do servidor onde estão instalados servidores de aplicação java ou mesmo aplicativos e o administrador/desenvolvedor precisa testar como estes artefatos mencionados se comportariam em cada versão.</p>
+<p>Outro dia escrevi como <a href="http://blog.gilbertoca.com/2010/06/alterne-entre-versoes-java-facilmente-update-alternatives.html">alterner entre versões Java facilmente</a>
+ utilizando o utilitário de sistema operacional <a href="http://man.he.net/man8/update-alternatives">update-alternatives</a>. Aquele post tem uma
+perspectiva do lado do servidor onde estão instalados servidores de aplicação java
+ou mesmo aplicativos e o administrador/desenvolvedor precisa testar como estes
+artefatos mencionados se comportariam em cada versão.</p>
 </div>
 <div class="paragraph">
-<p>Hoje vou relatar outra maneira de alternar entre versões java em perspectiva do lado do desenvolvedor. Aqui na secretaria, podemos escolher entre [Netbeans][3] e [Eclipse][4] como ambientes de desenvolvimento, desde que o projeto seja gerenciado pela ferramenta de construção [Maven][5].</p>
+<p>Hoje vou relatar outra maneira de alternar entre versões java em perspectiva do lado do desenvolvedor.
+Aqui na secretaria, podemos escolher entre <a href="http://www.netbeans.org">Netbeans</a> e <a href="http://www.eclipse.org">Eclipse</a> como ambientes de desenvolvimento,
+desde que o projeto seja gerenciado pela ferramenta de construção <a href="http://maven.apache.org">Maven</a>.</p>
 </div>
 <div class="paragraph">
-<p>Minha escolha, assim como de mais alguns colegas foi o [Netbeans][6] 6.8. Vejamos então como configurar o IDE Netbeans para facilitar a traca de versões java para compilar ou rodar aplicativos.
+<p>Minha escolha, assim como de mais alguns colegas foi o <a href="http://netbeans.org/index.html">Netbeans</a> 6.8.
+Vejamos então como configurar o IDE Netbeans para facilitar a traca de versões java para compilar ou rodar aplicativos.
 Tanto para configurar ou mesmo alternar a versão do java utilizado pode-se utilizar o seguinte caminho:
-Project&#8217;s properties&#8594;Build:compile .
-A partir deste diálogo, você poderá alternar de versão através “Java Plataform” ou gerenciar/adicionar/remover versões através da opção “Manage Java Plataforms”
-[&lt;img src="compile_option-300x225.png"  title="compile_option" width="300" height="225" class="alignleft size-medium wp-image-436" /&gt;][7]
-Lembrando que antes disso precisamos instalar as versões que desejamos utilizar.</p>
+<code>Project’s properties&#8594;Build:compile</code>.</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p>A partir deste diálogo, você poderá alternar de versão através "Java Plataform" ou gerenciar/adicionar/remover versões através da opção “Manage Java Plataforms”</p>
+</div>
+<div class="imageblock">
 <div class="content">
-<pre>[1]: http://blog.gilbertoca.com/?p=383
-[2]: http://man.he.net/man8/update-alternatives
-[3]: http://www.netbeans.org
-[4]: http://www.eclipse.org
-[5]: http://maven.apache.org
-[6]: http://netbeans.org/index.html
-[7]: compile_option.png</pre>
+<img src="compile_option.png" alt="compile option">
 </div>
+</div>
+<div class="paragraph">
+<p>Lembrando que antes disso precisamos instalar as versões que desejamos utilizar.</p>
 </div>
     </section>
 <section>
