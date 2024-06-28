@@ -6,10 +6,10 @@ status=published
 tags=Java, maven
 ~~~~~~
 
-
 **[Requisito][1]:** The packaging type required to be pom for parent and aggregation (multi-module) projects.  
-**Tradução: **para que você possa criar ou transformar um projeto em um que seja pai (PARENT) ou agregação (AGGREGATION), necessita-se definir seu empacotamento (PACKING) para pom, [assim][2]:
-
+**Tradução: **para que você possa criar ou transformar um projeto em um que seja pai (PARENT) ou agregação (AGGREGATION), 
+necessita-se definir seu empacotamento (PACKING) para pom, [assim][2]:
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -29,10 +29,10 @@ tags=Java, maven
     </tr>
   </table>
 </div></p> 
-
+++++
 Criei um [projeto hospedado no google][3] para armazenar códigos java - base de aprendizado na linguagem java, especialmente nas especificações Servlet e JPA.  
 Entre estes códigos, em especial, quero destacar o park-samples. [Este é estruturado utilizando tanto herança quanto agregação][4]:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -84,12 +84,12 @@ Entre estes códigos, em especial, quero destacar o park-samples. [Este é estru
     </tr>
   </table>
 </div></p> 
-
+++++
 Veja que marquei o pom do diretório raiz como pai(PARENT), mudando o tipo de empacotamento. Mas você pode perguntar: o que difere um do outro?  
 Bom, primeiro devo dizer que usamos herança em arquivos maven para compartilhar configurações, dependências e até recursos - dê uma boa olhada [neste pom][2] e você verá ajustes que teria de repetir em praticamente todos os sub-projetos. Já a agregação, usamos para agrupar (óbvio né! :)) projetos que precisam ser construídos juntos - quando executar mvn clean (ou outro comando) no pai, ocorrerá o mesmo nos filhos, tipo efeito cascata. 
 
 Para a herança funcionar precisamos adicionar uma seção (tag parent) no pom do sub-projeto:
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -107,9 +107,9 @@ Para a herança funcionar precisamos adicionar uma seção (tag parent) no pom d
     </tr>
   </table>
 </div></p> 
-
+++++
 Quando quero agregar projetos, tenho que configurar **o projeto que será o agregador **através da seção módulos (modules):
-
+++++
 <div class="wp_syntax">
   <table>
     <tr>
@@ -136,14 +136,13 @@ Quando quero agregar projetos, tenho que configurar **o projeto que será o agre
     </tr>
   </table>
 </div>
-
+++++
 Repare que neste sub-projeto usei os dois conceitos: herança (herdando as configurações do pai) e agregação (este pom agrupa dois outros projetos). 
 
-Para os sub-projetos do projeto park-multi-module, poderia adicionar a seção parent como fiz com os outros(apontando para park-samples), mas perderia o benefício da herança. Então o fiz apontando para o próprio park-multi-module, pois este já herda do raiz. Legal, né! <img src="http://blog.gilbertoca.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
+Para os sub-projetos do projeto park-multi-module, poderia adicionar a seção parent como fiz com os outros(apontando para park-samples), 
+mas perderia o benefício da herança. Então o fiz apontando para o próprio park-multi-module, pois este já herda do raiz. Legal, né! 
 
-
-
- [1]: http://maven.apache.org/pom.html#Inheritance
- [2]: http://code.google.com/p/construtor/source/browse/trunk/park-samples/pom.xml
- [3]: http://code.google.com/p/construtor/
- [4]: http://code.google.com/p/construtor/source/browse/trunk/park-samples/README.txt
+[1]: http://maven.apache.org/pom.html#Inheritance
+[2]: http://code.google.com/p/construtor/source/browse/trunk/park-samples/pom.xml
+[3]: http://code.google.com/p/construtor/
+[4]: http://code.google.com/p/construtor/source/browse/trunk/park-samples/README.txt

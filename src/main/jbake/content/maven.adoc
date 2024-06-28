@@ -5,7 +5,7 @@ type=page
 status=published
 ~~~~~~
 
-
+++++
 <table>
   <tr>
     <th style="width: 150px; border: 1px inset #cccccc;" width="150">
@@ -77,4 +77,4 @@ status=published
     </td>
   </tr>
 </table>
-
+++++
