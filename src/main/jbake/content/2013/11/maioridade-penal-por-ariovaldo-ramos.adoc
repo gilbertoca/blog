@@ -6,10 +6,8 @@ status=published
 tags=Estou lendo e você,  Jornada
 ~~~~~~
 
+video::64759494[vimeo,width=640,height=360,opts=controls]
 
-<iframe src="//player.vimeo.com/video/64759494" width="500" height="280" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-<a href="http://ariovaldoramosblog.blogspot.com.br/p/perfil.html" title="Ariovaldo Ramos[Por Ariovaldo Ramos</a>
+http://ariovaldoramosblog.blogspot.com.br/p/perfil.html[Por Ariovaldo Ramos]
 
 Precisamos ter discernimento e clareza nesse assunto.
-
