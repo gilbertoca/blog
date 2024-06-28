@@ -6,8 +6,8 @@
     <atom:link href="http://blog.gilbertoca.com/feeds/posts/default.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>sex., 28 jun. 2024 12:33:51 -0300</pubDate>
-    <lastBuildDate>sex., 28 jun. 2024 12:33:51 -0300</lastBuildDate>
+    <pubDate>sex., 28 jun. 2024 14:40:16 -0300</pubDate>
+    <lastBuildDate>sex., 28 jun. 2024 14:40:16 -0300</lastBuildDate>
 
     <item>
       <title>Visualizando arquivos de log no NetBeans</title>
@@ -1357,111 +1357,85 @@ aqui uma tabela que irá lhe ajudar&lt;/a&gt;!
       <pubDate>sex., 15 jul. 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/07/participacao-no-dominio-do-windows.html</guid>
       	<description>
-	&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&amp;gt;
-&amp;gt; Eu não quero compartilhar aquivo nenhum, apenas quero me logar no dominio MS, para assim usar internet, e-mail, enfim tudo que uma estação de trabalho com XP faria quando ingressa no dominio!
-&amp;gt; Eu não quero criar um server com samba sem ser PDC E deixar na rede, quero apenas ao inves de usar o XP como estação de trabalho usar o openSUSE!
-&amp;gt;&lt;/p&gt;
+	&lt;div class=&quot;quoteblock&quot;&gt;
+&lt;blockquote&gt;
+Eu não quero compartilhar aquivo nenhum, apenas quero me logar no dominio MS, para assim usar internet, e-mail, enfim tudo que uma estação de trabalho com XP faria quando ingressa no dominio!
+Eu não quero criar um server com samba sem ser PDC E deixar na rede, quero apenas ao inves de usar o XP como estação de trabalho usar o openSUSE!
+&lt;/blockquote&gt;
+&lt;div class=&quot;attribution&quot;&gt;
+&amp;#8212; Viva o Linux
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Este pedido de ajuda está registrado &amp;lt;a href=&quot;http://www.vivaolinux.com.br/topico/Suse/Linux-em-dominio-Windows&quot; title=&quot;Linux em dominio Windows[aqui&amp;lt;/a&amp;gt; na comunidade &amp;lt;a href=&quot;http://www.vivaolinux.com.br/&quot; title=&quot;Viva o Linux[vivaolinux&amp;lt;/a&amp;gt;.&lt;/p&gt;
+&lt;p&gt;Este pedido de ajuda está registrado &lt;a href=&quot;https://www.vivaolinux.com.br/topico/Suse/Linux-em-dominio-Windows&quot;&gt;aqui&lt;/a&gt; na comunidade &lt;a href=&quot;https://www.vivaolinux.com.br/&quot;&gt;Viva o Linux&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Apesar de ser uma discussão antiga, ainda assim é bom fazer um passo a passo deste procedimento. Antes devo relatar que aqui na secretaria usamos &amp;lt;a href=&quot;http://technet.microsoft.com/pt-br/library/cc668412.aspx&quot; title=&quot;Active Directory[Active Directory&amp;lt;/a&amp;gt; para autenticação, então foi esse ambiente que usei para testar a inclusão de uma estação &amp;lt;a href=&quot;http://pt.openSUSE.org/Portal:Distribui%C3%A7%C3%A3o&quot; title=&quot;openSUSE[Linux openSUSE&amp;lt;/a&amp;gt; em um Domínio Windows:&lt;/p&gt;
+&lt;p&gt;Apesar de ser uma discussão antiga, ainda assim é bom fazer um passo a passo deste procedimento. Antes devo relatar que aqui na secretaria usamos &lt;a href=&quot;https://technet.microsoft.com/pt-br/library/cc668412.aspx&quot;&gt;Active Directory&lt;/a&gt;
+para autenticação, então foi esse ambiente que usei para testar a inclusão de uma estação &lt;a href=&quot;https://pt.openSUSE.org/Portal:Distribui%C3%A7%C3%A3o&quot;&gt;Linux openSUSE&lt;/a&gt; em um Domínio Windows:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;olist arabic&quot;&gt;
 &lt;ol class=&quot;arabic&quot;&gt;
 &lt;li&gt;
 &lt;p&gt;Registrar seu controlador de domínio(DC) na lista de nomes de máquinas. Adicione todo o nome qualificado primeiro e o apelido como alias: 192.168.1.2 = server.domain.com server
-[&amp;lt;img src=&quot;1-register_domain_controler_machine_hosts.png&quot;  title=&quot;1-register_domain_controler_machine_hosts&quot; width=&quot;1024&quot; height=&quot;768&quot; class=&quot;alignright size-full wp-image-769&quot; /&amp;gt;][1]&lt;/p&gt;
+&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;1-register_domain_controler_machine_hosts.png&quot; alt=&quot;1-register_domain_controler_machine_hosts&quot; width=&quot;1024&quot; height=&quot;768&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Editar o arquivo /etc/resolv.conf e adicionar seu DC como nameserver: nameserver = server.domain.com
-[&amp;lt;img src=&quot;2-edit_etc_resolver_conf_add_DC_as_nameserver.png&quot;  title=&quot;2-edit_etc_resolver_conf_add_DC_as_nameserver&quot; width=&quot;1024&quot; height=&quot;768&quot; class=&quot;alignright size-full wp-image-770&quot; /&amp;gt;][2]&lt;/p&gt;
+&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;2-edit_etc_resolver_conf_add_DC_as_nameserver.png&quot; alt=&quot;2-edit_etc_resolver_conf_add_DC_as_nameserver&quot; width=&quot;1024&quot; height=&quot;768&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Configure o kerberos através do yast: o realm deverá ser escrito em letra maiúscula: DOMAIN.COM
-[&amp;lt;img src=&quot;3-configure_kerberos_capitalletters_for_DC.png&quot;  title=&quot;3-configure_kerberos_capitalletters_for_DC&quot; width=&quot;1024&quot; height=&quot;768&quot; class=&quot;alignright size-full wp-image-771&quot; /&amp;gt;][3]&lt;/p&gt;
+&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;3-configure_kerberos_capitalletters_for_DC.png&quot; alt=&quot;3-configure_kerberos_capitalletters_for_DC&quot; width=&quot;1024&quot; height=&quot;768&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Configura o samba
-[&amp;lt;img src=&quot;4-samba_DC_none_workgroupname_domain_security_ads_realms.png&quot;  title=&quot;4-samba_DC_none_workgroupname_domain_security_ads_realms&quot; width=&quot;1024&quot; height=&quot;768&quot; class=&quot;alignright size-full wp-image-772&quot; /&amp;gt;][4]&lt;/p&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;```Shell
-SUGEP265338:~ # more /etc/samba/smb.conf
-# smb.conf is the main Samba configuration file. You find a full commented
-# version at /usr/share/doc/packages/samba/examples/smb.conf.SUSE if the
-# samba-doc package is installed.
-# Date: 2011-11-02
-[global]
-        add machine script = /usr/sbin/useradd -c Machine -d /var/lib/nobody -s /bin/false %m$
-        domain master = No
-        security = ADS
-        workgroup = ADMINISTRACAO
-        realm = ADMINISTRACAO.LOCAL
-        idmap gid = 10000-20000
-        idmap uid = 10000-20000
-        usershare allow guests = No
-        template homedir = /home/%D/%U
-        winbind refresh tickets = yes
-        template shell = /bin/bash
-[homes]
-        comment = Home Directories
-        valid users = %S, %D%w%S
-        browseable = No
-        read only = No
-        inherit acls = Yes
-[profiles]
-```
-Não esqueça de reiniciar os serviços
-[&amp;lt;img src=&quot;5-restart_samba_server.png&quot;  title=&quot;5-restart_samba_server&quot; width=&quot;1024&quot; height=&quot;768&quot; class=&quot;alignright size-full wp-image-773&quot; /&amp;gt;][5]&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;Adicionar a máquina ao domínio (neste momento utilizando o kerberos)
-[&amp;lt;img src=&quot;6-test_kerberos_autentication.png&quot;  title=&quot;6-test_kerberos_autentication&quot; width=&quot;1024&quot; height=&quot;768&quot; class=&quot;alignright size-full wp-image-774&quot; /&amp;gt;][6]&amp;lt;/p&amp;gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;net ads join -U Administrador
-[&amp;lt;img src=&quot;7-join_ads_domain.png&quot;  title=&quot;7-join_ads_domain&quot; width=&quot;1024&quot; height=&quot;768&quot; class=&quot;alignright size-full wp-image-775&quot; /&amp;gt;][7]&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;Adicionar a máquina ao domínio (agora utilizando o samba): no yast use a opção:”Participação no domínio do windows”, marcando a opção “Usar informação SMB para autenticação Linux”
-[&amp;lt;img src=&quot;8-windows_domain_membership.png&quot;  title=&quot;8-windows_domain_membership&quot; width=&quot;1024&quot; height=&quot;768&quot; class=&quot;alignright size-full wp-image-776&quot; /&amp;gt;][8]&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;Reinicie a máquina
-[&amp;lt;img src=&quot;9-reboot_linux_client.png&quot;  title=&quot;9-reboot_linux_client&quot; width=&quot;1024&quot; height=&quot;768&quot; class=&quot;alignright size-full wp-image-777&quot; /&amp;gt;][9]&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;Use com moderação!&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;[1]: 1-register_domain_controler_machine_hosts.png
-[2]: 2-edit_etc_resolver_conf_add_DC_as_nameserver.png
-[3]: 3-configure_kerberos_capitalletters_for_DC.png
-[4]: 4-samba_DC_none_workgroupname_domain_security_ads_realms.png
-[5]: 5-restart_samba_server.png
-[6]: 6-test_kerberos_autentication.png
-[7]: 7-join_ads_domain.png
-[8]: 8-windows_domain_membership.png
-[9]: 9-reboot_linux_client.png&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;4-samba_DC_none_workgroupname_domain_security_ads_realms.png&quot; alt=&quot;4-samba_DC_none_workgroupname_domain_security_ads_realms&quot; width=&quot;1024&quot; height=&quot;768&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre&gt;  SUGEP265338:~ # more /etc/samba/smb.conf
+  # smb.conf is the main Samba configuration file. You find a full commented
+  # version at /usr/share/doc/packages/samba/examples/smb.conf.SUSE if the
+  # samba-doc package is installed.
+  # Date: 2011-11-02
+  [global]
+          add machine script = /usr/sbin/useradd -c Machine -d /var/lib/nobody -s /bin/false %m$
+          domain master = No
+          security = ADS
+          workgroup = ADMINISTRACAO
+          realm = ADMINISTRACAO.LOCAL
+          idmap gid = 10000-20000
+          idmap uid = 10000-20000
+          usershare allow guests = No
+          template homedir = /home/%D/%U
+          winbind refresh tickets = yes
+          template shell = /bin/bash
+  [homes]
+          comment = Home Directories
+          valid users = %S, %D%w%S
+          browseable = No
+          read only = No
+          inherit acls = Yes
+[profiles]&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Não esqueça de reiniciar os serviços
+&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;5-restart_samba_server.png&quot; alt=&quot;5-restart_samba_server&quot; width=&quot;1024&quot; height=&quot;768&quot;&gt;&lt;/span&gt;
+Adicionar a máquina ao domínio (neste momento utilizando o kerberos)
+&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;6-test_kerberos_autentication.png&quot; alt=&quot;6-test_kerberos_autentication&quot; width=&quot;1024&quot; height=&quot;768&quot;&gt;&lt;/span&gt;
+net ads join -U Administrador
+&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;7-join_ads_domain.png&quot; alt=&quot;7-join_ads_domain&quot; width=&quot;1024&quot; height=&quot;768&quot;&gt;&lt;/span&gt;
+Adicionar a máquina ao domínio (agora utilizando o samba): no yast use a opção:”Participação no domínio do windows”,
+marcando a opção “Usar informação SMB para autenticação Linux”
+&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;8-windows_domain_membership.png&quot; alt=&quot;8-windows_domain_membership&quot; width=&quot;1024&quot; height=&quot;768&quot;&gt;&lt;/span&gt;
+Reinicie a máquina
+&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;9-reboot_linux_client.png&quot; alt=&quot;9-reboot_linux_client&quot; width=&quot;1024&quot; height=&quot;768&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Use com moderação!&lt;/p&gt;
 &lt;/div&gt;
 	</description>
     </item>
@@ -1475,13 +1449,11 @@ Não esqueça de reiniciar os serviços
 &lt;p&gt;Abra o Firefox, em “Editar &amp;gt;&amp;gt; Preferências &amp;gt;&amp;gt; Avançado &amp;gt;&amp;gt; Geral”, desmarque a opção “Rolagem Suave” na parte navegação.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Essa foi uma dica de Ronnie Peterson no Viva o Linux (dica com o mesmo tema: [Firefox com rolagem lenta?][1]), que realizou esse procedimento no openSUSE 11.2 com Firefox 3.5.
-Valeu Ronnie! &amp;lt;img src=&quot;http://blog.gilbertoca.com/wp-includes/images/smilies/icon_smile.gif&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;Essa foi uma dica de Ronnie Peterson no Viva o Linux (dica com o mesmo tema: &lt;a href=&quot;https://www.vivaolinux.com.br/dica/Firefox-com-rolagem-lenta-Eis-a-solucao&quot;&gt;Firefox com rolagem lenta?&lt;/a&gt;),
+que realizou esse procedimento no openSUSE 11.2 com Firefox 3.5.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;[1]: http://www.vivaolinux.com.br/dica/Firefox-com-rolagem-lenta-Eis-a-solucao&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Valeu Ronnie!&lt;/p&gt;
 &lt;/div&gt;
 	</description>
     </item>
@@ -1492,7 +1464,8 @@ Valeu Ronnie! &amp;lt;img src=&quot;http://blog.gilbertoca.com/wp-includes/image
       <guid isPermaLink="false">2011/06/removendo-itens-pre-definidos-da-barra-lateralsidebar-inove-template.html</guid>
       	<description>
 	&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Há algum tempo venho tentando personalizar a barra lateral(sidebar) do tema([iNove template][1]) que adotei pro blog. Mas quando adiciono, por exemplo, um widget no sidebar Norte ele aparece duplicado.&lt;/p&gt;
+&lt;p&gt;Há algum tempo venho tentando personalizar a barra lateral(sidebar) do tema([iNove template][1]) que adotei pro blog. Mas quando adiciono, por exemplo,
+um widget no sidebar Norte ele aparece duplicado.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Hoje encontrei uma [discussão sobre o assunto][2] e finalmente a solução. Veja, como estão definidos os widgets para este tema:&lt;/p&gt;
@@ -1525,21 +1498,22 @@ Valeu Ronnie! &amp;lt;img src=&quot;http://blog.gilbertoca.com/wp-includes/image
 &lt;p&gt;selecione west_sidebar&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;arraste um widget Text para o sidebar selecionado e salve
-[&amp;lt;img src=&quot;delete_archives_widget.png&quot; alt:&quot;delete archives widget&quot; title=&quot;delete_archives_widget&quot; width=&quot;436&quot; height=&quot;712&quot; class=&quot;aligncenter size-full wp-image-744&quot; /&amp;gt;][3] &amp;lt;/ol&amp;gt;&lt;/p&gt;
+&lt;p&gt;arraste um widget Text para o sidebar selecionado e salve&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Colocando um widget de Text vazio faz a mágica. Foi o que coloquei em cada sidebar! Desta forma pude personalizar o primeiro(North sidebar)
-[&amp;lt;img src=&quot;Widgets_personalizado.png&quot; alt:&quot;Widgets_personalizado&quot; title=&quot;Widgets_personalizado&quot; width=&quot;436&quot; height=&quot;712&quot; class=&quot;aligncenter size-full wp-image-744&quot; /&amp;gt;][3]&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;delete_archives_widget.png&quot; alt=&quot;delete archives widget&quot; width=&quot;436&quot; height=&quot;712&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;[1]: http://www.neoease.com/inove/
-[2]: http://wordpress.org/support/topic/removing-sidebar-items-in-inove-template
-[3]: delete_archives_widget.png&lt;/pre&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Colocando um widget de Text vazio faz a mágica. Foi o que coloquei em cada sidebar! Desta forma pude personalizar o primeiro(North sidebar)&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;Widgets_personalizado.png&quot; alt=&quot;Widgets_personalizado&quot; width=&quot;436&quot; height=&quot;712&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;http://www.neoease.com/inove/&quot; class=&quot;bare&quot;&gt;http://www.neoease.com/inove/&lt;/a&gt;
+[2]: &lt;a href=&quot;http://wordpress.org/support/topic/removing-sidebar-items-in-inove-template&quot; class=&quot;bare&quot;&gt;http://wordpress.org/support/topic/removing-sidebar-items-in-inove-template&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 	</description>
     </item>
@@ -1551,86 +1525,83 @@ Valeu Ronnie! &amp;lt;img src=&quot;http://blog.gilbertoca.com/wp-includes/image
       	<description>
 	&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;&lt;strong&gt;[Requisito][1]:&lt;/strong&gt; The packaging type required to be pom for parent and aggregation (multi-module) projects.
-&lt;strong&gt;Tradução: &lt;/strong&gt;para que você possa criar ou transformar um projeto em um que seja pai (PARENT) ou agregação (AGGREGATION), necessita-se definir seu empacotamento (PACKING) para pom, [assim][2]:&lt;/p&gt;
+&lt;strong&gt;Tradução: &lt;/strong&gt;para que você possa criar ou transformar um projeto em um que seja pai (PARENT) ou agregação (AGGREGATION),
+necessita-se definir seu empacotamento (PACKING) para pom, [assim][2]:&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&amp;lt;div class=&quot;wp_syntax&quot;&amp;gt;
-  &amp;lt;table&amp;gt;
-    &amp;lt;tr&amp;gt;
-      &amp;lt;td class=&quot;code&quot;&amp;gt;
-        &amp;lt;pre class=&quot;xml&quot; style=&quot;font-family:monospace;&quot;&amp;gt;    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;modelVersion&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;4.0.0&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/modelVersion&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;groupId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;com.google.constructor&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/groupId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;artifactId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;park-samples&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/artifactId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #808080; font-style: italic;&quot;&amp;gt;&amp;lt;!--The packaging type required to be pom for parent and aggregation (multi-module) projects.--&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;packaging&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;pom&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/packaging&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;version&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;1.0-SNAPSHOT&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/version&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;name&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;Apache Click Park Samples Project&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/name&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;url&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&lt;a href=&quot;http://code.google.com/p/construtor&amp;lt;span&quot; class=&quot;bare&quot;&gt;http://code.google.com/p/construtor&amp;lt;span&lt;/a&gt; style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/url&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;description&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
+&lt;div class=&quot;wp_syntax&quot;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;code&quot;&gt;
+        &lt;pre class=&quot;xml&quot; style=&quot;font-family:monospace;&quot;&gt;    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;modelVersion&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;4.0.0&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/modelVersion&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;groupId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;com.google.constructor&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/groupId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;artifactId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;park-samples&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/artifactId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #808080; font-style: italic;&quot;&gt;&amp;lt;!--The packaging type required to be pom for parent and aggregation (multi-module) projects.--&amp;gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;packaging&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;pom&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/packaging&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;version&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;1.0-SNAPSHOT&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/version&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;name&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;Apache Click Park Samples Project&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/name&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;url&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;http://code.google.com/p/construtor&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/url&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;description&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
         A parent POM used for all the projects
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/description&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
-      &amp;lt;/td&amp;gt;
-    &amp;lt;/tr&amp;gt;
-  &amp;lt;/table&amp;gt;
-&amp;lt;/div&amp;gt;&amp;lt;/p&amp;gt;&lt;/p&gt;
-&lt;/div&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/description&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;&lt;/p&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Criei um [projeto hospedado no google][3] para armazenar códigos java - base de aprendizado na linguagem java, especialmente nas especificações Servlet e JPA.
 Entre estes códigos, em especial, quero destacar o park-samples. [Este é estruturado utilizando tanto herança quanto agregação][4]:&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&amp;lt;div class=&quot;wp_syntax&quot;&amp;gt;
-  &amp;lt;table&amp;gt;
-    &amp;lt;tr&amp;gt;
-      &amp;lt;td class=&quot;code&quot;&amp;gt;
-        &amp;lt;pre class=&quot;bash&quot; style=&quot;font-family:monospace;&quot;&amp;gt;gilberto&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;@&amp;lt;/span&amp;gt;dhcppc0:~&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;/&amp;lt;/span&amp;gt;dev&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;/&amp;lt;/span&amp;gt;netbeans-config&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;/&amp;lt;/span&amp;gt;park-samples&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #c20cb9; font-weight: bold;&quot;&amp;gt;tree&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #660033;&quot;&amp;gt;--dirsfirst&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #660033;&quot;&amp;gt;-L&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #000000;&quot;&amp;gt;3&amp;lt;/span&amp;gt;
+&lt;div class=&quot;wp_syntax&quot;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;code&quot;&gt;
+        &lt;pre class=&quot;bash&quot; style=&quot;font-family:monospace;&quot;&gt;gilberto&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;@&lt;/span&gt;dhcppc0:~&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;dev&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;netbeans-config&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;park-samples&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&quot;color: #c20cb9; font-weight: bold;&quot;&gt;tree&lt;/span&gt; &lt;span style=&quot;color: #660033;&quot;&gt;--dirsfirst&lt;/span&gt; &lt;span style=&quot;color: #660033;&quot;&gt;-L&lt;/span&gt; &lt;span style=&quot;color: #000000;&quot;&gt;3&lt;/span&gt;
 .
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- docs
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- evolus.pencil
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- EditLegalEntity.ep
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;`&amp;lt;/span&amp;gt;-- EditNaturalPerson.ep
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- power.architect
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- park.architect
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;`&amp;lt;/span&amp;gt;-- park-er.pdf
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- 03000001.png
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;`&amp;lt;/span&amp;gt;-- 03000003_en.png
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- park-cayenne
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- src
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- main
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;`&amp;lt;/span&amp;gt;-- &amp;lt;span style=&quot;color: #7a0874; font-weight: bold;&quot;&amp;gt;test&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- nbactions.xml
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- nb-configuration.xml
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;`&amp;lt;/span&amp;gt;-- pom.xml
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- park-jpa
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- src
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- main
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;`&amp;lt;/span&amp;gt;-- &amp;lt;span style=&quot;color: #7a0874; font-weight: bold;&quot;&amp;gt;test&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- LICENSE.txt
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- nbactions.xml
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- nb-configuration.xml
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- pom.xml
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;`&amp;lt;/span&amp;gt;-- README.txt
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- park-multi-module
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- core
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- src
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- nbactions.xml
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- nb-configuration.xml
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- pom.xml
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;`&amp;lt;/span&amp;gt;-- README.txt
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- web
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- src
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;`&amp;lt;/span&amp;gt;-- pom.xml
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- LICENSE.txt
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- pom.xml
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;`&amp;lt;/span&amp;gt;-- README.txt
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- LICENSE.txt
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;-- pom.xml
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;`&amp;lt;/span&amp;gt;-- README.txt&amp;lt;/pre&amp;gt;
-      &amp;lt;/td&amp;gt;
-    &amp;lt;/tr&amp;gt;
-  &amp;lt;/table&amp;gt;
-&amp;lt;/div&amp;gt;&amp;lt;/p&amp;gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- docs
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- evolus.pencil
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- EditLegalEntity.ep
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;`&lt;/span&gt;-- EditNaturalPerson.ep
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- power.architect
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- park.architect
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;`&lt;/span&gt;-- park-er.pdf
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- 03000001.png
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;`&lt;/span&gt;-- 03000003_en.png
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- park-cayenne
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- src
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- main
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;`&lt;/span&gt;-- &lt;span style=&quot;color: #7a0874; font-weight: bold;&quot;&gt;test&lt;/span&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- nbactions.xml
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- nb-configuration.xml
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;`&lt;/span&gt;-- pom.xml
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- park-jpa
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- src
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- main
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;`&lt;/span&gt;-- &lt;span style=&quot;color: #7a0874; font-weight: bold;&quot;&gt;test&lt;/span&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- LICENSE.txt
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- nbactions.xml
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- nb-configuration.xml
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- pom.xml
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;`&lt;/span&gt;-- README.txt
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- park-multi-module
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- core
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- src
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- nbactions.xml
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- nb-configuration.xml
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- pom.xml
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;`&lt;/span&gt;-- README.txt
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- web
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- src
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;`&lt;/span&gt;-- pom.xml
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- LICENSE.txt
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- pom.xml
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;`&lt;/span&gt;-- README.txt
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- LICENSE.txt
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;-- pom.xml
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;`&lt;/span&gt;-- README.txt&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;&lt;/p&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Veja que marquei o pom do diretório raiz como pai(PARENT), mudando o tipo de empacotamento. Mas você pode perguntar: o que difere um do outro?
 Bom, primeiro devo dizer que usamos herança em arquivos maven para compartilhar configurações, dependências e até recursos - dê uma boa olhada [neste pom][2] e você verá ajustes que teria de repetir em praticamente todos os sub-projetos. Já a agregação, usamos para agrupar (óbvio né! :)) projetos que precisam ser construídos juntos - quando executar mvn clean (ou outro comando) no pai, ocorrerá o mesmo nos filhos, tipo efeito cascata.&lt;/p&gt;
@@ -1638,69 +1609,64 @@ Bom, primeiro devo dizer que usamos herança em arquivos maven para compartilhar
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Para a herança funcionar precisamos adicionar uma seção (tag parent) no pom do sub-projeto:&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&amp;lt;div class=&quot;wp_syntax&quot;&amp;gt;
-  &amp;lt;table&amp;gt;
-    &amp;lt;tr&amp;gt;
-      &amp;lt;td class=&quot;code&quot;&amp;gt;
-        &amp;lt;pre class=&quot;xml&quot; style=&quot;font-family:monospace;&quot;&amp;gt;    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;modelVersion&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;4.0.0&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/modelVersion&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;parent&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-        &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;groupId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;com.google.constructor&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/groupId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-        &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;artifactId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;park-samples&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/artifactId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-        &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;version&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;1.0-SNAPSHOT&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/version&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/parent&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;artifactId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;park-jpa&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/artifactId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;packaging&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;war&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/packaging&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;name&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;Parking Control[JPA]&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/name&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
-      &amp;lt;/td&amp;gt;
-    &amp;lt;/tr&amp;gt;
-  &amp;lt;/table&amp;gt;
-&amp;lt;/div&amp;gt;&amp;lt;/p&amp;gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;div class=&quot;wp_syntax&quot;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;code&quot;&gt;
+        &lt;pre class=&quot;xml&quot; style=&quot;font-family:monospace;&quot;&gt;    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;modelVersion&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;4.0.0&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/modelVersion&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;parent&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;groupId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;com.google.constructor&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/groupId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;artifactId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;park-samples&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/artifactId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;version&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;1.0-SNAPSHOT&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/version&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/parent&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;artifactId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;park-jpa&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/artifactId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;packaging&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;war&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/packaging&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;name&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;Parking Control[JPA]&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/name&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;&lt;/p&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Quando quero agregar projetos, tenho que configurar &lt;strong&gt;o projeto que será o agregador &lt;/strong&gt;através da seção módulos (modules):&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&amp;lt;div class=&quot;wp_syntax&quot;&amp;gt;
-  &amp;lt;table&amp;gt;
-    &amp;lt;tr&amp;gt;
-      &amp;lt;td class=&quot;code&quot;&amp;gt;
-        &amp;lt;pre class=&quot;xml&quot; style=&quot;font-family:monospace;&quot;&amp;gt;    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;parent&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-        &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;groupId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;com.google.constructor&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/groupId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-        &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;artifactId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;park-samples&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/artifactId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-        &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;version&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;1.0-SNAPSHOT&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/version&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/parent&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;artifactId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;park-multi-module&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/artifactId&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;packaging&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;pom&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/packaging&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;name&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;Parking Control[MULTI-MODULE]&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/name&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;description&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
+&lt;div class=&quot;wp_syntax&quot;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;code&quot;&gt;
+        &lt;pre class=&quot;xml&quot; style=&quot;font-family:monospace;&quot;&gt;    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;parent&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;groupId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;com.google.constructor&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/groupId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;artifactId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;park-samples&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/artifactId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;version&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;1.0-SNAPSHOT&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/version&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/parent&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;artifactId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;park-multi-module&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/artifactId&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;packaging&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;pom&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/packaging&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;name&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;Parking Control[MULTI-MODULE]&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/name&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;description&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
         A mult-module project using maven aggregation
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/description&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/description&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &amp;nbsp;
-&amp;#8230;&amp;#8203;
+...
 &amp;nbsp;
-   &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;modules&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-        &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;module&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;core&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/module&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-        &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;module&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;web&amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/module&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;span style=&quot;color: #009900;&quot;&amp;gt;&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;lt;/modules&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
-      &amp;lt;/td&amp;gt;
-    &amp;lt;/tr&amp;gt;
-  &amp;lt;/table&amp;gt;
-&amp;lt;/div&amp;gt;&lt;/p&gt;
+   &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;modules&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;module&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;core&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/module&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;module&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;web&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/module&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/modules&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Repare que neste sub-projeto usei os dois conceitos: herança (herdando as configurações do pai) e agregação (este pom agrupa dois outros projetos).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Para os sub-projetos do projeto park-multi-module, poderia adicionar a seção parent como fiz com os outros(apontando para park-samples), mas perderia o benefício da herança. Então o fiz apontando para o próprio park-multi-module, pois este já herda do raiz. Legal, né! &amp;lt;img src=&quot;http://blog.gilbertoca.com/wp-includes/images/smilies/icon_smile.gif&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;Para os sub-projetos do projeto park-multi-module, poderia adicionar a seção parent como fiz com os outros(apontando para park-samples),
+mas perderia o benefício da herança. Então o fiz apontando para o próprio park-multi-module, pois este já herda do raiz. Legal, né!&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;[1]: http://maven.apache.org/pom.html#Inheritance
-[2]: http://code.google.com/p/construtor/source/browse/trunk/park-samples/pom.xml
-[3]: http://code.google.com/p/construtor/
-[4]: http://code.google.com/p/construtor/source/browse/trunk/park-samples/README.txt&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;http://maven.apache.org/pom.html#Inheritance&quot; class=&quot;bare&quot;&gt;http://maven.apache.org/pom.html#Inheritance&lt;/a&gt;
+[2]: &lt;a href=&quot;http://code.google.com/p/construtor/source/browse/trunk/park-samples/pom.xml&quot; class=&quot;bare&quot;&gt;http://code.google.com/p/construtor/source/browse/trunk/park-samples/pom.xml&lt;/a&gt;
+[3]: &lt;a href=&quot;http://code.google.com/p/construtor/&quot; class=&quot;bare&quot;&gt;http://code.google.com/p/construtor/&lt;/a&gt;
+[4]: &lt;a href=&quot;http://code.google.com/p/construtor/source/browse/trunk/park-samples/README.txt&quot; class=&quot;bare&quot;&gt;http://code.google.com/p/construtor/source/browse/trunk/park-samples/README.txt&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 	</description>
     </item>
