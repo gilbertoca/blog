@@ -6,8 +6,7 @@ status=published
 tags=Geral
 ~~~~~~
 
-Fonte:  
-http://swik.net/OpenSolaris/Planet+Solaris/Dave+Miner:+Wasting+time+with+blogs.sun.com+and+ScribeFire/bcx8c
+Fonte: https://blogs.oracle.com/solaris/post/wasting-time-with-blogssuncom-and-scribefire[Wasting time with blogs.sun.com and ScribeFire]
 
 1. Habilitar a opção para API clientes no servidor:
 
@@ -23,10 +22,10 @@ http://swik.net/OpenSolaris/Planet+Solaris/Dave+Miner:+Wasting+time+with+blogs.s
 
 3. Configure ScribeFire
 
-* blog url: http://www.jroller.com/<seu blogid="">  
+* blog url: http://www.jroller.com/<seu blogid> 
 * pressione Manually Configure  
 * selecione Custom Blog  
 * selecione MetaWeblog API  
 * Server API URL: http://jroller.com/roller-services/xmlrpc  
-* Forneça username and password</seu>
+* Forneça username and password
 
