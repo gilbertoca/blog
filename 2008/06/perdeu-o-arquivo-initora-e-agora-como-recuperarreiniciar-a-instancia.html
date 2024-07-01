@@ -60,6 +60,66 @@
 <p>O que fazer quando nós perdemos o arquivo de inicialização de um banco oracle - instância?
 Se você não possuir uma cópia do mesmo, recrie utilizando o arquivo de alerta - alert_&lt;instância&gt;.log.</p>
 </div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="console">SQL&gt; startup
+
+ORA-01078: failure in processing system parameters
+LRM-00109: could not open parameter file '/database/app/oracle/product/10.1.2/db_home1/dbs/initncscm.ora'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Primeiro, identificamos e extraimos todos os parâmentros spfile no arquivo de alerta.
+Copiamos todos para um arquivo temporário.</p>
+</div>
+<div class="listingblock">
+<div class="title">copy all parameters</div>
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="console">$vi /database/app/oracle/diag/rdbms/ncscm/ncscm/trace/alert_ncscm.log</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">create pfile:</div>
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="console">$cd /database/app/oracle/product/12.1.2/db_home1/dbs
+
+$vi initncscm.ora and paste all parameters</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">startup nomount</div>
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="console">SQL&gt; startup nomount
+
+ORACLE instance started.
+Total System Global Area 796917760 bytes
+Fixed Size   2929448 bytes
+Variable Size  511708376 bytes
+Database Buffers  276824064 bytes
+Redo Buffers   5455872 bytes
+SQL&gt; create spfile from pfile;
+File created.
+SQL&gt; shu immediate
+
+ORA-01507: database not mounted
+ORACLE instance shut down.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">startup</div>
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="console">SQL&gt; startup
+
+ORACLE instance started.
+Total System Global Area 796917760 bytes
+Fixed Size   2929448 bytes
+Variable Size  511708376 bytes
+Database Buffers  276824064 bytes
+Redo Buffers   5455872 bytes
+Database mounted.
+Database opened.</code></pre>
+</div>
+</div>
     </section>
 <section>
 <div id="disqus_thread"></div>

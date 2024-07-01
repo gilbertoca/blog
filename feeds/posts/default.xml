@@ -6,8 +6,8 @@
     <atom:link href="http://blog.gilbertoca.com/feeds/posts/default.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>sex., 28 jun. 2024 14:40:16 -0300</pubDate>
-    <lastBuildDate>sex., 28 jun. 2024 14:40:16 -0300</lastBuildDate>
+    <pubDate>seg., 1 jul. 2024 09:43:37 -0300</pubDate>
+    <lastBuildDate>seg., 1 jul. 2024 09:43:37 -0300</lastBuildDate>
 
     <item>
       <title>Visualizando arquivos de log no NetBeans</title>
@@ -5483,6 +5483,66 @@ end;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;O que fazer quando nós perdemos o arquivo de inicialização de um banco oracle - instância?
 Se você não possuir uma cópia do mesmo, recrie utilizando o arquivo de alerta - alert_&amp;lt;instância&amp;gt;.log.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;console&quot;&gt;SQL&amp;gt; startup
+
+ORA-01078: failure in processing system parameters
+LRM-00109: could not open parameter file &apos;/database/app/oracle/product/10.1.2/db_home1/dbs/initncscm.ora&apos;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Primeiro, identificamos e extraimos todos os parâmentros spfile no arquivo de alerta.
+Copiamos todos para um arquivo temporário.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;copy all parameters&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;console&quot;&gt;$vi /database/app/oracle/diag/rdbms/ncscm/ncscm/trace/alert_ncscm.log&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;create pfile:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;console&quot;&gt;$cd /database/app/oracle/product/12.1.2/db_home1/dbs
+
+$vi initncscm.ora and paste all parameters&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;startup nomount&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;console&quot;&gt;SQL&amp;gt; startup nomount
+
+ORACLE instance started.
+Total System Global Area 796917760 bytes
+Fixed Size   2929448 bytes
+Variable Size  511708376 bytes
+Database Buffers  276824064 bytes
+Redo Buffers   5455872 bytes
+SQL&amp;gt; create spfile from pfile;
+File created.
+SQL&amp;gt; shu immediate
+
+ORA-01507: database not mounted
+ORACLE instance shut down.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;startup&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;console&quot;&gt;SQL&amp;gt; startup
+
+ORACLE instance started.
+Total System Global Area 796917760 bytes
+Fixed Size   2929448 bytes
+Variable Size  511708376 bytes
+Database Buffers  276824064 bytes
+Redo Buffers   5455872 bytes
+Database mounted.
+Database opened.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 	</description>
     </item>
     <item>
@@ -5580,8 +5640,7 @@ ln -s /usr/X11R6/lib/libXtst.so.6.1 /usr/lib/libXtst.so.6.1.0&lt;/code&gt;&lt;/p
       <guid isPermaLink="false">2008/04/scribefire-setup-roller-api.html</guid>
       	<description>
 	&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Fonte:
-&lt;a href=&quot;http://swik.net/OpenSolaris/Planet+Solaris/Dave+Miner:+Wasting+time+with+blogs.sun.com+and+ScribeFire/bcx8c&quot; class=&quot;bare&quot;&gt;http://swik.net/OpenSolaris/Planet+Solaris/Dave+Miner:+Wasting+time+with+blogs.sun.com+and+ScribeFire/bcx8c&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fonte: &lt;a href=&quot;https://blogs.oracle.com/solaris/post/wasting-time-with-blogssuncom-and-scribefire&quot;&gt;Wasting time with blogs.sun.com and ScribeFire&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;olist arabic&quot;&gt;
 &lt;ol class=&quot;arabic&quot;&gt;
@@ -5622,7 +5681,7 @@ ln -s /usr/X11R6/lib/libXtst.so.6.1 /usr/lib/libXtst.so.6.1.0&lt;/code&gt;&lt;/p
 &lt;div class=&quot;ulist&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;blog url: &lt;a href=&quot;http://www.jroller.com/&amp;lt;seu&quot; class=&quot;bare&quot;&gt;http://www.jroller.com/&amp;lt;seu&lt;/a&gt; blogid=&quot;&quot;&amp;gt;&lt;/p&gt;
+&lt;p&gt;blog url: &lt;a href=&quot;http://www.jroller.com/&amp;lt;seu&quot; class=&quot;bare&quot;&gt;http://www.jroller.com/&amp;lt;seu&lt;/a&gt; blogid&amp;gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;pressione Manually Configure&lt;/p&gt;
@@ -5637,7 +5696,7 @@ ln -s /usr/X11R6/lib/libXtst.so.6.1 /usr/lib/libXtst.so.6.1.0&lt;/code&gt;&lt;/p
 &lt;p&gt;Server API URL: &lt;a href=&quot;http://jroller.com/roller-services/xmlrpc&quot; class=&quot;bare&quot;&gt;http://jroller.com/roller-services/xmlrpc&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Forneça username and password&amp;lt;/seu&amp;gt;&lt;/p&gt;
+&lt;p&gt;Forneça username and password&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
