@@ -6,8 +6,8 @@
     <atom:link href="http://blog.gilbertoca.com/feeds/posts/default.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>seg., 19 ago. 2024 14:18:37 -0300</pubDate>
-    <lastBuildDate>seg., 19 ago. 2024 14:18:37 -0300</lastBuildDate>
+    <pubDate>seg., 19 ago. 2024 14:25:54 -0300</pubDate>
+    <lastBuildDate>seg., 19 ago. 2024 14:25:54 -0300</lastBuildDate>
 
     <item>
       <title>Visualizando arquivos de log no NetBeans</title>
@@ -983,46 +983,48 @@ No GNOME 3, o comportamento padrão de diálogo modal é este anexar-se à janel
       <guid isPermaLink="false">2011/11/grep-like-command-for-doc-files.html</guid>
       	<description>
 	&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Esta é uma pequena dica. Se você tem uma grande quantidade de arquivos MS Word, OpenOffice e agora LibreOffice, com certeza já teve a necessidade de utilizar os recursos que o Shell Linux/Unix nos trás - grep, sed, more, strings, &amp;lt;a href=&quot;http://www.wagner.pp.ru/~vitus/software/catdoc/&quot; title=&quot;catdoc[catdoc&amp;lt;/a&amp;gt;, &amp;lt;a href=&quot;http://www.winfield.demon.nl/&quot; title=&quot;antiwork[antiwork&amp;lt;/a&amp;gt;, etc.&lt;/p&gt;
+&lt;p&gt;Esta é uma pequena dica. Se você tem uma grande quantidade de arquivos MS Word, OpenOffice e agora LibreOffice,
+com certeza já teve a necessidade de utilizar os recursos que o Shell Linux/Unix nos trás - grep, sed, more, strings,
+&lt;a href=&quot;http://www.wagner.pp.ru/~vitus/software/catdoc&quot;&gt;catdoc&lt;/a&gt;,
+&lt;a href=&quot;http://www.winfield.demon.nl/&quot;&gt;antiwork&lt;/a&gt;, etc.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Como vocês bem sabem, gerencio o grupo &amp;lt;a href=&quot;http://groups.google.com/group/ibmp-mensagens-reflexivas&quot; title=&quot;Mensagens Reflexivas[Mensagens Reflexivas&amp;lt;/a&amp;gt; e neste fim de semana - aos sábados editamos as mensagens - me deparei que tal necessidade: procurar em vários arquivos docs por um nome, neste caso, por um autor.&lt;/p&gt;
+&lt;p&gt;Como vocês bem sabem, gerencio o grupo &lt;a href=&quot;http://groups.google.com/group/ibmp-mensagens-reflexivas&quot;&gt;Mensagens Reflexivas&lt;/a&gt;
+e neste fim de semana - aos sábados editamos as mensagens - me deparei que tal necessidade: procurar em vários arquivos docs por um nome, neste caso, por um autor.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Bem, aqui está a dica:&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&amp;lt;div class=&quot;wp_syntax&quot;&amp;gt;
-  &amp;lt;table&amp;gt;
-    &amp;lt;tr&amp;gt;
-      &amp;lt;td class=&quot;code&quot;&amp;gt;
-        &amp;lt;pre class=&quot;bash&quot; style=&quot;font-family:monospace;&quot;&amp;gt;&amp;nbsp;
-gilberto&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;@&amp;lt;/span&amp;gt;SUGEP-DMASI:~&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;/&amp;lt;/span&amp;gt;Dropbox&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;/&amp;lt;/span&amp;gt;igreja-bmp&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;/&amp;lt;/span&amp;gt;mensagens&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;/&amp;lt;/span&amp;gt;ENVIADAS$ &amp;lt;span style=&quot;color: #c20cb9; font-weight: bold;&quot;&amp;gt;ls&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #660033;&quot;&amp;gt;-1&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #c20cb9; font-weight: bold;&quot;&amp;gt;wc&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #660033;&quot;&amp;gt;-l&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000;&quot;&amp;gt;167&amp;lt;/span&amp;gt;
+&lt;div class=&quot;wp_syntax&quot;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;code&quot;&gt;
+        &lt;pre class=&quot;bash&quot; style=&quot;font-family:monospace;&quot;&gt;&amp;nbsp;
+gilberto&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;@&lt;/span&gt;SUGEP-DMASI:~&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;Dropbox&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;igreja-bmp&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;mensagens&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;ENVIADAS$ &lt;span style=&quot;color: #c20cb9; font-weight: bold;&quot;&gt;ls&lt;/span&gt; &lt;span style=&quot;color: #660033;&quot;&gt;-1&lt;/span&gt; &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt; &lt;span style=&quot;color: #c20cb9; font-weight: bold;&quot;&gt;wc&lt;/span&gt; &lt;span style=&quot;color: #660033;&quot;&gt;-l&lt;/span&gt;
+&lt;span style=&quot;color: #000000;&quot;&gt;167&lt;/span&gt;
 &amp;nbsp;
-gilberto&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;@&amp;lt;/span&amp;gt;SUGEP-DMASI:~&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;/&amp;lt;/span&amp;gt;Dropbox&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;/&amp;lt;/span&amp;gt;igreja-bmp&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;/&amp;lt;/span&amp;gt;mensagens&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;/&amp;lt;/span&amp;gt;ENVIADAS$ antiword &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;*&amp;lt;/span&amp;gt;.doc &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #c20cb9; font-weight: bold;&quot;&amp;gt;grep&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #660033;&quot;&amp;gt;-i&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #ff0000;&quot;&amp;gt;&quot;João Garcia&quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;color: #c20cb9; font-weight: bold;&quot;&amp;gt;more&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Autor: João Garcia, Oakville,      &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Prezado amigo, caso queira interagir  &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Autor: João Garcia, Oakville,      &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Prezado amigo, caso queira interagir  &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Autor: João Garcia, Oakville,      &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Prezado amigo, caso queira interagir  &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Autor: João Garcia, Oakville,      &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Prezado amigo, caso queira interagir  &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Autor: João Garcia, Oakville,      &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Prezado amigo, caso queira interagir  &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Autor: João Garcia, Oakville,      &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Prezado amigo, caso queira interagir  &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Autor: João Garcia, Oakville,      &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Prezado amigo, caso queira interagir  &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Autor: João Garcia, Oakville,   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Prezado amigo, caso queira interagir      &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Autor: João Garcia, Oakville -     &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Prezado amigo, caso queira interagir&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Autor: João Garcia, Oakville,   &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;Prezado amigo, caso queira interagir     &amp;lt;span style=&quot;color: #000000; font-weight: bold;&quot;&amp;gt;|&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
-      &amp;lt;/td&amp;gt;
-    &amp;lt;/tr&amp;gt;
-  &amp;lt;/table&amp;gt;
-&amp;lt;/div&amp;gt;&amp;lt;/p&amp;gt;&lt;/p&gt;
-&lt;/div&gt;
+gilberto&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;@&lt;/span&gt;SUGEP-DMASI:~&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;Dropbox&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;igreja-bmp&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;mensagens&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;ENVIADAS$ antiword &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;*&lt;/span&gt;.doc &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt; &lt;span style=&quot;color: #c20cb9; font-weight: bold;&quot;&gt;grep&lt;/span&gt; &lt;span style=&quot;color: #660033;&quot;&gt;-i&lt;/span&gt; &lt;span style=&quot;color: #ff0000;&quot;&gt;&quot;João Garcia&quot;&lt;/span&gt; &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt; &lt;span style=&quot;color: #c20cb9; font-weight: bold;&quot;&gt;more&lt;/span&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,      &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir  &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir      &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Autor: João Garcia, Oakville -     &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Autor: João Garcia, Oakville,   &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;Prezado amigo, caso queira interagir     &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;|&lt;/span&gt;&lt;/pre&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;&lt;/p&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Uma busca pela rede mundial usando o Google ajuda muito nessas horas.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;ulist&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&amp;lt;a href=&quot;http://superuser.com/questions/70343/grep-in-microsoft-word&quot; title=&quot;Grep in Microsoft Word?[Grep in Microsoft Word?&amp;lt;/a&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://superuser.com/questions/70343/grep-in-microsoft-word&quot; title=&quot;Grep in Microsoft Word?&quot;&gt;Grep in Microsoft Word?&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
