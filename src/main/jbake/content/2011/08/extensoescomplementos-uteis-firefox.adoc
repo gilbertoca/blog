@@ -8,7 +8,7 @@ tags=FireFox,  Internet
 
 
 As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhoram bastante a navegabilidade:
-
+++++
 <table>
   <tr bgcolor="#339966">
     <td>
@@ -124,12 +124,15 @@ As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhor
       <a href="https://addons.mozilla.org/en-US/firefox/addon/session-manager/">Session Manager</a>
     </td>
     <td>
-      Session Manager saves and restores the state of all or some windows - either when you want it or automatically at startup and after crashes. It can also automatically save the state of open windows individually.
+      Session Manager saves and restores the state of all or some windows - either when you want it or automatically at startup and after crashes. 
+      It can also automatically save the state of open windows individually.
     </td>
   </tr>
 </table>
+++++
 
-Existem mais complementos, alias uma infinidade deles, que ajudam e transformam o [navegador FireFox][2] em um aplicativo de uso diário. Estes são prioridade para mim e com este post posso buscar e instalar rapidamente.
+Existem mais complementos, alias uma infinidade deles, que ajudam e transformam o [navegador FireFox][2] em um aplicativo de uso diário. 
+Estes são prioridade para mim e com este post posso buscar e instalar rapidamente.
 
 
 

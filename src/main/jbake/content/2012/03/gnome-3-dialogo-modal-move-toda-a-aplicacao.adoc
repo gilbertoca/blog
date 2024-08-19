@@ -3,7 +3,7 @@ title=Gnome 3 - diálogo modal move toda a aplicação
 date=2012-03-02 17:36:28
 type=post
 status=published
-tags=OpenSUSE, Geral
+tags=openSUSE, Geral
 ~~~~~~
 
 É, finalmente consegui um tempo para postar algo aqui no blog. Ultimamente (nos dois últimos meses) estive ocupado trabalhando na conversão de alguns projetos 

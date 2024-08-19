@@ -3,7 +3,7 @@ title=Apache Shiro Parte 1 - básico
 date=2011-04-07 18:04:51
 type=post
 status=published
-tags=Apache Shiro, Application Server, Autenticação, Autorização, Java, maven, Proteção, Recursos de Segurança, Traduções
+tags=Apache Shiro, Application Server, Autenticação, Autorização, Java, Apache-Maven, Proteção, Recursos de Segurança, Traduções
 ~~~~~~
 
 Este post é uma tradução livre do artigo http://meri-stuff.blogspot.com/2011/03/apache-shiro-part-1-basics.html[Apache Shiro Part 1 - Basics,window=_blank], publicado por Meri em 27 de março 2011 
