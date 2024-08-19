@@ -6,8 +6,8 @@
     <atom:link href="http://blog.gilbertoca.com/feeds/posts/default.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>seg., 1 jul. 2024 09:43:37 -0300</pubDate>
-    <lastBuildDate>seg., 1 jul. 2024 09:43:37 -0300</lastBuildDate>
+    <pubDate>seg., 19 ago. 2024 14:18:37 -0300</pubDate>
+    <lastBuildDate>seg., 19 ago. 2024 14:18:37 -0300</lastBuildDate>
 
     <item>
       <title>Visualizando arquivos de log no NetBeans</title>
@@ -1097,15 +1097,16 @@ O que move seus sentimentos? Ao fazer esse questionamento, podemos chegar a trê
       <pubDate>sex., 2 set. 2011 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">2011/09/a-tabela-de-softwares-equivalentes-substituicoes-analogos-windows-no-linux.html</guid>
       	<description>
-	É novo usuário do sistema Linux(&lt;a href=&quot;http://www.openSUSE.org/pt-br/&quot; title=&quot;openSUSE[openSUSE&lt;/a&gt;,
-&lt;a href=&quot;http://www.projetofedora.org/&quot; title=&quot;Fedora[Fedora&lt;/a&gt;,
-&lt;a href=&quot;http://www.ubuntu-br.org/&quot; title=&quot;Ubuntu[Ubuntu&lt;/a&gt;,
-&lt;a href=&quot;http://www.mandriva.com/br/&quot; title=&quot;Mandriva[Mandriva&lt;/a&gt;, etc)?
+	&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;É novo usuário do sistema Linux(&lt;a href=&quot;http://www.openSUSE.org/pt-br/&quot;&gt;openSUSE&lt;/a&gt;,
+&lt;a href=&quot;http://www.projetofedora.org/&quot;&gt;Fedora&lt;/a&gt;,
+&lt;a href=&quot;http://www.ubuntu-br.org/&quot;&gt;Ubuntu&lt;/a&gt;,
+&lt;a href=&quot;http://www.mandriva.com/br/&quot;&gt;Mandriva&lt;/a&gt;, etc)?
 Não sabe por onde começar? Não encontra aquele programa que costumava usar ou um equivalente?
 Pior, não sabe o nome do programa que precisa usar(Editor de Textos, Planilha Eletrônica,
 Navegador Web, Gerenciador de Arquivos, Gerenciador de Transferência de Arquivos Remoto, Editoração Eletrônica, etc)?
-Eis &lt;a href=&quot;http://www.linuxrsp.ru/win-lin-soft/table-eng.html&quot; title=&quot;Tabela de Equivalências de Softwares Windows no Linux[
-aqui uma tabela que irá lhe ajudar&lt;/a&gt;!
+Eis &lt;a href=&quot;http://www.linuxrsp.ru/win-lin-soft/table-eng.html&quot; title=&quot;Tabela de Equivalências de Softwares Windows no Linux&quot;&gt;aqui uma tabela que irá lhe ajudar&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
 	</description>
     </item>
     <item>
@@ -1129,129 +1130,129 @@ aqui uma tabela que irá lhe ajudar&lt;/a&gt;!
 	&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;As seguintes [extensões (complementos)][1] para o [navegador FireFox][2] melhoram bastante a navegabilidade:&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&amp;lt;table&amp;gt;
-  &amp;lt;tr bgcolor=&quot;#339966&quot;&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;strong&amp;gt;Complemento&amp;lt;/strong&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;strong&amp;gt;Utilidade&amp;lt;/strong&amp;gt;
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/download-status-bar/&quot;&amp;gt;download-status-bar&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
+&lt;table&gt;
+  &lt;tr bgcolor=&quot;#339966&quot;&gt;
+    &lt;td&gt;
+      &lt;strong&gt;Complemento&lt;/strong&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;strong&gt;Utilidade&lt;/strong&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/download-status-bar/&quot;&gt;download-status-bar&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
       Gerenciador de Downloads
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/201&quot;&amp;gt;DownThemAll!&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/201&quot;&gt;DownThemAll!&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
       Gerenciador de Downloads
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/flashgot/?src=search&quot;&amp;gt;FlashGot Mass Downloader&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/flashgot/?src=search&quot;&gt;FlashGot Mass Downloader&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
       Gerenciador de Downloads
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/684&quot;&amp;gt;FireFTP&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/684&quot;&gt;FireFTP&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
       Cliente FTP
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/super-start/&quot;&amp;gt;Super Start&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/super-start/&quot;&gt;Super Start&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
       Bookmarks Visuais
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/2888&quot;&amp;gt;GMarks&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
-      Sincronizar e gerenciar seus Favoritos com o Google&amp;lt;br /&amp;gt; Bookmarks
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/3257&quot;&amp;gt;Dicionário pt-BR&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/2888&quot;&gt;GMarks&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      Sincronizar e gerenciar seus Favoritos com o Google&lt;br /&gt; Bookmarks
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/3257&quot;&gt;Dicionário pt-BR&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
       Dicionário português brasileiro para o verificador ortográfico integrado do Firefox
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/easy-youtube-video-download/&quot;&amp;gt;Easy Youtube Video Downloader Express&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/easy-youtube-video-download/&quot;&gt;Easy Youtube Video Downloader Express&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
       Utilitário para baixar vídeos
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/video-downloader-player/&quot;&amp;gt;Ant Video Downloader com Player FLV incorporado&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/pt-br/firefox/addon/video-downloadhelper/&quot;&amp;gt;video-downloadhelper&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/pt-BR/firefox/addon/video-downloader-player/&quot;&gt;Ant Video Downloader com Player FLV incorporado&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/pt-br/firefox/addon/video-downloadhelper/&quot;&gt;video-downloadhelper&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
       Utilitário para baixar vídeos
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/html5-video-everywhere/&quot;&amp;gt;html5-video-everywhere&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/html5-video-everywhere/&quot;&gt;html5-video-everywhere&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
       Utilitário para baixar vídeos
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/pt-br/firefox/addon/print-edit/?src=search&quot;&amp;gt;Print Edit&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/pt-br/firefox/addon/print-edit/?src=search&quot;&gt;Print Edit&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
       Permite editar o conteúdo da página antes de imprimir
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/capture-print/?src=search&quot;&amp;gt;Capture &amp;amp; Print&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
-      Capture &amp;amp; Print permite capturar uma área da página e salvá-la em disco ou enviar para impressora
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/session-manager/&quot;&amp;gt;Session Manager&amp;lt;/a&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
-      Session Manager saves and restores the state of all or some windows - either when you want it or automatically at startup and after crashes. It can also automatically save the state of open windows individually.
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-&amp;lt;/table&amp;gt;&lt;/p&gt;
-&lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/capture-print/?src=search&quot;&gt;Capture &amp; Print&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      Capture &amp; Print permite capturar uma área da página e salvá-la em disco ou enviar para impressora
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/session-manager/&quot;&gt;Session Manager&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      Session Manager saves and restores the state of all or some windows - either when you want it or automatically at startup and after crashes.
+      It can also automatically save the state of open windows individually.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Existem mais complementos, alias uma infinidade deles, que ajudam e transformam o [navegador FireFox][2] em um aplicativo de uso diário. Estes são prioridade para mim e com este post posso buscar e instalar rapidamente.&lt;/p&gt;
+&lt;p&gt;Existem mais complementos, alias uma infinidade deles, que ajudam e transformam o [navegador FireFox][2] em um aplicativo de uso diário.
+Estes são prioridade para mim e com este post posso buscar e instalar rapidamente.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;literalblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
@@ -1538,7 +1539,7 @@ necessita-se definir seu empacotamento (PACKING) para pom, [assim][2]:&lt;/p&gt;
     &lt;span style=&quot;color: #808080; font-style: italic;&quot;&gt;&amp;lt;!--The packaging type required to be pom for parent and aggregation (multi-module) projects.--&amp;gt;&lt;/span&gt;
     &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;packaging&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;pom&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/packaging&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
     &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;version&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;1.0-SNAPSHOT&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/version&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;name&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;Apache Click Park Samples Project&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/name&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;name&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;Apache-Click Park Samples Project&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/name&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
     &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;url&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;http://code.google.com/p/construtor&lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;/url&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
     &lt;span style=&quot;color: #009900;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;description&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
         A parent POM used for all the projects
@@ -1677,94 +1678,78 @@ mas perderia o benefício da herança. Então o fiz apontando para o próprio pa
       <guid isPermaLink="false">2011/05/use-jetty-para-executar-aplicacoes-web-maven-no-netbeans.html</guid>
       	<description>
 	&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;[Jetty ][1]é um servidor web excelente. É rápido para iniciar o que o torna muito útil durante o desenvolvimento. A [ferramente de construção Maven][2] possui um [plugin Jetty][3] que podemos usar em nossos projetos de aplicação Web que utilizam Maven. Desta forma, podemos usar o Jetty para testar nossos arquivos HTML/JSP/JSF/Wicket/Click/etc. Podemos editar o arquivo JSP/HTML e atualizar nosso navegador para ver o resultado imediatamente. Podemos até mesmo compilar um arquivo de classe Java e o servidor Jetty irá reiniciar para que possamos testar o resultado no nosso navegador.
-Vejamos como configurar o [Jetty][1], utilizando como IDE o [Netbeans 6.9][4] (deve funcionar para outras versões também!), para executar e principalmente para depurar (Debugging) a aplicação:
-&lt;strong&gt;requisito: ser uma aplicação web gerenciada pelo Maven.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.eclipse.org/jetty/&quot;&gt;Jetty&lt;/a&gt; é um servidor web excelente. É rápido para iniciar o que o torna muito útil durante o desenvolvimento.
+A &lt;a href=&quot;http://maven.apache.org/what-is-maven.html&quot;&gt;ferramente de construção Maven&lt;/a&gt; possui um &lt;a href=&quot;http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin&quot;&gt;plugin Jetty&lt;/a&gt;
+que podemos usar em nossos projetos de aplicação Web que utilizam Maven. Desta forma, podemos usar o Jetty para testar nossos
+arquivos HTML/JSP/JSF/Wicket/Click/etc. Podemos editar o arquivo JSP/HTML e atualizar nosso navegador para ver o resultado imediatamente.
+Podemos até mesmo compilar um arquivo de classe Java e o servidor Jetty irá reiniciar para que possamos testar o resultado no nosso navegador.
+Vejamos como configurar o &lt;a href=&quot;http://www.eclipse.org/jetty/&quot;&gt;Jetty&lt;/a&gt;, utilizando como IDE o &lt;a href=&quot;https://netbeans.apache.org&quot;&gt;Netbeans 6.9&lt;/a&gt; (deve funcionar para outras versões também!),
+para executar e principalmente para depurar (Debugging) a aplicação:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Requisito: ser uma aplicação web gerenciada pelo Maven.&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;olist arabic&quot;&gt;
 &lt;ol class=&quot;arabic&quot;&gt;
 &lt;li&gt;
-&lt;p&gt;Primeiro vamos habilitar a função Compilar ao Salvar ([Compile On Save][5]) em nosso projeto. Esta função vem habilitada somente para execução de testes em projetos gerenciados pelo Maven, aqui estamos ajustando para execução do fonte também:
-[&amp;lt;img src=&quot;CompileOnSave.png&quot;  title=&quot;CompileOnSave&quot; width=&quot;804&quot; height=&quot;563&quot; class=&quot;alignright size-full wp-image-701&quot; /&amp;gt;][6]&lt;/p&gt;
+&lt;p&gt;Primeiro vamos habilitar a função Compilar ao Salvar (&lt;a href=&quot;http://wiki.netbeans.org/FaqCompileOnSave#Using_Compile_on_Save_in_Maven_Projects&quot;&gt;Compile On Save&lt;/a&gt;) em nosso projeto.
+Esta função vem habilitada somente para execução de testes em projetos gerenciados pelo Apache-Maven, aqui estamos ajustando para execução do fonte também:
+&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;CompileOnSave.png&quot; alt=&quot;CompileOnSave&quot; width=&quot;804&quot; height=&quot;563&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Adicione o [plugin jetty][3] para o maven;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
+&lt;p&gt;Adicione o &lt;a href=&quot;http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin&quot;&gt;plugin jetty&lt;/a&gt; para o maven;&lt;/p&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
 &lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;Xml&quot;&gt;&amp;lt;plugin&amp;gt;
-    &amp;lt;groupId&amp;gt;org.mortbay.jetty&amp;lt;/groupId&amp;gt;
-    &amp;lt;artifactId&amp;gt;jetty-maven-plugin&amp;lt;/artifactId&amp;gt;
-    &amp;lt;version&amp;gt;7.0.1.v20091125&amp;lt;/version&amp;gt;
-    &amp;lt;configuration&amp;gt;
-        &amp;lt;!--reload&amp;gt;manual&amp;lt;/reload--&amp;gt;
-        &amp;lt;scanIntervalSeconds&amp;gt;10&amp;lt;/scanIntervalSeconds&amp;gt;
-        &amp;lt;stopKey&amp;gt;foo&amp;lt;/stopKey&amp;gt;
-        &amp;lt;stopPort&amp;gt;9966&amp;lt;/stopPort&amp;gt;
-    &amp;lt;/configuration&amp;gt;
+  &amp;lt;groupId&amp;gt;org.mortbay.jetty&amp;lt;/groupId&amp;gt;
+  &amp;lt;artifactId&amp;gt;jetty-maven-plugin&amp;lt;/artifactId&amp;gt;
+  &amp;lt;version&amp;gt;7.0.1.v20091125&amp;lt;/version&amp;gt;
+  &amp;lt;configuration&amp;gt;
+      &amp;lt;!--reload&amp;gt;manual&amp;lt;/reload--&amp;gt;
+      &amp;lt;scanIntervalSeconds&amp;gt;10&amp;lt;/scanIntervalSeconds&amp;gt;
+      &amp;lt;stopKey&amp;gt;foo&amp;lt;/stopKey&amp;gt;
+      &amp;lt;stopPort&amp;gt;9966&amp;lt;/stopPort&amp;gt;
+  &amp;lt;/configuration&amp;gt;
 &amp;lt;/plugin&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;olist arabic&quot;&gt;
-&lt;ol class=&quot;arabic&quot;&gt;
-&lt;li&gt;
-&lt;p&gt;Abra a janela de propriedades do projeto Maven e selecione Ações(Actions) da lista de categorias (Categories). Encontre a ação Executar (Run) e altere o valor do campo Metas de Execução (Execute Goals) para &amp;lt;bold&amp;gt;jetty:stop jetty:run&amp;lt;/bold&amp;gt;;
-[&amp;lt;img src=&quot;ActionRunExecuteGoals.png&quot;  title=&quot;ActionRunExecuteGoals&quot; width=&quot;752&quot; height=&quot;580&quot; class=&quot;alignright size-full wp-image-687&quot; /&amp;gt;][7]&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Então, faça o mesmo para ação Depurar Projeto(Debug project)
-e adicione as seguintes propriedades:&lt;/p&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
+&lt;p&gt;Abra a janela de propriedades do projeto Maven e selecione Ações(Actions) da lista de categorias (Categories).
+Encontre a ação Executar (Run) e altere o valor do campo Metas de Execução (Execute Goals) para &lt;strong&gt;jetty:stop jetty:run&lt;/strong&gt; :&lt;/p&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;ActionRunExecuteGoals.png&quot; alt=&quot;ActionRunExecuteGoals&quot; width=&quot;752&quot; height=&quot;580&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Então, faça o mesmo para ação Depurar Projeto(Debug project) e adicione as seguintes propriedades:&lt;/p&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;```Shell
-jpda.listen=maven netbeans.deploy.debugmode=true
-```&lt;/pre&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;Shell&quot;&gt;jpda.listen=maven netbeans.deploy.debugmode=true&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;[&amp;lt;img src=&quot;ActionDebugExecuteGoals.png&quot;  title=&quot;ActionDebugExecuteGoals&quot; width=&quot;760&quot; height=&quot;589&quot; class=&quot;alignright size-full wp-image-689&quot; /&amp;gt;][8] &amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt;&lt;/pre&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;ActionDebugExecuteGoals.png&quot; alt=&quot;ActionDebugExecuteGoals&quot; width=&quot;760&quot; height=&quot;589&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;O legal é poder depurar a aplicação web.
-Pronto!! &amp;lt;img src=&quot;http://blog.gilbertoca.com/wp-includes/images/smilies/icon_smile.gif&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; /&amp;gt;&lt;/pre&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;O legal é poder depurar a aplicação web.
+Pronto!! &lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;../../icon_smile.gif&quot; alt=&quot;icon smile&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;Referências:&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Referências:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;ulist&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;[Using the Maven Jetty plugin - Wicket][9]&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://cwiki.apache.org/WICKET/maven-jetty-plugin.html&quot;&gt;Using the Maven Jetty plugin - Wicket&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;[Use Jetty to run Maven web applications in NetBeans][10]&lt;/p&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;[1]: http://www.eclipse.org/jetty/
-[2]: http://maven.apache.org/what-is-maven.html
-[3]: http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin
-[4]: http://www.netbeans.org
-[5]: http://wiki.netbeans.org/FaqCompileOnSave#Using_Compile_on_Save_in_Maven_Projects
-[6]: CompileOnSave.png
-[7]: ActionRunExecuteGoals.png
-[8]: ActionDebugExecuteGoals.png
-[9]: https://cwiki.apache.org/WICKET/maven-jetty-plugin.html
-[10]: http://mrhaki.blogspot.com/2009/02/use-jetty-to-run-maven-web-applications.html&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;http://mrhaki.blogspot.com/2009/02/use-jetty-to-run-maven-web-applications.html&quot;&gt;Use Jetty to run Maven web applications in NetBeans&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 &lt;/div&gt;
 	</description>
     </item>
@@ -2858,8 +2843,8 @@ mas este não o caso - placa legada:&lt;/p&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Assim que estalei o openSUSE 11.3 em casa ficou difícil evitar seu uso e olha que minha
 família ainda não viu - ou não usufruiu - das ferramentas gráficas pois ficamos aproximadamente
-3 meses usando o [driver de vídeo que vem instalado por padrão][1] - O projeto Nouveau.
-Só recentemente a Nvidia publicou uma atualização [para minha placa de vídeo][2]
+3 meses usando o &lt;a href=&quot;http://nouveau.freedesktop.org/wiki/&quot;&gt;driver de vídeo que vem instalado por padrão&lt;/a&gt; - O projeto Nouveau.
+Só recentemente a Nvidia publicou uma atualização &lt;a href=&quot;http://www.nvidia.com/object/linux-display-ia32-96.43.19-driver.html&quot;&gt;para minha placa de vídeo&lt;/a&gt;
 e é claro para a minha versão do kernel.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -2867,7 +2852,7 @@ e é claro para a minha versão do kernel.&lt;/p&gt;
 Veja, usei dois tipos de driver e com ambos o comportamento (defeito) persistiu.
 O pior é que fica dias sem aparecer e de repente acontece. Até então não havia outro meio
 de contornar o problema senão encerrar a sessão e entrar novamente.
-Hoje encontrei [uma discussão sobre o assunto][3] - Adivinha?
+Hoje encontrei &lt;a href=&quot;http://ubuntuforum-br.org/index.php?topic=69863.msg388780#msg388780&quot;&gt;uma discussão sobre o assunto&lt;/a&gt; - Adivinha?
 Aconteceu hoje novamente - e nessa discussão o usuário “Rvos” sugere o seguinte contorno:&lt;/p&gt;
 &lt;/div&gt;
   &lt;table&gt;
@@ -2886,8 +2871,8 @@ Sei que farão com bastante tranquilidade quando estiver por perto, mas quando n
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;&lt;strong&gt;ATUALIZAÇÃO (25/06/2011):&lt;/strong&gt;
-Após um longo período sem este problema, aconteceu novamente: desta vez enquanto usava o [qBittorrent][4].
-[Esta discussão][5] pode revelar algum caminho para resolução deste problema. Com o comando sugerido, verifiquei a minha configuração:&lt;/p&gt;
+Após um longo período sem este problema, aconteceu novamente: desta vez enquanto usava o &lt;a href=&quot;http://qbittorrent.sourceforge.net/&quot;&gt;qBittorrent&lt;/a&gt;.
+&lt;a href=&quot;http://forums.fedoraforum.org/archive/index.php/t-241590.html&quot;&gt;Esta discussão&lt;/a&gt; pode revelar algum caminho para resolução deste problema. Com o comando sugerido, verifiquei a minha configuração:&lt;/p&gt;
 &lt;/div&gt;
   &lt;table&gt;
     &lt;tr&gt;
@@ -2918,34 +2903,20 @@ Após um longo período sem este problema, aconteceu novamente: desta vez enquan
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;&lt;strong&gt;ATUALIZAÇÃO (31/12/2010):&lt;/strong&gt;
-Aconteceu novamente. Desta vez enquanto verificava a lista de contatos no [Empathy][6].
+Aconteceu novamente. Desta vez enquanto verificava a lista de contatos no &lt;a href=&quot;http://live.gnome.org/Empathy&quot;&gt;Empathy&lt;/a&gt;.
 O mais complicado foi constatar que este problema afeta a digitação. Ao utilizar as teclas de atalho - alt + f2 - não aconteceu nada,
 a tela de execução de aplicativos não apareceu. Utilizei o menu iniciar para acionar o prompt de comando - terminal gnome - que logo apareceu,
 mas não recebia qualquer digitação. O que fazer? Fui abrindo - através do menu iniciar - aplicativos que pudessem receber digitação,
-mas nenhum respondia. Então tentei a caixa de texto para pesquisa do próprio menu iniciar:
-![Caixa de texto para pesquisa, menu iniciar.][7]&lt;/p&gt;
+mas nenhum respondia. Então tentei a caixa de texto para pesquisa do próprio menu iniciar:  Caixa de texto para pesquisa, menu iniciar.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Com isso, fiz uma cópia do texto - ctrl+c - e adicionei um ícone no [painel principal][8],
+&lt;p&gt;Com isso, fiz uma cópia do texto - ctrl+c - e adicionei um ícone no &lt;a href=&quot;http://pt.wikipedia.org/wiki/Gnome-panel&quot;&gt;painel principal&lt;/a&gt;,
 aquela grande barra no rodapé da tela, para acionar o Executar Aplicativo:
-![adicionar ao painel][9]
+&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;adicionar_ao_painel.png&quot; alt=&quot;adicionar ao painel&quot;&gt;&lt;/span&gt;
 Observe que a imagem traz o botão de fechar, isso porque fiz a captura da tela agora depois de todo o processo.
 Com o ícone disponível foi só acioná-lo e colar - ctrl+v - o comando (metacity -replace) e executar.
 Pronto! Voltou ao normal!
 Até quando?&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;literalblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;[1]: http://nouveau.freedesktop.org/wiki/
-[2]: http://www.nvidia.com/object/linux-display-ia32-96.43.19-driver.html
-[3]: http://ubuntuforum-br.org/index.php?topic=69863.msg388780#msg388780
-[4]: http://qbittorrent.sourceforge.net/
-[5]: http://forums.fedoraforum.org/archive/index.php/t-241590.html
-[6]: http://live.gnome.org/Empathy
-[7]: http://dl.dropbox.com/u/9093640/imagem1.png
-[8]: http://pt.wikipedia.org/wiki/Gnome-panel
-[9]: http://dl.dropbox.com/u/9093640/adicionar_ao_painel.png&lt;/pre&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 	</description>
     </item>
@@ -3162,7 +3133,7 @@ artefatos mencionados se comportariam em cada versão.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Hoje vou relatar outra maneira de alternar entre versões java em perspectiva do lado do desenvolvedor.
-Aqui na secretaria, podemos escolher entre &lt;a href=&quot;http://www.netbeans.org&quot;&gt;Netbeans&lt;/a&gt; e &lt;a href=&quot;http://www.eclipse.org&quot;&gt;Eclipse&lt;/a&gt; como ambientes de desenvolvimento,
+Aqui na secretaria, podemos escolher entre &lt;a href=&quot;https://netbeans.apache.org&quot;&gt;Netbeans&lt;/a&gt; e &lt;a href=&quot;http://www.eclipse.org&quot;&gt;Eclipse&lt;/a&gt; como ambientes de desenvolvimento,
 desde que o projeto seja gerenciado pela ferramenta de construção &lt;a href=&quot;http://maven.apache.org&quot;&gt;Maven&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -5496,13 +5467,13 @@ LRM-00109: could not open parameter file &apos;/database/app/oracle/product/10.1
 Copiamos todos para um arquivo temporário.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;title&quot;&gt;copy all parameters&lt;/div&gt;
+&lt;div class=&quot;title&quot;&gt;Copy all parameters&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;
 &lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;console&quot;&gt;$vi /database/app/oracle/diag/rdbms/ncscm/ncscm/trace/alert_ncscm.log&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;title&quot;&gt;create pfile:&lt;/div&gt;
+&lt;div class=&quot;title&quot;&gt;Create pfile:&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;
 &lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;console&quot;&gt;$cd /database/app/oracle/product/12.1.2/db_home1/dbs
 
@@ -5510,7 +5481,7 @@ $vi initncscm.ora and paste all parameters&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;title&quot;&gt;startup nomount&lt;/div&gt;
+&lt;div class=&quot;title&quot;&gt;Startup nomount:&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;
 &lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;console&quot;&gt;SQL&amp;gt; startup nomount
 
@@ -5529,7 +5500,7 @@ ORACLE instance shut down.&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;title&quot;&gt;startup&lt;/div&gt;
+&lt;div class=&quot;title&quot;&gt;Startup:&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;
 &lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;console&quot;&gt;SQL&amp;gt; startup
 

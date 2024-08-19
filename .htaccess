@@ -1,0 +1,5 @@
+# redirect blog posts
+# old:   2013/05/30/apache-shiro-122-released.html
+# new:   blog/2013/05/30/apache-shiro-122-released.html
+RedirectMatch ^/?p=10 /2008/12/para-duplicar-um-banco-oracle-na-mesma-maquina.html
+RedirectMatch ^/?p=626 /2011/04/apache-shiro-parte-1-basico.html
