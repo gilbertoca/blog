@@ -83,49 +83,37 @@ A37710:/dados/D/Softwares_usados/Tools/java/jdk # zypper install jdk-7u15-linux-
 <p>Vamos "avisar" o mecanismo do sistema que é responsável por estes serviços - <a href="/2012/03/alterne-entre-versoes-java-facilmente-update-alternatives-parte-2.html">update-alternatives</a>
 que existe uma nova versão do jdk instalada. O diretório (melhor dizendo, link) <strong>/usr/java/latest</strong> representa a versão mais recente instalada e irá apontar para última e mais nova versão:</p>
 </div>
-<div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">A37710:<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java <span style="color: #666666; font-style: italic;"># ll</span>
-total <span style="color: #000000;">12</span>
-lrwxrwxrwx <span style="color: #000000;">1</span> root root   <span style="color: #000000;">16</span> Feb <span style="color: #000000;">15</span> <span style="color: #000000;">16</span>:09 default -<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>latest
-drwxr-xr-x <span style="color: #000000;">4</span> root root <span style="color: #000000;">4096</span> Feb <span style="color: #000000;">15</span> <span style="color: #000000;">15</span>:<span style="color: #000000;">13</span> jdk1.7.0_07
-drwxr-xr-x <span style="color: #000000;">3</span> root root <span style="color: #000000;">4096</span> Feb <span style="color: #000000;">21</span> <span style="color: #000000;">14</span>:<span style="color: #000000;">36</span> jdk1.7.0_13
-drwxr-xr-x <span style="color: #000000;">8</span> root root <span style="color: #000000;">4096</span> Feb <span style="color: #000000;">21</span> <span style="color: #000000;">14</span>:<span style="color: #000000;">36</span> jdk1.7.0_15
-lrwxrwxrwx <span style="color: #000000;">1</span> root root   <span style="color: #000000;">21</span> Feb <span style="color: #000000;">21</span> <span style="color: #000000;">14</span>:<span style="color: #000000;">36</span> latest -<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>jdk1.7.0_15</pre>
-      </td>
-    </tr>
-  </table>
-</div></p>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="Shell">A37710:/usr/java # ll
+total 12
+lrwxrwxrwx 1 root root   16 Feb 15 16:09 default -&gt; /usr/java/latest
+drwxr-xr-x 4 root root 4096 Feb 15 15:13 jdk1.7.0_07
+drwxr-xr-x 3 root root 4096 Feb 21 14:36 jdk1.7.0_13
+drwxr-xr-x 8 root root 4096 Feb 21 14:36 jdk1.7.0_15
+lrwxrwxrwx 1 root root   21 Feb 21 14:36 latest -&gt; /usr/java/jdk1.7.0_15</code></pre>
+</div>
+</div>
 <div class="paragraph">
 <p>A partir do diretório <strong>latest/bin</strong> e <strong>latest/jre/bin</strong> realize as seguintes modificações:</p>
 </div>
-<div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">A37710:<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java <span style="color: #666666; font-style: italic;"># cd latest/bin/</span>
-A37710:<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>latest<span style="color: #000000; font-weight: bold;">/</span>bin <span style="color: #666666; font-style: italic;"># for bin in *; do update-alternatives --install /usr/bin/$bin $bin $(pwd)/$bin 20000; done</span>
-A37710:<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>latest<span style="color: #000000; font-weight: bold;">/</span>bin <span style="color: #666666; font-style: italic;"># cd ..</span>
-A37710:<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>latest <span style="color: #666666; font-style: italic;"># cd jre/bin/</span>
-A37710:<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>latest<span style="color: #000000; font-weight: bold;">/</span>jre<span style="color: #000000; font-weight: bold;">/</span>bin <span style="color: #666666; font-style: italic;"># for bin in *; do update-alternatives --install /usr/bin/$bin $bin $(pwd)/$bin 20000; done</span>
-A37710:<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>latest<span style="color: #000000; font-weight: bold;">/</span>jre<span style="color: #000000; font-weight: bold;">/</span>bin <span style="color: #666666; font-style: italic;">#</span></pre>
-      </td>
-    </tr>
-  </table>
-</div></p>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="Shell">A37710:/usr/java # cd latest/bin/
+A37710:/usr/java/latest/bin # for bin in *; do update-alternatives --install /usr/bin/$bin $bin $(pwd)/$bin 20000; done
+A37710:/usr/java/latest/bin # cd ..
+A37710:/usr/java/latest # cd jre/bin/
+A37710:/usr/java/latest/jre/bin # for bin in *; do update-alternatives --install /usr/bin/$bin $bin $(pwd)/$bin 20000; done
+A37710:/usr/java/latest/jre/bin #</code></pre>
+</div>
+</div>
 <div class="paragraph">
 <p>Por fim, atualizaremos o <strong>plugin java - javaplugin.so -</strong> para os navegadores instalados no sistema:</p>
 </div>
-<div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">update-alternatives <span style="color: #660033;">--install</span> <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>lib64<span style="color: #000000; font-weight: bold;">/</span>browser-plugins<span style="color: #000000; font-weight: bold;">/</span>javaplugin.so javaplugin <span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>java<span style="color: #000000; font-weight: bold;">/</span>latest<span style="color: #000000; font-weight: bold;">/</span>jre<span style="color: #000000; font-weight: bold;">/</span>lib<span style="color: #000000; font-weight: bold;">/</span>amd64<span style="color: #000000; font-weight: bold;">/</span>libnpjp2.so <span style="color: #000000;">20000</span></pre>
-      </td>
-    </tr>
-  </table>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="Shell">update-alternatives --install /usr/lib64/browser-plugins/javaplugin.so javaplugin /usr/java/latest/jre/lib/amd64/libnpjp2.so 20000</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>Olhe com atenção pois utilizamos como referência para atualizar o update-alternatives o caminho base <strong>/usr/java/latest</strong>.

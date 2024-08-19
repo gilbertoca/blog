@@ -6,8 +6,8 @@
     <atom:link href="http://blog.gilbertoca.com/feeds/posts/default.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>seg., 19 ago. 2024 14:27:30 -0300</pubDate>
-    <lastBuildDate>seg., 19 ago. 2024 14:27:30 -0300</lastBuildDate>
+    <pubDate>seg., 19 ago. 2024 14:33:28 -0300</pubDate>
+    <lastBuildDate>seg., 19 ago. 2024 14:33:28 -0300</lastBuildDate>
 
     <item>
       <title>Visualizando arquivos de log no NetBeans</title>
@@ -350,49 +350,37 @@ A37710:/dados/D/Softwares_usados/Tools/java/jdk # zypper install jdk-7u15-linux-
 &lt;p&gt;Vamos &quot;avisar&quot; o mecanismo do sistema que é responsável por estes serviços - &lt;a href=&quot;/2012/03/alterne-entre-versoes-java-facilmente-update-alternatives-parte-2.html&quot;&gt;update-alternatives&lt;/a&gt;
 que existe uma nova versão do jdk instalada. O diretório (melhor dizendo, link) &lt;strong&gt;/usr/java/latest&lt;/strong&gt; representa a versão mais recente instalada e irá apontar para última e mais nova versão:&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;wp_syntax&quot;&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;code&quot;&gt;
-        &lt;pre class=&quot;bash&quot; style=&quot;font-family:monospace;&quot;&gt;A37710:&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;usr&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;java &lt;span style=&quot;color: #666666; font-style: italic;&quot;&gt;# ll&lt;/span&gt;
-total &lt;span style=&quot;color: #000000;&quot;&gt;12&lt;/span&gt;
-lrwxrwxrwx &lt;span style=&quot;color: #000000;&quot;&gt;1&lt;/span&gt; root root   &lt;span style=&quot;color: #000000;&quot;&gt;16&lt;/span&gt; Feb &lt;span style=&quot;color: #000000;&quot;&gt;15&lt;/span&gt; &lt;span style=&quot;color: #000000;&quot;&gt;16&lt;/span&gt;:09 default -&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;usr&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;java&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;latest
-drwxr-xr-x &lt;span style=&quot;color: #000000;&quot;&gt;4&lt;/span&gt; root root &lt;span style=&quot;color: #000000;&quot;&gt;4096&lt;/span&gt; Feb &lt;span style=&quot;color: #000000;&quot;&gt;15&lt;/span&gt; &lt;span style=&quot;color: #000000;&quot;&gt;15&lt;/span&gt;:&lt;span style=&quot;color: #000000;&quot;&gt;13&lt;/span&gt; jdk1.7.0_07
-drwxr-xr-x &lt;span style=&quot;color: #000000;&quot;&gt;3&lt;/span&gt; root root &lt;span style=&quot;color: #000000;&quot;&gt;4096&lt;/span&gt; Feb &lt;span style=&quot;color: #000000;&quot;&gt;21&lt;/span&gt; &lt;span style=&quot;color: #000000;&quot;&gt;14&lt;/span&gt;:&lt;span style=&quot;color: #000000;&quot;&gt;36&lt;/span&gt; jdk1.7.0_13
-drwxr-xr-x &lt;span style=&quot;color: #000000;&quot;&gt;8&lt;/span&gt; root root &lt;span style=&quot;color: #000000;&quot;&gt;4096&lt;/span&gt; Feb &lt;span style=&quot;color: #000000;&quot;&gt;21&lt;/span&gt; &lt;span style=&quot;color: #000000;&quot;&gt;14&lt;/span&gt;:&lt;span style=&quot;color: #000000;&quot;&gt;36&lt;/span&gt; jdk1.7.0_15
-lrwxrwxrwx &lt;span style=&quot;color: #000000;&quot;&gt;1&lt;/span&gt; root root   &lt;span style=&quot;color: #000000;&quot;&gt;21&lt;/span&gt; Feb &lt;span style=&quot;color: #000000;&quot;&gt;21&lt;/span&gt; &lt;span style=&quot;color: #000000;&quot;&gt;14&lt;/span&gt;:&lt;span style=&quot;color: #000000;&quot;&gt;36&lt;/span&gt; latest -&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;usr&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;java&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;jdk1.7.0_15&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;Shell&quot;&gt;A37710:/usr/java # ll
+total 12
+lrwxrwxrwx 1 root root   16 Feb 15 16:09 default -&amp;gt; /usr/java/latest
+drwxr-xr-x 4 root root 4096 Feb 15 15:13 jdk1.7.0_07
+drwxr-xr-x 3 root root 4096 Feb 21 14:36 jdk1.7.0_13
+drwxr-xr-x 8 root root 4096 Feb 21 14:36 jdk1.7.0_15
+lrwxrwxrwx 1 root root   21 Feb 21 14:36 latest -&amp;gt; /usr/java/jdk1.7.0_15&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;A partir do diretório &lt;strong&gt;latest/bin&lt;/strong&gt; e &lt;strong&gt;latest/jre/bin&lt;/strong&gt; realize as seguintes modificações:&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;wp_syntax&quot;&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;code&quot;&gt;
-        &lt;pre class=&quot;bash&quot; style=&quot;font-family:monospace;&quot;&gt;A37710:&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;usr&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;java &lt;span style=&quot;color: #666666; font-style: italic;&quot;&gt;# cd latest/bin/&lt;/span&gt;
-A37710:&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;usr&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;java&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;latest&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;bin &lt;span style=&quot;color: #666666; font-style: italic;&quot;&gt;# for bin in *; do update-alternatives --install /usr/bin/$bin $bin $(pwd)/$bin 20000; done&lt;/span&gt;
-A37710:&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;usr&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;java&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;latest&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;bin &lt;span style=&quot;color: #666666; font-style: italic;&quot;&gt;# cd ..&lt;/span&gt;
-A37710:&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;usr&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;java&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;latest &lt;span style=&quot;color: #666666; font-style: italic;&quot;&gt;# cd jre/bin/&lt;/span&gt;
-A37710:&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;usr&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;java&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;latest&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;jre&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;bin &lt;span style=&quot;color: #666666; font-style: italic;&quot;&gt;# for bin in *; do update-alternatives --install /usr/bin/$bin $bin $(pwd)/$bin 20000; done&lt;/span&gt;
-A37710:&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;usr&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;java&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;latest&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;jre&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;bin &lt;span style=&quot;color: #666666; font-style: italic;&quot;&gt;#&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;Shell&quot;&gt;A37710:/usr/java # cd latest/bin/
+A37710:/usr/java/latest/bin # for bin in *; do update-alternatives --install /usr/bin/$bin $bin $(pwd)/$bin 20000; done
+A37710:/usr/java/latest/bin # cd ..
+A37710:/usr/java/latest # cd jre/bin/
+A37710:/usr/java/latest/jre/bin # for bin in *; do update-alternatives --install /usr/bin/$bin $bin $(pwd)/$bin 20000; done
+A37710:/usr/java/latest/jre/bin #&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Por fim, atualizaremos o &lt;strong&gt;plugin java - javaplugin.so -&lt;/strong&gt; para os navegadores instalados no sistema:&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;wp_syntax&quot;&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;code&quot;&gt;
-        &lt;pre class=&quot;bash&quot; style=&quot;font-family:monospace;&quot;&gt;update-alternatives &lt;span style=&quot;color: #660033;&quot;&gt;--install&lt;/span&gt; &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;usr&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;lib64&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;browser-plugins&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;javaplugin.so javaplugin &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;usr&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;java&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;latest&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;jre&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;lib&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;amd64&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;/&lt;/span&gt;libnpjp2.so &lt;span style=&quot;color: #000000;&quot;&gt;20000&lt;/span&gt;&lt;/pre&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;Shell&quot;&gt;update-alternatives --install /usr/lib64/browser-plugins/javaplugin.so javaplugin /usr/java/latest/jre/lib/amd64/libnpjp2.so 20000&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Olhe com atenção pois utilizamos como referência para atualizar o update-alternatives o caminho base &lt;strong&gt;/usr/java/latest&lt;/strong&gt;.
