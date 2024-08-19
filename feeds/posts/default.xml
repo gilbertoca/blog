@@ -6,8 +6,8 @@
     <atom:link href="http://blog.gilbertoca.com/feeds/posts/default.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>seg., 19 ago. 2024 14:25:54 -0300</pubDate>
-    <lastBuildDate>seg., 19 ago. 2024 14:25:54 -0300</lastBuildDate>
+    <pubDate>seg., 19 ago. 2024 14:27:30 -0300</pubDate>
+    <lastBuildDate>seg., 19 ago. 2024 14:27:30 -0300</lastBuildDate>
 
     <item>
       <title>Visualizando arquivos de log no NetBeans</title>
@@ -995,7 +995,6 @@ e neste fim de semana - aos sábados editamos as mensagens - me deparei que tal 
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Bem, aqui está a dica:&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;wp_syntax&quot;&gt;
   &lt;table&gt;
     &lt;tr&gt;
       &lt;td class=&quot;code&quot;&gt;
@@ -1017,7 +1016,6 @@ gilberto&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;@&lt;/s
       &lt;/td&gt;
     &lt;/tr&gt;
   &lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Uma busca pela rede mundial usando o Google ajuda muito nessas horas.&lt;/p&gt;
 &lt;/div&gt;
